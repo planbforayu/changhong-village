@@ -58,7 +58,7 @@ func run() -> void:
 	check(r.game.phase == "stamped", "one-second wax press seals")
 	advance(r,1.4)
 	await shot(r,"02-sealed")
-	r.game.input("tap",Vector2(180,580));advance(r,1.9)
+	r.game.input("tap",Vector2(180,580));advance(r,3.5)  # 寄信过场 3.3 秒（三帧 C2）
 	check(r.game.phase == "receive", "letter is sent before recipient receives it")
 	await shot(r,"03-received")
 	r.game.input("tap",Vector2(180,337))
