@@ -130,6 +130,8 @@ func travel(where: String) -> void:
         add_child(content)
         while not game.bootstrapped:
             await get_tree().process_frame
+        # 从爱情篇进村会跳过村子欢迎页，音乐要在这里启动（点按钮进村，已算一次手势）
+        preload("res://ayu_home/v4/core/playtest_music.gd").ensure(get_tree()).unlock_from_gesture()
     else:
         game = load("res://hongyuan/wedding.gd").new()
         game.guest_profile = profile.duplicate(true)
@@ -143,11 +145,21 @@ func travel(where: String) -> void:
         func(): travel("wedding" if destination == "village" else "village"))
     if destination == "wedding":
         add_button("直接入席", func(): game.enter_banquet())
+    place_navigation()
     navigation.show()
     loading.hide()
     busy = false
     save_world()
     print("WORLD_READY route=", destination, " nick=", profile.nick, " avatar=", profile.avatar)
+
+# 微信右上角的胶囊按钮会盖住「去婚礼现场」，按刘海安全区往下让出胶囊的高度
+func place_navigation() -> void:
+    var top := 82.0
+    var safe := DisplayServer.get_display_safe_area()
+    var win := DisplayServer.window_get_size()
+    if win.y > 0 and safe.position.y > 0:
+        top = maxf(top, safe.position.y * get_viewport().get_visible_rect().size.y / win.y + 62.0)
+    navigation.offset_top = top
 
 func add_button(label: String, action: Callable) -> void:
     var button := Button.new()

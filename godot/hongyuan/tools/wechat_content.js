@@ -61,6 +61,7 @@ async function mountInput(group,item) {
 GameGlobal.hongyuanContent={
     count:group=>(config.remote[group]||[]).length,
     local:group=>!!config.local[group],
+    bytes:(group,item)=>{const e=item<0?config.local[group]:(config.remote[group]||[])[item];return e&&e.bytes||0},
     status:(group,item)=>JSON.stringify(statuses[group+'-'+item]||{state:'download',received:0,total:0}),
     editGuestName(value, maxLength, callback) {
         let draft = value
