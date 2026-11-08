@@ -100,15 +100,20 @@ func input(kind: String, pos: Vector2) -> void:
 		"ready_send":
 			if kind == "tap" and _ok_rect().has_point(pos): _set_phase("send")
 		"receive":
-			if kind == "down" and _envelope().grow(12).has_point(pos):
+			# 电脑上用鼠标也要能拆：从信封附近任何位置按下往右拖都算，拖过一大半松手也拆开；
+			# 直接点信封也能拆（拖不动的人不会卡在这里）
+			if kind == "down" and _envelope().grow(60).has_point(pos):
 				dragging = true
 				from = pos
 			elif kind == "move" and dragging:
-				open_progress = clampf((pos.x - from.x) / 140.0, 0, 1)
+				open_progress = clampf((pos.x - from.x) / 120.0, 0, 1)
 				if open_progress >= 1.0: _set_phase("opening")
 			elif kind == "up":
 				dragging = false
+				if open_progress >= 0.6: _set_phase("opening")
 				open_progress = 0.0
+			elif kind == "tap" and _envelope().grow(12).has_point(pos):
+				_set_phase("opening")
 		"read_received":
 			if kind == "tap" and t > 0.5: _set_phase("look")
 		"look":
@@ -266,7 +271,7 @@ func draw(ci) -> void:
 			elif phase == "receive":
 				ci.StoryCaption.draw_caption(ci, "你收到了一封邀请函", "narrator")
 				ci.draw_line(Vector2(76, 275), Vector2(76 + 208 * open_progress, 275), ci.GOLD, 4)
-				ci.pill(Rect2(48, 475, 264, 44), "沿封口向右滑动，亲手拆开", 16, ci.RED, ci.PAPER)
+				ci.pill(Rect2(48, 475, 264, 44), "沿封口向右滑动，或点一下信封", 16, ci.RED, ci.PAPER)
 			elif phase == "opening":
 				var k := clampf(t / 0.8, 0, 1)
 				var open_art: Texture2D = ci.texture("round1/finale/mail_02_open.png" if k < 0.5 else "round1/finale/mail_03_pull.png")
