@@ -157,8 +157,29 @@ func _make_edit() -> void:
 	if OS.has_feature("web") and OS.has_feature("hongyuan_wechat"):
 		edit.virtual_keyboard_enabled = false
 		edit.gui_input.connect(_wechat_name_input)
+	elif OS.has_feature("web") and DisplayServer.is_touchscreen_available():
+		# 手机浏览器：键盘必须在手指点下的同一时刻由浏览器自己弹出，Godot 的输入框
+		# 晚一帧才处理触摸，安卓会被拦掉。改用浏览器自带的输入对话框，一定弹得出来。
+		edit.virtual_keyboard_enabled = false
+		edit.placeholder_text = "点这里输入名字"
+		edit.gui_input.connect(_web_name_input)
 	else:
 		edit.grab_focus()
+
+
+func _web_name_input(event: InputEvent) -> void:
+	var released := false
+	if event is InputEventMouseButton:
+		released = event.button_index == MOUSE_BUTTON_LEFT and not event.pressed
+	if not released or keyboard_open or phase != "name" or not is_instance_valid(edit):
+		return
+	keyboard_open = true
+	var answer = JavaScriptBridge.eval("window.prompt(%s, %s)" % [JSON.stringify("请输入你的名字（2–12 个字）"), JSON.stringify(edit.text)], true)
+	keyboard_open = false
+	if answer == null or not is_instance_valid(edit):
+		return
+	edit.text = str(answer).strip_edges().substr(0, edit.max_length)
+	error = false
 
 
 func _wechat_name_input(event: InputEvent) -> void:
