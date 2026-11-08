@@ -64,6 +64,10 @@ static func _pool_glint(i: int,time: float) -> Rect2:
 	return Rect2(roundf(x),roundf(y),width,1.3)
 
 static func _street(ci,time: float) -> void:
+	# 11/08 新街景（540×1200）车道就在停车位前，紫色 G42 按真实比例停在位里；
+	# 旧图远处车道上的 82 像素小车放进来会开上人行道、也比 G42 小一大截，所以新图不再加过路车。
+	var plate: Texture2D = ci.texture(str(ci.bg))
+	if plate and plate.get_height() != 960: return
 	ci.draw_set_transform_matrix(_transform(ci,Vector2(540,960)))
 	var cars := ["car_street.png","car_parking.png"]
 	for lane in range(2):

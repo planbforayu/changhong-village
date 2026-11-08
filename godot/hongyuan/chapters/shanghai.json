@@ -18,16 +18,16 @@
         "personHeight": 105,
         "start": [
           100,
-          476
+          380
         ],
         "walkArea": [
           [
             20,
-            435
+            318
           ],
           [
             340,
-            435
+            318
           ],
           [
             340,
@@ -40,63 +40,48 @@
         ],
         "walkers": [
           {
-            "guest": "01",
+            "sheet": "w2/shanghai/npc_d1_office.png",
             "a": [
-              20,
-              480
+              70,
+              400
             ],
             "b": [
-              85,
-              480
+              200,
+              400
             ],
-            "speed": 18,
+            "speed": 36,
             "phase": 0.0,
-            "scale": 0.95,
+            "scale": 0.97,
             "pause": 2
           },
           {
-            "guest": "02",
+            "sheet": "w2/shanghai/npc_d1_coffee.png",
             "a": [
-              325,
-              497
+              290,
+              470
             ],
             "b": [
-              265,
-              497
+              170,
+              470
             ],
-            "speed": 21,
-            "phase": 0.19,
+            "speed": 32,
+            "phase": 0.3,
             "scale": 0.95,
             "pause": 3
           },
           {
-            "guest": "03",
+            "sheet": "w2/shanghai/npc_d1_dog.png",
             "a": [
-              115,
-              514
+              60,
+              560
             ],
             "b": [
-              180,
-              514
+              170,
+              560
             ],
-            "speed": 24,
-            "phase": 0.38,
-            "scale": 0.95,
-            "pause": 2
-          },
-          {
-            "guest": "04",
-            "a": [
-              250,
-              531
-            ],
-            "b": [
-              200,
-              531
-            ],
-            "speed": 27,
-            "phase": 0.5700000000000001,
-            "scale": 0.95,
+            "speed": 26,
+            "phase": 0.6,
+            "scale": 0.94,
             "pause": 3
           }
         ],
@@ -108,9 +93,9 @@
             "tex": "car_street.png",
             "at": [
               255,
-              426
+              300
             ],
-            "scale": 0.7
+            "scale": 1.0
           }
         ],
         "beats": [
@@ -136,16 +121,16 @@
         "personHeight": 105,
         "start": [
           100,
-          476
+          380
         ],
         "walkArea": [
           [
             20,
-            435
+            318
           ],
           [
             340,
-            435
+            318
           ],
           [
             340,
@@ -158,63 +143,48 @@
         ],
         "walkers": [
           {
-            "guest": "01",
+            "sheet": "w2/shanghai/npc_d1_office.png",
             "a": [
-              20,
-              480
+              70,
+              400
             ],
             "b": [
-              85,
-              480
+              200,
+              400
             ],
-            "speed": 18,
+            "speed": 36,
             "phase": 0.0,
-            "scale": 0.95,
+            "scale": 0.97,
             "pause": 2
           },
           {
-            "guest": "02",
+            "sheet": "w2/shanghai/npc_d1_coffee.png",
             "a": [
-              325,
-              497
+              290,
+              470
             ],
             "b": [
-              265,
-              497
+              170,
+              470
             ],
-            "speed": 21,
-            "phase": 0.19,
+            "speed": 32,
+            "phase": 0.3,
             "scale": 0.95,
             "pause": 3
           },
           {
-            "guest": "03",
+            "sheet": "w2/shanghai/npc_d1_dog.png",
             "a": [
-              115,
-              514
+              60,
+              560
             ],
             "b": [
-              180,
-              514
+              170,
+              560
             ],
-            "speed": 24,
-            "phase": 0.38,
-            "scale": 0.95,
-            "pause": 2
-          },
-          {
-            "guest": "04",
-            "a": [
-              250,
-              531
-            ],
-            "b": [
-              200,
-              531
-            ],
-            "speed": 27,
-            "phase": 0.5700000000000001,
-            "scale": 0.95,
+            "speed": 26,
+            "phase": 0.6,
+            "scale": 0.94,
             "pause": 3
           }
         ],
@@ -226,9 +196,9 @@
             "tex": "car_street.png",
             "at": [
               255,
-              426
+              300
             ],
-            "scale": 0.7
+            "scale": 1.0
           }
         ],
         "beats": [
@@ -253,16 +223,16 @@
         "personHeight": 105,
         "start": [
           100,
-          476
+          380
         ],
         "walkArea": [
           [
             20,
-            435
+            318
           ],
           [
             340,
-            435
+            318
           ],
           [
             340,
@@ -275,63 +245,48 @@
         ],
         "walkers": [
           {
-            "guest": "01",
+            "sheet": "w2/shanghai/npc_d1_office.png",
             "a": [
-              20,
-              480
+              70,
+              400
             ],
             "b": [
-              85,
-              480
+              200,
+              400
             ],
-            "speed": 18,
+            "speed": 36,
             "phase": 0.0,
-            "scale": 0.95,
+            "scale": 0.97,
             "pause": 2
           },
           {
-            "guest": "02",
+            "sheet": "w2/shanghai/npc_d1_coffee.png",
             "a": [
-              325,
-              497
+              290,
+              470
             ],
             "b": [
-              265,
-              497
+              170,
+              470
             ],
-            "speed": 21,
-            "phase": 0.19,
+            "speed": 32,
+            "phase": 0.3,
             "scale": 0.95,
             "pause": 3
           },
           {
-            "guest": "03",
+            "sheet": "w2/shanghai/npc_d1_dog.png",
             "a": [
-              115,
-              514
+              60,
+              560
             ],
             "b": [
-              180,
-              514
+              170,
+              560
             ],
-            "speed": 24,
-            "phase": 0.38,
-            "scale": 0.95,
-            "pause": 2
-          },
-          {
-            "guest": "04",
-            "a": [
-              250,
-              531
-            ],
-            "b": [
-              200,
-              531
-            ],
-            "speed": 27,
-            "phase": 0.5700000000000001,
-            "scale": 0.95,
+            "speed": 26,
+            "phase": 0.6,
+            "scale": 0.94,
             "pause": 3
           }
         ],
@@ -343,9 +298,9 @@
             "tex": "car_street.png",
             "at": [
               255,
-              426
+              300
             ],
-            "scale": 0.7
+            "scale": 1.0
           }
         ],
         "hotspots": [
@@ -353,7 +308,7 @@
             "id": "car",
             "at": [
               247,
-              447
+              328
             ],
             "icon": "pick"
           }

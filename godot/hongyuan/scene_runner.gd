@@ -15,7 +15,11 @@ const WorldScale := preload("res://hongyuan/world_scale.gd")
 const CoastShow := preload("res://hongyuan/coast_show.gd")
 const FONT := preload("res://hongyuan/fonts/dialogue_font.tres")
 const ROOT := "res://hongyuan/assets/"
-const SPEED := 126.0
+## 走路：速度和步幅都跟着人在画面里的高度走（128 高≈1.65 米）。
+## 105 像素/秒 ≈ 1.3 米/秒的正常步行；4 帧行走图是一个完整步态（两步），一帧走 0.2 个身高，
+## 这样脚步和地面移动对得上，不会原地小碎步或滑行。
+const SPEED := 105.0
+const STRIDE_K := 0.2
 const NEAR := 40.0
 const GOAL_DELAY := 1.2
 const INK := Color("#281a1a")
@@ -367,9 +371,13 @@ func _process(dt: float) -> void:
 
 # ---------- 走路 ----------
 
+func _stride(y := NAN) -> float:
+	return maxf(6.0, person_height_at(feet.y if is_nan(y) else y) * STRIDE_K)
+
+
 func _walk(dt: float) -> void:
 	var before := feet
-	var speed := SPEED * clampf(person_height_at(feet.y) / 128.0, 0.45, 1.15)
+	var speed := SPEED * clampf(person_height_at(feet.y) / 128.0, 0.3, 1.15)
 	if stick.length() > 0.08:
 		target_hot = ""
 		moving = false
@@ -736,7 +744,7 @@ func _draw_world() -> void:
 		var cf := "w2/common/toretto_neutral_r2.png"
 		if mode == "game" and game and game.has_method("companion_frame"):
 			cf = game.companion_frame()
-		elif mode == "go" and comp_moving and int(comp_walk / 10.0) % 2 == 0:
+		elif mode == "go" and comp_moving and int(comp_walk / _stride(comp_pos.y)) % 2 == 0:
 			cf = "w2/common/toretto_walk.png"
 		items.append({"y": comp_pos.y, "tex": cf, "at": comp_pos, "flip": facing < 0, "scale": 1.0})
 	for i in range(walkers.size()):
@@ -791,6 +799,9 @@ func _draw_walker(w: Dictionary) -> void:
 	if absf(heading.y) > absf(heading.x): row = 0 if heading.y > 0 else 12
 	if bool(w.get("fishing",false)): row = 12
 	if w.has("frameRow"): row = int(w.frameRow)
+	if w.has("sheet"):
+		_draw_sheet_walker(w, state)
+		return
 	var path := "res://assets/characters/lm/chr_LM-GUEST-%s.png" % str(w.guest)
 	if not sheet_cache.has(path): sheet_cache[path] = load(path) if ResourceLoader.exists(path) else null
 	var sheet: Texture2D = sheet_cache[path]
@@ -834,6 +845,25 @@ func _draw_walker(w: Dictionary) -> void:
 		draw_circle(float_at,1.5,Color("#dc6652"))
 
 
+## GPT 路人图集：192×208 一格，横排 5 格（第 0 格站立、1–4 行走，朝右），脚点 (96,198)，
+## 人从头顶到脚底约 185 像素（遛狗、骑车的狗和车不算身高）。往左走时水平翻转。
+const SHEET_CELL := Vector2(192, 208)
+const SHEET_FOOT := Vector2(96, 198)
+const SHEET_BODY_H := 185.0
+func _draw_sheet_walker(w: Dictionary, state: Dictionary) -> void:
+	var sheet := texture(str(w.sheet))
+	if not sheet: return
+	var pos: Vector2 = _walker_pos(w)
+	var k := person_height_at(pos.y) * float(w.get("scale", 0.94)) / SHEET_BODY_H
+	var f := 1 + int(float(state.distance) / maxf(6.0, person_height_at(pos.y) * float(w.get("scale", 0.94)) * STRIDE_K)) % 4 if state.walking else 0
+	var heading: Vector2 = state.heading
+	var flip := heading.x < 0 if f > 0 else false
+	_shadow(pos, 60.0 * k * 0.5)
+	draw_set_transform(pos + Vector2(0, camera_y), 0, Vector2(-k if flip else k, k))
+	draw_texture_rect_region(sheet, Rect2(-SHEET_FOOT, SHEET_CELL), Rect2(Vector2(f * SHEET_CELL.x, 0), SHEET_CELL))
+	draw_set_transform(Vector2(0, camera_y))
+
+
 func _player_frame() -> String:
 	if mode == "game" and game and game.has_method("body_frame"):
 		return game.body_frame()
@@ -842,21 +872,21 @@ func _player_frame() -> String:
 	if player_role == "toretto":
 		name = "w2/common/toretto_neutral_r2.png"
 		if walking:
-			name = "w2/common/toretto_walk.png" if int(walk_dist / 10.0) % 2 == 0 else "w2/common/toretto_neutral_r2.png"
+			name = "w2/common/toretto_walk.png" if int(walk_dist / _stride()) % 2 == 0 else "w2/common/toretto_neutral_r2.png"
 		elif pose != "":
 			name = {"gifts": "w2/common/toretto_gifts_r2.png", "sit": "w2/common/toretto_sit.png", "back": "w2/common/toretto_back_r2.png"}.get(pose, pose)
 	elif pose != "" and not walking:
 		name = {"sit": "w2/shizuoka/ayu_sit.png|ayu_idle.png", "fishing": "w2/shizuoka/ayu_fish_hold.png|w2/common/ayu_fishing.png", "throw": "w2/hainan/ayu_throw_hold.png|w2/common/ayu_throw.png", "cheer": "w2/common/ayu_cheer.png", "back": "w2/common/ayu_idle_back.png|ayu_idle.png"}.get(pose, pose)
 		if pose == "surprised": name = "w2/common/ayu_surprised.png|ayu_idle.png"
 	elif walking:
-		var f := 1 + int(walk_dist / 10.0) % 4
+		var f := 1 + int(walk_dist / _stride()) % 4
 		if absf(move_dir.y) > absf(move_dir.x) * 1.3:
 			var dirn := "back" if move_dir.y < 0 else "front"
 			name = "w2/common/ayu_walk_%s_%d.png|w2/common/ayu_walk_side_%d.png|%s" % [dirn, f, f, "ayu_walk.png" if f % 2 == 1 else "ayu_idle.png"]
 		else:
 			name = "w2/common/ayu_walk_side_%d.png|%s" % [f, "ayu_walk.png" if f % 2 == 1 else "ayu_idle.png"]
 	if follower != "" and walking:
-		name = "w2/hongkong/ayu_drag_side_%d.png|%s" % [1 + int(walk_dist / 10.0) % 4, name]
+		name = "w2/hongkong/ayu_drag_side_%d.png|%s" % [1 + int(walk_dist / _stride()) % 4, name]
 	return name
 
 
@@ -865,7 +895,7 @@ func _draw_player() -> void:
 		game.draw_body(self)
 		return
 	var walking := mode == "go" and (moving or stick.length() > 0.08) and move_dir.length() > 0.01
-	var bob := -1.0 if walking and int(walk_dist / 10.0) % 2 == 0 else 0.0
+	var bob := -1.0 if walking and int(walk_dist / _stride()) % 2 == 0 else 0.0
 	sprite(_player_frame(), feet + Vector2(0, bob), facing < 0, 1.0, feet.y)
 
 

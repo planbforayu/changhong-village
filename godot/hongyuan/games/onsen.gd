@@ -2,7 +2,8 @@ extends RefCounted
 ## 浦岛酒店温泉：夕阳 → 黄昏 → 星夜。玩家先点他旁边的位置，阿鱼滑过去；
 ## 然后每点一下说一句（头顶气泡），天色随对白慢慢暗下来，结尾留一会儿星空。
 const StoryCaption := preload("res://hongyuan/ui/story_caption.gd")
-const BG := ["w2/shizuoka/bg_onsen_sunset.png", "w2/shizuoka/bg_onsen_dusk_r2.png", "w2/shizuoka/bg_onsen_night_r2.png"]
+# 11/08 补交版：去掉护栏、池子贴着海边岩岸，三张同构图只变天色（841×1870，宽度铺满、上下各裁约 80）
+const BG := ["w2/shizuoka/bg_onsen_sunset_r3.png|w2/shizuoka/bg_onsen_sunset.png", "w2/shizuoka/bg_onsen_dusk_r3.png|w2/shizuoka/bg_onsen_dusk_r2.png", "w2/shizuoka/bg_onsen_night_r3.png|w2/shizuoka/bg_onsen_night_r2.png"]
 const AYU_TEX := "w2/shizuoka/ayu_onsen_r2.png"
 const TORETTO_TEX := "w2/shizuoka/toretto_onsen_r2.png"
 # 透明图里真正有像素的范围（素材清单），透明边不参与比例
@@ -10,7 +11,7 @@ const AYU_USED := Rect2(447, 277, 416, 509)
 const TORETTO_USED := Rect2(392, 62, 745, 850)
 const AYU_H := 58.0
 const TORETTO_H := 66.0
-const WATER_Y := 438.0   # 人物下沿 = 池水线
+const WATER_Y := 428.0   # 人物下沿 = 池水线（新池前沿石头约在 440）
 const TORETTO_X := 238.0
 const SPOT_X := 176.0
 const START_X := 78.0
@@ -218,6 +219,8 @@ func _draw_foam(ci) -> void:
 		for i in range(-1, 11):
 			var x0 := i * step + (f * 6.0 + row * 13.0)
 			x0 = fposmod(x0, 400.0) - 20.0
+			if x0 < 28.0:   # 新图左侧是木灯柱，浪线不画到柱子上
+				continue
 			var len := 14.0 + 6.0 * ((i + row) % 3)
 			if (i + row + f) % 5 == 0:
 				continue
@@ -307,12 +310,18 @@ func _draw_arrival(ci) -> void:
 		ci.draw_set_transform_matrix(xf)
 
 func _draw_guests(ci, tint: Color) -> void:
-	# Distinct background bathers: only heads and shoulders, with no trouser or
-	# standing-body silhouette in the water. These use the existing guest atlas.
-	var positions := [Vector2(48,391),Vector2(91,367),Vector2(270,376),Vector2(302,404)]
-	var ids := ["02","06","09","11"]
-	for i in range(4):
-		var path := "res://assets/characters/lm/chr_LM-GUEST-%s.png" % ids[i]
+	# 池里的其他客人只露头肩。比例跟阿鱼、Toretto 对齐：主角在池前沿 (WATER_Y) 露出约 58–66，
+	# 头约占一半；客人离得远一点按景深缩到 0.80–0.92，头的大小和主角同一量级。
+	# village 图集的 Q 版头偏大，所以按"头高"而不是整块裁切高度来对齐。
+	var guests := [
+		{"id": "02", "at": Vector2(52, 398)},
+		{"id": "06", "at": Vector2(104, 372)},
+		{"id": "09", "at": Vector2(262, 376)},
+		{"id": "05", "at": Vector2(314, 402)},
+	]
+	var deep := Color(0.10, 0.42, 0.52, 0.62).lerp(Color(0.06, 0.16, 0.36, 0.70), clampf(sky_s, 0.0, 2.0) * 0.5)
+	for i in range(guests.size()):
+		var path := "res://assets/characters/lm/chr_LM-GUEST-%s.png" % guests[i].id
 		if not _guest_textures.has(path):
 			_guest_textures[path] = load(path) if ResourceLoader.exists(path) else null
 		var tex: Texture2D = _guest_textures[path]
@@ -320,14 +329,24 @@ func _draw_guests(ci, tint: Color) -> void:
 		# 12 is the rear-view pose. A short side glance every few seconds gives
 		# the group a different rhythm without having them pace through a pool.
 		var frame := 12 if fmod(r.time + i * 2.3, 9.0) < 7.4 else (4 if i < 2 else 8)
-		var source := Rect2(frame * 64 + 14, 0, 36, 34)
-		var at: Vector2 = positions[i] + Vector2(0,sin(r.time*1.2+i)*0.6)
-		var h := 21.0 + (i % 2) * 3
+		var key := path + "#" + str(frame)
+		if not _guest_textures.has(key):
+			_guest_textures[key] = tex.get_image().get_region(Rect2i(frame * 64, 0, 64, 84)).get_used_rect()
+		var used: Rect2i = _guest_textures[key]
+		# 从头顶往下取 34 行（头 + 肩），不管图集里人物站得高还是低
+		var source := Rect2(frame * 64 + 14, used.position.y, 36, 34)
+		var at: Vector2 = guests[i].at + Vector2(0, sin(r.time * 1.2 + i) * 0.6)
+		var depth := clampf((at.y - 360.0) / (WATER_Y - 360.0), 0.0, 1.0)
+		var h := AYU_H * lerpf(0.60, 0.70, depth)   # 约 35–41：Q 版头占七成，头高约为主角头高（约 30）的 0.8–0.9
 		var size := source.size * (h / source.size.y)
-		ci.draw_texture_rect_region(tex,Rect2(at-Vector2(size.x*0.5,h),size),source,tint)
-		ci.draw_rect(Rect2(at.x-size.x*0.6,at.y-2,size.x*1.2,6),Color(0.12,0.4,0.47,0.82))
-		var points := PackedVector2Array()
-		for j in range(17):
-			var a := TAU * j/16.0
-			points.append(at+Vector2(cos(a)*(size.x*0.7+3),sin(a)*2.8))
-		ci.draw_polyline(points,Color(0.8,0.9,0.9,0.35),1)
+		ci.draw_texture_rect_region(tex, Rect2(at - Vector2(size.x * 0.5, h), size), source, tint)
+		# 池水盖到肩膀：和主角同一种水带
+		var top := at.y - h * 0.22
+		var band := PackedVector2Array()
+		for j in range(9):
+			band.append(Vector2(at.x - size.x * 0.5 + size.x * 1.0 * j / 8.0, top + sin(r.time * 2.2 + i + j * 0.9) * 0.8))
+		var poly := PackedVector2Array(band)
+		poly.append(Vector2(at.x + size.x * 0.5, at.y + 4))
+		poly.append(Vector2(at.x - size.x * 0.5, at.y + 4))
+		ci.draw_colored_polygon(poly, deep)
+		ci.draw_polyline(band, Color(1, 1, 1, 0.4), 1.0)

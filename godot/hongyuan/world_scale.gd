@@ -3,7 +3,7 @@ extends RefCounted
 ## floor depths, calibrated against cars, furniture and doors in each camera.
 ## Top-down banquet art intentionally keeps a constant scale.
 const PROFILES := {
-	"shanghai_street": [370.0, 55.0, 555.0, 112.0],
+	"shanghai_street": [310.0, 62.0, 610.0, 96.0],
 	"shanghai_parking": [380.0, 55.0, 580.0, 105.0],
 	"chengdu": [270.0, 62.0, 560.0, 110.0],
 	"room": [368.0, 185.0, 620.0, 270.0],

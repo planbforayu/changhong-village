@@ -383,7 +383,7 @@ func _enter_step(index: int, resume := false) -> void:
 
 func _starting_feet(scene: String) -> Vector2:
 	match scene:
-		"shanghai_street": return Vector2(104, 451)
+		"shanghai_street": return Vector2(100, 380)
 		"shanghai_parking": return Vector2(140, 404)
 		"chengdu_day": return Vector2(169, 456)
 	return Vector2(96, 456)
