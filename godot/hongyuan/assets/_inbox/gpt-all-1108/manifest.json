@@ -1,0 +1,2088 @@
+{
+  "package": "gpt-all-1108",
+  "repository": "planbforayu/changhong-village",
+  "branch": "art/love-1108",
+  "base_path": "godot/hongyuan/assets/_inbox/gpt-all-1108/",
+  "scope": "GPT/D3 爱情篇美术与玩法/画面设计；按用户指示排除场景路人组。",
+  "add_only": true,
+  "file_count_excluding_manifest": 111,
+  "records": [
+    {
+      "file": "characters/panda_eat_1.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号01-C5/panda_eat_1.png",
+      "kind": "image",
+      "chapter": "C5",
+      "scene": "成都熊猫基地·喂食互动",
+      "pixel_size": [
+        144,
+        128
+      ],
+      "frame_count": 1,
+      "trigger_timing": "玩家触发喂食后开始咀嚼循环。",
+      "sequence_order": 1,
+      "role": "character_animation",
+      "creator_or_source": "GPT/D3",
+      "note": "素材说明标注 144×128；单帧。",
+      "bytes": 21047,
+      "sha256": "9f61f457215b553ad8f0d7bc59acee7fde8615d298a46041de90b90923e8ee8e"
+    },
+    {
+      "file": "characters/panda_eat_2.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号01-C5/panda_eat_2.png",
+      "kind": "image",
+      "chapter": "C5",
+      "scene": "成都熊猫基地·喂食互动",
+      "pixel_size": [
+        144,
+        128
+      ],
+      "frame_count": 1,
+      "trigger_timing": "接 panda_eat_1，循环咀嚼。",
+      "sequence_order": 2,
+      "role": "character_animation",
+      "creator_or_source": "GPT/D3",
+      "note": "素材说明标注 144×128；单帧。",
+      "bytes": 20949,
+      "sha256": "3907b01646c9046d5f78fd41d331de018bf6dfb3b826c31eb4692cdd1bdad5c6"
+    },
+    {
+      "file": "transitions/heart_pop.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号01-C5/heart_pop.png",
+      "kind": "image",
+      "chapter": "C5",
+      "scene": "成都熊猫基地·喂食反馈",
+      "pixel_size": [
+        32,
+        32
+      ],
+      "frame_count": 1,
+      "trigger_timing": "喂食成功时弹出一次。",
+      "sequence_order": 3,
+      "role": "effect",
+      "creator_or_source": "GPT/D3",
+      "note": "素材说明标注透明 32×32。",
+      "bytes": 1400,
+      "sha256": "8a37f3c757ba441d9c845d36e7fb1540ca3033d49cf63a8ffa51be676cfcf72b"
+    },
+    {
+      "file": "transitions/worry_bubble.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号02-C6/worry_bubble.png",
+      "kind": "image",
+      "chapter": "C6",
+      "scene": "来电章·烦恼泡泡",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "完整泡泡",
+      "sequence_order": 1,
+      "role": "transition_frame",
+      "creator_or_source": "GPT/D3",
+      "note": "四张透明 64×64 单帧图，依序播放。",
+      "bytes": 1446,
+      "sha256": "44df3c098648af81b6ba831fdaf1ea5c97e9b31be9fbf8807d73b3da541740ac"
+    },
+    {
+      "file": "transitions/worry_pop_1.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号02-C6/worry_pop_1.png",
+      "kind": "image",
+      "chapter": "C6",
+      "scene": "来电章·烦恼泡泡",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "裂开",
+      "sequence_order": 2,
+      "role": "transition_frame",
+      "creator_or_source": "GPT/D3",
+      "note": "四张透明 64×64 单帧图，依序播放。",
+      "bytes": 1636,
+      "sha256": "6e9768803acca2593c55bd99483a1d9ae0ebf6903aff6c1d91b7b8c71e28f92d"
+    },
+    {
+      "file": "transitions/worry_pop_2.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号02-C6/worry_pop_2.png",
+      "kind": "image",
+      "chapter": "C6",
+      "scene": "来电章·烦恼泡泡",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "碎裂",
+      "sequence_order": 3,
+      "role": "transition_frame",
+      "creator_or_source": "GPT/D3",
+      "note": "四张透明 64×64 单帧图，依序播放。",
+      "bytes": 1585,
+      "sha256": "7ef1adcfb9e7ab7a4e444edc0df5fb5a4417af0d021cdc98094a53fa0ae630ee"
+    },
+    {
+      "file": "transitions/worry_pop_3.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号02-C6/worry_pop_3.png",
+      "kind": "image",
+      "chapter": "C6",
+      "scene": "来电章·烦恼泡泡",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "消散",
+      "sequence_order": 4,
+      "role": "transition_frame",
+      "creator_or_source": "GPT/D3",
+      "note": "四张透明 64×64 单帧图，依序播放。",
+      "bytes": 633,
+      "sha256": "ad633f3c2f53182021d241464e5c7262a97da4991564e7fdf69b9f6b7fc54ee7"
+    },
+    {
+      "file": "characters/ayu_face_1.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号03-C7/ayu_face_1.png",
+      "kind": "image",
+      "chapter": "C7",
+      "scene": "来电头像情绪变化",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "来电界面显示，表情由紧张、平静到放松。",
+      "sequence_order": 1,
+      "role": "portrait",
+      "creator_or_source": "GPT/D3",
+      "note": "人物设计一览图原图裁切；素材说明标注 64×64。",
+      "bytes": 9011,
+      "sha256": "e947192f24f44346648bfd900c5c1ac2057cb32b2cc28361d52180dd1d274929"
+    },
+    {
+      "file": "characters/ayu_face_2.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号03-C7/ayu_face_2.png",
+      "kind": "image",
+      "chapter": "C7",
+      "scene": "来电头像情绪变化",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "来电界面显示，表情由紧张、平静到放松。",
+      "sequence_order": 2,
+      "role": "portrait",
+      "creator_or_source": "GPT/D3",
+      "note": "人物设计一览图原图裁切；素材说明标注 64×64。",
+      "bytes": 7482,
+      "sha256": "d6992bba7c1274f72ff63b7915027d08e63973c45f58b82e1880dec4be4e0cf6"
+    },
+    {
+      "file": "characters/ayu_face_3.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号03-C7/ayu_face_3.png",
+      "kind": "image",
+      "chapter": "C7",
+      "scene": "来电头像情绪变化",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "来电界面显示，表情由紧张、平静到放松。",
+      "sequence_order": 3,
+      "role": "portrait",
+      "creator_or_source": "GPT/D3",
+      "note": "人物设计一览图原图裁切；素材说明标注 64×64。",
+      "bytes": 8557,
+      "sha256": "dc9034df16a7c47e2f2c3840b9b97d1bced5f02829450c91fa2a28607c1d5297"
+    },
+    {
+      "file": "characters/toretto_avatar.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号04-C8/toretto_avatar.png",
+      "kind": "image",
+      "chapter": "C8",
+      "scene": "来电/群聊头像",
+      "pixel_size": [
+        64,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "来电或群聊 UI 显示 Toretto 头像。",
+      "sequence_order": 1,
+      "role": "portrait",
+      "creator_or_source": "GPT/D3",
+      "note": "64×64；复用项目原图裁切。",
+      "bytes": 5867,
+      "sha256": "50bdd2775d3f3029f67a7d69460ca6ab06b07fe4a0bac5a8221ec43eaac09193"
+    },
+    {
+      "file": "transitions/phone_ring_2.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号05-C9/phone_ring_2.png",
+      "kind": "image",
+      "chapter": "C9",
+      "scene": "深夜房间·手机响铃",
+      "pixel_size": [
+        48,
+        32
+      ],
+      "frame_count": 1,
+      "trigger_timing": "与 phone_ring_1 交替闪烁。",
+      "sequence_order": 2,
+      "role": "effect",
+      "creator_or_source": "GPT/D3",
+      "note": "48×32；复用项目响铃第二帧。",
+      "bytes": 263,
+      "sha256": "eb5adde6741d77963cbbe76fb29c8ea13071dcb83eae8ad68d2656e69ca592f0"
+    },
+    {
+      "file": "props_ui/g42_side.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号06-C10/g42_side.png",
+      "kind": "image",
+      "chapter": "C10",
+      "scene": "上海滨江·路边停车",
+      "pixel_size": [
+        263,
+        80
+      ],
+      "frame_count": 1,
+      "trigger_timing": "上海驾驶/停车时按车辆关系显示。",
+      "sequence_order": 1,
+      "role": "vehicle_prop",
+      "creator_or_source": "GPT/D3",
+      "note": "透明侧视车图；不推断车主差异。",
+      "bytes": 24708,
+      "sha256": "a962af66b693d5d8f3084cd10b50190b413b4b9eb090d045cf763bfa0abe107a"
+    },
+    {
+      "file": "props_ui/axiao_car_side.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号06-C10/axiao_car_side.png",
+      "kind": "image",
+      "chapter": "C10",
+      "scene": "上海滨江·路边停车",
+      "pixel_size": [
+        175,
+        54
+      ],
+      "frame_count": 1,
+      "trigger_timing": "上海驾驶/停车时按车辆关系显示。",
+      "sequence_order": 2,
+      "role": "vehicle_prop",
+      "creator_or_source": "GPT/D3",
+      "note": "透明侧视车图；不推断车主差异。",
+      "bytes": 13313,
+      "sha256": "dfb551571164ab402e53e2d7f5ba41cbce238e02df4cf794a50bd2c130ed453a"
+    },
+    {
+      "file": "scenes/bg_sh_street.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号07-A8/bg_sh_street.png",
+      "kind": "image",
+      "chapter": "A8",
+      "scene": "上海滨江·街边步行",
+      "pixel_size": [
+        540,
+        1200
+      ],
+      "frame_count": 1,
+      "trigger_timing": "进入上海滨江步行段时显示。",
+      "sequence_order": 1,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "540×1200；无人物、无车辆。",
+      "bytes": 1573050,
+      "sha256": "32aea3e2c2356b7c618cca1f1fa9175e4bc460c2f409d7068e0f2386e2bc5f66"
+    },
+    {
+      "file": "scenes/onsen_sunset_candidate.png",
+      "source_file": "godot/hongyuan/assets/_inbox/补交-A5温泉/onsen_sunset_candidate.png",
+      "kind": "image",
+      "chapter": "A5",
+      "scene": "静冈·浦岛海边温泉",
+      "pixel_size": [
+        841,
+        1870
+      ],
+      "frame_count": 1,
+      "trigger_timing": "按剧情时段择一显示；三张是同构图的时段版本，不连续播放。",
+      "sequence_order": 1,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "独立温泉池与深色天然岩岸分开；海浪拍岸；无护栏。",
+      "bytes": 2399060,
+      "sha256": "cbb7f1c0f22c4ff23ffabdef78317130a50d9f49765c349952b0af428fbdee45"
+    },
+    {
+      "file": "scenes/onsen_dusk_candidate.png",
+      "source_file": "godot/hongyuan/assets/_inbox/补交-A5温泉/onsen_dusk_candidate.png",
+      "kind": "image",
+      "chapter": "A5",
+      "scene": "静冈·浦岛海边温泉",
+      "pixel_size": [
+        841,
+        1870
+      ],
+      "frame_count": 1,
+      "trigger_timing": "按剧情时段择一显示；三张是同构图的时段版本，不连续播放。",
+      "sequence_order": 2,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "独立温泉池与深色天然岩岸分开；海浪拍岸；无护栏。",
+      "bytes": 2385490,
+      "sha256": "7ccfb4c88a326356790e3a3848ff7ceb691c50ce5f98c78130e45cb6aca52a3a"
+    },
+    {
+      "file": "scenes/onsen_night_candidate.png",
+      "source_file": "godot/hongyuan/assets/_inbox/补交-A5温泉/onsen_night_candidate.png",
+      "kind": "image",
+      "chapter": "A5",
+      "scene": "静冈·浦岛海边温泉",
+      "pixel_size": [
+        841,
+        1870
+      ],
+      "frame_count": 1,
+      "trigger_timing": "按剧情时段择一显示；三张是同构图的时段版本，不连续播放。",
+      "sequence_order": 3,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "独立温泉池与深色天然岩岸分开；海浪拍岸；无护栏。",
+      "bytes": 2450269,
+      "sha256": "cba9c2783f65a9b2e6d480e8d00107644c1b982b794c371b90b45cb20e82d092"
+    },
+    {
+      "file": "transitions/disney_toys_photo.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号08-A9/disney_toys_photo.png",
+      "kind": "image",
+      "chapter": "A9",
+      "scene": "乐园回忆·拍立得·玩具区",
+      "pixel_size": [
+        520,
+        426
+      ],
+      "frame_count": 1,
+      "trigger_timing": "乐园游玩完成后，按玩具区→花园→原创城堡展示。",
+      "sequence_order": 1,
+      "role": "memory_transition",
+      "creator_or_source": "GPT/D3",
+      "note": "照片成片；主角沿用项目原图。",
+      "bytes": 322752,
+      "sha256": "b1b217015da9f1fddfd725d4523329c3028f261b958a5ce8b5d2ff930d261ed3"
+    },
+    {
+      "file": "transitions/disney_garden_photo.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号08-A9/disney_garden_photo.png",
+      "kind": "image",
+      "chapter": "A9",
+      "scene": "乐园回忆·拍立得·花园",
+      "pixel_size": [
+        520,
+        426
+      ],
+      "frame_count": 1,
+      "trigger_timing": "乐园游玩完成后，按玩具区→花园→原创城堡展示。",
+      "sequence_order": 2,
+      "role": "memory_transition",
+      "creator_or_source": "GPT/D3",
+      "note": "照片成片；主角沿用项目原图。",
+      "bytes": 388606,
+      "sha256": "f8727f7be1e40712d0aaf459756bd9fc00a6cba8bc1181b0c362c8eacbead3af"
+    },
+    {
+      "file": "transitions/disney_castle_photo.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号08-A9/disney_castle_photo.png",
+      "kind": "image",
+      "chapter": "A9",
+      "scene": "乐园回忆·拍立得·原创城堡",
+      "pixel_size": [
+        520,
+        426
+      ],
+      "frame_count": 1,
+      "trigger_timing": "乐园游玩完成后，按玩具区→花园→原创城堡展示。",
+      "sequence_order": 3,
+      "role": "memory_transition",
+      "creator_or_source": "GPT/D3",
+      "note": "照片成片；主角沿用项目原图。",
+      "bytes": 378978,
+      "sha256": "71402fca8a90e7575400de35c5d9db131efc02ae002454c1b5c42ef9ad3efdad"
+    },
+    {
+      "file": "characters/ayu_wedding_idle.png",
+      "source_file": "godot/hongyuan/assets/_inbox/序号10-B4/ayu_wedding_idle.png",
+      "kind": "image",
+      "chapter": "B4",
+      "scene": "婚宴终章·旗袍阿鱼",
+      "pixel_size": [
+        128,
+        208
+      ],
+      "frame_count": 1,
+      "trigger_timing": "终章需要展示阿鱼旗袍待机形象时使用。",
+      "sequence_order": 1,
+      "role": "character_sprite",
+      "creator_or_source": "GPT/D3",
+      "note": "单帧 128×208；黑长直齐刘海。",
+      "bytes": 18602,
+      "sha256": "f2bd843c9a8968c58e69b050629eecb57840587c7a5eef514a63712f67121223"
+    },
+    {
+      "file": "scenes/bg_cbd_birthday_desk_r1.png",
+      "source_file": "godot/hongyuan/assets/bg_cbd_birthday_desk_r1.png",
+      "kind": "image",
+      "chapter": "A3",
+      "scene": "CBD办公室·桌面近景",
+      "pixel_size": [
+        540,
+        960
+      ],
+      "frame_count": 1,
+      "trigger_timing": "办公室/生日桌面对话进入特写时显示。",
+      "sequence_order": 1,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "K21 D3 设计说明：540×960，无人物、无文字。",
+      "bytes": 589209,
+      "sha256": "c4b95c7f1f4ba9ee87cc1b31cde54d4fa501c20daf24d4af26427d90a7f0fd46"
+    },
+    {
+      "file": "scenes/bg_shizuoka_pier_r1.png",
+      "source_file": "godot/hongyuan/assets/bg_shizuoka_pier_r1.png",
+      "kind": "image",
+      "chapter": "A4",
+      "scene": "静冈码头",
+      "pixel_size": [
+        540,
+        960
+      ],
+      "frame_count": 1,
+      "trigger_timing": "进入垂钓段时显示。",
+      "sequence_order": 1,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "K22 D3 设计说明：540×960，无字、无烘焙角色。",
+      "bytes": 975646,
+      "sha256": "2b81f0c9aaea110712f549a555db8e73c310db65922d9acacc0ba94ea245a28e"
+    },
+    {
+      "file": "scenes/bg_shizuoka_boat_cabin_r1.png",
+      "source_file": "godot/hongyuan/assets/bg_shizuoka_boat_cabin_r1.png",
+      "kind": "image",
+      "chapter": "A4",
+      "scene": "静冈·乌龟船船舱",
+      "pixel_size": [
+        540,
+        960
+      ],
+      "frame_count": 1,
+      "trigger_timing": "登船后进入船舱时显示。",
+      "sequence_order": 2,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "K22 D3 设计说明：540×960，无字、无烘焙角色。",
+      "bytes": 875151,
+      "sha256": "81c390003c0ee00e555d2df3c2849a0f27ae8f20fd76dcca690e2a72e5e75b1e"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/review_base.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/review_base.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        1536,
+        1024
+      ],
+      "frame_count": 1,
+      "trigger_timing": "完成请柬后进入婚宴流程时先显示迎宾院。",
+      "sequence_order": 1,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "K28 D3 无字底图，属于请柬完成后的场景。",
+      "bytes": 58341,
+      "sha256": "d64cf6cda5b6d7f9431fe123e590c908f5a7e915d9625a43400cc966a578535d"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/review_base.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/review_base.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        1536,
+        1024
+      ],
+      "frame_count": 1,
+      "trigger_timing": "迎宾院流程后转入喷泉广场。",
+      "sequence_order": 2,
+      "role": "scene_background",
+      "creator_or_source": "GPT/D3",
+      "note": "K30 D3 无字底图，属于请柬完成后的场景。",
+      "bytes": 71790,
+      "sha256": "2e909d5a20f34993b1b5d49c49bf95690189c7c1583df90c90120af200721599"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/album_stand.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/album_stand.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        36,
+        76
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 403,
+      "sha256": "4f252a56595571f58bd24a03d56453e5c3590839526f2c66ee213164653e6d87"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/blessing_board.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/blessing_board.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        52,
+        86
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 426,
+      "sha256": "23e5bd16b9a462165e38085a0432f90a26589e60c5eee7c6a0f5ceb120148f4f"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/camera_e.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/camera_e.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        28,
+        80
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 338,
+      "sha256": "4ebbeccfb2895db4c9bcb55fc6eb1ab1c4ad99f4b8db8077bbb9c515afb95658"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/camera_w.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/camera_w.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        28,
+        80
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 338,
+      "sha256": "4ebbeccfb2895db4c9bcb55fc6eb1ab1c4ad99f4b8db8077bbb9c515afb95658"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/flower_box_e.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/flower_box_e.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        122,
+        48
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 892,
+      "sha256": "80b12e8225af823d42226aac70cd4ee52b5547d73e156088988a14686dbfb981"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/flower_box_w.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/flower_box_w.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        122,
+        48
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 901,
+      "sha256": "811456f943329596d3cf041f40a5566cc5727e27288b982dd4f882ee4ca100f5"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/flower_wall.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/flower_wall.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        218,
+        144
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 6616,
+      "sha256": "5a295ad3856ef6ab253d361495aa1f2c9866515a798c7b23b6aa281926cc66b7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/gate_post_e.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/gate_post_e.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        42,
+        216
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 485,
+      "sha256": "776cebb01ec7c9d83baa3cc3382df7212ea237742730e4663547bd59e77f7ac8"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/gate_post_w.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/gate_post_w.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        42,
+        216
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 485,
+      "sha256": "776cebb01ec7c9d83baa3cc3382df7212ea237742730e4663547bd59e77f7ac8"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/gate_roof.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/gate_roof.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        346,
+        42
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 486,
+      "sha256": "11af0a1d9591ee16c8a53050413d9528a0e1063c28b4bdd303469139b7fae23a"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/lantern_e1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/lantern_e1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        31,
+        67
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 2339,
+      "sha256": "016f08f56fb4b57869ee03511732e8098815e87a788f6f819a087d0ba7ec9ac7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/lantern_e2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/lantern_e2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        31,
+        67
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 2339,
+      "sha256": "016f08f56fb4b57869ee03511732e8098815e87a788f6f819a087d0ba7ec9ac7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/lantern_e3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/lantern_e3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        31,
+        67
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 2339,
+      "sha256": "016f08f56fb4b57869ee03511732e8098815e87a788f6f819a087d0ba7ec9ac7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/lantern_w1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/lantern_w1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        31,
+        67
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 2339,
+      "sha256": "016f08f56fb4b57869ee03511732e8098815e87a788f6f819a087d0ba7ec9ac7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/lantern_w2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/lantern_w2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        31,
+        67
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 2339,
+      "sha256": "016f08f56fb4b57869ee03511732e8098815e87a788f6f819a087d0ba7ec9ac7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/lantern_w3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/lantern_w3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        31,
+        67
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 2339,
+      "sha256": "016f08f56fb4b57869ee03511732e8098815e87a788f6f819a087d0ba7ec9ac7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/parking_closure.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/parking_closure.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        26,
+        106
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 528,
+      "sha256": "faab2604b8b3e225861902fd5f39af38ba3aabad0decb2f0b0ee71bea7bdce78"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/print_desk.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/print_desk.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        40,
+        56
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 270,
+      "sha256": "37f4e462124ee792211b54d4e8e8db0f66b046064833f785d02ba7d7d24ef312"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/sign_table.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/sign_table.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        114,
+        58
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 467,
+      "sha256": "8aa530afa856453c967d6d22f5212ffb89f7fff1809ba19ceddc022cb46636f7"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/stool_1a.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/stool_1a.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        20,
+        34
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 215,
+      "sha256": "ba615e1aeddcbdccffd8a2dc18a1c4bdccbdf5523ad3642c426fc5de9e664cf4"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/stool_2a.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/stool_2a.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        20,
+        34
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 215,
+      "sha256": "ba615e1aeddcbdccffd8a2dc18a1c4bdccbdf5523ad3642c426fc5de9e664cf4"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/stool_2b.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/stool_2b.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        20,
+        34
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 215,
+      "sha256": "ba615e1aeddcbdccffd8a2dc18a1c4bdccbdf5523ad3642c426fc5de9e664cf4"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/stool_3a.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/stool_3a.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        20,
+        34
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 221,
+      "sha256": "f691d491e2eeec37df9c2f9916aac03c97a1052db14fc6b64fc1620ac4a91ca6"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/stool_3b.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/stool_3b.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        20,
+        34
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 221,
+      "sha256": "f691d491e2eeec37df9c2f9916aac03c97a1052db14fc6b64fc1620ac4a91ca6"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/tea_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/tea_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        46,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 453,
+      "sha256": "86de219cf4b2be29ad136a9b8a43a2e771001f894fdad07c77fc581ca305b2fe"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/tea_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/tea_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        46,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 453,
+      "sha256": "86de219cf4b2be29ad136a9b8a43a2e771001f894fdad07c77fc581ca305b2fe"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/tea_3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/tea_3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        46,
+        64
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 464,
+      "sha256": "f4327696cc4f13808cdd279bf3046be597cb151a5671f76e1efc0782ab113905"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/tree_ne.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/tree_ne.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        113,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 11346,
+      "sha256": "b0c0e5e10e91c306debcd0654c6b1dfd57a1a7a0abf021cbfd6cb393dffea8e2"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/tree_nw.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/tree_nw.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        140,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 16969,
+      "sha256": "df296a47cd627d5d270fa48795f4de02b63530de16f415563790c736a1e840b3"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/tree_se.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/tree_se.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        113,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 11176,
+      "sha256": "4483844e0c293786ef724bee11fbf1ee4219074356b2c9e831578ecfa98ac999"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/tree_sw.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/tree_sw.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        140,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 18219,
+      "sha256": "cec9898879ab75f68060f19da01ceafb441448dbe9778c10cbdb21db1652282a"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/wall_s_e.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/wall_s_e.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        652,
+        74
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1789,
+      "sha256": "a0f16834356df10ea536b6081f047f6db7caab74114ce5b4966378ea40a0a4ba"
+    },
+    {
+      "file": "scenes/wedding_r1/entrance/layers/wall_s_w.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/layers/wall_s_w.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        654,
+        74
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1861,
+      "sha256": "864b6e8ad2814052194b6ec2432be05ebc9ba2464f8861f8dd4324c4059454f8"
+    },
+    {
+      "file": "designs/wedding_r1/entrance/room.json",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/entrance/room.json",
+      "kind": "design_document",
+      "chapter": "婚宴终章",
+      "scene": "婚宴房间布局",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "场景加载/审看时作为美术与玩法布局参考。",
+      "sequence_order": 1,
+      "role": "layout_design",
+      "creator_or_source": "GPT/D3",
+      "note": "原始房间或放置配置；不修改游戏代码。",
+      "bytes": 7780,
+      "sha256": "0e1a650607136b17cb3dc74c895daff9671d5dbaf68681a1525d22197a8567cf"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/bench_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/bench_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        74,
+        34
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 256,
+      "sha256": "d43249bcb708a2dcfba36c75cf2319a23ca7849da5ca61d36ad8c0e16af44193"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/bench_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/bench_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        74,
+        34
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 256,
+      "sha256": "d43249bcb708a2dcfba36c75cf2319a23ca7849da5ca61d36ad8c0e16af44193"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/flowerbed_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/flowerbed_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        114,
+        58
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 998,
+      "sha256": "a03c5aeecc56a7b876fb174d53823245390c5b6570d8f96d20280e812730e0d4"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/flowerbed_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/flowerbed_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        114,
+        58
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1006,
+      "sha256": "b752af6cb09cb6621859f94ced7a89194e9aa0a6b1c206d9a40ab24e0d57477e"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/flowerbed_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/flowerbed_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        114,
+        58
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 957,
+      "sha256": "8199b64519652e555704af8cb74b4ccfe34bf6133a7b834883022beb5b026379"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/flowerbed_3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/flowerbed_3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        114,
+        58
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 996,
+      "sha256": "149207ae2d2026c7277f5d51002cd4d9b11b485bc54e2d872807e934b074b80b"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/fountain_assembly.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/fountain_assembly.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        302,
+        226
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 3180,
+      "sha256": "0e958deb76e782e0c53b765042eaa181696d0ebc75cf731e6290599ca9961915"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_closure_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_closure_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        74,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 580,
+      "sha256": "d49037c5430cc09798759d20780885e92fe038eeeefb3fa01498298736109726"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_closure_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_closure_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        74,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 596,
+      "sha256": "7bfd69178bfd4857af18a45025759755ea9637501f3738e3e6788a5a5b8bc082"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_closure_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_closure_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        74,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 580,
+      "sha256": "9d78e782fc005599b2d6bb2475a0e57bf2f941bb6a09665d791e7fd7e08f3bff"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_closure_3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_closure_3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        110
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 425,
+      "sha256": "2873cbaf7cb862f65f0043a45e146de0b6262ac8a2d82ef35900db5705bb5498"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_closure_4.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_closure_4.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        110
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 393,
+      "sha256": "393b06d5c28ecaa699bd19aec8be7c4f7926d7db5c42a1d3febfa574d64a86f1"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_e_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_e_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        186
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 575,
+      "sha256": "bc1662f924170eb61e177b16c2f34bff9b7ae9a4d09314143cec287902edddd1"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_e_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_e_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        244
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 728,
+      "sha256": "7723969622059afd74af32f02b7e2fbcaa7163f5c35f21d060b429bd79cbd917"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_e_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_e_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        172
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 549,
+      "sha256": "f6dc5f3ad4f80574c548d2fd66d8aa7270fc4696d114002e15846e4c93585dd1"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_n_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_n_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        588,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1966,
+      "sha256": "e6c62084f6b6f6376ee21bfb5120740a0d88d2c7f8ff975bfe608ef9bf69c0de"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_n_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_n_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        588,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1900,
+      "sha256": "1c90e571a0c56eeba8d14d8456f0504e3f884fd51745f3ba9d6192cb87dd9889"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_s_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_s_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        246,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1243,
+      "sha256": "5b54d8905a874bae5bd893e144b2dd0bcd03537e198905610a0829bf5212d7d7"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_s_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_s_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        278,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1169,
+      "sha256": "d129cc239a4248757d246264347e66e05431549174a998621ddac00818eaebf2"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_s_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_s_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        278,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1313,
+      "sha256": "1fba6b2b490b594dd34edfe1dfeb7976cf22346f1c473a8ed0b683055846fccf"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_s_3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_s_3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        246,
+        52
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 1295,
+      "sha256": "f0f15eeed2b479ea7e535b70264313b40594a6969c6c9d2b4d7c15b37f7afe28"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_w_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_w_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        186
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 538,
+      "sha256": "c8554847651c3cfe7610b624e29bd9e3723db67c8c03d65ea3f2450feff5a7c6"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_w_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_w_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        244
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 718,
+      "sha256": "94eb08bed3882750f5d5ae13d2ea77ccc85b30461be862b770a4be47ca43fd43"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/hedge_w_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/hedge_w_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        16,
+        172
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 494,
+      "sha256": "5c621f6d0f0e31c5818989b0ccd3a75ddef492c2979228b2b9d3b278d452eb78"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/lamp_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/lamp_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        30,
+        158
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 442,
+      "sha256": "478627002b3172207e8ed2179f5406cbea55bfb36a06572b1948869ca4c3d07f"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/lamp_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/lamp_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        30,
+        158
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 442,
+      "sha256": "478627002b3172207e8ed2179f5406cbea55bfb36a06572b1948869ca4c3d07f"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/lamp_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/lamp_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        30,
+        158
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 442,
+      "sha256": "478627002b3172207e8ed2179f5406cbea55bfb36a06572b1948869ca4c3d07f"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/lamp_3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/lamp_3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        30,
+        158
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 442,
+      "sha256": "478627002b3172207e8ed2179f5406cbea55bfb36a06572b1948869ca4c3d07f"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/tree_0.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/tree_0.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        180,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 21747,
+      "sha256": "9a8f990b690d444f35e0e4d07e5d03d998b942c06ad387cbddede08e581b6cd2"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/tree_1.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/tree_1.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        113,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 11346,
+      "sha256": "b0c0e5e10e91c306debcd0654c6b1dfd57a1a7a0abf021cbfd6cb393dffea8e2"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/tree_2.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/tree_2.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        113,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 11176,
+      "sha256": "4483844e0c293786ef724bee11fbf1ee4219074356b2c9e831578ecfa98ac999"
+    },
+    {
+      "file": "scenes/wedding_r1/plaza/layers/tree_3.png",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/layers/tree_3.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        180,
+        264
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入婚宴场景，按房间布置静态显示。",
+      "sequence_order": 1,
+      "role": "scene_layer",
+      "creator_or_source": "GPT/D3",
+      "note": "D3 可编辑场景层；保留源目录结构。",
+      "bytes": 21445,
+      "sha256": "71e73b06b6c9882240f0cc44d04900d29cb69f34633146f59849bb54f94e0a70"
+    },
+    {
+      "file": "designs/wedding_r1/plaza/room.json",
+      "source_file": "godot/hongyuan/assets/w2_review/wedding_r1/plaza/room.json",
+      "kind": "design_document",
+      "chapter": "婚宴终章",
+      "scene": "婚宴房间布局",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "场景加载/审看时作为美术与玩法布局参考。",
+      "sequence_order": 1,
+      "role": "layout_design",
+      "creator_or_source": "GPT/D3",
+      "note": "原始房间或放置配置；不修改游戏代码。",
+      "bytes": 7193,
+      "sha256": "e39cce7b60aa7a5ff34741356274b01e184419f9d7a7bab6034a873d8c0ab510"
+    },
+    {
+      "file": "designs/K02-street-annotation.png",
+      "source_file": "回执/W2工位/D3/K02/street-annotation.png",
+      "kind": "image",
+      "chapter": "A8/C10",
+      "scene": "上海街边步行与上车点",
+      "pixel_size": [
+        588,
+        1242
+      ],
+      "frame_count": 1,
+      "trigger_timing": "靠近车门后显示上车交互；静态设计标注。",
+      "sequence_order": 1,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K02 坐标与互动半径核对。",
+      "bytes": 845854,
+      "sha256": "29743df655de4a8c3bb1598d5777f26f3a7ba84755b177317531e9ad37a61f11"
+    },
+    {
+      "file": "designs/K02-parking-annotation.png",
+      "source_file": "回执/W2工位/D3/K02/parking-annotation.png",
+      "kind": "image",
+      "chapter": "C10",
+      "scene": "东方明珠停车区",
+      "pixel_size": [
+        588,
+        1242
+      ],
+      "frame_count": 1,
+      "trigger_timing": "停车后靠近阿晓触发对话；静态设计标注。",
+      "sequence_order": 2,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K02 坐标与互动半径核对。",
+      "bytes": 1001487,
+      "sha256": "ff96b2fa3795f78390f6a42ce99518772baa79c9499276dd7cdfc9e1e4501595"
+    },
+    {
+      "file": "designs/K22-pier-annotation.png",
+      "source_file": "回执/W2工位/D3/K22/pier-annotation.png",
+      "kind": "image",
+      "chapter": "A4",
+      "scene": "静冈码头",
+      "pixel_size": [
+        588,
+        1110
+      ],
+      "frame_count": 1,
+      "trigger_timing": "进入垂钓互动前核对落点与钓位。",
+      "sequence_order": 1,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K22 码头放置标注。",
+      "bytes": 993874,
+      "sha256": "dd19450d3ff0bd3f32eb37fd3fbc0167cf0d5d1ddf6bb7577255717bbb74819a"
+    },
+    {
+      "file": "designs/K22-boat-annotation.png",
+      "source_file": "回执/W2工位/D3/K22/boat-annotation.png",
+      "kind": "image",
+      "chapter": "A4",
+      "scene": "乌龟船船舱",
+      "pixel_size": [
+        588,
+        1110
+      ],
+      "frame_count": 1,
+      "trigger_timing": "登船后核对走线及座位位置。",
+      "sequence_order": 2,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K22 船舱走线标注。",
+      "bytes": 892224,
+      "sha256": "b32c3b951206b29b4bd773fed6bf184bfd13ebdca930816cf3ee21cca402f679"
+    },
+    {
+      "file": "designs/K28-welcome-court-annotation.png",
+      "source_file": "回执/W2工位/D3/K28-annotation.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院",
+      "pixel_size": [
+        1584,
+        1268
+      ],
+      "frame_count": 1,
+      "trigger_timing": "请柬完成后进入；核对签到、合影、休息点和通道。",
+      "sequence_order": 1,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K28 婚宴布局标注。",
+      "bytes": 252166,
+      "sha256": "2c175b26eec3eada967bdc950521fc1471f12f4622a3e10b212a3eb7a0dff73c"
+    },
+    {
+      "file": "designs/K30-fountain-plaza-annotation.png",
+      "source_file": "回执/W2工位/D3/K30-annotation.png",
+      "kind": "image",
+      "chapter": "婚宴终章",
+      "scene": "喷泉广场",
+      "pixel_size": [
+        1584,
+        1268
+      ],
+      "frame_count": 1,
+      "trigger_timing": "迎宾院后转入；核对出口、遮挡与可走通路。",
+      "sequence_order": 2,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K30 婚宴布局标注。",
+      "bytes": 239028,
+      "sha256": "76dc168d75dad34aa8c708c8ab67fb01c959d6836f99a586def14118c96a3a6c"
+    },
+    {
+      "file": "transitions/上海群聊-R1.png",
+      "source_file": "回执/W2工位/D3/K39/上海群聊-R1.png",
+      "kind": "image",
+      "chapter": "A2",
+      "scene": "上海群聊屏",
+      "pixel_size": [
+        360,
+        640
+      ],
+      "frame_count": 1,
+      "trigger_timing": "停车后的群聊事件触发时显示；静态屏幕样稿。",
+      "sequence_order": 1,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K39 D3 群聊过渡屏样稿。",
+      "bytes": 74730,
+      "sha256": "0a9785e6ea35fbabb923d98ab0f9add0867915cda2c1b82083ffa8a8a4ac5508"
+    },
+    {
+      "file": "transitions/共用手机-来电-R1.png",
+      "source_file": "回执/W2工位/D3/K39/共用手机-来电-R1.png",
+      "kind": "image",
+      "chapter": "C6/C9",
+      "scene": "共用手机来电屏",
+      "pixel_size": [
+        360,
+        640
+      ],
+      "frame_count": 1,
+      "trigger_timing": "来电触发时显示；静态屏幕样稿。",
+      "sequence_order": 2,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3",
+      "note": "K39 D3 来电过渡屏样稿。",
+      "bytes": 44764,
+      "sha256": "5db0f77b5d16866079ffff2a6bad99815588a7915d598c2ee1f5371cf58993ce"
+    },
+    {
+      "file": "designs/K02-上海街边与停车区坐标.md",
+      "source_file": "回执/W2工位/D3/K02/坐标.md",
+      "kind": "design_document",
+      "chapter": "A8/C10",
+      "scene": "上海街边与东方明珠停车区",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 1429,
+      "sha256": "69e41fc53f9a03f75a31c30dfaa5219b77d79f9ddc0e945ae275cc33e5ace061"
+    },
+    {
+      "file": "designs/K22-静冈码头与乌龟船内设计.md",
+      "source_file": "回执/W2工位/D3/K22/接图.md",
+      "kind": "design_document",
+      "chapter": "A4",
+      "scene": "静冈码头、船舱与领证衔接",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 1563,
+      "sha256": "3097347a9f9c6cb4bd185ae558a4ea22ed08bbd0199507635125660f7d83beff"
+    },
+    {
+      "file": "designs/K22-placement.json",
+      "source_file": "回执/W2工位/D3/K22/placement.json",
+      "kind": "design_document",
+      "chapter": "A4",
+      "scene": "静冈码头与船舱放置设计",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 848,
+      "sha256": "34ce2eb5beadff11d545a0a9b831a2db6f161c01f95cbd7c5a422a9f08168ed3"
+    },
+    {
+      "file": "designs/K39-群聊与共用手机屏幕设计.md",
+      "source_file": "回执/W2工位/D3/K39/首批接图.md",
+      "kind": "design_document",
+      "chapter": "A2/C6/C9",
+      "scene": "上海群聊、来电转场与 UI 规范",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 2132,
+      "sha256": "69bdad27765b86de9497419d336d4f67092bc6eac9274eb501f4ac63c17e7079"
+    },
+    {
+      "file": "designs/K39-逐屏素材与流程盘点.md",
+      "source_file": "回执/W2工位/D3/K39/逐屏盘点.md",
+      "kind": "design_document",
+      "chapter": "爱情篇多章",
+      "scene": "多章节屏幕与素材流程清单",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 3074,
+      "sha256": "dadba645f3c6fdb1de94e8544d78c6e7f8553e686cc544714a5a2fa0c2cbc93a"
+    },
+    {
+      "file": "designs/K21-CBD办公室桌面画面设计.md",
+      "source_file": "回执/W2工位/D3/K21-办公室桌面-R1.md",
+      "kind": "design_document",
+      "chapter": "A3",
+      "scene": "CBD 办公室桌面对话",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 699,
+      "sha256": "add00715c9f90f9c1c471525ff50342da9236e29cad02e2174316337bdaf7481"
+    },
+    {
+      "file": "designs/K28-K30-婚宴场景交付设计.md",
+      "source_file": "回执/W2工位/D3/婚宴R1-真包评审接图.md",
+      "kind": "design_document",
+      "chapter": "婚宴终章",
+      "scene": "迎宾院与喷泉广场交接",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 2183,
+      "sha256": "7e86e5131397a839af128fd81be1dbeee6f103768fa0c3548a308605340b36df"
+    },
+    {
+      "file": "designs/K28-K30-迎宾院与喷泉广场布局.md",
+      "source_file": "回执/W2工位/D3/迎宾院与广场-R1.md",
+      "kind": "design_document",
+      "chapter": "婚宴终章",
+      "scene": "请柬完成后的婚宴场景布局",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "开发与审看阶段参考；具体时机见对应文档和场景记录。",
+      "sequence_order": 0,
+      "role": "gameplay_design_document",
+      "creator_or_source": "GPT/D3 design",
+      "note": "D3 工作区原始玩法/画面设计文档。",
+      "bytes": 1337,
+      "sha256": "e80d6c5f1568d6919c8dd87084c5a87152c76d683753caedf1a38dbfcf05b2bc"
+    },
+    {
+      "file": "designs/GPT-爱情篇玩法与画面设计摘录.md",
+      "source_file": "本次根据 D3 接图说明与 K39/K02/K22/K28/K30 设计交接整理",
+      "kind": "design_document",
+      "chapter": "爱情篇多章",
+      "scene": "跨章节过渡与婚宴终章",
+      "pixel_size": "non-image",
+      "frame_count": 0,
+      "trigger_timing": "阶段设计摘要；详见本文和逐文件记录。",
+      "sequence_order": 0,
+      "role": "gameplay_visual_design",
+      "creator_or_source": "GPT/D3 design",
+      "note": "明确请柬完成后迎宾院→喷泉广场顺序。",
+      "bytes": 1679,
+      "sha256": "c7866cc348f9f1e5e20e7aa8f9667bb7405a197184b184b421f5ebe498f908b0"
+    }
+  ],
+  "file_count_including_manifest": 112
+}
