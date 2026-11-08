@@ -403,7 +403,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -413,11 +413,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -495,12 +495,12 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           }
         ],
         "beats": [
@@ -520,7 +520,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -530,11 +530,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -612,23 +612,23 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8,
+            "scale": 0.33,
             "moveFrom": [
-              260,
+              250,
               300
             ],
             "moveTime": 2.2
@@ -662,7 +662,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -672,11 +672,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -754,21 +754,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -807,7 +807,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -817,11 +817,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -899,21 +899,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -942,7 +942,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -952,11 +952,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1034,21 +1034,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -1077,7 +1077,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -1087,11 +1087,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1169,21 +1169,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -1212,7 +1212,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -1222,11 +1222,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1304,21 +1304,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -1347,7 +1347,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -1357,11 +1357,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1439,21 +1439,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -1482,7 +1482,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -1492,11 +1492,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1574,21 +1574,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -1617,7 +1617,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -1627,11 +1627,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1709,21 +1709,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -1751,7 +1751,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -1761,11 +1761,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1843,21 +1843,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",
@@ -1885,7 +1885,7 @@
       "background": "scene",
       "visibleActors": [],
       "scene": {
-        "bg": "round1/scenes/shanghai_parking.png",
+        "bg": "round1/rework1107/shanghai_parking.png",
         "scaleProfile": "shanghai_parking",
         "personHeight": 105,
         "start": [
@@ -1895,11 +1895,11 @@
         "walkArea": [
           [
             20,
-            480
+            430
           ],
           [
             340,
-            480
+            430
           ],
           [
             340,
@@ -1977,21 +1977,21 @@
         "actors": [
           {
             "id": "g42",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
-              120,
-              445
+              125,
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao_car",
-            "tex": "w2/shanghai/g42_top.png",
+            "tex": "round1/vehicles/g42_rear_r2.png",
             "at": [
               250,
-              445
+              402
             ],
-            "scale": 1.8
+            "scale": 0.33
           },
           {
             "id": "axiao",

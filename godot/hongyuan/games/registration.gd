@@ -6,6 +6,7 @@ const BG := "round1/scenes/registry.png"
 const AYU := "ayu_idle.png"
 const TORETTO := "w2/common/toretto_neutral_r2.png"
 const RED := Color("#a73339")
+const PHOTO := "w2/shanghai/wedding_photo_smile.png"
 var r
 var phase := "enter" # enter → stamp → handover → photo → flash → memory → done
 var t := 0.0
@@ -87,6 +88,9 @@ func draw(ci) -> void:
 	var photo_pose := phase in ["photo","flash","memory","done"]
 	var y := lerpf(ci.view_rect.end.y+100,365,progress)
 	if photo_pose: y = lerpf(365,470,smoothstep(0,1,clampf(t/0.6,0,1))) if phase == "photo" else 470
+	# 合影：GPT 画好的整张合影（两人并肩、笑、手拿红本），淡入后不再叠旧人物
+	var photo_art: Texture2D = ci.texture(PHOTO) if photo_pose else null
+	var photo_k := clampf(t / 0.6, 0, 1) if phase == "photo" else 1.0
 	var left_x := 147.0
 	var right_x := 215.0
 	if phase in ["stamp","handover"]: left_x = 145; right_x = 218
@@ -97,8 +101,14 @@ func draw(ci) -> void:
 		left_x = lerpf(145,161,settle);right_x = lerpf(218,201,settle)
 	elif phase in ["flash","memory","done"]:
 		left_x = 161; right_x = 201
-	_draw_person(ci,Vector2(left_x,y),false,entering,t)
-	_draw_person(ci,Vector2(right_x,y+2),true,entering,t)
+	if not photo_art or photo_k < 1.0:
+		_draw_person(ci,Vector2(left_x,y),false,entering,t)
+		_draw_person(ci,Vector2(right_x,y+2),true,entering,t)
+	if photo_art:
+		var area: Rect2 = ci.view_rect
+		var sc := maxf(area.size.x / photo_art.get_width(), area.size.y / photo_art.get_height())
+		var full := Rect2(area.get_center() - photo_art.get_size() * sc * 0.5, photo_art.get_size() * sc)
+		ci.draw_texture_rect_region(photo_art, area, Rect2((area.position - full.position) / sc, area.size / sc), Color(1, 1, 1, photo_k))
 	if phase in ["stamp","handover"]:
 		_draw_paper(ci)
 	if phase == "stamp":
@@ -120,15 +130,17 @@ func draw(ci) -> void:
 		if handed: ci.pill(_next_rect(),"收好证件，合张影",16,ci.RED,ci.PAPER)
 	elif photo_pose:
 		# 合影：两人靠拢，红本举在胸前（不是飘在胯部）
-		_certificate(ci,Vector2(left_x+14,y-70),-0.08)
-		_certificate(ci,Vector2(right_x-14,y-72),0.08)
+		if not photo_art:
+			_certificate(ci,Vector2(left_x+14,y-70),-0.08)
+			_certificate(ci,Vector2(right_x-14,y-72),0.08)
 		if phase == "photo":
 			_camera_marks(ci)
 			ci.pill(_next_rect(),"拍下这一刻",17,ci.RED,ci.PAPER)
 		elif phase == "flash":
 			ci.draw_rect(ci.view_rect,Color(1,1,1,maxf(0,1-t/0.35)))
-	ci.text_at(Vector2(95,92),"上海 · 静安",17,ci.PAPER,184)
-	ci.text_at(Vector2(95,115),"婚姻登记",15,ci.PAPER,184)
+	if not photo_art:
+		ci.text_at(Vector2(95,92),"上海 · 静安",17,ci.PAPER,184)
+		ci.text_at(Vector2(95,115),"婚姻登记",15,ci.PAPER,184)
 	if phase == "memory":
 		StoryCaption.draw_caption(ci,_memory_text(),"narrator",int(reveal),false)
 

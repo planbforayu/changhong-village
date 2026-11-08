@@ -14,7 +14,7 @@
       "scene": {
         "personHeight": 120,
         "badge": "G-02",
-        "bg": "round1/scenes/wanning_beach.png",
+        "bg": "round1/rework1107/wanning_stall.png",
         "sky": "#86cfe8",
         "ground": "#e8d6a8",
         "horizon": 250,
@@ -32,35 +32,35 @@
         "walkArea": [
           [
             20,
-            400
+            418
           ],
           [
             340,
-            400
+            418
           ],
           [
             340,
-            560
+            610
           ],
           [
             20,
-            560
+            610
           ]
         ],
         "start": [
           85,
-          565
+          590
         ],
         "hotspots": [
           {
             "id": "stall",
             "at": [
-              176,
-              540
+              180,
+              430
             ],
             "snap": [
-              176,
-              540
+              180,
+              432
             ],
             "face": 1,
             "icon": "pick"

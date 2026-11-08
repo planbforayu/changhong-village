@@ -14,23 +14,23 @@
       "scene": {
         "personHeight": 128,
         "badge": "G-02",
-        "bg": "round1/scenes/harbor.png",
+        "bg": "round1/rework1107/shizuoka_pier.png",
         "walkArea": [
           [
-            20,
-            485
+            125,
+            245
           ],
           [
-            340,
-            485
+            235,
+            245
           ],
           [
-            340,
-            610
+            332,
+            604
           ],
           [
-            20,
-            610
+            28,
+            604
           ]
         ],
         "start": [
@@ -41,12 +41,12 @@
           {
             "id": "spot",
             "at": [
-              225,
-              490
+              180,
+              300
             ],
             "snap": [
-              225,
-              490
+              180,
+              300
             ],
             "face": 1,
             "icon": "rod"
@@ -54,8 +54,8 @@
           {
             "id": "boat",
             "at": [
-              316,
-              564
+              290,
+              585
             ],
             "icon": "exit"
           }
@@ -92,40 +92,40 @@
             "go": "boat"
           },
           {
-            "bg": "round1/people/turtle_boarding.png",
+            "bg": "round1/rework1107/turtle_boarding.png",
             "scaleProfile": "boarding",
             "walkArea": [
               [
-                40,
+                20,
                 610
               ],
               [
-                320,
+                340,
                 610
               ],
               [
-                320,
-                500
+                340,
+                432
               ],
               [
-                150,
-                465
+                198,
+                424
               ],
               [
-                240,
-                320
+                250,
+                242
               ],
               [
-                200,
-                300
+                206,
+                242
               ],
               [
-                70,
-                475
+                78,
+                420
               ],
               [
-                40,
-                500
+                20,
+                430
               ]
             ],
             "start": [
@@ -195,20 +195,20 @@
               {
                 "id": "gangway_foot",
                 "at": [
-                  108,
-                  492
+                  140,
+                  445
                 ],
                 "icon": "exit"
               },
               {
                 "id": "gangway",
                 "at": [
-                  215,
-                  335
+                  228,
+                  258
                 ],
                 "snap": [
-                  215,
-                  335
+                  228,
+                  258
                 ],
                 "icon": "exit"
               }

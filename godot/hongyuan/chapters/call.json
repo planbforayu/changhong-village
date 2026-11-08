@@ -339,6 +339,13 @@
             "narrate": "A3-2t"
           },
           {
+            "bg": "w2/call/ayu_toretto_holdhands.png",
+            "fill": "#2a1414",
+            "badge": "",
+            "hideAyu": true,
+            "walkers": []
+          },
+          {
             "wait": 2.2
           },
           {

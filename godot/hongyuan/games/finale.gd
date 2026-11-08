@@ -13,6 +13,8 @@ var open_progress := 0.0
 var t := 0.0
 var edit: LineEdit
 var error := false
+const SEND_TIME := 3.3   # 寄信过场：书桌窗口飞出 → 飞过江岸 → 落到收件人桌上
+const LETTER := "w2/finale/letter_closeup.png"
 var error_key := "A7-E1"
 const RESERVED_NAMES := ["阿鱼", "toretto", "新郎", "新娘", "主角"]
 var look := -1
@@ -47,7 +49,7 @@ func process(dt: float) -> bool:
 		"stamped":
 			if t >= 1.2: _set_phase("ready_send")
 		"send":
-			if t >= 1.8: _set_phase("receive")
+			if t >= SEND_TIME: _set_phase("receive")
 		"opening":
 			if t >= 0.8: _set_phase("read_received")
 	return phase == "done"
@@ -211,7 +213,15 @@ func _guest(i: int) -> Texture2D:
 func draw(ci) -> void:
 	var desk = preload("res://hongyuan/ui/desk_art.gd")
 	if phase == "welcome":
-		desk.cover(ci, ci.texture("round1/common/welcome_bg.png"), r.view_rect)
+		# 新欢迎图把两人画在门里，整张铺满，不再叠旧人物
+		desk.cover(ci, ci.texture("round1/common/welcome_entrance_r2.png"), r.view_rect)
+	elif phase == "send":
+		_send_frames(ci)
+		return
+	elif phase in ["receive", "opening", "read_received"]:
+		desk.cover(ci, ci.texture("w2/finale/recipient_desk.png"), r.view_rect)
+	elif phase in ["write", "written"]:
+		desk.cover(ci, ci.texture(LETTER), r.view_rect)
 	else:
 		desk.draw(ci, r.materials, r.view_rect, "", t, false, phase in ["write", "written"])
 	match phase:
@@ -274,13 +284,7 @@ func draw(ci) -> void:
 				if guest: ci.draw_texture_rect_region(guest, Rect2(rr.position + Vector2(1, 0), Vector2(64, 84)), Rect2(0, 0, 64, 84))
 			if look >= 0: ci.pill(_ok_rect(), ci.t_("G-19"), 18, ci.RED, ci.PAPER)
 		"welcome":
-			var welcome: Texture2D = ci.texture("round1/common/welcome.png")
-			if welcome:
-				ci.draw_texture_rect(welcome, Rect2(42, 166, 276, 386.4), false)
-			else:
-				ci.sprite("ayu_stand.png", Vector2(135, 490))
-				ci.sprite("w2/common/toretto_neutral_r2.png", Vector2(230, 490))
-			ci.StoryCaption.draw_caption(ci, ci.t_("A7-2c"), "ayu", -1, true, Vector2(134, 258))
+			ci.StoryCaption.draw_caption(ci, ci.t_("A7-2c"), "ayu", -1, true, Vector2(166, 318))
 			ci.pill(_ok_rect(), "去赴约", 18, ci.RED, ci.PAPER)
 
 func _letter_lines(ci, text: String, font_size := 20, width := 205.0) -> Array[String]:
@@ -297,18 +301,15 @@ func _letter_lines(ci, text: String, font_size := 20, width := 205.0) -> Array[S
 
 func _paper(ci, length: int) -> void:
 	var desk = preload("res://hongyuan/ui/desk_art.gd")
-	var close_up := phase == "read_received"
-	var fs := 17 if close_up else 20
-	var width := 220.0 if close_up else 205.0
-	if close_up:
-		desk.paper_art(ci)
-	else:
-		ci.draw_set_transform_matrix(desk.paper_transform(r.view_rect))
+	# 正面信纸特写占满屏幕，字一行一行写上去，手机上也看得清
+	if phase == "read_received":
+		desk.cover(ci, ci.texture(LETTER), r.view_rect)
+	var fs := 18
+	var width := 248.0
 	var row := 0
 	for line in _letter_lines(ci, _letter().substr(0,length),fs,width):
-		ci.draw_string(ci.FONT,Vector2(70,180 + row*28) if close_up else Vector2(0,20+row*22),line,HORIZONTAL_ALIGNMENT_LEFT,width,fs,ci.INK)
+		ci.draw_string(ci.FONT,Vector2(56,120 + row*30),line,HORIZONTAL_ALIGNMENT_LEFT,width,fs,ci.INK)
 		row += 1
-	ci.draw_set_transform(Vector2.ZERO)
 
 func _envelope_art(ci, sealed: bool) -> void:
 	var rect := _envelope()
@@ -326,3 +327,22 @@ func _envelope_art(ci, sealed: bool) -> void:
 			var stamp: Texture2D = ci.texture("round1/desk_r3/object_stamp.png")
 			var lift := 9.0 * (1.0 - clampf((hold - 0.45) / 0.3, 0, 1))
 			if stamp: ci.draw_texture_rect(stamp, Rect2(rect.get_center() - Vector2(25, 48 + lift), Vector2(50,50)), false)
+
+
+## 寄信过场：三张图依次交叉淡入，最后一帧落到收件人桌上
+func _send_frames(ci) -> void:
+	var span := SEND_TIME / 3.0
+	var i := mini(2, int(t / span))
+	_cover_alpha(ci, "w2/finale/send_transition_%d.png" % (i + 1), 1.0)
+	var k := clampf((t - i * span) / 0.4, 0, 1)
+	if i > 0 and k < 1.0:
+		_cover_alpha(ci, "w2/finale/send_transition_%d.png" % i, 1.0 - k)
+
+func _cover_alpha(ci, file: String, alpha: float) -> void:
+	var tex: Texture2D = ci.texture(file)
+	if not tex: return
+	var area: Rect2 = r.view_rect
+	var scale := maxf(area.size.x / tex.get_width(), area.size.y / tex.get_height())
+	var size := tex.get_size() * scale
+	var rect := Rect2(area.get_center() - size * 0.5, size)
+	ci.draw_texture_rect_region(tex, area, Rect2((area.position - rect.position) / scale, area.size / scale), Color(1, 1, 1, alpha))
