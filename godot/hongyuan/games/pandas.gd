@@ -184,7 +184,7 @@ func draw(ci) -> void:
 func _draw_player(ci) -> void:
 	var art := "ayu_idle.png"
 	if (r.moving or r.stick.length() > 0.08) and r.move_dir.length() > 0.01:
-		var frame := 1 + int(r.walk_dist / 10.0) % 4
+		var frame := 1 + int(r.walk_dist / r._stride()) % 4
 		if absf(r.move_dir.y) > absf(r.move_dir.x) * 1.3:
 			var direction := "back" if r.move_dir.y < 0 else "front"
 			art = "w2/common/ayu_walk_%s_%d.png|ayu_idle.png" % [direction, frame]
@@ -195,6 +195,12 @@ func _draw_player(ci) -> void:
 		if tex: ci.draw_texture_rect(tex, Rect2(r.feet + Vector2(16 * r.facing - 6, -49), Vector2(12, 37)), false)
 
 func _heart(ci, c: Vector2, rad: float, col: Color) -> void:
+	# GPT 像素爱心 32×32，中心锚点；按原来画的大小缩到约 3.2 倍半径
+	var tex: Texture2D = ci.texture("w2/chengdu/heart_pop.png")
+	if tex:
+		var side := roundf(rad * 3.2)
+		ci.draw_texture_rect(tex, Rect2(c - Vector2(side, side) * 0.5, Vector2(side, side)), false, Color(1, 1, 1, col.a))
+		return
 	ci.draw_circle(c + Vector2(-rad * 0.5, 0), rad * 0.6, col)
 	ci.draw_circle(c + Vector2(rad * 0.5, 0), rad * 0.6, col)
 	ci.draw_colored_polygon(PackedVector2Array([c + Vector2(-rad * 1.05, rad * 0.2), c + Vector2(rad * 1.05, rad * 0.2), c + Vector2(0, rad * 1.4)]), col)

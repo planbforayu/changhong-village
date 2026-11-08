@@ -47,6 +47,10 @@ func draw(ci) -> void:
 		ci.text_at(c-Vector2(42,-5),WORDS[i],14,ci.PAPER,84)
 	for p in pops:
 		var k := 1.0 - float(p[1]) / 0.5
+		var pop_tex: Texture2D = ci.texture("w2/call/worry_pop_%d.png" % mini(3, 1 + int(k * 3.0)))
+		if pop_tex:
+			ci.draw_texture_rect(pop_tex, _bubble_rect(p[0]), false)
+			continue
 		for j in range(8):
 			var a := TAU * j / 8.0
 			var q: Vector2 = (p[0] as Vector2) + Vector2(cos(a),sin(a)) * (30 + 30 * k)
@@ -58,8 +62,16 @@ func draw(ci) -> void:
 	if dragging:
 		ci.draw_circle(pointer,24,Color("#edb1a4"));ci.text_at(pointer-Vector2(25,-5),"关心",14,ci.INK,50)
 
-## 像素风的烦恼泡泡：深色圆 + 2px 浅色描边 + 左上角方块高光（不再是平面蓝圆）
+## GPT 像素泡泡 64×64，云朵本体中心在 (32,29)，按 3 倍最近邻放大，本体约 102×54
+func _bubble_rect(c: Vector2) -> Rect2:
+	return Rect2(c - Vector2(32, 29) * 3.0, Vector2(192, 192))
+
+## 没有图时退回画的泡泡：深色圆 + 2px 浅色描边 + 左上角方块高光
 func _bubble(ci, c: Vector2, rad: float) -> void:
+	var tex: Texture2D = ci.texture("w2/call/worry_bubble.png")
+	if tex:
+		ci.draw_texture_rect(tex, _bubble_rect(c), false)
+		return
 	ci.draw_circle(c,rad,Color(0.20,0.24,0.36,0.88))
 	ci.draw_arc(c,rad-1,0,TAU,24,Color(0.55,0.62,0.82,0.9),2)
 	ci.draw_rect(Rect2(c + Vector2(-rad*0.55,-rad*0.6),Vector2(8,8)),Color(0.85,0.9,1.0,0.7))
