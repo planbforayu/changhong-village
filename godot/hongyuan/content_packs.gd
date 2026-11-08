@@ -171,30 +171,44 @@ func _download_and_mount(entry: Dictionary, completed: int, total: int, backgrou
 	return true
 
 func _wechat(groups: Array[String], bridge: JavaScriptObject, background: bool) -> bool:
+	# 先算出这次要下的全部文件和总字节，进度条只走一遍，不再每个文件从 0 跳到 100%
+	var todo: Array = []
+	var total := 0
 	for group in groups:
 		var first := -1 if bool(bridge.local(group)) else 0
 		for i in range(first, int(bridge.count(group))):
-			var key := "%s/%d" % [group, i]
-			if mounted.has(key):
+			if mounted.has("%s/%d" % [group, i]):
 				continue
-			var result: Array = []
-			var token := str(Time.get_ticks_usec()) + key
-			callbacks[token] = JavaScriptBridge.create_callback(func(args: Array):
-				result.append(str(args[0]) if not args.is_empty() else "")
-				callbacks.erase(token))
-			bridge.fetch(group, i, callbacks[token])
-			var started := Time.get_ticks_msec()
-			while result.is_empty():
-				if Time.get_ticks_msec() - started > timeout_seconds * 1000.0:
-					last_error = "下载超时，请重试"
-					return false
-				var status: Variant = JSON.parse_string(str(bridge.status(group, i)))
-				if status is Dictionary:
-					status.background = background
-					progress.emit(status)
-				await get_tree().process_frame
-			if str(result[0]).is_empty() or not ProjectSettings.load_resource_pack(result[0], false):
-				last_error = "资源下载未完成，请重试"
+			var size := int(bridge.bytes(group, i))
+			todo.append([group, i, size])
+			total += size
+	var done := 0
+	for item: Array in todo:
+		var group: String = item[0]
+		var i: int = item[1]
+		var key := "%s/%d" % [group, i]
+		var result: Array = []
+		var token := str(Time.get_ticks_usec()) + key
+		callbacks[token] = JavaScriptBridge.create_callback(func(args: Array):
+			result.append(str(args[0]) if not args.is_empty() else "")
+			callbacks.erase(token))
+		bridge.fetch(group, i, callbacks[token])
+		var started := Time.get_ticks_msec()
+		while result.is_empty():
+			if Time.get_ticks_msec() - started > timeout_seconds * 1000.0:
+				last_error = "下载超时，请重试"
 				return false
-			mounted[key] = true
+			var status: Variant = JSON.parse_string(str(bridge.status(group, i)))
+			if status is Dictionary:
+				if str(status.get("state", "")) != "error" and total > 0:
+					status.received = done + mini(int(status.get("received", 0)), int(item[2]))
+					status.total = total
+				status.background = background
+				progress.emit(status)
+			await get_tree().process_frame
+		if str(result[0]).is_empty() or not ProjectSettings.load_resource_pack(result[0], false):
+			last_error = "资源下载未完成，请重试"
+			return false
+		mounted[key] = true
+		done += int(item[2])
 	return true
