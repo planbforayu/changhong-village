@@ -821,8 +821,9 @@ func _draw_walker(w: Dictionary) -> void:
 
 ## GPT 路人整图（5 帧横条：第 0 帧站立，1–4 帧向右走）。向左走时翻转；
 ## 缩放按 npc_meta.json 里该条的人高，脚点落在 foot 行，和老路人共用景深标定。
-const NPC_DIR := "res://assets/round1/npc/"
+const NPC_DIR := "res://hongyuan/assets/round1/npc/"
 var npc_meta: Dictionary = {}
+var npc_tex: Dictionary = {}
 func _npc_meta(id: String) -> Dictionary:
 	if npc_meta.is_empty():
 		var f := FileAccess.open(NPC_DIR + "npc_meta.json", FileAccess.READ)
@@ -834,7 +835,11 @@ func _draw_npc_strip(w: Dictionary, state: Dictionary, pos: Vector2, height: flo
 	var m := _npc_meta(id)
 	var path := NPC_DIR + id + ".png"
 	if m.is_empty() or not ResourceLoader.exists(path): return
-	var sheet: Texture2D = load(path)
+	if not npc_tex.has(id):
+		var loaded: Texture2D = load(path)
+		npc_tex[id] = ImageTexture.create_from_image(loaded.get_image()) if loaded else null
+	var sheet: Texture2D = npc_tex[id]
+	if not sheet: return
 	var heading: Vector2 = state.heading
 	var frame := 0
 	if state.walking: frame = 1 + int(float(state.distance) / 8.0) % 4
@@ -844,12 +849,10 @@ func _draw_npc_strip(w: Dictionary, state: Dictionary, pos: Vector2, height: flo
 	var flip := heading.x < 0
 	var dest := Rect2(-fw * k * 0.5, -float(m.foot) * k, fw * k, sheet.get_height() * k)
 	_shadow(pos, fw * k * 0.16)
+	dest.position += pos
 	if flip:
-		draw_set_transform(pos, 0.0, Vector2(-1, 1))
-	else:
-		draw_set_transform(pos, 0.0, Vector2.ONE)
+		dest = Rect2(dest.position.x + dest.size.x, dest.position.y, -dest.size.x, dest.size.y)
 	draw_texture_rect_region(sheet, dest, src)
-	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
 func _draw_walker_extras(w: Dictionary, state: Dictionary, pos: Vector2, height: float) -> void:
