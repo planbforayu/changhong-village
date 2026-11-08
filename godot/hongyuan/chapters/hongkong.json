@@ -1,0 +1,894 @@
+{
+  "chapterId": "hongkong",
+  "titleId": "G-11",
+  "steps": [
+    {
+      "id": "hk",
+      "type": "scene",
+      "sceneId": "hongkong",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "badge": "G-02",
+        "bg": "round1/people/offer_room.png",
+        "fill": "#2a1c18",
+        "hideAyu": true,
+        "beats": [
+          {
+            "card": "G-11",
+            "duration": 2.0
+          },
+          {
+            "narrate": "A6-0"
+          },
+          {
+            "hint": "A6-P1"
+          },
+          {
+            "goal": {
+              "目标": "一起出发，留下旅行合影",
+              "操作": "打开新邮件，再带着行李去机场",
+              "所得": "信封，让这份邀请能够寄出"
+            }
+          },
+          {
+            "game": "offer"
+          },
+          {
+            "hint": ""
+          },
+          {
+            "narrate": "A6-1"
+          },
+          {
+            "personHeight": 112,
+            "bg": "w2/hongkong/bg_departure_pvg.png",
+            "sky": "#cfe3ee",
+            "ground": "#d8d2c6",
+            "horizon": 330,
+            "decor": [
+              {
+                "r": [
+                  0,
+                  120,
+                  360,
+                  200
+                ],
+                "c": "#a9c9dc"
+              },
+              {
+                "r": [
+                  0,
+                  300,
+                  360,
+                  30
+                ],
+                "c": "#7d8c7a"
+              },
+              {
+                "r": [
+                  296,
+                  300,
+                  54,
+                  118
+                ],
+                "c": "#3f7d5a"
+              },
+              {
+                "r": [
+                  306,
+                  312,
+                  34,
+                  22
+                ],
+                "c": "#f2f2f2"
+              }
+            ],
+            "hideAyu": false,
+            "start": [
+              50,
+              590
+            ],
+            "follow": "w2/hongkong/suitcase_1.png",
+            "companion": "toretto",
+            "walkers": [
+              {
+                "guest": "01",
+                "a": [
+                  20,
+                  410
+                ],
+                "b": [
+                  85,
+                  410
+                ],
+                "speed": 18,
+                "phase": 0.0,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "02",
+                "a": [
+                  325,
+                  427
+                ],
+                "b": [
+                  265,
+                  427
+                ],
+                "speed": 21,
+                "phase": 0.19,
+                "scale": 0.95,
+                "pause": 3
+              },
+              {
+                "guest": "03",
+                "a": [
+                  115,
+                  444
+                ],
+                "b": [
+                  180,
+                  444
+                ],
+                "speed": 24,
+                "phase": 0.38,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "04",
+                "a": [
+                  250,
+                  461
+                ],
+                "b": [
+                  200,
+                  461
+                ],
+                "speed": 27,
+                "phase": 0.5700000000000001,
+                "scale": 0.95,
+                "pause": 3
+              },
+              {
+                "guest": "05",
+                "a": [
+                  25,
+                  478
+                ],
+                "b": [
+                  85,
+                  478
+                ],
+                "speed": 30,
+                "phase": 0.76,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "06",
+                "a": [
+                  330,
+                  495
+                ],
+                "b": [
+                  270,
+                  495
+                ],
+                "speed": 33,
+                "phase": 0.95,
+                "scale": 0.95,
+                "pause": 3
+              }
+            ],
+            "walkArea": [
+              [
+                20,
+                330
+              ],
+              [
+                345,
+                330
+              ],
+              [
+                345,
+                615
+              ],
+              [
+                20,
+                615
+              ]
+            ],
+            "actors": [],
+            "hotspots": [
+              {
+                "id": "security",
+                "at": [
+                  268,
+                  342
+                ],
+                "snap": [
+                  268,
+                  346
+                ],
+                "icon": "exit",
+                "iconAt": [
+                  268,
+                  300
+                ]
+              }
+            ]
+          },
+          {
+            "go": "security",
+            "hint": "R1-AIRPORT-SECURITY"
+          },
+          {
+            "wait": 1.2
+          },
+          {
+            "bg": "w2/hongkong/bg_arrival_hk_r2.png",
+            "start": [
+              60,
+              590
+            ],
+            "walkArea": [
+              [
+                130,
+                320
+              ],
+              [
+                345,
+                320
+              ],
+              [
+                345,
+                615
+              ],
+              [
+                20,
+                615
+              ],
+              [
+                20,
+                395
+              ],
+              [
+                130,
+                395
+              ]
+            ],
+            "hotspots": [
+              {
+                "id": "exit",
+                "at": [
+                  250,
+                  336
+                ],
+                "snap": [
+                  250,
+                  340
+                ],
+                "icon": "exit",
+                "iconAt": [
+                  250,
+                  296
+                ]
+              }
+            ],
+            "actors": []
+          },
+          {
+            "go": "exit",
+            "hint": "A6-P3"
+          },
+          {
+            "companion": "",
+            "walkers": []
+          },
+          {
+            "bg": "round1/scenes/hk_street.png",
+            "scaleProfile": "disney",
+            "start": [
+              58,
+              590
+            ],
+            "hideAyu": false,
+            "personHeight": 100,
+            "companion": "toretto",
+            "actors": [],
+            "walkArea": [
+              [
+                20,
+                440
+              ],
+              [
+                340,
+                440
+              ],
+              [
+                340,
+                610
+              ],
+              [
+                20,
+                610
+              ]
+            ],
+            "walkers": [
+              {
+                "guest": "04",
+                "a": [
+                  20,
+                  455
+                ],
+                "b": [
+                  85,
+                  455
+                ],
+                "speed": 18,
+                "phase": 0.0,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "05",
+                "a": [
+                  325,
+                  472
+                ],
+                "b": [
+                  265,
+                  472
+                ],
+                "speed": 21,
+                "phase": 0.19,
+                "scale": 0.95,
+                "pause": 3
+              },
+              {
+                "guest": "06",
+                "a": [
+                  115,
+                  489
+                ],
+                "b": [
+                  180,
+                  489
+                ],
+                "speed": 24,
+                "phase": 0.38,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "07",
+                "a": [
+                  250,
+                  506
+                ],
+                "b": [
+                  200,
+                  506
+                ],
+                "speed": 27,
+                "phase": 0.5700000000000001,
+                "scale": 0.95,
+                "pause": 3
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "street_photo",
+                "at": [
+                  180,
+                  560
+                ],
+                "icon": "pick"
+              }
+            ],
+            "follow": "w2/hongkong/suitcase_1.png",
+            "badge": ""
+          },
+          {
+            "narrate": "R1-HK-ARRIVAL"
+          },
+          {
+            "go": "street_photo"
+          },
+          {
+            "hideAyu": true,
+            "companion": ""
+          },
+          {
+            "game": "photo",
+            "caption": "R1-HK-PHOTO"
+          },
+          {
+            "bg": "w2/hongkong/park_toys_r2.png",
+            "scaleProfile": "disney",
+            "start": [
+              58,
+              590
+            ],
+            "hideAyu": false,
+            "personHeight": 100,
+            "companion": "toretto",
+            "actors": [],
+            "walkArea": [
+              [
+                60,
+                250
+              ],
+              [
+                250,
+                250
+              ],
+              [
+                300,
+                420
+              ],
+              [
+                335,
+                612
+              ],
+              [
+                25,
+                612
+              ],
+              [
+                45,
+                420
+              ]
+            ],
+            "walkers": [
+              {
+                "guest": "01",
+                "a": [
+                  40,
+                  470
+                ],
+                "b": [
+                  85,
+                  470
+                ],
+                "speed": 16,
+                "phase": 0.0,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "02",
+                "a": [
+                  300,
+                  460
+                ],
+                "b": [
+                  255,
+                  460
+                ],
+                "speed": 20,
+                "phase": 0.23,
+                "scale": 0.95,
+                "pause": 3
+              },
+              {
+                "guest": "03",
+                "a": [
+                  150,
+                  500
+                ],
+                "b": [
+                  195,
+                  500
+                ],
+                "speed": 24,
+                "phase": 0.46,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "08",
+                "a": [
+                  250,
+                  520
+                ],
+                "b": [
+                  205,
+                  520
+                ],
+                "speed": 28,
+                "phase": 0.69,
+                "scale": 0.95,
+                "pause": 3
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "toys_path",
+                "at": [
+                  220,
+                  330
+                ],
+                "icon": "pick"
+              }
+            ],
+            "follow": "",
+            "badge": ""
+          },
+          {
+            "narrate": "R1-DISNEY-TOYS"
+          },
+          {
+            "go": "toys_path"
+          },
+          {
+            "bg": "w2/hongkong/park_garden_r2.png",
+            "scaleProfile": "disney",
+            "start": [
+              58,
+              590
+            ],
+            "hideAyu": false,
+            "personHeight": 100,
+            "companion": "toretto",
+            "actors": [],
+            "walkArea": [
+              [
+                40,
+                300
+              ],
+              [
+                320,
+                300
+              ],
+              [
+                335,
+                612
+              ],
+              [
+                25,
+                612
+              ]
+            ],
+            "walkers": [
+              {
+                "guest": "05",
+                "a": [
+                  60,
+                  480
+                ],
+                "b": [
+                  105,
+                  480
+                ],
+                "speed": 16,
+                "phase": 0.0,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "06",
+                "a": [
+                  280,
+                  470
+                ],
+                "b": [
+                  235,
+                  470
+                ],
+                "speed": 20,
+                "phase": 0.23,
+                "scale": 0.95,
+                "pause": 3
+              },
+              {
+                "guest": "08",
+                "a": [
+                  200,
+                  520
+                ],
+                "b": [
+                  245,
+                  520
+                ],
+                "speed": 24,
+                "phase": 0.46,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "02",
+                "a": [
+                  120,
+                  455
+                ],
+                "b": [
+                  75,
+                  455
+                ],
+                "speed": 28,
+                "phase": 0.69,
+                "scale": 0.95,
+                "pause": 3
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "garden_path",
+                "at": [
+                  235,
+                  420
+                ],
+                "icon": "pick"
+              }
+            ],
+            "follow": "",
+            "badge": ""
+          },
+          {
+            "narrate": "R1-DISNEY-GARDEN"
+          },
+          {
+            "go": "garden_path"
+          },
+          {
+            "bg": "w2/hongkong/park_castle_r2.png",
+            "scaleProfile": "disney",
+            "start": [
+              58,
+              590
+            ],
+            "hideAyu": false,
+            "personHeight": 100,
+            "companion": "toretto",
+            "actors": [],
+            "walkArea": [
+              [
+                20,
+                400
+              ],
+              [
+                345,
+                400
+              ],
+              [
+                345,
+                615
+              ],
+              [
+                20,
+                615
+              ]
+            ],
+            "walkers": [
+              {
+                "guest": "03",
+                "a": [
+                  300,
+                  455
+                ],
+                "b": [
+                  345,
+                  455
+                ],
+                "speed": 16,
+                "phase": 0.0,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "04",
+                "a": [
+                  40,
+                  500
+                ],
+                "b": [
+                  -5,
+                  500
+                ],
+                "speed": 20,
+                "phase": 0.23,
+                "scale": 0.95,
+                "pause": 3
+              },
+              {
+                "guest": "07",
+                "a": [
+                  240,
+                  480
+                ],
+                "b": [
+                  285,
+                  480
+                ],
+                "speed": 24,
+                "phase": 0.46,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "01",
+                "a": [
+                  110,
+                  520
+                ],
+                "b": [
+                  65,
+                  520
+                ],
+                "speed": 28,
+                "phase": 0.69,
+                "scale": 0.95,
+                "pause": 3
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "castle_photo",
+                "at": [
+                  180,
+                  470
+                ],
+                "icon": "pick"
+              }
+            ],
+            "follow": "",
+            "badge": ""
+          },
+          {
+            "narrate": "R1-DISNEY-CASTLE"
+          },
+          {
+            "go": "castle_photo"
+          },
+          {
+            "hideAyu": true,
+            "companion": ""
+          },
+          {
+            "game": "photo",
+            "caption": "B-G3-1"
+          },
+          {
+            "bg": "round1/scenes/university.png",
+            "scaleProfile": "disney",
+            "start": [
+              58,
+              590
+            ],
+            "hideAyu": false,
+            "personHeight": 100,
+            "companion": "toretto",
+            "actors": [],
+            "walkArea": [
+              [
+                20,
+                440
+              ],
+              [
+                340,
+                440
+              ],
+              [
+                340,
+                610
+              ],
+              [
+                20,
+                610
+              ]
+            ],
+            "walkers": [
+              {
+                "guest": "06",
+                "a": [
+                  70,
+                  470
+                ],
+                "b": [
+                  115,
+                  470
+                ],
+                "speed": 16,
+                "phase": 0.0,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "07",
+                "a": [
+                  290,
+                  500
+                ],
+                "b": [
+                  245,
+                  500
+                ],
+                "speed": 20,
+                "phase": 0.23,
+                "scale": 0.95,
+                "pause": 3
+              },
+              {
+                "guest": "08",
+                "a": [
+                  150,
+                  455
+                ],
+                "b": [
+                  195,
+                  455
+                ],
+                "speed": 24,
+                "phase": 0.46,
+                "scale": 0.95,
+                "pause": 2
+              },
+              {
+                "guest": "05",
+                "a": [
+                  230,
+                  530
+                ],
+                "b": [
+                  185,
+                  530
+                ],
+                "speed": 28,
+                "phase": 0.69,
+                "scale": 0.95,
+                "pause": 3
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "campus_photo",
+                "at": [
+                  180,
+                  550
+                ],
+                "icon": "pick"
+              }
+            ],
+            "follow": "",
+            "badge": ""
+          },
+          {
+            "narrate": "R1-HK-CAMPUS"
+          },
+          {
+            "go": "campus_photo"
+          },
+          {
+            "hideAyu": true,
+            "companion": ""
+          },
+          {
+            "game": "photo",
+            "caption": "R1-CAMPUS-PHOTO"
+          },
+          {
+            "material": "envelope"
+          },
+          {
+            "badge": "",
+            "bg": "round1/desk_r4/writing.png",
+            "hideAyu": true,
+            "walkers": [],
+            "actors": [],
+            "companion": ""
+          },
+          {
+            "button": "A6-B2"
+          }
+        ]
+      }
+    }
+  ]
+}

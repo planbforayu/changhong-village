@@ -1,0 +1,183 @@
+"""生成成都到终章的章节 JSON。剧情文字只引用 copy.json 的编号。"""
+import json, os
+D = os.path.join(os.path.dirname(__file__), "..", "chapters")
+
+def scene(id, sid, sc):
+    return {"id": id, "type": "scene", "sceneId": sid, "speaker": "system", "actorMode": "none",
+            "actorSlot": None, "background": "scene", "visibleActors": [], "scene": sc}
+
+def N(k, **kw): return {"narrate": k, **kw}
+def T(k): return {"say": k, "who": "toretto"}
+def A(k): return {"say": k, "who": "ayu"}
+def auto(k, s=2.6): return {"narrate": k, "auto": s}
+
+GOALS = {
+    "chengdu": {"目标": "逛逛熊猫基地", "操作": "走到竹子旁拿起，再靠近熊猫喂食", "所得": "墨水，让请帖上的字显现"},
+    "call": {"目标": "接起这通来电", "操作": "走近手机，亲手点接听", "所得": "信纸，记住这一段日子"},
+    "shizuoka": {"目标": "到港口钓一次鱼", "操作": "走到钓位，按住蓄力，松手甩竿", "所得": "旅途之后，把印章带回书桌"},
+    "hainan": {"目标": "一起留下海边的回忆", "操作": "走近套圈摊，拖动瞄准后松手", "所得": "火漆，留到最后封上请帖"},
+    "hongkong": {"目标": "一起出发，留下旅行合影", "操作": "打开新邮件，再带着行李去机场", "所得": "信封，让这份邀请能够寄出"},
+}
+def write(cid, title, steps):
+    if cid in GOALS:
+        inserted = False
+        for step in steps:
+            beats = step.get("scene", {}).get("beats", [])
+            for i, beat in enumerate(beats):
+                if not inserted and ("go" in beat or "game" in beat):
+                    beats.insert(i, {"goal": GOALS[cid]})
+                    inserted = True
+                    break
+    json.dump({"chapterId": cid, "titleId": title, "steps": steps}, open(os.path.join(D, cid + ".json"), "w"), ensure_ascii=False, indent=1)
+
+def legacy(id, kind, sid, background, actors=None, **fields):
+    return {"id": id, "type": kind, "sceneId": sid, "speaker": "narrator" if kind == "narration" else "system",
+            "actorMode": "none", "actorSlot": None, "background": background, "visibleActors": actors or [], **fields}
+
+# Keep legacy step IDs so existing Chengdu saves still resume at the same story boundary.
+# Only the former single-panda walk is replaced; mid-feed group messages belong to D2-C2.
+CHENGDU_ACTORS = [{"id": "ayu", "mode": "sprite", "slot": "left", "layer": "world"},
+                  {"id": "panda", "mode": "sprite", "slot": "right", "layer": "world"}]
+write("chengdu", "G-07", [
+    legacy("chengdu_return", "narration", "chengdu_day", "chengdu", CHENGDU_ACTORS, copyId="A2-1a", duration=3.7),
+    legacy("chengdu_routine", "narration", "chengdu_day", "chengdu", CHENGDU_ACTORS, copyId="A2-1b", duration=5.2),
+    scene("chengdu_walk", "chengdu_day", {
+        "bg": "w2/chengdu/bg_base.png", "badge": "G-02", "personHeight": 88,
+        "walkArea": [[25, 362], [335, 362], [335, 535], [25, 535]], "start": [240, 523],
+        "beats": [{"game": "pandas"}],
+    }),
+    legacy("chengdu_ping", "notification", "chengdu_phone", "phone", copyId="A2-2"),
+    legacy("chengdu_group", "phone", "chengdu_phone", "phone", [
+        {"id": "axiao", "mode": "sprite", "slot": "left", "layer": "phone"},
+        {"id": "toretto", "mode": "sprite", "slot": "left", "layer": "phone"},
+        {"id": "ayu", "mode": "sprite", "slot": "right", "layer": "phone"}], duration=2.4, groupId="A1-G0"),
+    legacy("ink", "material", "invitation", "invitation", duration=2.25, materialId="ink"),
+])
+
+ROOM_AREA = [[150, 372], [282, 368], [282, 445], [350, 452], [350, 620], [20, 620], [20, 470], [150, 462]]
+write("call", "G-08", [scene("night_call", "call_room", {
+    "badge": "G-02", "bg": "w2/call/bg_room_night.png|l3_computer.webp", "fill": "#1a120e", "night": 0.0,
+    "personHeight": 128, "walkArea": ROOM_AREA, "start": [200, 545],
+    "actors": [{"id": "phone", "tex": "w2/call/phone_ring_1.png|phone_prop.png", "at": [215, 300]}],
+    "hotspots": [{"id": "phone", "at": [215, 378], "snap": [215, 378], "face": 1, "pose": "back", "icon": "phone"}],
+    "beats": [
+        {"card": "G-08", "duration": 2.0},
+        N("A3-1a"), N("A3-1b"),
+        {"go": "phone"},
+        {"game": "call", "aside": "A3-D1", "lines": [
+            {"say": "A3-2a"}, {"say": "A3-2b"}, {"say": "A3-2c"}, {"say": "A3-2d", "who": "toretto"},
+            {"say": "A3-2e", "who": "ayu"}, {"say": "A3-2f"}, {"say": "A3-2g", "who": "ayu"}, {"say": "A3-2h", "who": "toretto"}]},
+        {"bg": "w2/call/bg_cbd_office_r2.png", "bgFit": True, "personHeight": 160,
+         "night": 0.0, "badge": "", "hideAyu": False, "player": "toretto", "pose": "", "actors": [],
+         "start": [65, 540], "walkArea": [[48, 432], [318, 432], [318, 568], [48, 568]],
+         "hotspots": [
+             {"id": "cake", "at": [94, 440], "snap": [94, 440], "face": 1, "pose": "gifts", "icon": "pick", "iconAt": [194, 289]},
+             {"id": "flowers", "at": [94, 440], "icon": "pick", "iconAt": [260, 247]},
+             {"id": "desk_phone", "at": [94, 440], "icon": "phone", "iconAt": [150, 300]}]},
+        N("A3-2i"),
+        {"go": "cake", "hint": "G-DESK-APPROACH"}, T("A3-2j"),
+        {"go": "flowers", "hint": "G-DESK-FLOWERS"}, N("A3-2k"),
+        {"go": "desk_phone", "hint": "G-DESK-PHONE"},
+        {"hint": "", "bg": "w2/call/bg_cbd_window_chat_r3.png", "bgFit": True,
+         "hideAyu": True, "actors": [], "hotspots": []},
+        {"game": "desk_chat", "lines": [T("A3-2l"), A("A3-2m"), T("A3-2n"), T("A3-2o"), A("A3-2p")]},
+        {"player": "ayu", "hideAyu": True, "actors": [], "hotspots": [], "pose": ""},
+        {"bg": "", "fill": "#2a1414", "badge": "G-02"},
+        auto("A3-2q"), auto("A3-2r"), auto("A3-2s"), auto("A3-2t"), auto("A3-3a"), auto("A3-3b"),
+        {"material": "paper"},
+    ]})])
+
+write("shizuoka", "G-09", [scene("pier", "shizuoka", {
+    "personHeight": 128, "badge": "G-02", "bg": "w2/shizuoka/bg_pier.png|bg_shizuoka_pier_r1.png",
+    "walkArea": [[16, 376], [344, 376], [344, 590], [16, 590]], "start": [60, 540],
+    "hotspots": [
+        {"id": "spot", "at": [200, 382], "snap": [200, 382], "face": 1, "icon": "rod"},
+        {"id": "boat", "at": [326, 500], "icon": "sit"}],
+    "beats": [
+        {"card": "G-09", "duration": 2.0},
+        N("A4-1a"), N("A4-1b"), N("A4-1c"),
+        {"go": "spot", "hint": "A4-P1"},
+        {"game": "fishing"},
+        {"go": "boat"},
+        {"personHeight": 180, "bg": "w2/shizuoka/bg_boat.png|bg_shizuoka_boat_cabin_r1.png", "walkArea": [[30, 440], [330, 440], [340, 620], [20, 620]],
+         "start": [284, 570], "pose": "",
+         "actors": [{"id": "toretto", "tex": "w2/common/toretto_sit.png", "at": [142, 430]}],
+         "hotspots": [{"id": "seat", "at": [220, 440], "snap": [220, 430], "face": -1, "pose": "sit", "icon": "sit"}]},
+        {"go": "seat", "hint": "G-BOAT-SIT"},
+        {"hint": ""},
+        {"wait": 3.5},
+        {"card": "B-J3-1", "duration": 2.0},
+        {"bg": "", "fill": "#10122a", "badge": "", "pose": "", "actors": [], "hotspots": [], "hideAyu": True},
+        {"game": "onsen", "lines": [T("A4-2a"), A("A4-2b"), T("A4-2c"), T("A4-2d"), T("A4-2e"), T("A4-2f"),
+                                     {"say": "A4-2g"}, A("A4-2h")]},
+        {"card": "A4-T1", "duration": 1.8},
+        {"bg": "w2/shizuoka/bg_cert.png", "fill": "#5e2929", "actors": [], "hideAyu": True, "hotspots": []},
+        N("A4-3a"), N("A4-3b"),
+        {"material": "stamp"},
+    ]})])
+
+write("hainan", "G-10", [scene("wanning", "hainan", {
+    "personHeight": 120, "badge": "G-02", "bg": "w2/hainan/bg_wanning.png", "sky": "#86cfe8", "ground": "#e8d6a8", "horizon": 250,
+    "decor": [{"r": [0, 250, 360, 36], "c": "#4fb3c8"}],
+    "walkArea": [[20, 400], [340, 400], [340, 560], [20, 560]], "start": [70, 550],
+    "hotspots": [{"id": "stall", "at": [180, 520], "snap": [180, 520], "face": 1, "icon": "pick"}],
+    "beats": [
+        {"card": "G-10", "duration": 2.0},
+        N("A5-0"), N("A5-1a"), N("A5-1b"),
+        {"go": "stall", "hint": "A5-P1"},
+        {"game": "ringtoss"},
+        {"card": "A5-T1", "duration": 1.6},
+        {"personHeight": 112, "bg": "w2/hainan/bg_wenchang_memory_r2.png", "bgFit": True,
+         "scaleProfile": "beach_memory", "atmosphere": "coast", "badge": "", "decor": [],
+         "place": [151, 565], "pose": "back",
+         "actors": [{"id": "toretto", "tex": "w2/common/toretto_back_r2.png", "at": [199, 565]}], "hotspots": []},
+        N("A5-2"), T("A5-3a"), A("A5-3b"),
+        {"wait": 8.0},
+        {"pose": "", "atmosphere": ""},
+        {"material": "wax"},
+    ]})])
+
+write("hongkong", "G-11", [scene("hk", "hongkong", {
+    "badge": "G-02", "bg": "", "fill": "#2a1c18", "hideAyu": True,
+    "beats": [
+        {"card": "G-11", "duration": 2.0},
+        N("A6-0"),
+        {"hint": "A6-P1"},
+        {"game": "offer"},
+        {"hint": ""},
+        N("A6-1"),
+        {"personHeight": 112, "bg": "w2/hongkong/bg_arrival.png", "sky": "#cfe3ee", "ground": "#d8d2c6", "horizon": 330,
+         "decor": [{"r": [0, 120, 360, 200], "c": "#a9c9dc"}, {"r": [0, 300, 360, 30], "c": "#7d8c7a"},
+                   {"r": [296, 300, 54, 118], "c": "#3f7d5a"}, {"r": [306, 312, 34, 22], "c": "#f2f2f2"}],
+         "hideAyu": False, "start": [50, 590], "follow": "w2/hongkong/suitcase_1.png", "companion": "toretto",
+         # 路人走在后排（窗边那条线），不和主角从左下到闸机的路线交叉
+         "walkers": [{"guest": "02", "a": [-30, 384], "b": [250, 384], "speed": 30, "scale": 0.75},
+                     {"guest": "05", "a": [250, 392], "b": [-30, 392], "speed": 36, "phase": 0.35, "scale": 0.75},
+                     {"guest": "03", "a": [-30, 400], "b": [230, 400], "speed": 26, "phase": 0.6, "scale": 0.75}],
+         "walkArea": [[20, 380], [345, 380], [345, 615], [20, 615]],
+         "actors": [{"id": "gate", "tex": "w2/hongkong/exit_gate.png", "at": [300, 400]}],
+         "hotspots": [{"id": "exit", "at": [300, 405], "snap": [300, 402], "icon": "exit", "iconAt": [300, 262]}]},
+        {"go": "exit", "hint": "A6-P3"},
+        {"follow": "", "companion": "", "walkers": []},
+        {"bg": "w2/hongkong/bg_disney_memory_r1.png", "bgFit": True, "personHeight": 90, "decor": [],
+         "badge": "", "hideAyu": True, "actors": [], "hotspots": [], "walkArea": [], "start": [50, 590]},
+        {"game": "photo"},
+        {"material": "envelope"},
+        {"badge": ""},
+        {"button": "A6-B2"},
+    ]})])
+
+write("finale", "G-12", [scene("finale", "finale", {
+    "bg": "", "fill": "#3a1414", "hideAyu": True,
+    "beats": [
+        {"card": "G-12", "duration": 2.0},
+        {"bg": "", "hideAyu": True},
+        {"game": "finale"},
+        {"choice": ["G-WEDDING", "G-VILLAGE"],
+         "to": ["res://hongyuan/world_entry.tscn", "res://hongyuan/village_entry.tscn"]},
+        {"bg": "", "fill": "#2a1210", "hideAyu": True},
+        {"game": "seat"},
+    ]}),
+    {"id": "next", "type": "terminal", "sceneId": "finale_end", "speaker": "system", "actorMode": "none",
+     "actorSlot": None, "background": "phone", "visibleActors": [], "copyId": "W-NEXT"}])
+print("ok")

@@ -1,0 +1,2117 @@
+{
+  "chapterId": "shanghai",
+  "titleId": "G-06",
+  "steps": [
+    {
+      "id": "perspective",
+      "type": "scene",
+      "sceneId": "shanghai_street",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "titleId": "G-02",
+      "scene": {
+        "bg": "bg_sh_street.png",
+        "scaleProfile": "shanghai_street",
+        "personHeight": 105,
+        "start": [
+          100,
+          380
+        ],
+        "walkArea": [
+          [
+            20,
+            318
+          ],
+          [
+            340,
+            318
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "sheet": "w2/shanghai/npc_d1_office.png",
+            "a": [
+              70,
+              400
+            ],
+            "b": [
+              200,
+              400
+            ],
+            "speed": 36,
+            "phase": 0.0,
+            "scale": 0.97,
+            "pause": 2
+          },
+          {
+            "sheet": "w2/shanghai/npc_d1_coffee.png",
+            "a": [
+              290,
+              470
+            ],
+            "b": [
+              170,
+              470
+            ],
+            "speed": 32,
+            "phase": 0.3,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "sheet": "w2/shanghai/npc_d1_dog.png",
+            "a": [
+              60,
+              560
+            ],
+            "b": [
+              170,
+              560
+            ],
+            "speed": 26,
+            "phase": 0.6,
+            "scale": 0.94,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "street",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "car_street.png",
+            "at": [
+              255,
+              300
+            ],
+            "scale": 1.0
+          }
+        ],
+        "beats": [
+          {
+            "card": "G-06",
+            "duration": 1.6
+          }
+        ]
+      }
+    },
+    {
+      "id": "street_intro",
+      "type": "scene",
+      "sceneId": "shanghai_street",
+      "speaker": "narrator",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "bg_sh_street.png",
+        "scaleProfile": "shanghai_street",
+        "personHeight": 105,
+        "start": [
+          100,
+          380
+        ],
+        "walkArea": [
+          [
+            20,
+            318
+          ],
+          [
+            340,
+            318
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "sheet": "w2/shanghai/npc_d1_office.png",
+            "a": [
+              70,
+              400
+            ],
+            "b": [
+              200,
+              400
+            ],
+            "speed": 36,
+            "phase": 0.0,
+            "scale": 0.97,
+            "pause": 2
+          },
+          {
+            "sheet": "w2/shanghai/npc_d1_coffee.png",
+            "a": [
+              290,
+              470
+            ],
+            "b": [
+              170,
+              470
+            ],
+            "speed": 32,
+            "phase": 0.3,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "sheet": "w2/shanghai/npc_d1_dog.png",
+            "a": [
+              60,
+              560
+            ],
+            "b": [
+              170,
+              560
+            ],
+            "speed": 26,
+            "phase": 0.6,
+            "scale": 0.94,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "street",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "car_street.png",
+            "at": [
+              255,
+              300
+            ],
+            "scale": 1.0
+          }
+        ],
+        "beats": [
+          {
+            "narrate": "A1-1a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "board_car",
+      "type": "scene",
+      "sceneId": "shanghai_street",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "bg_sh_street.png",
+        "scaleProfile": "shanghai_street",
+        "personHeight": 105,
+        "start": [
+          100,
+          380
+        ],
+        "walkArea": [
+          [
+            20,
+            318
+          ],
+          [
+            340,
+            318
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "sheet": "w2/shanghai/npc_d1_office.png",
+            "a": [
+              70,
+              400
+            ],
+            "b": [
+              200,
+              400
+            ],
+            "speed": 36,
+            "phase": 0.0,
+            "scale": 0.97,
+            "pause": 2
+          },
+          {
+            "sheet": "w2/shanghai/npc_d1_coffee.png",
+            "a": [
+              290,
+              470
+            ],
+            "b": [
+              170,
+              470
+            ],
+            "speed": 32,
+            "phase": 0.3,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "sheet": "w2/shanghai/npc_d1_dog.png",
+            "a": [
+              60,
+              560
+            ],
+            "b": [
+              170,
+              560
+            ],
+            "speed": 26,
+            "phase": 0.6,
+            "scale": 0.94,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "street",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "car_street.png",
+            "at": [
+              255,
+              300
+            ],
+            "scale": 1.0
+          }
+        ],
+        "hotspots": [
+          {
+            "id": "car",
+            "at": [
+              247,
+              328
+            ],
+            "icon": "pick"
+          }
+        ],
+        "beats": [
+          {
+            "go": "car",
+            "hint": "A1-P1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "drive",
+      "type": "scene",
+      "sceneId": "shanghai_road",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "hideAyu": true,
+        "fill": "#6f8f4e",
+        "beats": [
+          {
+            "goal": {
+              "目标": "开着紫色 G42 到东方明珠",
+              "操作": "左右滑动换道，小心前车；快到时按住屏幕停车",
+              "所得": "钢笔，写邀请函用"
+            }
+          },
+          {
+            "game": "drive"
+          }
+        ],
+        "bg": "round1/scenes/shanghai_drive.png"
+      }
+    },
+    {
+      "id": "parked",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "narrator",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          115,
+          510
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          }
+        ],
+        "beats": [
+          {
+            "narrate": "A1-1b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "other_car",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "narrator",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          115,
+          510
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33,
+            "moveFrom": [
+              250,
+              300
+            ],
+            "moveTime": 2.2
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "wait": 2.3
+          },
+          {
+            "narrate": "A1-1c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "approach_axiao",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          115,
+          510
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "hotspots": [
+          {
+            "id": "axiao",
+            "at": [
+              193,
+              515
+            ],
+            "icon": "talk"
+          }
+        ],
+        "beats": [
+          {
+            "go": "axiao",
+            "hint": "A1-P3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "line_1",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "axiao",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          187,
+          515
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "say": "A1-2a",
+            "who": "axiao"
+          }
+        ]
+      }
+    },
+    {
+      "id": "line_2",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "ayu",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          187,
+          515
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "say": "A1-2b",
+            "who": "ayu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "line_3",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "axiao",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          187,
+          515
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "say": "A1-2c",
+            "who": "axiao"
+          }
+        ]
+      }
+    },
+    {
+      "id": "line_4",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "ayu",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          187,
+          515
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "say": "A1-2d",
+            "who": "ayu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "line_5",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "axiao",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          187,
+          515
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "say": "A1-2e",
+            "who": "axiao"
+          }
+        ]
+      }
+    },
+    {
+      "id": "line_6",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "ayu",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          187,
+          515
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "say": "A1-2f",
+            "who": "ayu"
+          }
+        ]
+      }
+    },
+    {
+      "id": "meet_close",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "narrator",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          115,
+          510
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "narrate": "A1-2g"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quiet",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          115,
+          510
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "wait": 1.5
+          }
+        ]
+      }
+    },
+    {
+      "id": "later",
+      "type": "scene",
+      "sceneId": "shanghai_parking",
+      "speaker": "narrator",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/rework1107/shanghai_parking.png",
+        "scaleProfile": "shanghai_parking",
+        "personHeight": 105,
+        "start": [
+          115,
+          510
+        ],
+        "walkArea": [
+          [
+            20,
+            430
+          ],
+          [
+            340,
+            430
+          ],
+          [
+            340,
+            610
+          ],
+          [
+            20,
+            610
+          ]
+        ],
+        "walkers": [
+          {
+            "guest": "01",
+            "a": [
+              20,
+              535
+            ],
+            "b": [
+              85,
+              535
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "02",
+            "a": [
+              325,
+              552
+            ],
+            "b": [
+              265,
+              552
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "03",
+            "a": [
+              115,
+              569
+            ],
+            "b": [
+              180,
+              569
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "04",
+            "a": [
+              250,
+              586
+            ],
+            "b": [
+              200,
+              586
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "badge": "G-02",
+        "atmosphere": "",
+        "actors": [
+          {
+            "id": "g42",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              125,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao_car",
+            "tex": "round1/vehicles/g42_rear_r2.png",
+            "at": [
+              250,
+              402
+            ],
+            "scale": 0.33
+          },
+          {
+            "id": "axiao",
+            "tex": "axiao_idle.png",
+            "at": [
+              230,
+              515
+            ]
+          }
+        ],
+        "beats": [
+          {
+            "narrate": "A1-T1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chat_system",
+      "type": "scene",
+      "sceneId": "shanghai_phone",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "messageId": "invite",
+      "scene": {
+        "hideAyu": true,
+        "bg": "round1/people/group_shoulder.png",
+        "badge": "",
+        "beats": [
+          {
+            "game": "group_chat",
+            "lines": [
+              {
+                "say": "A1-3a",
+                "who": "system"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "chat_axiao",
+      "type": "scene",
+      "sceneId": "shanghai_phone",
+      "speaker": "axiao",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "messageId": "axiao",
+      "scene": {
+        "hideAyu": true,
+        "bg": "round1/people/group_shoulder.png",
+        "badge": "",
+        "beats": [
+          {
+            "game": "group_chat",
+            "lines": [
+              {
+                "say": "A1-3b",
+                "who": "axiao"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "chat_toretto",
+      "type": "scene",
+      "sceneId": "shanghai_phone",
+      "speaker": "toretto",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "messageId": "toretto",
+      "scene": {
+        "hideAyu": true,
+        "bg": "round1/people/group_shoulder.png",
+        "badge": "",
+        "beats": [
+          {
+            "game": "group_chat",
+            "lines": [
+              {
+                "say": "A1-3c",
+                "who": "toretto"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "chat_ayu",
+      "type": "scene",
+      "sceneId": "shanghai_phone",
+      "speaker": "ayu",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "messageId": "ayu",
+      "caret": true,
+      "scene": {
+        "hideAyu": true,
+        "bg": "round1/people/group_shoulder.png",
+        "badge": "",
+        "beats": [
+          {
+            "game": "group_chat",
+            "lines": [
+              {
+                "say": "A1-3d",
+                "who": "ayu"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pen",
+      "type": "scene",
+      "sceneId": "invitation",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "materialId": "pen",
+      "scene": {
+        "hideAyu": true,
+        "bg": "round1/desk_r4/idle.png",
+        "beats": [
+          {
+            "material": "pen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "to_chengdu",
+      "type": "scene",
+      "sceneId": "invitation",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "effect": "ink_to_chengdu",
+      "scene": {
+        "hideAyu": true,
+        "bg": "round1/desk_r4/idle.png",
+        "beats": [
+          {
+            "narrate": "W-NEXT-CHENGDU"
+          }
+        ]
+      }
+    }
+  ]
+}

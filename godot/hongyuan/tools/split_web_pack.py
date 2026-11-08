@@ -1,0 +1,149 @@
+"""Split a full export into an offline desk plus immutable, versioned chapter PCKs.
+Only export artifacts are modified. Chapter JSON/scripts stay in the startup pack.
+"""
+import argparse
+from collections import defaultdict
+from hashlib import md5, sha256
+import json
+import os
+from pathlib import Path
+import re
+from split_wechat_pack import Entry, read_pack, write_pack, partition, CHAPTERS, MEDIA, CLOUD_CHUNK
+
+def reuse_identical(path, output):
+    """Share only immutable, hash-identical prior artifacts; never remove a candidate."""
+    relative = path.relative_to(output)
+    digest = sha256(path.read_bytes()).digest()
+    for sibling in output.parent.iterdir():
+        if sibling == output or not sibling.is_dir():
+            continue
+        old = sibling / relative
+        if old.is_file() and old.stat().st_size == path.stat().st_size and sha256(old.read_bytes()).digest() == digest:
+            link = path.with_name(path.name + '.shared')
+            try:
+                os.link(old, link)
+                os.replace(link, path)
+                return
+            except OSError:
+                link.unlink(missing_ok=True)
+
+STARTUP = {'bg_invite_desk.png', 'invite_card.png', 'invite_base.png', 'invite_pen_stroke.png',
+           'invite_slot_pen.png', 'invite_slot_ink.png', 'pen_tip.png'}
+
+def split_web(out, root, source, base_url, development=False):
+    wasm = out / 'index.wasm'
+    with wasm.open('rb') as stream:
+        if stream.read(8) != b'\x00asm\x01\x00\x00\x00' or wasm.stat().st_size < 1_000_000:
+            raise RuntimeError('Incomplete WebAssembly export; preserve the log and repair before splitting')
+    html_source = (out / 'index.html').read_text()
+    match = re.search(r'"index\.wasm"\s*:\s*(\d+)', html_source)
+    if not match or int(match[1]) != wasm.stat().st_size:
+        raise RuntimeError('WebAssembly byte size does not match the generated HTML')
+    pack = out / 'index.pck'
+    header, entries = read_pack(pack)
+    groups = partition(entries)
+    # Determine old root-level art ownership from actual chapter strings and alias maps.
+    references = defaultdict(set)
+    aliases = json.loads((root / 'hongyuan/assets/manifest.json').read_text()).get('backgrounds', {})
+    games = {'drive': 'shanghai', 'desk_chat': 'call', 'pandas': 'chengdu', 'call': 'call',
+             'fishing': 'shizuoka', 'onsen': 'shizuoka', 'ringtoss': 'hainan',
+             'fireworks': 'hainan', 'photo': 'hongkong', 'offer': 'hongkong', 'mail': 'hongkong',
+             'finale': 'finale', 'invite_mail': 'finale'}
+    for chapter in CHAPTERS:
+        text = (root / f'hongyuan/chapters/{chapter}.json').read_text()
+        for key, value in aliases.items():
+            if f'"{key}"' in text:
+                text += json.dumps(value)
+        for game, owner in games.items():
+            if owner == chapter:
+                text += (root / f'hongyuan/games/{game}.gd').read_text()
+        for filename in re.findall(r'[\w./-]+\.(?:png|webp|svg|ogg)', text):
+            references[Path(filename).name].add(chapter)
+    # 全局代码（运行器、舞台、界面、没有归章的小游戏）里用到的图，不能只放进某一章的包
+    shared = set()
+    global_sources = [root / 'hongyuan/scene_runner.gd', root / 'hongyuan/stage.gd', root / 'hongyuan/player.gd']
+    global_sources += sorted((root / 'hongyuan/ui').glob('*.gd'))
+    global_sources += [f for f in sorted((root / 'hongyuan/games').glob('*.gd')) if f.stem not in games]
+    for source_file in global_sources:
+        if source_file.exists():
+            for filename in re.findall(r'[\w./%-]+\.(?:png|webp|svg|ogg)', source_file.read_text()):
+                shared.add(Path(filename).name)
+    assigned = {}
+    for group, members in groups.items():
+        for entry in members:
+            name = entry.name.removesuffix('.import').removesuffix('.remap')
+            target = group
+            if name.startswith('hongyuan/assets/'):
+                if Path(name).name in STARTUP or name.startswith('hongyuan/assets/round1/desk_r4/') or re.search(r'w2/finale/slot_', name):
+                    target = 'main'
+                elif group == 'love-media':
+                    owners = references[Path(name).name] - {'prologue'}
+                    if len(owners) == 1 and Path(name).name not in shared:
+                        target = next(iter(owners))
+            if group == 'prologue':
+                target = 'main'
+            assigned[entry.name] = target
+    # An import/remap and all of its payloads must move together.
+    for entry in entries.values():
+        if entry.name.endswith(('.import', '.remap')):
+            for path in re.findall(rb'"res://([^"\r\n]+)"', entry.data):
+                if path.decode() in assigned:
+                    assigned[path.decode()] = assigned[entry.name]
+    groups = defaultdict(list)
+    for name, group in assigned.items():
+        groups[group].append(entries[name])
+    cloud = out / 'content'
+    cloud.mkdir(exist_ok=False)
+    manifest = {'schema': 1, 'mode': 'remote', 'source': source, 'baseUrl': base_url,
+                'development': development, 'groups': {'prologue': []}}
+    report = {}
+    for group, members in sorted(groups.items()):
+        if group == 'main':
+            continue
+        batch, size, batches = [], 0, []
+        for entry in sorted(members, key=lambda e: e.name):
+            cost = len(entry.data) + len(entry.name.encode()) + 64
+            if batch and size + cost > CLOUD_CHUNK:
+                batches.append(batch)
+                batch, size = [], 0
+            batch.append(entry)
+            size += cost
+        if batch:
+            batches.append(batch)
+        manifest['groups'][group] = []
+        for index, batch in enumerate(batches):
+            temp = cloud / f'{group}-{index}.pck'
+            write_pack(temp, header, batch)
+            digest = sha256(temp.read_bytes()).hexdigest()
+            path = temp.with_name(f'{group}-{digest[:20]}.pck')
+            temp.rename(path)
+            reuse_identical(path, out)
+            manifest['groups'][group].append({'file': path.name, 'bytes': path.stat().st_size, 'sha256': digest})
+        report[group] = sum(p['bytes'] for p in manifest['groups'][group])
+    payload = json.dumps(manifest, ensure_ascii=False).encode()
+    main = [e for e in groups['main'] if e.name != 'hongyuan/content_manifest.json']
+    main.append(Entry('hongyuan/content_manifest.json', payload, md5(payload).digest()))
+    write_pack(pack, header, main)
+    report['startup_pck'] = pack.stat().st_size
+    report['startup_wasm'] = (out / 'index.wasm').stat().st_size
+    for name in ['index.wasm', 'index.js']:
+        reuse_identical(out / name, out)
+    html = out / 'index.html'
+    text = html.read_text()
+    text, count = re.subn(r'("index\.pck"\s*:\s*)\d+', lambda m: m[1] + str(pack.stat().st_size), text)
+    if count != 1:
+        raise RuntimeError('Generated HTML PCK size field changed; do not ship this export')
+    html.write_text(text)
+    (out / 'content-manifest.json').write_bytes(payload)
+    (out / 'content-sizes.json').write_text(json.dumps(report, indent=2) + '\n')
+    return report
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('output', type=Path)
+    parser.add_argument('--base-url', required=True)
+    parser.add_argument('--source', required=True)
+    parser.add_argument('--development', action='store_true')
+    args = parser.parse_args()
+    print(json.dumps(split_web(args.output, Path(__file__).resolve().parents[2], args.source,
+                               args.base_url, args.development), indent=2))

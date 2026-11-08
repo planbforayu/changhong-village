@@ -1,0 +1,484 @@
+{
+  "chapterId": "shizuoka",
+  "titleId": "G-09",
+  "steps": [
+    {
+      "id": "pier",
+      "type": "scene",
+      "sceneId": "shizuoka",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "personHeight": 128,
+        "badge": "G-02",
+        "bg": "round1/rework1107/shizuoka_pier.png",
+        "walkArea": [
+          [
+            125,
+            245
+          ],
+          [
+            235,
+            245
+          ],
+          [
+            332,
+            604
+          ],
+          [
+            28,
+            604
+          ]
+        ],
+        "start": [
+          65,
+          588
+        ],
+        "hotspots": [
+          {
+            "id": "spot",
+            "at": [
+              180,
+              300
+            ],
+            "snap": [
+              180,
+              300
+            ],
+            "face": 1,
+            "icon": "rod"
+          },
+          {
+            "id": "boat",
+            "at": [
+              290,
+              585
+            ],
+            "icon": "exit"
+          }
+        ],
+        "beats": [
+          {
+            "card": "G-09",
+            "duration": 2.0
+          },
+          {
+            "narrate": "A4-1a"
+          },
+          {
+            "narrate": "A4-1b"
+          },
+          {
+            "narrate": "A4-1c"
+          },
+          {
+            "goal": {
+              "目标": "到港口钓一次鱼",
+              "操作": "走到钓位，按住蓄力，松手甩竿",
+              "所得": "印章，盖在邀请函上"
+            }
+          },
+          {
+            "go": "spot",
+            "hint": "A4-P1"
+          },
+          {
+            "game": "fishing"
+          },
+          {
+            "go": "boat"
+          },
+          {
+            "bg": "round1/rework1107/turtle_boarding.png",
+            "scaleProfile": "boarding",
+            "walkArea": [
+              [
+                20,
+                610
+              ],
+              [
+                340,
+                610
+              ],
+              [
+                340,
+                432
+              ],
+              [
+                198,
+                424
+              ],
+              [
+                250,
+                242
+              ],
+              [
+                206,
+                242
+              ],
+              [
+                78,
+                420
+              ],
+              [
+                20,
+                430
+              ]
+            ],
+            "start": [
+              65,
+              590
+            ],
+            "companion": "toretto",
+            "walkers": [
+              {
+                "guest": "05",
+                "a": [
+                  45,
+                  570
+                ],
+                "b": [
+                  45,
+                  610
+                ],
+                "speed": 12,
+                "scale": 0.9,
+                "phase": 0.0
+              },
+              {
+                "guest": "06",
+                "a": [
+                  115,
+                  570
+                ],
+                "b": [
+                  115,
+                  610
+                ],
+                "speed": 12,
+                "scale": 0.9,
+                "phase": 0.2
+              },
+              {
+                "guest": "07",
+                "a": [
+                  185,
+                  570
+                ],
+                "b": [
+                  185,
+                  610
+                ],
+                "speed": 12,
+                "scale": 0.9,
+                "phase": 0.4
+              },
+              {
+                "guest": "08",
+                "a": [
+                  255,
+                  570
+                ],
+                "b": [
+                  255,
+                  610
+                ],
+                "speed": 12,
+                "scale": 0.9,
+                "phase": 0.6000000000000001
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "gangway_foot",
+                "at": [
+                  140,
+                  445
+                ],
+                "icon": "exit"
+              },
+              {
+                "id": "gangway",
+                "at": [
+                  228,
+                  258
+                ],
+                "snap": [
+                  228,
+                  258
+                ],
+                "icon": "exit"
+              }
+            ]
+          },
+          {
+            "go": "gangway_foot",
+            "hint": "A4-B3"
+          },
+          {
+            "go": "gangway",
+            "hint": "A4-B3"
+          },
+          {
+            "personHeight": 95,
+            "bg": "round1/scenes/cabin.png",
+            "walkArea": [
+              [
+                95,
+                285
+              ],
+              [
+                270,
+                285
+              ],
+              [
+                305,
+                620
+              ],
+              [
+                55,
+                620
+              ]
+            ],
+            "start": [
+              180,
+              590
+            ],
+            "pose": "",
+            "actors": [
+              {
+                "id": "toretto",
+                "tex": "w2/common/toretto_sit.png",
+                "at": [
+                  170,
+                  264
+                ]
+              }
+            ],
+            "hotspots": [
+              {
+                "id": "seat",
+                "at": [
+                  220,
+                  294
+                ],
+                "snap": [
+                  220,
+                  264
+                ],
+                "face": -1,
+                "pose": "sit",
+                "icon": "sit"
+              }
+            ],
+            "scaleProfile": "cabin",
+            "atmosphere": "boat",
+            "companion": "",
+            "walkers": [
+              {
+                "guest": "09",
+                "a": [
+                  80,
+                  298
+                ],
+                "b": [
+                  80,
+                  298
+                ],
+                "speed": 0,
+                "scale": 0.8
+              },
+              {
+                "guest": "10",
+                "a": [
+                  292,
+                  340
+                ],
+                "b": [
+                  292,
+                  340
+                ],
+                "speed": 0,
+                "scale": 0.8
+              },
+              {
+                "guest": "11",
+                "a": [
+                  107,
+                  430
+                ],
+                "b": [
+                  130,
+                  520
+                ],
+                "speed": 17,
+                "scale": 0.95
+              },
+              {
+                "guest": "12",
+                "a": [
+                  258,
+                  540
+                ],
+                "b": [
+                  240,
+                  420
+                ],
+                "speed": 19,
+                "scale": 0.95
+              }
+            ]
+          },
+          {
+            "go": "seat",
+            "hint": "G-BOAT-SIT"
+          },
+          {
+            "hint": ""
+          },
+          {
+            "wait": 5.0
+          },
+          {
+            "card": "B-J3-1",
+            "duration": 2.0
+          },
+          {
+            "bg": "",
+            "fill": "#10122a",
+            "badge": "",
+            "pose": "",
+            "actors": [],
+            "hotspots": [],
+            "hideAyu": true,
+            "walkers": [],
+            "companion": ""
+          },
+          {
+            "game": "onsen",
+            "lines": [
+              {
+                "say": "A4-2a",
+                "who": "toretto"
+              },
+              {
+                "say": "A4-2b",
+                "who": "ayu"
+              },
+              {
+                "say": "A4-2c",
+                "who": "toretto"
+              },
+              {
+                "say": "A4-2d",
+                "who": "toretto"
+              },
+              {
+                "say": "A4-2e",
+                "who": "toretto"
+              },
+              {
+                "say": "A4-2f",
+                "who": "toretto"
+              },
+              {
+                "say": "A4-2g"
+              },
+              {
+                "say": "A4-2h",
+                "who": "ayu"
+              }
+            ]
+          },
+          {
+            "card": "A4-T1",
+            "duration": 1.8
+          },
+          {
+            "bg": "round1/scenes/registry.png",
+            "fill": "#5e2929",
+            "actors": [],
+            "hideAyu": true,
+            "hotspots": [],
+            "walkers": [],
+            "companion": ""
+          },
+          {
+            "game": "registration",
+            "memory": [
+              "A4-3a",
+              "A4-3b"
+            ]
+          },
+          {
+            "material": "stamp"
+          }
+        ],
+        "scaleProfile": "harbor",
+        "atmosphere": "harbour",
+        "walkers": [
+          {
+            "guest": "03",
+            "a": [
+              20,
+              510
+            ],
+            "b": [
+              125,
+              510
+            ],
+            "speed": 11,
+            "scale": 0.8,
+            "pause": 3
+          },
+          {
+            "guest": "04",
+            "a": [
+              130,
+              545
+            ],
+            "b": [
+              25,
+              545
+            ],
+            "speed": 13,
+            "scale": 0.8,
+            "pause": 4
+          },
+          {
+            "guest": "07",
+            "a": [
+              310,
+              505
+            ],
+            "b": [
+              310,
+              505
+            ],
+            "speed": 0,
+            "scale": 0.8,
+            "fishing": true
+          },
+          {
+            "guest": "08",
+            "a": [
+              335,
+              540
+            ],
+            "b": [
+              335,
+              540
+            ],
+            "speed": 0,
+            "scale": 0.8,
+            "fishing": true
+          }
+        ],
+        "companion": "toretto"
+      }
+    }
+  ]
+}

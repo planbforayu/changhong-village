@@ -1,0 +1,4164 @@
+{
+  "sourceCommit": "d445d3b3346f41dd29a67497a53790f9f24bdbd1",
+  "backgrounds": {
+    "cbd_birthday_desk_r1": {
+      "file": "bg_cbd_birthday_desk_r1.png",
+      "bakedActors": [],
+      "bakedText": [],
+      "status": "reviewCandidate",
+      "location": "CBD·生日桌面近景"
+    },
+    "shizuoka_pier_r1": {
+      "file": "bg_shizuoka_pier_r1.png",
+      "bakedActors": [],
+      "bakedText": [],
+      "status": "reviewCandidate",
+      "location": "静冈·浦岛酒店码头"
+    },
+    "shizuoka_boat_cabin_r1": {
+      "file": "bg_shizuoka_boat_cabin_r1.png",
+      "bakedActors": [],
+      "bakedText": [],
+      "status": "reviewCandidate",
+      "location": "静冈·乌龟船内"
+    },
+    "street": {
+      "file": "bg_sh_street.png",
+      "bakedActors": [],
+      "status": "approvedEmpty",
+      "bakedText": [],
+      "location": "上海日景·出发街边"
+    },
+    "parking": {
+      "file": "parking.webp",
+      "bakedActors": [],
+      "status": "approvedEmpty",
+      "location": "上海日景·东方明珠停车位",
+      "bakedText": []
+    },
+    "driving": {
+      "file": "driving.webp",
+      "bakedActors": [],
+      "status": "approvedEmpty",
+      "location": "上海日景·三车道路",
+      "bakedText": []
+    },
+    "chengdu": {
+      "file": "bg_cd_panda.png",
+      "bakedActors": [],
+      "status": "approvedEmpty",
+      "bakedText": [],
+      "location": "成都日景·熊猫基地"
+    },
+    "road": {
+      "file": "driving.webp",
+      "bakedActors": [],
+      "status": "approvedEmpty",
+      "location": "上海日景·三车道路",
+      "bakedText": []
+    },
+    "invitation_desk": {
+      "file": "bg_invite_desk.png",
+      "bakedActors": [],
+      "status": "approvedEmpty",
+      "bakedText": [],
+      "location": "序章·请柬书桌"
+    },
+    "night": {
+      "file": "l3_computer.webp",
+      "bakedActors": [],
+      "status": "approvedReuse",
+      "bakedText": [],
+      "location": "深夜房间",
+      "bakedSubjects": [
+        "猫"
+      ],
+      "canvas": [
+        540,
+        960
+      ],
+      "origin": [
+        20,
+        36
+      ],
+      "scale": 1
+    }
+  },
+  "sprites": {
+    "ayu": {
+      "idle": "ayu_idle.png",
+      "walk": [
+        "ayu_walk.png",
+        "ayu_idle.png"
+      ],
+      "footBottom": 4
+    },
+    "axiao": {
+      "idle": "axiao_idle.png",
+      "footBottom": 8,
+      "phone": "axiao_phone.png",
+      "walk": [
+        "axiao_walk_side_1.png",
+        "axiao_walk_side_2.png",
+        "axiao_walk_side_3.png",
+        "axiao_walk_side_4.png"
+      ],
+      "avatarFile": "axiao_phone.png",
+      "avatarRegion": [
+        32,
+        8,
+        64,
+        64
+      ]
+    },
+    "panda": {
+      "idle": "panda_slow.png",
+      "action": "panda_eat.png",
+      "slow": "panda_slow.png",
+      "sleep": "panda_sleep.png"
+    }
+  },
+  "images": {
+    "interaction_hand": "interaction_hand.png",
+    "interaction_dialogue": "interaction_dialogue.png",
+    "car": "car.png",
+    "car_rear": "car_rear.png",
+    "traffic_silver": "traffic_silver.png",
+    "traffic_blue": "traffic_blue.png",
+    "traffic_gold": "traffic_gold.png",
+    "ayu_avatar": "ayu_avatar.png",
+    "axiao_avatar": "axiao_avatar.png",
+    "toretto_avatar": "toretto_avatar.png",
+    "car_street": "car_street.png",
+    "car_parking": "car_parking.png",
+    "ayu_formal": "ayu_wedding_idle.png",
+    "invite_card": "invite_card.png",
+    "invite_pen_stroke": "invite_pen_stroke.png",
+    "invite_ink_tint": "invite_ink_tint.png",
+    "invite_slot_pen": "invite_slot_pen.png",
+    "invite_slot_ink": "invite_slot_ink.png",
+    "pen_tip": "pen_tip.png",
+    "phone_frame": "phone_frame.png",
+    "phone_prop": "phone_prop.png",
+    "bubble_left": "bubble_left.png",
+    "bubble_right": "bubble_right.png",
+    "bubble_system": "bubble_system.png",
+    "call_screen": "call_screen.png",
+    "w2_phone_frame": "w2_ui/phone_frame_w2_r1.png",
+    "w2_phone_screen_paper": "w2_ui/phone_screen_paper_w2_r1.png",
+    "w2_phone_header": "w2_ui/phone_header_w2_r1.png",
+    "w2_bubble_left": "w2_ui/bubble_left_w2_r1.png",
+    "w2_bubble_right": "w2_ui/bubble_right_w2_r1.png",
+    "w2_bubble_system": "w2_ui/bubble_system_w2_r1.png",
+    "w2_button": "w2_ui/button_w2_r1.png",
+    "w2_call_accept": "w2_ui/call_accept_w2_r1.png",
+    "w2_call_end": "w2_ui/call_end_w2_r1.png"
+  },
+  "sources": {
+    "interaction_hand.png": {
+      "origin": "D3 原创",
+      "dimensions": [
+        32,
+        32
+      ],
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿，深棕描边、米色手势"
+    },
+    "interaction_dialogue.png": {
+      "origin": "D3 原创",
+      "dimensions": [
+        32,
+        32
+      ],
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿，深棕描边、米色无字气泡"
+    },
+    "street.webp": {
+      "path": "public/assets/stage1/generated/shanghai-map-day-optimized.webp",
+      "cropLTRB": [
+        304,
+        1080,
+        637,
+        1672
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 0
+    },
+    "driving.webp": {
+      "path": "public/assets/stage1/generated/driving-road-day-optimized.webp",
+      "origin": "旧网页",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 0
+    },
+    "chengdu.webp": {
+      "path": "public/assets/l2_chengdu.webp",
+      "cropLTRB": [
+        174,
+        245,
+        321,
+        506
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 0
+    },
+    "ayu.png": {
+      "path": "public/assets/stage1/generated/ayu-idle-directions.png",
+      "cropLTRB": [
+        0,
+        0,
+        192,
+        256
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        82,
+        192
+      ],
+      "generationAttempt": 0
+    },
+    "ayu_walk1.png": {
+      "path": "public/assets/stage1/generated/ayu-walk-fixed.png",
+      "cropLTRB": [
+        0,
+        0,
+        128,
+        192
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        84,
+        181
+      ],
+      "generationAttempt": 0
+    },
+    "ayu_walk2.png": {
+      "path": "public/assets/stage1/generated/ayu-walk-fixed.png",
+      "cropLTRB": [
+        128,
+        0,
+        256,
+        192
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        82,
+        181
+      ],
+      "generationAttempt": 0
+    },
+    "ayu_walk3.png": {
+      "path": "public/assets/stage1/generated/ayu-walk-fixed.png",
+      "cropLTRB": [
+        256,
+        0,
+        384,
+        192
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        82,
+        181
+      ],
+      "generationAttempt": 0
+    },
+    "ayu_walk4.png": {
+      "path": "public/assets/stage1/generated/ayu-walk-fixed.png",
+      "cropLTRB": [
+        384,
+        0,
+        512,
+        192
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        83,
+        181
+      ],
+      "generationAttempt": 0
+    },
+    "axiao.png": {
+      "path": "public/assets/axiao_phone.webp",
+      "origin": "旧网页",
+      "dimensions": [
+        83,
+        300
+      ],
+      "generationAttempt": 0
+    },
+    "panda.png": {
+      "path": "public/assets/continuation/generated/panda-eating-states-mobile.webp",
+      "cropLTRB": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        111,
+        120
+      ],
+      "generationAttempt": 0
+    },
+    "panda_action.png": {
+      "path": "public/assets/continuation/generated/panda-eating-states-mobile.webp",
+      "cropLTRB": [
+        256,
+        0,
+        512,
+        256
+      ],
+      "origin": "旧网页",
+      "dimensions": [
+        116,
+        120
+      ],
+      "generationAttempt": 0
+    },
+    "car.png": {
+      "path": "public/assets/car_ayu_L.webp",
+      "origin": "旧网页",
+      "dimensions": [
+        320,
+        94
+      ],
+      "generationAttempt": 0
+    },
+    "car_rear.png": {
+      "path": "public/assets/stage1/generated/ayu-g42-rear-optimized.webp",
+      "pixelTreatment": "保留原车造型，清理烘焙车牌字符与车标",
+      "origin": "旧网页",
+      "dimensions": [
+        240,
+        168
+      ],
+      "generationAttempt": 0
+    },
+    "traffic_silver.png": {
+      "path": "public/assets/stage1/generated/traffic-silver-rear-optimized.webp",
+      "origin": "旧网页",
+      "dimensions": [
+        160,
+        118
+      ],
+      "generationAttempt": 0
+    },
+    "traffic_blue.png": {
+      "path": "public/assets/stage1/generated/traffic-blue-rear-optimized.webp",
+      "origin": "旧网页",
+      "dimensions": [
+        160,
+        118
+      ],
+      "generationAttempt": 0
+    },
+    "traffic_gold.png": {
+      "path": "public/assets/stage1/generated/traffic-gold-rear-optimized.webp",
+      "origin": "旧网页",
+      "dimensions": [
+        160,
+        118
+      ],
+      "generationAttempt": 0
+    },
+    "ayu_avatar.png": {
+      "origin": "一览图同源原图",
+      "dimensions": [
+        64,
+        64
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/ayu_idle.webp",
+      "board": "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png",
+      "designBoardCell": "A.ayu-casual-idle"
+    },
+    "axiao_avatar.png": {
+      "origin": "从阿晓新图裁取",
+      "dimensions": [
+        64,
+        64
+      ],
+      "generationAttempt": 0,
+      "references": [
+        "axiao_idle.png",
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "method": "已确认站姿头肩裁切"
+    },
+    "toretto_avatar.png": {
+      "origin": "一览图同源原图",
+      "dimensions": [
+        64,
+        64
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/tt_stand.webp",
+      "board": "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png",
+      "designBoardCell": "B-terotto-casual-stand"
+    },
+    "parking.webp": {
+      "path": "public/assets/stage1/generated/shanghai-map-day-optimized.webp",
+      "origin": "旧网页",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 0
+    },
+    "bg_invite_desk.png": {
+      "dimensions": [
+        540,
+        960
+      ],
+      "origin": "新画",
+      "generationAttempt": 1,
+      "method": "内置 imagegen；目标像素尺寸最近邻整稿",
+      "references": [
+        "public/assets/stage1/generated/invitation-desk-empty-optimized.webp"
+      ]
+    },
+    "bg_sh_street.png": {
+      "dimensions": [
+        540,
+        960
+      ],
+      "origin": "新画",
+      "generationAttempt": 1,
+      "method": "内置 imagegen；目标像素尺寸最近邻整稿",
+      "references": [
+        "public/assets/stage1/generated/shanghai-map-day-optimized.webp",
+        "public/assets/stage1/generated/driving-road-day-optimized.webp"
+      ]
+    },
+    "bg_cd_panda.png": {
+      "dimensions": [
+        540,
+        960
+      ],
+      "origin": "新画",
+      "generationAttempt": 1,
+      "method": "内置 imagegen；目标像素尺寸最近邻整稿",
+      "references": [
+        "public/assets/stage1/generated/shanghai-map-day-optimized.webp",
+        "public/assets/l2_chengdu.webp"
+      ]
+    },
+    "l3_computer.webp": {
+      "origin": "旧网页",
+      "dimensions": [
+        499,
+        887
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/l3_computer.webp",
+      "canvas": [
+        540,
+        960
+      ],
+      "origin_px": [
+        20,
+        36
+      ],
+      "scale": 1,
+      "bakedSubjects": [
+        "猫"
+      ]
+    },
+    "car_street.png": {
+      "origin": "一览图同源原图",
+      "dimensions": [
+        263,
+        80
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/car_ayu_L.webp",
+      "board": "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png",
+      "scaleDivisor": 2
+    },
+    "car_parking.png": {
+      "origin": "一览图同源原图",
+      "dimensions": [
+        175,
+        54
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/car_ayu_L.webp",
+      "board": "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png",
+      "scaleDivisor": 3
+    },
+    "panda_sleep.png": {
+      "dimensions": [
+        170,
+        91
+      ],
+      "origin": "旧网页",
+      "generationAttempt": 0,
+      "path": "public/assets/continuation/generated/panda-eating-states-mobile.webp",
+      "cropLTRB": [
+        512,
+        0,
+        768,
+        256
+      ],
+      "method": "相同比例缩到坐高约120；深色一像素描边"
+    },
+    "ayu_idle.png": {
+      "origin": "一览图同源原图",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/ayu_idle.webp",
+      "board": "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png",
+      "designBoardCell": "A.ayu-casual-idle"
+    },
+    "ayu_walk.png": {
+      "origin": "一览图同源原图",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/ayu_walk.webp",
+      "board": "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png",
+      "designBoardCell": "B.ayu-casual-walk"
+    },
+    "ayu_wedding_idle.png": {
+      "origin": "一览图同源原图",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 0,
+      "path": "public/assets/ayu_wed_stand.webp",
+      "board": "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png",
+      "designBoardCell": "6.ayu-wedding-stand"
+    },
+    "panda_eat.png": {
+      "dimensions": [
+        111,
+        120
+      ],
+      "origin": "旧网页",
+      "generationAttempt": 0,
+      "path": "public/assets/continuation/generated/panda-eating-states-mobile.webp",
+      "cropLTRB": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "method": "相同比例缩到坐高约120；深色一像素描边"
+    },
+    "panda_slow.png": {
+      "dimensions": [
+        110,
+        114
+      ],
+      "origin": "旧网页",
+      "generationAttempt": 0,
+      "path": "public/assets/continuation/generated/panda-eating-states-mobile.webp",
+      "cropLTRB": [
+        256,
+        0,
+        512,
+        256
+      ],
+      "method": "相同比例缩到坐高约120；深色一像素描边"
+    },
+    "invite_card.png": {
+      "dimensions": [
+        360,
+        460
+      ],
+      "origin": "新画",
+      "generationAttempt": 1,
+      "method": "内置 imagegen；目标像素尺寸最近邻整稿",
+      "references": [
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ]
+    },
+    "invite_pen_stroke.png": {
+      "dimensions": [
+        360,
+        460
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "invite_card.png"
+      ],
+      "linePx": [
+        [
+          50,
+          172
+        ],
+        [
+          310,
+          172
+        ]
+      ]
+    },
+    "invite_ink_tint.png": {
+      "dimensions": [
+        360,
+        460
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "invite_card.png",
+        "invite_pen_stroke.png"
+      ]
+    },
+    "invite_slot_pen.png": {
+      "dimensions": [
+        360,
+        460
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "invite_card.png"
+      ]
+    },
+    "invite_slot_ink.png": {
+      "dimensions": [
+        360,
+        460
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "invite_card.png"
+      ]
+    },
+    "pen_tip.png": {
+      "dimensions": [
+        44,
+        56
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "invite_slot_pen.png"
+      ],
+      "anchor": [
+        6,
+        50
+      ]
+    },
+    "phone_frame.png": {
+      "dimensions": [
+        300,
+        540
+      ],
+      "origin": "新画",
+      "generationAttempt": 1,
+      "method": "内置 imagegen；目标像素尺寸最近邻整稿",
+      "references": [
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "screenRect": [
+        15,
+        26,
+        270,
+        488
+      ]
+    },
+    "phone_prop.png": {
+      "dimensions": [
+        42,
+        63
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "phone_frame.png"
+      ]
+    },
+    "bubble_left.png": {
+      "dimensions": [
+        48,
+        48
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "sliceMargin": 12
+    },
+    "bubble_right.png": {
+      "dimensions": [
+        48,
+        48
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "sliceMargin": 12
+    },
+    "bubble_system.png": {
+      "dimensions": [
+        48,
+        48
+      ],
+      "origin": "新画",
+      "generationAttempt": 0,
+      "method": "原生像素 PNG 手工制稿",
+      "references": [
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "sliceMargin": 12
+    },
+    "call_screen.png": {
+      "dimensions": [
+        270,
+        488
+      ],
+      "origin": "新画",
+      "generationAttempt": 1,
+      "method": "内置 imagegen；目标像素尺寸最近邻整稿",
+      "references": [
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ]
+    },
+    "axiao_idle.png": {
+      "origin": "D3 按退回04重画阿晓",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 2,
+      "references": [
+        "public/assets/axiao_phone.webp",
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "method": "内置 imagegen 重画；透明蒙版净边、最近邻整稿、减色与小熊发夹局部修正",
+      "card": "H01",
+      "anchor": [
+        64,
+        200
+      ],
+      "revision": "H01-R1",
+      "status": "staticArtReviewed",
+      "sha256": "f250d0ae003446319ad82c59c2c61bc8dce9536feb34081dcf41956a2fe84f42",
+      "review": {
+        "D2": "初审过",
+        "D4": "六项静态审美过",
+        "sourceCommit": "fdb6750740066a450dba90278ae0cf011689b8be",
+        "sourceReport": "回执/W2工位/D4/H01-2026-11-06/H01-R1-阿晓六帧-静态审美终审.md",
+        "runtimeReview": "待下一冻结包 D4 复验"
+      }
+    },
+    "axiao_phone.png": {
+      "origin": "D3 按退回04重画阿晓",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 2,
+      "references": [
+        "public/assets/axiao_phone.webp",
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "method": "内置 imagegen 重画；透明蒙版净边、最近邻整稿、减色与小熊发夹局部修正",
+      "card": "H01",
+      "anchor": [
+        64,
+        200
+      ],
+      "revision": "H01-R1",
+      "status": "staticArtReviewed",
+      "sha256": "1699739c620bcd087beaa44c6f72ae89920f93b0ad323fbc4ce634f58bfa6b95",
+      "review": {
+        "D2": "初审过",
+        "D4": "六项静态审美过",
+        "sourceCommit": "fdb6750740066a450dba90278ae0cf011689b8be",
+        "sourceReport": "回执/W2工位/D4/H01-2026-11-06/H01-R1-阿晓六帧-静态审美终审.md",
+        "runtimeReview": "待下一冻结包 D4 复验"
+      }
+    },
+    "axiao_walk_side_1.png": {
+      "origin": "D3 按退回04重画阿晓",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 2,
+      "references": [
+        "public/assets/axiao_phone.webp",
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "method": "内置 imagegen 重画；透明蒙版净边、最近邻整稿、减色与小熊发夹局部修正",
+      "card": "H01",
+      "anchor": [
+        64,
+        200
+      ],
+      "revision": "H01-R1",
+      "status": "staticArtReviewed",
+      "sha256": "fbf69cd4c7bba5227f14c98ad38dff81ef15db05de7e63d1b9b58d7ffa056722",
+      "review": {
+        "D2": "初审过",
+        "D4": "六项静态审美过",
+        "sourceCommit": "fdb6750740066a450dba90278ae0cf011689b8be",
+        "sourceReport": "回执/W2工位/D4/H01-2026-11-06/H01-R1-阿晓六帧-静态审美终审.md",
+        "runtimeReview": "待下一冻结包 D4 复验"
+      }
+    },
+    "axiao_walk_side_2.png": {
+      "origin": "D3 按退回04重画阿晓",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 2,
+      "references": [
+        "public/assets/axiao_phone.webp",
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "method": "内置 imagegen 重画；透明蒙版净边、最近邻整稿、减色与小熊发夹局部修正",
+      "card": "H01",
+      "anchor": [
+        64,
+        200
+      ],
+      "revision": "H01-R1",
+      "status": "staticArtReviewed",
+      "sha256": "0822b2cb5ae29350bcbcb7096b59c7eee508ade8285ce5257f7a9d39780d3399",
+      "review": {
+        "D2": "初审过",
+        "D4": "六项静态审美过",
+        "sourceCommit": "fdb6750740066a450dba90278ae0cf011689b8be",
+        "sourceReport": "回执/W2工位/D4/H01-2026-11-06/H01-R1-阿晓六帧-静态审美终审.md",
+        "runtimeReview": "待下一冻结包 D4 复验"
+      }
+    },
+    "axiao_walk_side_3.png": {
+      "origin": "D3 按退回04重画阿晓",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 3,
+      "references": [
+        "public/assets/axiao_phone.webp",
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "method": "内置 imagegen 重画；透明蒙版净边、最近邻整稿、减色与小熊发夹局部修正",
+      "card": "H01",
+      "anchor": [
+        64,
+        200
+      ],
+      "revision": "H01-R1",
+      "status": "staticArtReviewed",
+      "sha256": "720f4ed15fcfb534e0edeab1d7f85bf6d3c1bc2ef4eedfd007c8d765d360530c",
+      "review": {
+        "D2": "初审过",
+        "D4": "六项静态审美过",
+        "sourceCommit": "fdb6750740066a450dba90278ae0cf011689b8be",
+        "sourceReport": "回执/W2工位/D4/H01-2026-11-06/H01-R1-阿晓六帧-静态审美终审.md",
+        "runtimeReview": "待下一冻结包 D4 复验"
+      }
+    },
+    "axiao_walk_side_4.png": {
+      "origin": "D3 按退回04重画阿晓",
+      "dimensions": [
+        128,
+        208
+      ],
+      "generationAttempt": 3,
+      "references": [
+        "public/assets/axiao_phone.webp",
+        "docs/红缘原稿/03 美术参考/红缘大冒险-人物设计一览图.png"
+      ],
+      "method": "内置 imagegen 重画；透明蒙版净边、最近邻整稿、减色与小熊发夹局部修正",
+      "card": "H01",
+      "anchor": [
+        64,
+        200
+      ],
+      "revision": "H01-R1",
+      "status": "staticArtReviewed",
+      "sha256": "e7697c6c07ad1dceb5974018199591d6591a868ff35ee4c015f741aa19e89024",
+      "review": {
+        "D2": "初审过",
+        "D4": "六项静态审美过",
+        "sourceCommit": "fdb6750740066a450dba90278ae0cf011689b8be",
+        "sourceReport": "回执/W2工位/D4/H01-2026-11-06/H01-R1-阿晓六帧-静态审美终审.md",
+        "runtimeReview": "待下一冻结包 D4 复验"
+      }
+    },
+    "w2_review/welcome_court_r1.png": {
+      "origin": "D3 迎宾院构图小样",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationAttempt": 1,
+      "status": "reviewOnly",
+      "references": [
+        "godot/assets/layered/scene_luoman_entrance/layout.json",
+        "godot/docs/任务卡-A05-迎宾院.md"
+      ]
+    },
+    "w2_review/fountain_plaza_r1.png": {
+      "origin": "D3 喷泉广场构图小样",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationAttempt": 1,
+      "status": "reviewOnly",
+      "references": [
+        "godot/assets/layered/scene_luoman_plaza/layout.json"
+      ]
+    },
+    "bg_cbd_birthday_desk_r1.png": {
+      "origin": "D3 新画·K21 R1",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 1,
+      "method": "内置 ImageGen，最近邻缩至工程尺寸",
+      "references": [
+        "w2-refs/阿鱼10-03-像素办公室参考.png"
+      ]
+    },
+    "bg_shizuoka_pier_r1.png": {
+      "origin": "D3 新画·K22 R1",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 1,
+      "method": "内置 ImageGen，最近邻缩至工程尺寸",
+      "references": [
+        "public/assets/l4_japan.webp"
+      ]
+    },
+    "bg_shizuoka_boat_cabin_r1.png": {
+      "origin": "D3 新画·K22 R1",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 1,
+      "method": "内置 ImageGen，最近邻缩至工程尺寸",
+      "references": [
+        "public/assets/l4_japan.webp"
+      ]
+    },
+    "w2_review/wedding_r1/entrance/review_base.png": {
+      "origin": "D3 迎宾院 R1 真包评审分层",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationAttempt": 1,
+      "status": "reviewOnly",
+      "reviewPlacement": "w2_review/wedding_r1/entrance/room.json"
+    },
+    "w2_review/wedding_r1/plaza/review_base.png": {
+      "origin": "D3 喷泉广场 R1 真包评审分层",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationAttempt": 1,
+      "status": "reviewOnly",
+      "reviewPlacement": "w2_review/wedding_r1/plaza/room.json"
+    },
+    "w2_ui/bubble_left_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        48,
+        48
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate",
+      "sliceMargin": 12
+    },
+    "w2_ui/bubble_right_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        48,
+        48
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate",
+      "sliceMargin": 12
+    },
+    "w2_ui/bubble_system_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        48,
+        48
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate",
+      "sliceMargin": 12
+    },
+    "w2_ui/button_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        48,
+        48
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate",
+      "sliceMargin": 12
+    },
+    "w2_ui/call_accept_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        66,
+        66
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate"
+    },
+    "w2_ui/call_end_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        66,
+        66
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate"
+    },
+    "w2_ui/dialogue_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        48,
+        48
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate",
+      "sliceMargin": 12
+    },
+    "w2_ui/phone_frame_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        498,
+        864
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate",
+      "screenRect": [
+        12,
+        22,
+        474,
+        820
+      ]
+    },
+    "w2_ui/phone_header_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        474,
+        84
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate"
+    },
+    "w2_ui/phone_screen_paper_w2_r1.png": {
+      "origin": "D3 K38/K39 原生像素界面首批",
+      "dimensions": [
+        474,
+        820
+      ],
+      "generationAttempt": 1,
+      "status": "reviewCandidate"
+    },
+    "laugh.svg": {
+      "origin": "W1 现有图标",
+      "dimensions": [
+        32,
+        32
+      ],
+      "generationAttempt": 0
+    },
+    "w2/call/bg_cbd_desk.png": {
+      "file": "w2/call/bg_cbd_desk.png",
+      "card": "M33",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "深夜来电与 CBD 桌面",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_cbd_birthday_desk_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "c4b95c7f1f4ba9ee87cc1b31cde54d4fa501c20daf24d4af26427d90a7f0fd46"
+    },
+    "w2/call/bg_room_night.png": {
+      "file": "w2/call/bg_room_night.png",
+      "card": "M30",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "旧网页房间原图 1:1；D3 ImageGen 仅补外缘",
+      "usedIn": "深夜来电与 CBD 桌面",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "l3_computer.webp"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "d36c5be9a6725dafccd519e54f4d2438e0fab35a075e490d4c1de715974b7e69"
+    },
+    "w2/call/phone_ring_1.png": {
+      "file": "w2/call/phone_ring_1.png",
+      "card": "M32",
+      "dimensions": [
+        48,
+        32
+      ],
+      "anchor": [
+        24,
+        16
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "深夜来电与 CBD 桌面",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "279bd836e3135be4dbacb34cdadad4d45a7aa9aa1af38c3a196d75603a4f4776"
+    },
+    "w2/call/phone_ring_2.png": {
+      "file": "w2/call/phone_ring_2.png",
+      "card": "M32",
+      "dimensions": [
+        48,
+        32
+      ],
+      "anchor": [
+        24,
+        16
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "深夜来电与 CBD 桌面",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "eb5adde6741d77963cbbe76fb29c8ea13071dcb83eae8ad68d2656e69ca592f0"
+    },
+    "w2/chengdu/bamboo_held.png": {
+      "file": "w2/chengdu/bamboo_held.png",
+      "card": "M22",
+      "dimensions": [
+        48,
+        96
+      ],
+      "anchor": [
+        24,
+        86
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "成都熊猫基地",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "bd55eec7a784b3d93d1d359353ac362005e487f2f46275902b6b371b06eb6c38"
+    },
+    "w2/chengdu/bg_base.png": {
+      "file": "w2/chengdu/bg_base.png",
+      "card": "M20",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "成都熊猫基地",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_cd_panda.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "7cfae3a102fafd08d5cc4271138761a292fd9c65e3b3056546b1556fb63e8035"
+    },
+    "w2/chengdu/panda_eat.png": {
+      "file": "w2/chengdu/panda_eat.png",
+      "card": "M23",
+      "dimensions": [
+        111,
+        120
+      ],
+      "anchor": [
+        55,
+        119
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "成都熊猫基地",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "panda_eat.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "62d302c978dd5f2f077795dfced8a725befc91bbab704fe26e660eea878274b0"
+    },
+    "w2/chengdu/panda_idle.png": {
+      "file": "w2/chengdu/panda_idle.png",
+      "card": "M23",
+      "dimensions": [
+        111,
+        120
+      ],
+      "anchor": [
+        55,
+        119
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "成都熊猫基地",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "panda.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "339914442d4e308e0b135b3e2293d96998fe8a83bc57cb0dd8d7924384a5c54b"
+    },
+    "w2/chengdu/panda_sleep.png": {
+      "file": "w2/chengdu/panda_sleep.png",
+      "card": "M23",
+      "dimensions": [
+        170,
+        91
+      ],
+      "anchor": [
+        85,
+        90
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "成都熊猫基地",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "panda_sleep.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "975f7b3a4f7a1b132b0ac3c6720dd8dd00cb80e8158a4b74d7040f1ae9241fb8"
+    },
+    "w2/chengdu/panda_slow.png": {
+      "file": "w2/chengdu/panda_slow.png",
+      "card": "M23",
+      "dimensions": [
+        110,
+        114
+      ],
+      "anchor": [
+        55,
+        113
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "成都熊猫基地",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "panda_slow.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "68a2f3f167db5532b569dec344be43f836a58d1653d97632a210cbcec043f130"
+    },
+    "w2/common/ayu_idle_back.png": {
+      "file": "w2/common/ayu_idle_back.png",
+      "card": "M03",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "237ae69c61bdc97d3e46eb0c1eb33df32ba6441c339e5d7f41bd7feb203cb5b8"
+    },
+    "w2/common/ayu_walk_back_1.png": {
+      "file": "w2/common/ayu_walk_back_1.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "154cbbcc98596f5ff638150f5670b12d796e9407793a5c75b3f55fd624eb3db1"
+    },
+    "w2/common/ayu_walk_back_2.png": {
+      "file": "w2/common/ayu_walk_back_2.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "95ac6842beb837e27258ff58354a6a8b96eace6a3e59fdf49db3451750293443"
+    },
+    "w2/common/ayu_walk_back_3.png": {
+      "file": "w2/common/ayu_walk_back_3.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "ddfbf94efe5b34251681922d78211e4a9a8374db41afb19f5f9e100b8a0ecccf"
+    },
+    "w2/common/ayu_walk_back_4.png": {
+      "file": "w2/common/ayu_walk_back_4.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "0c8355be648c5195e47e4f56523ed06519b97d69c537fb3f92967d799d133abc"
+    },
+    "w2/common/ayu_walk_front_1.png": {
+      "file": "w2/common/ayu_walk_front_1.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "a23cb003db8a3491ceadd75c5401cd59d8359fbc0739b8d04a1521a365300eae"
+    },
+    "w2/common/ayu_walk_front_2.png": {
+      "file": "w2/common/ayu_walk_front_2.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "fabd0ed41d8eda3651093886b1d30d112a08c431bf7c066a4b5cc2906f4b4d2e"
+    },
+    "w2/common/ayu_walk_front_3.png": {
+      "file": "w2/common/ayu_walk_front_3.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "246e8bc3549e611e8256289398a74bfdece72c83713e0f7699b595098b4dd8f2"
+    },
+    "w2/common/ayu_walk_front_4.png": {
+      "file": "w2/common/ayu_walk_front_4.png",
+      "card": "M02",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "94e65191b137abbfd9adac20106835a1e02cfa7e656e489cb135dc9a9045b763"
+    },
+    "w2/common/ayu_walk_side_1.png": {
+      "file": "w2/common/ayu_walk_side_1.png",
+      "card": "M01",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "9c0559f00e367e8dd0392eb527b27c485678a3989ec87c2a605c6328fc1448c0"
+    },
+    "w2/common/ayu_walk_side_2.png": {
+      "file": "w2/common/ayu_walk_side_2.png",
+      "card": "M01",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 2,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "833d882f2cf51eb13986b81a1a19f8067cbc8df33ff1814f86f0af1d600be958"
+    },
+    "w2/common/ayu_walk_side_3.png": {
+      "file": "w2/common/ayu_walk_side_3.png",
+      "card": "M01",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 2,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "3f659423b31826d77a0fb30002f8e9722e8b07d511448c9c80b405e6be186ddf"
+    },
+    "w2/common/ayu_walk_side_4.png": {
+      "file": "w2/common/ayu_walk_side_4.png",
+      "card": "M01",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 2,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "6b9d68f69847840a7714abd7442baacee5e50d3cda2e10c150800c5dee552256"
+    },
+    "w2/common/footstep_dust_1.png": {
+      "file": "w2/common/footstep_dust_1.png",
+      "card": "M07",
+      "dimensions": [
+        32,
+        16
+      ],
+      "anchor": [
+        16,
+        14
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "0db2bf94bbd8fd7ef519cbe94bcee290c867d7b9ddbd4dc3747281c304aeb9bf"
+    },
+    "w2/common/footstep_dust_2.png": {
+      "file": "w2/common/footstep_dust_2.png",
+      "card": "M07",
+      "dimensions": [
+        32,
+        16
+      ],
+      "anchor": [
+        16,
+        14
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "5bce2a16df62a2a5626e1799ba1a14d1032abf9db59d1bf235189dbead67fa9d"
+    },
+    "w2/common/footstep_dust_3.png": {
+      "file": "w2/common/footstep_dust_3.png",
+      "card": "M07",
+      "dimensions": [
+        32,
+        16
+      ],
+      "anchor": [
+        16,
+        14
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "574aa849599fb425ec1c8a79f39d2eca8ce970072bebf82e80e88c70b8a4209b"
+    },
+    "w2/common/icon_answer.png": {
+      "file": "w2/common/icon_answer.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "f3944a172c75e688f7b5f9ae545df3e59e21cd56a9adf38da76724acd4bca561"
+    },
+    "w2/common/icon_car.png": {
+      "file": "w2/common/icon_car.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "f4f2ee63d15980eb10a275c3957ce1d78f571227b5519af317767eb97b67b697"
+    },
+    "w2/common/icon_exit.png": {
+      "file": "w2/common/icon_exit.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "6630ec512c6f88da5895f7b1d32b9136bfdbd0526f82f024815d269bb348579a"
+    },
+    "w2/common/icon_feed.png": {
+      "file": "w2/common/icon_feed.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "17f240a8423b1fc1a7ffd0e3a0f84c0b4b01b1d4c33836bd7a7a019040ec5e06"
+    },
+    "w2/common/icon_phone.png": {
+      "file": "w2/common/icon_phone.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "f8582d6ac443075b19038b8b419485b49328d2a65db5d79302c8db288f6b45cf"
+    },
+    "w2/common/icon_pick.png": {
+      "file": "w2/common/icon_pick.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "44cbf4709cdf35238a29d219ac5f88bfee5684324bb76d2bdfebfce6774e0d30"
+    },
+    "w2/common/icon_rod.png": {
+      "file": "w2/common/icon_rod.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "b3231b1b84eef355ec773238a634dc0b07cf3be9760c655b0816ed9612594191"
+    },
+    "w2/common/icon_sit.png": {
+      "file": "w2/common/icon_sit.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "95a0618af684f7bedbbb7bd082460f6b39a8554146be0e9896ad3a136baff725"
+    },
+    "w2/common/icon_suitcase.png": {
+      "file": "w2/common/icon_suitcase.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "fb1e254f9e49ff7bb259d0f16344c2c38fa30cf57cdf9251fc98a16c60a6efb3"
+    },
+    "w2/common/icon_talk.png": {
+      "file": "w2/common/icon_talk.png",
+      "card": "M06",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "27953e16fcb629eb3b48ee81f5cb6133b94edd847eb1bd731cf50d26b9e42f16"
+    },
+    "w2/common/joystick_base.png": {
+      "file": "w2/common/joystick_base.png",
+      "card": "M05",
+      "dimensions": [
+        144,
+        144
+      ],
+      "anchor": [
+        72,
+        72
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "3fc56f309d07f37a0f90a2383c46da928b2c962ad41167b272f892d22c31d4c9"
+    },
+    "w2/common/joystick_knob.png": {
+      "file": "w2/common/joystick_knob.png",
+      "card": "M05",
+      "dimensions": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        32
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "99c217458311e563e65d25429ae39cfeacf3af00f54110af5aab6e1051b3463e"
+    },
+    "w2/common/toretto_idle.png": {
+      "file": "w2/common/toretto_idle.png",
+      "card": "M04",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "各章通用控件与角色",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "public/assets/tt_stand.webp"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "79c969216274a73fe32473d5eda18c91c6fd17648c7a85244ff4140cae26e622"
+    },
+    "w2/finale/btn_enter.png": {
+      "file": "w2/finale/btn_enter.png",
+      "card": "M72",
+      "dimensions": [
+        240,
+        72
+      ],
+      "anchor": [
+        120,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "7689511dc7691875f96145ec244648eb2abf9896800afdd7cc7edcb51ef6f883"
+    },
+    "w2/finale/chr_LM-GUEST-07.png": {
+      "file": "w2/finale/chr_LM-GUEST-07.png",
+      "card": "M73",
+      "dimensions": [
+        1024,
+        84
+      ],
+      "anchor": [
+        32,
+        82
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 2,
+      "references": [
+        "婚宴 LM-GUEST-01～06、08 原图仅用于同类对照"
+      ],
+      "frameDimensions": [
+        64,
+        84
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "71132a5901f3843629831be952ef0b7bb8d5a2099d27f68498a22ec1a31f0b6c"
+    },
+    "w2/finale/invite_envelope.png": {
+      "file": "w2/finale/invite_envelope.png",
+      "card": "M70",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_slot_envelope_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "aade8da481d594c194e92cca4195ab45228615409380e99c86ef284fa015d4a7"
+    },
+    "w2/finale/invite_paper.png": {
+      "file": "w2/finale/invite_paper.png",
+      "card": "M70",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_slot_paper_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "b6a9678940d7fa4cddc2ed28d9f6aa82f6ab8347f19890c187a82219c1243c57"
+    },
+    "w2/finale/invite_stamp.png": {
+      "file": "w2/finale/invite_stamp.png",
+      "card": "M70",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_slot_stamp_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "f6850a31d1b66ae4755d7ea81c350cd30b3079b171c5ee5505f7a5f5ade1f41a"
+    },
+    "w2/finale/invite_wax.png": {
+      "file": "w2/finale/invite_wax.png",
+      "card": "M70",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_slot_wax_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "6da0c194d6fb0bacafe1666d4d5e6c7bead532c459c5d3ca635841dd58cbf414"
+    },
+    "w2/finale/seal_1.png": {
+      "file": "w2/finale/seal_1.png",
+      "card": "M71",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_pack_open_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "fa1508b8a0d26c9507644120238a2092e4c689f82309e08cb80985f9cc356936"
+    },
+    "w2/finale/seal_2.png": {
+      "file": "w2/finale/seal_2.png",
+      "card": "M71",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_pack_insert_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "7ef9fd25e7d08be20c4c5667bff9350e9ffdca6aedab17ed9e7594db6696dc85"
+    },
+    "w2/finale/seal_3.png": {
+      "file": "w2/finale/seal_3.png",
+      "card": "M71",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_pack_closed_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "ea9d05ef84e1113dc1c9910c9afd461c0105b3148f50baff5a01f7e7675c0b66"
+    },
+    "w2/finale/seal_4.png": {
+      "file": "w2/finale/seal_4.png",
+      "card": "M71",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_seal_hover_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "a54396ee279a716e8237d526032d788cce04377cae3081ec0bcfa4fe88367f92"
+    },
+    "w2/finale/seal_5.png": {
+      "file": "w2/finale/seal_5.png",
+      "card": "M71",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_seal_pressed_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "6fb67c20f02b21a82b2bc50a155b5a4c605b0ad0c96e863b29842776aca1bc46"
+    },
+    "w2/finale/seal_6.png": {
+      "file": "w2/finale/seal_6.png",
+      "card": "M71",
+      "dimensions": [
+        360,
+        460
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "终章请柬、封口及宾客选择",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_invite/invite_seal_done_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "83c005bf6189ed45b3b7bca2028105ec526fc758e8afb582709e6afbd9a5bbd2"
+    },
+    "w2/hainan/ayu_throw_hold.png": {
+      "file": "w2/hainan/ayu_throw_hold.png",
+      "card": "M53",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "public/assets/ayu_throw.webp"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "e2628cf7958331e737f8390c3f1fc311e9d35b1eaf8362d727acc9962b41b16b"
+    },
+    "w2/hainan/ayu_throw_release.png": {
+      "file": "w2/hainan/ayu_throw_release.png",
+      "card": "M53",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "public/assets/ayu_throw.webp"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "eee15fd88bb726868910b4668a3d3fc8d7156620b4af3235b8578247aad4dd57"
+    },
+    "w2/hainan/bg_wanning.png": {
+      "file": "w2/hainan/bg_wanning.png",
+      "card": "M50",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_cd_panda.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "a42fe0dd129224d9e7ac06657c87901538571aa9f9705b9ea948ced50143a1fc"
+    },
+    "w2/hainan/bg_wenchang_night.png": {
+      "file": "w2/hainan/bg_wenchang_night.png",
+      "card": "M54",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_shizuoka_pier_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "e574b6485464dbcf51d3284202771cece0fd194baabec3869fe6db7d889fbeeb"
+    },
+    "w2/hainan/firework_blue_1.png": {
+      "file": "w2/hainan/firework_blue_1.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "36376a89a0254f79bfba428a9b1b1e4c941b937e84d0c5b7508aa907e1d5bc91"
+    },
+    "w2/hainan/firework_blue_2.png": {
+      "file": "w2/hainan/firework_blue_2.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "c67a17d394f1ca880cf401b30163b7ee1af1e5dae08249f1aaf2130e1f711c59"
+    },
+    "w2/hainan/firework_blue_3.png": {
+      "file": "w2/hainan/firework_blue_3.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "a965f7707c671754d6da19a37b1a21aafdbe2d8571ca35c3aef0e292110445b8"
+    },
+    "w2/hainan/firework_blue_4.png": {
+      "file": "w2/hainan/firework_blue_4.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "49b3dbe746506aed6d646d386de3fa90d1d11df37dc4e7aa50213b58c9d78a48"
+    },
+    "w2/hainan/firework_blue_5.png": {
+      "file": "w2/hainan/firework_blue_5.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "4bf70418eb2778cb60d183864fa97d72982dde9e24531a863484c7120c33fd8e"
+    },
+    "w2/hainan/firework_gold_1.png": {
+      "file": "w2/hainan/firework_gold_1.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "5f0cf64f037cc9c671efa8fb6e9b5c180ef45d5bfdff728db955f2912230d48d"
+    },
+    "w2/hainan/firework_gold_2.png": {
+      "file": "w2/hainan/firework_gold_2.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "e6f7e57332574dbf4fa6a0bc69c893446d88793dfa55b633b8bd74721b7d9b1c"
+    },
+    "w2/hainan/firework_gold_3.png": {
+      "file": "w2/hainan/firework_gold_3.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "7529de25fcf09d011c8d6f2ded42efa868e1bbbcc478d02ca1c1785886aa8411"
+    },
+    "w2/hainan/firework_gold_4.png": {
+      "file": "w2/hainan/firework_gold_4.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "98b21da0906f1f5e89d33ec549d307b05e132e795f5f421a625b0189ec411eca"
+    },
+    "w2/hainan/firework_gold_5.png": {
+      "file": "w2/hainan/firework_gold_5.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "82cc6b72b3b76627772a26d1347a5d897d84913dd72f7b013d2248ceb3af35f6"
+    },
+    "w2/hainan/firework_red_1.png": {
+      "file": "w2/hainan/firework_red_1.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "654d2ab2461a2e07ed5cde845e4c78a1eb3f67862831effebb3a65cd5b0e24d8"
+    },
+    "w2/hainan/firework_red_2.png": {
+      "file": "w2/hainan/firework_red_2.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "7cd1bd6184827b898922ba5c4d982174838837dfb7f96ceb857f6e4812340ccb"
+    },
+    "w2/hainan/firework_red_3.png": {
+      "file": "w2/hainan/firework_red_3.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "a964ad758bc3c3c9db363b5113e52c5c70ab15c93acf0875ae0cd385ef4f7c51"
+    },
+    "w2/hainan/firework_red_4.png": {
+      "file": "w2/hainan/firework_red_4.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "95f5eab78c0e9c0fafd4fb32fac48579d6efb5b5090ab389db7becca31f02a82"
+    },
+    "w2/hainan/firework_red_5.png": {
+      "file": "w2/hainan/firework_red_5.png",
+      "card": "M55",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "ddf10207c80ddcc912008f348d07ec397ccc1da9533df2b15ba383a66adb8966"
+    },
+    "w2/hainan/firework_wax_1.png": {
+      "file": "w2/hainan/firework_wax_1.png",
+      "card": "M56",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "5d98441d72983f4197bba91d55d7b6014b80f0a25e81c865e80b9dccebd648bb"
+    },
+    "w2/hainan/firework_wax_2.png": {
+      "file": "w2/hainan/firework_wax_2.png",
+      "card": "M56",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "59e92a2fd749995d994c994f1225dc07cfbde2871ce720bafbc96b14f66347e5"
+    },
+    "w2/hainan/firework_wax_3.png": {
+      "file": "w2/hainan/firework_wax_3.png",
+      "card": "M56",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "9543fa93733e76bebda7f945cd930df8b266867b4566acdd05ebae1d65f3264e"
+    },
+    "w2/hainan/firework_wax_4.png": {
+      "file": "w2/hainan/firework_wax_4.png",
+      "card": "M56",
+      "dimensions": [
+        160,
+        160
+      ],
+      "anchor": [
+        80,
+        80
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "6afa6758c1ffe681ce53551004bd6297280dac990d71499d47f72052cbb9bba5"
+    },
+    "w2/hainan/ring_fly_1.png": {
+      "file": "w2/hainan/ring_fly_1.png",
+      "card": "M52",
+      "dimensions": [
+        40,
+        24
+      ],
+      "anchor": [
+        20,
+        12
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "67ca8141b0aa0ff44e1514032515a5f76087584dabef49f9e235d423a258e8c5"
+    },
+    "w2/hainan/ring_fly_2.png": {
+      "file": "w2/hainan/ring_fly_2.png",
+      "card": "M52",
+      "dimensions": [
+        40,
+        24
+      ],
+      "anchor": [
+        20,
+        12
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "a69358d7583045590b9b43065da8dd0ffefaad2ffe310360dee72c2bcd4b6672"
+    },
+    "w2/hainan/ring_fly_3.png": {
+      "file": "w2/hainan/ring_fly_3.png",
+      "card": "M52",
+      "dimensions": [
+        40,
+        24
+      ],
+      "anchor": [
+        20,
+        12
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "ec1f939ebacad541a7b8da8bf6c3031c4e29b770b2f8dfe3ff75e7af2a37a6e4"
+    },
+    "w2/hainan/ring_land.png": {
+      "file": "w2/hainan/ring_land.png",
+      "card": "M52",
+      "dimensions": [
+        40,
+        24
+      ],
+      "anchor": [
+        20,
+        12
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "万宁套圈或文昌烟花",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "c626de063f286f561e078c599acd45df51d828c84fff5e5a0704fd5979580d18"
+    },
+    "w2/hongkong/ayu_drag_side_1.png": {
+      "file": "w2/hongkong/ayu_drag_side_1.png",
+      "card": "M62",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "6fc69576ef10640efbb5ccd1accb6ad503155f8bc275b63cab03b42f43fbf6e3"
+    },
+    "w2/hongkong/ayu_drag_side_2.png": {
+      "file": "w2/hongkong/ayu_drag_side_2.png",
+      "card": "M62",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "17fcac4ef1375d65e31064d79b883451c7125fd50351d6f6d2e0e40111ac2498"
+    },
+    "w2/hongkong/ayu_drag_side_3.png": {
+      "file": "w2/hongkong/ayu_drag_side_3.png",
+      "card": "M62",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "32d744a2e54a229f3bab69195e8625931e313c67a8334a1de395f1e58d5b8e5b"
+    },
+    "w2/hongkong/ayu_drag_side_4.png": {
+      "file": "w2/hongkong/ayu_drag_side_4.png",
+      "card": "M62",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_walk.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "604723db2fbe657ab6f90e98a4a1d5b0d57eec2f8cad2180867e983469d6c2da"
+    },
+    "w2/hongkong/bg_arrival.png": {
+      "file": "w2/hongkong/bg_arrival.png",
+      "card": "M60",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_sh_street.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "ae76a50563138e9d6a65396dab840a77f578d016386526389ca07c8951b4b23a"
+    },
+    "w2/hongkong/mail_icon.png": {
+      "file": "w2/hongkong/mail_icon.png",
+      "card": "M64",
+      "dimensions": [
+        72,
+        72
+      ],
+      "anchor": [
+        36,
+        36
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "6e8a4542f083ee6f5d07996fc0590c9cdb672ae1fdffcc83fcc4ff8d7b7b241b"
+    },
+    "w2/hongkong/suitcase_1.png": {
+      "file": "w2/hongkong/suitcase_1.png",
+      "card": "M63",
+      "dimensions": [
+        56,
+        72
+      ],
+      "anchor": [
+        28,
+        70
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "0495b47b5f2cdd2f01c93c867e1cf7c46529397ad59ead69a0f36b01724297e1"
+    },
+    "w2/hongkong/suitcase_2.png": {
+      "file": "w2/hongkong/suitcase_2.png",
+      "card": "M63",
+      "dimensions": [
+        56,
+        72
+      ],
+      "anchor": [
+        28,
+        70
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "香港到达大厅、拖箱或邮件",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "c6b067396aa92b237b3122f799365634614c43436e629b43e7b7020e4078fb50"
+    },
+    "w2/shanghai/drive_tile.png": {
+      "file": "w2/shanghai/drive_tile.png",
+      "card": "M12",
+      "dimensions": [
+        540,
+        640
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "2c399bb36965566a620554b3dde52eeb9514a2dcab2882c75fbc6744466fc50e"
+    },
+    "w2/shanghai/g42_top.png": {
+      "file": "w2/shanghai/g42_top.png",
+      "card": "M13",
+      "dimensions": [
+        66,
+        108
+      ],
+      "anchor": [
+        33,
+        54
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "红缘大冒险-人物设计一览图 BMW 区域"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "ce8e6bd39a4ff1bd8d63332d8b441373cdb8f8d3452112c583df0671cce21d80"
+    },
+    "w2/shanghai/parking_lot.png": {
+      "file": "w2/shanghai/parking_lot.png",
+      "card": "M16",
+      "dimensions": [
+        126,
+        780
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "679f88e64ce4cdf3ab0a8a7c8288e68c1a20847f3fd4da15f942d79feae40725"
+    },
+    "w2/shanghai/pearl_top.png": {
+      "file": "w2/shanghai/pearl_top.png",
+      "card": "M15",
+      "dimensions": [
+        120,
+        120
+      ],
+      "anchor": [
+        60,
+        111
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 2,
+      "references": [
+        "parking.webp 东方明珠地标"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "24dd1932008233670e2fab5b4bfca6a7c1b95501a650e112f84f00ef02082c44"
+    },
+    "w2/shanghai/traffic_top_1.png": {
+      "file": "w2/shanghai/traffic_top_1.png",
+      "card": "M14",
+      "dimensions": [
+        66,
+        108
+      ],
+      "anchor": [
+        33,
+        54
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "8f39626c873ede9d8d146e70f1c6b268719456b85a9e0c713836d447fabebe04"
+    },
+    "w2/shanghai/traffic_top_2.png": {
+      "file": "w2/shanghai/traffic_top_2.png",
+      "card": "M14",
+      "dimensions": [
+        66,
+        108
+      ],
+      "anchor": [
+        33,
+        54
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "4a0ae91f19faae6b7876efb77b105cac46085495aa56e1aa831e809c31ab97cf"
+    },
+    "w2/shanghai/traffic_top_3.png": {
+      "file": "w2/shanghai/traffic_top_3.png",
+      "card": "M14",
+      "dimensions": [
+        66,
+        108
+      ],
+      "anchor": [
+        33,
+        54
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "8527882acd8bf8faa983ef04b7fa4c355c72d4cb2d52c389075d4a98427d9817"
+    },
+    "w2/shizuoka/ayu_fish_cast.png": {
+      "file": "w2/shizuoka/ayu_fish_cast.png",
+      "card": "M41",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "public/assets/ayu_fishing.webp"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "2da02c5ea37eac4d1f5b526cf4482fef00975adf1d5e6527adcbc8cebb647613"
+    },
+    "w2/shizuoka/ayu_fish_hold.png": {
+      "file": "w2/shizuoka/ayu_fish_hold.png",
+      "card": "M41",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "public/assets/ayu_fishing.webp"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "72b5885055e87421b8d2045355c4094de052cd772c33bdf11c2753f152a47d80"
+    },
+    "w2/shizuoka/ayu_fish_reel.png": {
+      "file": "w2/shizuoka/ayu_fish_reel.png",
+      "card": "M41",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "public/assets/ayu_fishing.webp"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "c7e46986ca27d697fb9d5873e1995a7a87c1b5ff99ac8eaa1cffa23271ff2004"
+    },
+    "w2/shizuoka/ayu_sit.png": {
+      "file": "w2/shizuoka/ayu_sit.png",
+      "card": "M45",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "ayu_idle.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "34b8f3b6c0fa79a246e24a19e1803b21ed6ef3d76e9dde552c22889f3be115e9"
+    },
+    "w2/shizuoka/bg_boat.png": {
+      "file": "w2/shizuoka/bg_boat.png",
+      "card": "M44",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_shizuoka_boat_cabin_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "eeab1947bf8fe2d822fbc65d41f2e37ff6d2593835311fd3d12901aa5de4b65d"
+    },
+    "w2/shizuoka/bg_cert.png": {
+      "file": "w2/shizuoka/bg_cert.png",
+      "card": "M46",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "public/assets/l4_cert.webp"
+      ],
+      "bakedActors": [
+        "ayu",
+        "toretto"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "49e825602f96638078d7c3b4ccf6e82dd00bb1e2423ccfc2afb645c7871e825e"
+    },
+    "w2/shizuoka/bg_pier.png": {
+      "file": "w2/shizuoka/bg_pier.png",
+      "card": "M40",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "D3 ImageGen 补绘或去字，最近邻整理",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_shizuoka_pier_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "38aaa7ec30c9d34620c696f6d742d61a8eb47aff32f05afe0b15c98c31c6d521"
+    },
+    "w2/shizuoka/bucket.png": {
+      "file": "w2/shizuoka/bucket.png",
+      "card": "M43",
+      "dimensions": [
+        64,
+        64
+      ],
+      "anchor": [
+        32,
+        63
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "w2_props/k23/fishing_bucket_w2_r1.png"
+      ],
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "75101ca2715baaa2583f49cbcca6d0ce3881d7a27d21d316f2045146f3b4316a"
+    },
+    "w2/shizuoka/fish.png": {
+      "file": "w2/shizuoka/fish.png",
+      "card": "M43",
+      "dimensions": [
+        64,
+        40
+      ],
+      "anchor": [
+        32,
+        20
+      ],
+      "origin": "D3 原生像素绘制",
+      "usedIn": "静冈码头、船内及静安领证",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-A.md",
+        "sourceReportSHA256": "8d0a7055ff0b3a91b861bd9452612765bbbfd90bf5eb2c673fdfcf7a134c648f"
+      },
+      "sha256": "ae465f2fe5f41bc1ccb79cccb6134194297a65bc9e6023ffb1317839e8ce9575"
+    },
+    "w2/common/toretto_sit.png": {
+      "file": "w2/common/toretto_sit.png",
+      "card": "M04-sit",
+      "dimensions": [
+        128,
+        208
+      ],
+      "anchor": [
+        64,
+        200
+      ],
+      "origin": "一览图同源站姿及 R1；ImageGen 恢复原白色圆领短袖",
+      "usedIn": "静冈船上右座",
+      "generationAttempt": 2,
+      "status": "staticArtReviewed",
+      "sha256": "904461bc1eba102a76730817a4285c6a124f73337a8ee24e8f63ab1577c9d8da",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M04-sit-R2-2026-11-05/assets/toretto_sit.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/hainan/ring_stall.png": {
+      "file": "w2/hainan/ring_stall.png",
+      "card": "M51",
+      "dimensions": [
+        300,
+        220
+      ],
+      "anchor": [
+        150,
+        211
+      ],
+      "origin": "万宁原景及 R1；ImageGen 补棚布、木纹与玩偶体积",
+      "usedIn": "万宁套圈摊",
+      "generationAttempt": 2,
+      "status": "staticArtReviewed",
+      "sha256": "f110214a643fb6b7d1a3e1451a23ee9dd9e3256971ccd210d674fe00d578cb10",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M51-R2-2026-11-05/assets/ring_stall.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/hongkong/exit_gate.png": {
+      "file": "w2/hongkong/exit_gate.png",
+      "card": "M61",
+      "dimensions": [
+        160,
+        200
+      ],
+      "anchor": [
+        80,
+        195
+      ],
+      "origin": "香港原景及 R1；ImageGen 补金属玻璃与接地",
+      "usedIn": "香港到达厅出口",
+      "generationAttempt": 2,
+      "status": "staticArtReviewed",
+      "sha256": "6393ba752d4144f870388bdc1b27996f292a1ae3e6b6b0a71edc8ebe05b71874",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M61-R2-2026-11-05/assets/exit_gate.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/shanghai/bg_parking.png": {
+      "file": "w2/shanghai/bg_parking.png",
+      "card": "M17",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "parking.webp"
+      ],
+      "sha256": "ee280d71ac1217e40abf20bbd78aebf9a714605cc235ce6efcefaaf5f1c90289",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M10-M11-M17-M19-2026-11-05/assets/bg_parking.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/shanghai/bg_pearl_plaza.png": {
+      "file": "w2/shanghai/bg_pearl_plaza.png",
+      "card": "M19",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "parking.webp"
+      ],
+      "sha256": "ee280d71ac1217e40abf20bbd78aebf9a714605cc235ce6efcefaaf5f1c90289",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M10-M11-M17-M19-2026-11-05/assets/bg_pearl_plaza.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/shanghai/bg_street.png": {
+      "file": "w2/shanghai/bg_street.png",
+      "card": "M10",
+      "dimensions": [
+        540,
+        960
+      ],
+      "anchor": [
+        0,
+        0
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "bg_sh_street.png"
+      ],
+      "sha256": "5be7bd409ec5cbab02140feb4bbbc10c95d431d2c3a52b39ccf4c31a45b745e4",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M10-M11-M17-M19-2026-11-05/assets/bg_street.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/shanghai/car_side.png": {
+      "file": "w2/shanghai/car_side.png",
+      "card": "M11",
+      "dimensions": [
+        263,
+        80
+      ],
+      "anchor": [
+        131,
+        76
+      ],
+      "origin": "项目原素材复用并对齐",
+      "usedIn": "上海街边、俯视驾驶、停车或下车广场",
+      "status": "staticArtReviewed",
+      "generationAttempt": 1,
+      "references": [
+        "car_street.png"
+      ],
+      "sha256": "d974b595bdeae36b9a7ed3994553ceb02ce525253f90dd0ef44d191c3bba9186",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M10-M11-M17-M19-2026-11-05/assets/car_side.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/shizuoka/bobber_1.png": {
+      "file": "w2/shizuoka/bobber_1.png",
+      "card": "M42",
+      "dimensions": [
+        24,
+        24
+      ],
+      "anchor": [
+        12,
+        12
+      ],
+      "origin": "D3 原生像素绘制；珊瑚色浮标、水线及水花分态",
+      "usedIn": "静冈码头钓鱼",
+      "generationAttempt": 2,
+      "status": "staticArtReviewed",
+      "sha256": "0a92058f46de49741102923500780fe5d812de2f1c7db069a1b4da2f987ad8e1",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M42-R2-2026-11-05/assets/bobber_1.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/shizuoka/bobber_2.png": {
+      "file": "w2/shizuoka/bobber_2.png",
+      "card": "M42",
+      "dimensions": [
+        24,
+        24
+      ],
+      "anchor": [
+        12,
+        12
+      ],
+      "origin": "D3 原生像素绘制；珊瑚色浮标、水线及水花分态",
+      "usedIn": "静冈码头钓鱼",
+      "generationAttempt": 2,
+      "status": "staticArtReviewed",
+      "sha256": "4bb2bde3992ce4c8cee55b85e7612b3c16f652b9f3d961fbd354c645447d6419",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M42-R2-2026-11-05/assets/bobber_2.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/shizuoka/bobber_3.png": {
+      "file": "w2/shizuoka/bobber_3.png",
+      "card": "M42",
+      "dimensions": [
+        24,
+        24
+      ],
+      "anchor": [
+        12,
+        12
+      ],
+      "origin": "D3 原生像素绘制；珊瑚色浮标、水线及水花分态",
+      "usedIn": "静冈码头钓鱼",
+      "generationAttempt": 2,
+      "status": "staticArtReviewed",
+      "sha256": "3ca3618aaee9138bd236bb9fc05dad0a7b4fa2ac3d846b5b205499a47859cfd0",
+      "review": {
+        "D2": "初审过",
+        "D4": "静态六项审美过",
+        "sourceCommit": "a8be311e0b5ce5fdfeb0ebd9593bfee1b0a12bfb",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "d5e5d1fdea4ea11512c101eb312cc158f2243f7df27a02f7315a857ecb901439",
+        "evidence": "回执/W2工位/D4/M42-R2-2026-11-05/assets/bobber_3.png",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-B.md"
+      }
+    },
+    "w2/chengdu/bamboo_clump.png": {
+      "file": "w2/chengdu/bamboo_clump.png",
+      "card": "M21",
+      "dimensions": [
+        120,
+        200
+      ],
+      "anchor": [
+        60,
+        196
+      ],
+      "origin": "D3 按 D2 第三次退回决定，从 R3 局部简化外围并净色",
+      "usedIn": "成都竹丛取物",
+      "generationAttempt": 2,
+      "revision": 4,
+      "status": "staticArtReviewed",
+      "sha256": "2b199325700671ab255eb54ad95a0c00b856258e304f0f13db37781442654d73",
+      "review": {
+        "D2": "R4初审过",
+        "D4": "R4静态六项审美过",
+        "sourceCommit": "85a2fed68cbbf7855dc044b33171575429986ec8",
+        "sourceReport": "回执/W2工位/D4/2026-11-05-本轮判定.md",
+        "sourceReportSHA256": "cef84f99e179ae6071d7afe1f5dcbc3ace38920e45bc7c284a9a1330f1c5d545",
+        "evidence": "回执/W2工位/D4/M21-R4-2026-11-05/",
+        "handoff": "回执/W2工位/D2/美术交付-2026-11-05-C-M21.md"
+      }
+    },
+    "w2/call/bg_cbd_office_r2.png": {
+      "file": "w2/call/bg_cbd_office_r2.png",
+      "card": "D2-K2",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "built-in image_gen; 阿鱼11/06要求上海CBD办公室中景",
+      "usedIn": "Toretto办公室收到蛋糕、两束蓝花与手机聊天",
+      "status": "pendingReview",
+      "generationAttempt": 1,
+      "review": {
+        "D4": "待判",
+        "D1": "待核"
+      },
+      "sha256": "4ed05dee961f7a45deb6947b1eae8da58050accf1f6f24741da87b4c569a04f0"
+    },
+    "w2/call/bg_cbd_window_chat_r3.png": {
+      "file": "w2/call/bg_cbd_window_chat_r3.png",
+      "card": "D2-K2",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "built-in image_gen; 阿鱼11/06要求Toretto站办公室窗前拿iPhone给阿鱼发微信",
+      "usedIn": "蛋糕与两束蓝花之后的A3-2l～2p微信对话；Toretto已烘焙，禁叠立绘/头像",
+      "status": "pendingReview",
+      "generationAttempt": 1,
+      "bakedActors": [
+        "toretto"
+      ],
+      "review": {
+        "D4": "待判",
+        "D1": "待核"
+      },
+      "sha256": "3e1e0ebb9fb9c665d617af4d6c9c0ba9a1b21ee89b9e9ced5256832c54638dcf"
+    },
+    "w2/common/toretto_neutral_r2.png": {
+      "file": "w2/common/toretto_neutral_r2.png",
+      "card": "D2-UI2",
+      "dimensions": [
+        984,
+        1599
+      ],
+      "anchor": [
+        505,
+        1518
+      ],
+      "origin": "built-in image_gen; 阿鱼要求按场景切换动作，不总扶眼镜",
+      "usedIn": "自然站姿/办公室看礼物/背身看海",
+      "status": "pendingReview",
+      "generationAttempt": 1,
+      "review": {
+        "D4": "待判",
+        "D1": "待核"
+      },
+      "sha256": "542f61dcea751fcf3ddee06a54be787b5a04149e1612044942c84b1eee937517",
+      "contentRect": [
+        299,
+        61,
+        412,
+        1457
+      ],
+      "contentAlphaThreshold": 16
+    },
+    "w2/common/toretto_gifts_r2.png": {
+      "file": "w2/common/toretto_gifts_r2.png",
+      "card": "D2-UI2",
+      "dimensions": [
+        984,
+        1599
+      ],
+      "anchor": [
+        462.5,
+        1525
+      ],
+      "origin": "built-in image_gen; 阿鱼要求按场景切换动作，不总扶眼镜",
+      "usedIn": "自然站姿/办公室看礼物/背身看海",
+      "status": "pendingReview",
+      "generationAttempt": 1,
+      "review": {
+        "D4": "待判",
+        "D1": "待核"
+      },
+      "sha256": "5eeed65b28574c9923f7b516c38162b22fb8aa88adda57835f7098549a4b7b4a",
+      "contentRect": [
+        251,
+        66,
+        546,
+        1459
+      ],
+      "contentAlphaThreshold": 16
+    },
+    "w2/common/toretto_back_r2.png": {
+      "file": "w2/common/toretto_back_r2.png",
+      "card": "D2-UI2",
+      "dimensions": [
+        984,
+        1599
+      ],
+      "anchor": [
+        491.5,
+        1522
+      ],
+      "origin": "built-in image_gen; 阿鱼要求按场景切换动作，不总扶眼镜",
+      "usedIn": "自然站姿/办公室看礼物/背身看海",
+      "status": "pendingReview",
+      "generationAttempt": 1,
+      "review": {
+        "D4": "待判",
+        "D1": "待核"
+      },
+      "sha256": "37e8d28cdf4dd3489b9694d85e234aa969ba0fd7c1d2e56b4899562441274609",
+      "contentRect": [
+        299,
+        64,
+        386,
+        1458
+      ],
+      "contentAlphaThreshold": 16
+    },
+    "w2/hainan/bg_wenchang_memory_r2.png": {
+      "file": "w2/hainan/bg_wenchang_memory_r2.png",
+      "card": "D2-H2",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "built-in image_gen; Ayu requested a lively public beach memory with distant launch base",
+      "usedIn": "Hainan continuous fireworks memory; crowd baked, couple drawn separately",
+      "status": "pendingReview",
+      "review": {
+        "D4": "pending",
+        "D1": "pending"
+      },
+      "sha256": "e5896bfb68dacc17696c659bad55cf6e78f18a36cb7c841517bb3e3a7f7cc587"
+    },
+    "w2/shizuoka/bg_onsen_sunset.png": {
+      "file": "w2/shizuoka/bg_onsen_sunset.png",
+      "card": "D2-J3",
+      "dimensions": [
+        540,
+        960
+      ],
+      "origin": "D3 revised sunset sample",
+      "usedIn": "Intended seaside onsen A4-2a to h; art only, not connected to runtime",
+      "status": "pendingReview",
+      "review": {
+        "D4": "pending",
+        "D1": "pending"
+      },
+      "sha256": "b4400f51f36250623e2aa340a2c91414f4290468809eee85a3aa1b32bc8f62b6"
+    },
+    "w2/shizuoka/bg_onsen_dusk_r2.png": {
+      "file": "w2/shizuoka/bg_onsen_dusk_r2.png",
+      "card": "D2-J3",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "built-in image_gen; matching time-of-day or bathing pose",
+      "usedIn": "Intended seaside onsen A4-2a to h; art only, not connected to runtime",
+      "status": "pendingReview",
+      "review": {
+        "D4": "pending",
+        "D1": "pending"
+      },
+      "sha256": "2e1fbb7f8bcb1521e206a09593556a2092034b67ae253117d104fc6c0770260a"
+    },
+    "w2/shizuoka/bg_onsen_night_r2.png": {
+      "file": "w2/shizuoka/bg_onsen_night_r2.png",
+      "card": "D2-J3",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "built-in image_gen; matching time-of-day or bathing pose",
+      "usedIn": "Intended seaside onsen A4-2a to h; art only, not connected to runtime",
+      "status": "pendingReview",
+      "review": {
+        "D4": "pending",
+        "D1": "pending"
+      },
+      "sha256": "bc873be8028658565da52a78b288e8bd48b095d55363ee24f668731563d85383"
+    },
+    "w2/shizuoka/ayu_onsen_r2.png": {
+      "file": "w2/shizuoka/ayu_onsen_r2.png",
+      "card": "D2-J3",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "origin": "built-in image_gen; matching time-of-day or bathing pose",
+      "usedIn": "Intended seaside onsen A4-2a to h; art only, not connected to runtime",
+      "status": "pendingReview",
+      "review": {
+        "D4": "pending",
+        "D1": "pending"
+      },
+      "sha256": "5d81cce523d29b4fa4ab7c7d5224c28181606765d547aeef5894dff54894aaeb"
+    },
+    "w2/shizuoka/toretto_onsen_r2.png": {
+      "file": "w2/shizuoka/toretto_onsen_r2.png",
+      "card": "D2-J3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "origin": "built-in image_gen; matching time-of-day or bathing pose",
+      "usedIn": "Intended seaside onsen A4-2a to h; art only, not connected to runtime",
+      "status": "pendingReview",
+      "review": {
+        "D4": "pending",
+        "D1": "pending"
+      },
+      "sha256": "ee48d2bf3a0e6eee6713ed7a3fec0a97e0a99a3034ce499052e9bf9e181b88cc"
+    },
+    "w2/hongkong/bg_disney_memory_r1.png": {
+      "file": "w2/hongkong/bg_disney_memory_r1.png",
+      "card": "D2-HO / D3-G3",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "built-in image_gen; exec-e2ae6ca3-c121-4418-be19-0729fe70bfc0.png",
+      "usedIn": "Intended Hong Kong Disneyland memory; art only, not connected to runtime",
+      "status": "pendingReview",
+      "review": {
+        "D4": "pending",
+        "D1": "pending"
+      },
+      "sha256": "edcf7401a824de04929a0d14c0ce9ba47099e35cfc594e3e38e1877ff093cc87"
+    }
+  },
+  "palette": {
+    "deep": "#240307",
+    "darkRed": "#400a0c",
+    "header": "#5e0e0e",
+    "label": "#662016",
+    "cream": "#fef2d3",
+    "line": "#d9c29e",
+    "gold": "#d6a43c"
+  },
+  "props": {
+    "desk_family_portrait": {
+      "file": "round1/desk_r4/family_portrait.png",
+      "status": "reviewCandidate",
+      "source": "User supplied on-site wedding family photograph; printed image cropped for the existing desk frame, without a generative redraw",
+      "integration": "desk_art.gd shared frame overlay: opening, materials, writing and direct desk backgrounds"
+    }
+  }
+}

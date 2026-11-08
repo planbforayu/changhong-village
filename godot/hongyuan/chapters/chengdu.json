@@ -1,0 +1,300 @@
+{
+  "chapterId": "chengdu",
+  "titleId": "G-07",
+  "steps": [
+    {
+      "id": "chengdu_return",
+      "type": "scene",
+      "sceneId": "chengdu_day",
+      "speaker": "narrator",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/scenes/panda_garden.png",
+        "start": [
+          238,
+          523
+        ],
+        "scaleProfile": "chengdu",
+        "walkers": [
+          {
+            "guest": "05",
+            "a": [
+              20,
+              270
+            ],
+            "b": [
+              85,
+              270
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "06",
+            "a": [
+              325,
+              287
+            ],
+            "b": [
+              265,
+              287
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "07",
+            "a": [
+              115,
+              304
+            ],
+            "b": [
+              180,
+              304
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "08",
+            "a": [
+              250,
+              321
+            ],
+            "b": [
+              200,
+              321
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "beats": [
+          {
+            "narrate": "A2-1a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chengdu_routine",
+      "type": "scene",
+      "sceneId": "chengdu_day",
+      "speaker": "narrator",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/scenes/panda_garden.png",
+        "start": [
+          238,
+          523
+        ],
+        "scaleProfile": "chengdu",
+        "walkers": [
+          {
+            "guest": "05",
+            "a": [
+              20,
+              270
+            ],
+            "b": [
+              85,
+              270
+            ],
+            "speed": 18,
+            "phase": 0.0,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "06",
+            "a": [
+              325,
+              287
+            ],
+            "b": [
+              265,
+              287
+            ],
+            "speed": 21,
+            "phase": 0.19,
+            "scale": 0.95,
+            "pause": 3
+          },
+          {
+            "guest": "07",
+            "a": [
+              115,
+              304
+            ],
+            "b": [
+              180,
+              304
+            ],
+            "speed": 24,
+            "phase": 0.38,
+            "scale": 0.95,
+            "pause": 2
+          },
+          {
+            "guest": "08",
+            "a": [
+              250,
+              321
+            ],
+            "b": [
+              200,
+              321
+            ],
+            "speed": 27,
+            "phase": 0.5700000000000001,
+            "scale": 0.95,
+            "pause": 3
+          }
+        ],
+        "beats": [
+          {
+            "narrate": "A2-1b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chengdu_walk",
+      "type": "scene",
+      "sceneId": "chengdu_day",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/scenes/panda_garden.png",
+        "badge": "G-02",
+        "personHeight": 88,
+        "walkArea": [
+          [
+            25,
+            362
+          ],
+          [
+            335,
+            362
+          ],
+          [
+            335,
+            535
+          ],
+          [
+            25,
+            535
+          ]
+        ],
+        "start": [
+          240,
+          523
+        ],
+        "beats": [
+          {
+            "goal": {
+              "目标": "逛逛熊猫基地",
+              "操作": "走到竹子旁拿起，再靠近熊猫喂食",
+              "所得": "墨水，让邀请函上的字显现"
+            }
+          },
+          {
+            "game": "pandas"
+          }
+        ],
+        "scaleProfile": "chengdu",
+        "walkers": []
+      }
+    },
+    {
+      "id": "chengdu_ping",
+      "type": "scene",
+      "sceneId": "chengdu_phone",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/people/group_chengdu.png",
+        "hideAyu": true,
+        "beats": [
+          {
+            "narrate": "A2-2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chengdu_group",
+      "type": "scene",
+      "sceneId": "chengdu_phone",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "scene": {
+        "bg": "round1/people/group_chengdu.png",
+        "hideAyu": true,
+        "beats": [
+          {
+            "game": "group_chat",
+            "lines": [
+              {
+                "say": "A2-3a",
+                "who": "axiao"
+              },
+              {
+                "say": "A2-3b",
+                "who": "ayu"
+              },
+              {
+                "say": "A2-3c",
+                "who": "toretto"
+              }
+            ],
+            "backdrop": "round1/people/group_chengdu.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ink",
+      "type": "scene",
+      "sceneId": "invitation",
+      "speaker": "system",
+      "actorMode": "none",
+      "actorSlot": null,
+      "background": "scene",
+      "visibleActors": [],
+      "materialId": "ink",
+      "scene": {
+        "bg": "round1/desk_r4/idle.png",
+        "hideAyu": true,
+        "beats": [
+          {
+            "material": "ink"
+          }
+        ]
+      }
+    }
+  ]
+}
