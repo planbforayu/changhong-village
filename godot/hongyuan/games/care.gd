@@ -58,11 +58,15 @@ func draw(ci) -> void:
 	ci.pill(TRAY,"按住这颗心 · 往上拖",16,Color("#f5dfbe"),ci.INK)
 	_heart(ci, TRAY.position + Vector2(TRAY.size.x - 34, 32), 3.0)
 	if phase == "care" and cleared.is_empty() and not dragging:
-		# 往上拖的箭头提示：在托盘上方一下一下往上飘
+		# 往上拖提示：GPT 画的手形图标（64×96）优先，没有就退回箭头
 		var rise := fposmod(t, 1.1) / 1.1
 		var a := TRAY.position + Vector2(TRAY.size.x - 34, -6 - rise * 40)
-		var tint := Color(PIXEL_HEART, 1.0 - rise)
-		ci.draw_colored_polygon(PackedVector2Array([a + Vector2(0, -12), a + Vector2(12, 4), a + Vector2(5, 4), a + Vector2(5, 16), a + Vector2(-5, 16), a + Vector2(-5, 4), a + Vector2(-12, 4)]), tint)
+		var tint := Color(1, 1, 1, 1.0 - rise)
+		var hand_tex: Texture2D = ci.texture("w2/call/care_hand.png")
+		if hand_tex:
+			ci.draw_texture_rect(hand_tex, Rect2(a - Vector2(16, 24), Vector2(32, 48)), false, tint)
+		else:
+			ci.draw_colored_polygon(PackedVector2Array([a + Vector2(0, -12), a + Vector2(12, 4), a + Vector2(5, 4), a + Vector2(5, 16), a + Vector2(-5, 16), a + Vector2(-5, 4), a + Vector2(-12, 4)]), Color(PIXEL_HEART, 1.0 - rise))
 	var face: Texture2D = ci.texture("toretto_avatar.png")
 	if face: ci.draw_texture_rect(face,Rect2(TRAY.position + Vector2(-30,10),Vector2(44,44)),false)
 	ci.text_at(Vector2(90,512),"已经放下 %d / 6"%cleared.size(),15,ci.PAPER,180)

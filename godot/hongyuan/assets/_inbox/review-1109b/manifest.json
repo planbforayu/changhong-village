@@ -1,0 +1,304 @@
+{
+  "batch": "first",
+  "branch": "claude/art-review-1109b",
+  "date": "2026-11-09",
+  "assets": {
+    "moments_1.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/moments_1.png",
+      "dimensions": [
+        840,
+        840
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate",
+      "scene_note": "宁波海边傍晚的小桌旁，阿鱼和 Toretto 坐着戴手套剥蟹，双脚落在地面；无门/出口。"
+    },
+    "moments_2.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/moments_2.png",
+      "dimensions": [
+        840,
+        840
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate",
+      "scene_note": "大阪运河商店街自拍，两人站在岸边步道上并肩比耶；街道出口沿运河向画面深处延伸。"
+    },
+    "moments_3.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/moments_3.png",
+      "dimensions": [
+        840,
+        840
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 2,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate",
+      "scene_note": "滴水湖日落步道，两人背对画面坐在干燥岸边长椅/步道上，脚不触水；步道沿湖延伸，无门/出口。"
+    },
+    "moments_4.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/moments_4.png",
+      "dimensions": [
+        840,
+        840
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate",
+      "scene_note": "苏七镇老街小吃摊前，两人坐在矮凳上吃小吃，脚落在街面；街巷向画面深处延伸，无门/出口。"
+    },
+    "choose_look_panel.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/choose_look_panel.png",
+      "dimensions": [
+        720,
+        1100
+      ],
+      "origin": "eight existing LM guest sprites",
+      "generationAttempt": 0,
+      "method": "原始客人逐帧提取并手工合成",
+      "status": "reviewCandidate",
+      "scene_note": "非场景界面：八位宾客各自立绘置于 2×4 暖米色卡格内；无门/出口。"
+    },
+    "choose_look_highlight.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/choose_look_highlight.png",
+      "dimensions": [
+        320,
+        250
+      ],
+      "origin": "D3 original",
+      "generationAttempt": 0,
+      "method": "手工绘制透明像素边框",
+      "status": "reviewCandidate",
+      "scene_note": "非场景 UI 高亮框，不含人物；无门/出口。"
+    },
+    "choose_look_coordinates.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/choose_look_coordinates.png",
+      "dimensions": [
+        720,
+        1100
+      ],
+      "origin": "choose_look_panel.png",
+      "generationAttempt": 0,
+      "method": "手工坐标标注图",
+      "status": "reviewCandidate",
+      "scene_note": "非场景标注图，标出八个选角格位置；无门/出口。"
+    },
+    "recipient_gate.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/recipient_gate.png",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "origin": "new 1109b task, style revised after review",
+      "generationAttempt": 3,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate",
+      "scene_note": "上海外滩黄昏滨江步道上，阿鱼和 Toretto 面对面站在地面递信，脚底着地；两车车牌保留沪EKX9**与苏E432**；步道朝江岸延伸。"
+    },
+    "shizuoka_pier_v2.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/shizuoka_pier_v2.png",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate",
+      "scene_note": "静冈码头，角色可站在画面下半部宽石岸与伸向水面的栈桥；船停在桥右侧水面且不压桥；岸路朝画面上方。"
+    },
+    "shizuoka_pier_v2_walk.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/shizuoka_pier_v2_walk.png",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "origin": "shizuoka_pier_v2.png",
+      "generationAttempt": 0,
+      "method": "手工绘制 RGBA 可行走遮罩",
+      "status": "reviewCandidate",
+      "scene_note": "非场景遮罩：绿色标记干燥石岸和栈桥，蓝色为水面，船体留透明；无门/出口。"
+    },
+    "hk_street_v2.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/hk_street_v2.png",
+      "dimensions": [
+        841,
+        1870
+      ],
+      "origin": "round1/scenes/hk_street.png",
+      "generationAttempt": 1,
+      "method": "沿用原图并添加六处繁体灯牌",
+      "status": "reviewCandidate",
+      "scene_note": "香港街景，行人站在人行道；街道出口沿街道纵深方向；门店入口朝向人行道。"
+    },
+    "poster_base_a.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/poster_base_a.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素海报底图",
+      "status": "reviewCandidate",
+      "scene_note": "罗曼山庄门前，阿鱼与 Toretto 并肩站在石路上；入口朝向画面前景，右下预留二维码净区。"
+    },
+    "poster_base_b.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/poster_base_b.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素海报底图",
+      "status": "reviewCandidate",
+      "scene_note": "苏七镇老街，阿鱼与 Toretto 并肩站在街面；街巷向画面深处延伸，右下预留二维码净区。"
+    },
+    "group_phone_1109_bg.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/group_phone_1109_bg.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "user-selected generated scene",
+      "generationAttempt": 1,
+      "method": "使用用户指定图像并按原图尺寸导出",
+      "status": "reviewCandidate",
+      "scene_note": "使用用户指定的咖啡厅阿鱼看手机图作为群聊场景背景。"
+    },
+    "care_heart.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/care_heart.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "非场景 UI 图标：暖红像素爱心，供关心玩法拖动；无门/出口。"
+    },
+    "care_hand.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/care_hand.png",
+      "dimensions": [
+        64,
+        96
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "非场景 UI 操作提示：手指和箭头向上，提示玩家上划；无门/出口。"
+    },
+    "chapter_end_prologue.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_prologue.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_shanghai.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_shanghai.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_chengdu.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_chengdu.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_call.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_call.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_shizuoka.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_shizuoka.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_hainan.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_hainan.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_hongkong.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_hongkong.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_finale.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_finale.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    }
+  },
+  "notes": [
+    "仅新增审稿候选，不改游戏代码。",
+    "turtle_boarding.png 已检查，无误穿水问题，本批无需重画。",
+    "海报二维码净区目标为 x=700,y=1540,w=320,h=320。",
+    "第7项五组场景比例修正尚未制作。",
+    "第8项群聊背景采用用户指定图。",
+    "第9项爱心与上划提示已补。",
+    "第10项八张章末图为独立新绘场景。"
+  ]
+}

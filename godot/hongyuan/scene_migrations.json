@@ -1833,7 +1833,7 @@
             "walkers": []
           },
           {
-            "bg": "round1/scenes/hk_street.png",
+            "bg": "round1/scenes/hk_street_v2.png",
             "scaleProfile": "disney",
             "start": [
               58,
