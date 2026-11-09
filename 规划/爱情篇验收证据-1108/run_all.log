@@ -1,0 +1,59 @@
+FAIL hongyuan/tests/call_hold_test.gd
+FAIL After three replies ordinary continue cannot skip speaker action
+FAIL Reload before speaker action still requires the icon
+FAIL Speaker click lights the speaker and reveals A3-2h
+FAIL Reload after speaker action preserves visible on state
+FAILURES 4
+ok   hongyuan/tests/coast_memory_test.gd
+FAIL hongyuan/tests/content_loader_test.gd
+ERROR: Parse JSON failed. Error at line 0: Unknown error getting token
+SCRIPT ERROR: Trying to assign value of type 'Nil' to a variable of type 'Dictionary'.
+ok   hongyuan/tests/crowd_motion_test.gd
+ok   hongyuan/tests/desk_composition_test.gd
+ok   hongyuan/tests/drive_scene_test.gd
+FAIL hongyuan/tests/fishing_cast_test.gd
+FAIL lure launches at the visible forward rod tip
+FAILURES 1
+ok   hongyuan/tests/fishing_touch_test.gd
+ok   hongyuan/tests/guest_anatomy_test.gd
+FAIL hongyuan/tests/gui_input_test.gd
+ERROR: Viewport ground tap moves, touch=false
+ERROR: Viewport ground tap moves, touch=true
+ERROR: Pause stops scene and clears gesture
+FAILURES 3
+ok   hongyuan/tests/office_scale_test.gd
+FAIL hongyuan/tests/office_test.gd
+FAIL Desk phone opens all five original messages
+FAIL Window phone scene has exactly one baked Toretto and no duplicate portrait/sprite
+FAIL Office returns to Ayu timeline after final message
+FAILURES 3
+FAIL hongyuan/tests/p0_fix_test.gd
+SCRIPT ERROR: Invalid call. Nonexistent function 'input' in base 'Nil'.
+FAIL hongyuan/tests/pandas_test.gd
+SCRIPT ERROR: Invalid access to property or key 'copyId' on a base object of type 'Dictionary'.
+FAIL hongyuan/tests/pandas_touch_test.gd
+FAIL Touch joystick moves and cancellation stops it
+SCRIPT ERROR: Invalid access to property or key 'BAMBOO' on a base object of type 'Nil'.
+FAIL hongyuan/tests/phone_layout_test.gd
+ERROR: Group header uses locked title
+ERROR: Four original messages retained in order
+ERROR: Chat body matches original copy and order exactly
+ERROR: Chengdu notification retains copy and fits new phone
+FAILURES 4
+ok   hongyuan/tests/photo_restore_test.gd
+ok   hongyuan/tests/round1_gui_test.gd
+ok   hongyuan/tests/round1_interactions_test.gd
+ok   hongyuan/tests/scene_migrations_test.gd
+ok   hongyuan/tests/scene_migrations_versions_test.gd
+ok   hongyuan/tests/scene_state_test.gd
+FAIL hongyuan/tests/shanghai_controls_test.gd
+ERROR: Shanghai controlled walk
+ERROR: Lower-left drag moves with polygon constraint
+ERROR: Far car tap approaches without triggering the interaction
+ERROR: Arrival never automatically triggers
+SCRIPT ERROR: Invalid access to property or key 'target' on a base object of type 'Dictionary'.
+ok   hongyuan/tests/skip_test.gd
+ok   hongyuan/tests/story_spine_test.gd
+ok   hongyuan/tests/village_choice_test.gd
+ok   hongyuan/tests/web_caption_wrap_test.gd
+ok   hongyuan/tests/world_bridge_test.gd

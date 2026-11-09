@@ -1,0 +1,64 @@
+{
+  "cold_first_scene_s": 11.43,
+  "cold_requests": [
+    {
+      "name": "http://127.0.0.1:8791/index.html",
+      "duration": 249.79999999701977,
+      "transferSize": 6021,
+      "encodedBodySize": 5721,
+      "decodedBodySize": 5721,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:8791/index.png",
+      "duration": 13.5,
+      "transferSize": 21743,
+      "encodedBodySize": 21443,
+      "decodedBodySize": 21443,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:8791/index.js",
+      "duration": 15.399999998509884,
+      "transferSize": 282961,
+      "encodedBodySize": 282661,
+      "decodedBodySize": 282661,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:8791/index.wasm",
+      "duration": 516.5,
+      "transferSize": 39515054,
+      "encodedBodySize": 39514754,
+      "decodedBodySize": 39514754,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:8791/index.pck",
+      "duration": 3425.39999999851,
+      "transferSize": 467474652,
+      "encodedBodySize": 467474352,
+      "decodedBodySize": 467474352,
+      "responseStatus": 200
+    },
+    {
+      "name": "http://127.0.0.1:8791/index.icon.png",
+      "duration": 28.100000001490116,
+      "transferSize": 6000,
+      "encodedBodySize": 5700,
+      "decodedBodySize": 5700,
+      "responseStatus": 200
+    }
+  ],
+  "reset": {
+    "before": "dd3e9497137031c932da235c5a12492e",
+    "reset": "0e684f2061c7c2e3be330ccecf4691b0",
+    "after": "0e684f2061c7c2e3be330ccecf4691b0",
+    "reset_step": "prologue/closed",
+    "reload_step": "prologue/unfinished_letter",
+    "stripped_url": "http://127.0.0.1:8791/index.html?qa=keep#reset",
+    "reset_run_changed": true,
+    "reload_run_preserved": true
+  },
+  "events": []
+}
