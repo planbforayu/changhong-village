@@ -1,0 +1,13 @@
+{
+  "index.html": 5721,
+  "index.js": 279815,
+  "index.wasm": 39514754,
+  "index.pck": 430209344,
+  "index.png": 21443,
+  "index.audio.worklet.js": 7298,
+  "index.audio.position.worklet.js": 2973,
+  "core_startup_bytes_sum": 470041348,
+  "mode": "bundled (project default; no --content-base-url)",
+  "source_commit": "05dc6a1be625b93a15b728ba81462ccc6ebce7c9",
+  "godot": "4.7.2.stable.official.ed1daf0bf"
+}

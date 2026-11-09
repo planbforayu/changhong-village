@@ -1,0 +1,8 @@
+Standard `export_web.py` invocation with default editor_plugins:
+ERROR: Can't open file from path 'res://.godot/imported/lounge_09.dialogue-4aa7634faefcede659e3704aca1a0716.tres'.
+ERROR: Can't open file from path 'res://.godot/imported/boatman_1.dialogue-bcdb128f9c43b29905bbdbbb15d0f84b.tres'.
+Traceback (most recent call last):
+    idbfs_report = patch_export(out / 'index.js')
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/hy-web-review2/index.js'
+
+The error came from unavailable imported Dialogue Manager resources (lounge_09.dialogue and boatman_1.dialogue); the export helper then could not find index.js. Export completed after temporarily enabling the same Dialogue Manager and GodotMinigame editor plugins used by the WeChat export path.

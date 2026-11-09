@@ -1,0 +1,95 @@
+爱情篇 `run_all.sh` 自动化结果
+
+通过：19 项
+- hongyuan/tests/coast_memory_test.gd
+- hongyuan/tests/crowd_motion_test.gd
+- hongyuan/tests/drive_scene_test.gd
+- hongyuan/tests/fishing_touch_test.gd
+- hongyuan/tests/guest_anatomy_test.gd
+- hongyuan/tests/office_scale_test.gd
+- hongyuan/tests/office_test.gd
+- hongyuan/tests/pandas_touch_test.gd
+- hongyuan/tests/photo_restore_test.gd
+- hongyuan/tests/round1_gui_test.gd
+- hongyuan/tests/round1_interactions_test.gd
+- hongyuan/tests/scene_migrations_test.gd
+- hongyuan/tests/scene_migrations_versions_test.gd
+- hongyuan/tests/scene_state_test.gd
+- hongyuan/tests/skip_test.gd
+- hongyuan/tests/village_choice_test.gd
+- hongyuan/tests/web_caption_wrap_test.gd
+- hongyuan/tests/world_bridge_test.gd
+- hongyuan/tests/world_scale_test.gd
+
+失败：11 项
+
+- hongyuan/tests/call_hold_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.02.07.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - FAIL After three replies ordinary continue cannot skip speaker action
+  - FAIL Reload before speaker action still requires the icon
+  - FAIL Speaker click lights the speaker and reveals A3-2h
+
+- hongyuan/tests/content_loader_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.02.53.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - ERROR: Parse JSON failed. Error at line 0: Unknown error getting token
+  - SCRIPT ERROR: Trying to assign value of type 'Nil' to a variable of type 'Dictionary'.
+
+- hongyuan/tests/desk_composition_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.03.38.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - ERROR: Parameter "t" is null.
+  - SCRIPT ERROR: Cannot call method 'save_png' on a null value.
+  - ERROR: Parameter "t" is null.
+
+- hongyuan/tests/fishing_cast_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.03.43.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - FAIL lure launches at the visible forward rod tip
+  - FAILURES 1
+
+- hongyuan/tests/gui_input_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.03.57.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - ERROR: Viewport ground tap moves, touch=false
+  - ERROR: Viewport ground tap moves, touch=true
+  - FAILURES 2
+
+- hongyuan/tests/p0_fix_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.05.39.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - SCRIPT ERROR: Invalid call. Nonexistent function 'input' in base 'Nil'.
+
+- hongyuan/tests/pandas_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.06.24.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - SCRIPT ERROR: Invalid access to property or key 'copyId' on a base object of type 'Dictionary'.
+
+- hongyuan/tests/phone_layout_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.07.54.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - ERROR: Group header uses locked title
+  - ERROR: Four original messages retained in order
+  - ERROR: Chat body matches original copy and order exactly
+
+- hongyuan/tests/shanghai_controls_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.10.15.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - ERROR: Shanghai controlled walk
+  - ERROR: Lower-left drag moves with polygon constraint
+  - ERROR: Far car tap approaches without triggering the interaction
+
+- hongyuan/tests/story_spine_test.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.11.14.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - ERROR: Parameter "t" is null.
+  - SCRIPT ERROR: Cannot call method 'save_png' on a null value.
+  - ERROR: Parameter "t" is null.
+
+- hongyuan/tests/scenes_walkthrough.gd
+  - ERROR: Failed to open 'user://logs/godot2026-11-08T17.12.04.log'.
+  - ERROR: Failed to open log file for writing: user://logs/godot.log
+  - ERROR: Parameter "t" is null.
+  - SCRIPT ERROR: Cannot call method 'save_png' on a null value.
+  - ERROR: Parameter "t" is null.

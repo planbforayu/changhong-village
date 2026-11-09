@@ -1,0 +1,5 @@
+Godot 4.7.2 headless full_flow_review: ERROR: Failed to open 'user://logs/godot2026-11-08T17.12.16.log'.
+ERROR: Failed to open log file for writing: user://logs/godot.log
+REVIEW_STEP prologue/closed
+
+The process waited at the first frame-post-draw capture and was stopped. Normal GUI mode terminated with exit code 134 before emitting output. No full-flow screenshot was produced in this environment.
