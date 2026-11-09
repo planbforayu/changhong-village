@@ -49,7 +49,7 @@ func _ready() -> void:
     navigation.grow_horizontal = Control.GROW_DIRECTION_BEGIN
     navigation.offset_left = -300
     navigation.offset_right = -8
-    navigation.offset_top = 82
+    navigation.offset_top = 96
     navigation.alignment = BoxContainer.ALIGNMENT_END
     navigation.add_theme_constant_override("separation", 6)
     layer.add_child(navigation)
