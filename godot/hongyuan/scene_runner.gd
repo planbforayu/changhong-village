@@ -859,7 +859,10 @@ func _draw_npc_strip(w: Dictionary, state: Dictionary, pos: Vector2, height: flo
 	if not sheet: return
 	var heading: Vector2 = state.heading
 	var frame := 0
-	if state.walking: frame = 1 + int(float(state.distance) / 8.0) % 4
+	if int(m.get("frames", 5)) == 3:
+		# 聊天站姿：轮到自己说话时嘴一张一合，偶尔笑；不说话时闭嘴听
+		if w.has("chat") and _chat_on(w): frame = 1 + int(world_elapsed / 0.32) % 2
+	elif state.walking: frame = 1 + int(float(state.distance) / 8.0) % 4
 	var k := height / float(m.h)
 	var fw := float(m.w)
 	var src := Rect2(frame * fw, 0, fw, sheet.get_height())
@@ -901,14 +904,16 @@ func _draw_walker_extras(w: Dictionary, state: Dictionary, pos: Vector2, height:
 ## 路人闲聊：站着的时候头顶轮流冒一句。两人一对时用 chatOffset 错开，像在你一句我一句。
 const CHAT_PERIOD := 4.6
 const CHAT_SHOW := 2.3
+func _chat_on(w: Dictionary) -> bool:
+	return fposmod(world_elapsed + float(w.get("chatOffset", 0.0)), CHAT_PERIOD) <= CHAT_SHOW
+
 func _draw_walker_chat(w: Dictionary, state: Dictionary, pos: Vector2, height: float) -> void:
 	if bool(state.walking) or mode in ["game", "material", "card", "choice", "goal", "button"]:
 		return
 	var lines: Array = w.chat
-	if lines.is_empty(): return
+	if lines.is_empty() or not _chat_on(w): return
 	var clock := world_elapsed + float(w.get("chatOffset", 0.0))
 	var phase := fposmod(clock, CHAT_PERIOD)
-	if phase > CHAT_SHOW: return
 	var text := _text(str(lines[int(clock / CHAT_PERIOD) % lines.size()]))
 	var a := clampf(minf(phase / 0.18, (CHAT_SHOW - phase) / 0.3), 0.0, 1.0)
 	var fs := 11

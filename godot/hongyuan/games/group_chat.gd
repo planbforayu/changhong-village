@@ -6,7 +6,7 @@ var r
 var lines: Array = []
 var li := 0
 var phase := "chat"
-var backdrop := "round1/people/group_shoulder.png"
+var backdrop := "round1/people/group_phone_1109.png|round1/people/group_shoulder.png"
 var t := 0.0
 var reveal := 0.0
 var member_faces: Array[Texture2D] = []
@@ -36,7 +36,8 @@ func draw(ci) -> void:
 		var origin: Vector2 = ci.view_rect.get_center()-bg.get_size()*k*0.5
 		# Tiny message silhouettes follow the real iPhone in her hands;
 		# the lower readable inset carries the exact script.
-		for j in range(3):
+		# 新图（11-09 重画）手机屏幕朝向她自己，不再画屏幕上的小气泡
+		for j in range(0 if ci.texture("round1/people/group_phone_1109.png") else 3):
 			ci.draw_rect(Rect2(origin+Vector2(490,820+j*47)*k,Vector2(92,34)*k),Color("#b4dfa2") if j==2 else Color("#f8faf4"))
 
 	Bubble._round_box(ci,Rect2(18,350,324,252),Color(0.96,0.97,0.94,0.95),12)

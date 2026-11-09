@@ -91,7 +91,9 @@ func draw(ci) -> void:
 		ci.draw_style_box(_box(Color("#fff7ea", 0.9 * k), 9), Rect2(at - Vector2(66, 18), Vector2(132, 26)))
 		ci.text_at(at + Vector2(-66, 1), str(s[0]), 14, Color(ci.INK, k), 132)
 	if phase == "play":
-		ci.text_at(Vector2(0, 618), "听懂了 %d / %d 句" % [mini(caught, need), need], 14, ci.PAPER, 360)
+		# 计数放在通话按钮上方，不和挂断键挤在一起
+		ci.draw_style_box(_box(Color(0, 0, 0, 0.45), 13), Rect2(118, 478, 124, 26))
+		ci.text_at(Vector2(118, 497), "听懂了 %d / %d 句" % [mini(caught, need), need], 14, ci.PAPER, 124)
 	elif phase == "lyric":
 		var k := clampf(t / 0.8, 0, 1)
 		var box := Rect2(40, 268, 280, 64)

@@ -361,7 +361,7 @@ func _paper(ci, length: int) -> void:
 	var fancy: bool = ci.texture(NEW_CARD) != null
 	var fs := 17 if fancy else 18
 	var width := 220.0 if fancy else 248.0
-	var origin := Vector2(70, 286) if fancy else Vector2(56, 120)
+	var origin := Vector2(72, 304) if fancy else Vector2(56, 120)
 	var step := 27.0 if fancy else 30.0
 	var row := 0
 	for line in _letter_lines(ci, _letter().substr(0,length),fs,width):

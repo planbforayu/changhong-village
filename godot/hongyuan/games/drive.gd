@@ -228,9 +228,11 @@ func _bay(ci) -> void:
 func _car(ci, p: Vector2, tex_name: String, color: Color, ang := 0.0) -> void:
 	var tex: Texture2D = ci.texture(tex_name)
 	ci.draw_set_transform(p, ang, Vector2.ONE)
-	ci.draw_rect(Rect2(-20, -32, 44, 72), Color(0, 0, 0, 0.25))
+	var shadow: Texture2D = ci.texture("w2/shanghai/car_shadow_top.png")
 	if tex:
 		var sz: Vector2 = tex.get_size() * ci.S
+		# 车影贴着车身、往右下偏一点（11-09 换掉原来的灰方块）
+		if shadow: ci.draw_texture_rect(shadow, Rect2(-sz * 0.52 + Vector2(2.5, 3.5), sz * 1.04), false, Color(1, 1, 1, 0.75))
 		ci.draw_texture_rect(tex, Rect2(-sz * 0.5, sz), false)
 	else:
 		ci.draw_rect(Rect2(-21, -36, 42, 72), color.darkened(0.45))
