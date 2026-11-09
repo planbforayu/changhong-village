@@ -9,7 +9,7 @@ var glow := [0.0,0.0,0.0]
 const LABELS := ["工作","家人","对方"]
 func start(runner,_beat: Dictionary) -> void:
 	r=runner;r.hint="哪件事快堆满了，就点一下照顾它"
-func rect(i: int) -> Rect2: return Rect2(28,418+i*58,304,52)  # 放在画面下方，不压住两个人
+func rect(i: int) -> Rect2: return Rect2(20+i*110,542,100,56)  # 三张并排压在最下沿，只挡到小腿，不再从腰盖到腿
 func process(dt: float) -> bool:
 	t += dt
 	if phase == "active":
@@ -25,7 +25,7 @@ func draw(ci) -> void:
 	for i in range(3):
 		var box:=rect(i)
 		ci.pill(box,LABELS[i],18,Color("#f6e8d1"),ci.INK)
-		ci.draw_rect(Rect2(box.position+Vector2(110,32),Vector2(172,7)),Color("#d7c7b0"))
-		ci.draw_rect(Rect2(box.position+Vector2(110,32),Vector2(172*levels[i],7)),Color("#cc8561") if levels[i]>.8 else Color("#80a88b"))
-		if glow[i]>0:ci.text_at(box.position+Vector2(114,24),"慢慢来",14,ci.WOOD,165)
-	ci.text_at(Vector2(45,602),"一起度过这段日子 · %d / 30 秒"%mini(30,int(t)),14,ci.PAPER,270)
+		ci.draw_rect(Rect2(box.position+Vector2(12,42),Vector2(76,7)),Color("#d7c7b0"))
+		ci.draw_rect(Rect2(box.position+Vector2(12,42),Vector2(76*levels[i],7)),Color("#cc8561") if levels[i]>.8 else Color("#80a88b"))
+		if glow[i]>0:ci.text_at(box.position+Vector2(22,-6),"慢慢来",14,ci.PAPER,80)
+	ci.text_at(Vector2(24,620),"一起度过这段日子 · %d / 30 秒"%mini(30,int(t)),14,ci.PAPER,250)

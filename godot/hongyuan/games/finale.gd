@@ -169,12 +169,18 @@ func _make_edit() -> void:
 		edit.grab_focus()
 
 
+var _last_name_tap := -10000
+
 func _web_name_input(event: InputEvent) -> void:
-	var released := false
+	# 触摸松开和模拟出来的鼠标松开都收，同一下点按只弹一次框
+	var released: bool = event is InputEventScreenTouch and not event.pressed and not event.canceled
 	if event is InputEventMouseButton:
 		released = event.button_index == MOUSE_BUTTON_LEFT and not event.pressed
 	if not released or keyboard_open or phase != "name" or not is_instance_valid(edit):
 		return
+	if Time.get_ticks_msec() - _last_name_tap < 500:
+		return
+	_last_name_tap = Time.get_ticks_msec()
 	keyboard_open = true
 	var answer = JavaScriptBridge.eval("window.prompt(%s, %s)" % [JSON.stringify("请输入你的名字（2–12 个字）"), JSON.stringify(edit.text)], true)
 	keyboard_open = false
@@ -192,6 +198,7 @@ func _wechat_name_input(event: InputEvent) -> void:
 		return
 	var bridge := JavaScriptBridge.get_interface("hongyuanContent")
 	if bridge == null:
+		edit.placeholder_text = "输入框没连上，请退出小游戏再进"
 		return
 	keyboard_open = true
 	keyboard_callback = JavaScriptBridge.create_callback(func(args: Array) -> void:

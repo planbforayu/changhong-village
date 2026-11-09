@@ -1354,7 +1354,7 @@ func resident_toast(openid: String) -> bool:
     var cup := _cup_sprite()
     cup.position = stand + Vector2(14.0 if pos.x >= stand.x else -14.0, -_px_h(stand.y) + 22.0)
     add_child(cup)
-    get_tree().create_timer(TOAST_SHOW).timeout.connect(func():
+    _later(TOAST_SHOW, func():
         if is_instance_valid(st): st.queue_free()
         if is_instance_valid(cup): cup.queue_free()
         if is_instance_valid(seated_spr): seated_spr.visible = true)
@@ -1376,7 +1376,7 @@ func toasted_me() -> void:
     face = "down"
     raise_cup()
     if was:
-        get_tree().create_timer(TOAST_SHOW).timeout.connect(func():
+        _later(TOAST_SHOW, func():
             if not seated and path.is_empty() and stick == Vector2.ZERO and my_seat == seat:
                 sit_at(str(seat.get("table_id", "")), int(seat.get("chair_no", 0))))
 
@@ -1603,3 +1603,16 @@ func _scan_chairs(dt: float) -> void:
         table_near_key = best_table
         table_near.emit(best_table)
         _refresh_near_signs()
+
+
+## 延时回调挂在自己身上：场景被换掉（比如婚宴切去村子）时一起释放，不会再调到已释放的 lambda
+func _later(seconds: float, action: Callable) -> void:
+    var t := Timer.new()
+    t.one_shot = true
+    t.wait_time = maxf(seconds, 0.001)
+    t.process_mode = Node.PROCESS_MODE_ALWAYS
+    add_child(t)
+    t.timeout.connect(func():
+        t.queue_free()
+        action.call())
+    t.start()

@@ -214,7 +214,8 @@
             "who": "ayu"
           },
           {
-            "wait": 8.0
+            "game": "fireworks",
+            "count": 3
           },
           {
             "pose": "",

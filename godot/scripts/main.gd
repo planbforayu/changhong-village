@@ -449,7 +449,7 @@ func _ready() -> void:
         title_screen.boot_done()   # 预热完了：「轻触屏幕，进入苏七镇」
         _fade_to(0.0)
         # 保险：不管前面哪里没走完，2 秒后开场一定亮出来
-        get_tree().create_timer(2.0).timeout.connect(func():
+        _later(2.0, func():
             if state == "title" and fade.color.a > 0.0:
                 fade.color.a = 0.0
                 print("[suqi] 开场黑幕是被保险掀开的"))
@@ -2179,7 +2179,7 @@ func _on_enter_hall(r: Dictionary) -> void:
     # 只在刚从大门进来的时候管（从后厅侧门回来不管）；服务端还没带 arrival 的旧版照旧站门口
     if USE_LAYERED and hall.big and d.has("arrival") and hall.pos.distance_to(hall.SPAWN) < 1.0:
         if bool((d["arrival"] as Dictionary).get("first_visit", true)):
-            get_tree().create_timer(0.8).timeout.connect(func():
+            _later(0.8, func():
                 if state == "banquet" and hall.big and hall.pos.distance_to(hall.SPAWN) < 1.0:
                     hall.fly_to_my_table())
         else:
@@ -2201,7 +2201,7 @@ func _arrive(d: Dictionary) -> void:
             _say(line, 5.0)
         if _want_backhall_row():
             # 第一次进厅：新人那句说完（5 秒）再出卡，卡上就这一行（一次只留一层）
-            get_tree().create_timer(5.2 if line != "" else 0.3).timeout.connect(func():
+            _later(5.2 if line != "" else 0.3, func():
                 if state == "banquet" and not is_instance_valid(arrival_card) and not is_instance_valid(game_host) and _want_backhall_row():
                     _show_arrival_card([{"kind": "backhall"}], {}))
         return
@@ -2326,7 +2326,7 @@ func _arrive_old(d: Dictionary) -> void:
             var who := str(finfo.get("nick", "有人"))
             parts.append(who + ("等 %d 人敬了你" % tc if tc > 1 else " 敬了你一杯"))
             # 不在线时被敬的：进厅也看一次干杯插图（阿鱼 9/18 晚）
-            get_tree().create_timer(1.5).timeout.connect(func():
+            _later(1.5, func():
                 if state == "banquet":
                     if USE_LAYERED and hall.festive != null:
                         hall.festive.request("toast", [hall.pos, hall.resident_stand(from)])   # 被敬也是干杯
@@ -4481,3 +4481,16 @@ func _open_kitchen() -> void:
         game_host = null
         backhall.walking_enabled = state == "backhall")
     game_host.open(games_save, font)
+
+
+## 延时回调挂在自己身上：场景被换掉（比如婚宴切去村子）时一起释放，不会再调到已释放的 lambda
+func _later(seconds: float, action: Callable) -> void:
+    var t := Timer.new()
+    t.one_shot = true
+    t.wait_time = maxf(seconds, 0.001)
+    t.process_mode = Node.PROCESS_MODE_ALWAYS
+    add_child(t)
+    t.timeout.connect(func():
+        t.queue_free()
+        action.call())
+    t.start()
