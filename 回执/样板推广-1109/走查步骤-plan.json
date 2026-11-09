@@ -1,0 +1,11 @@
+[{"do":"stand","room":"village","at":[328,2660],"face":"up"},{"do":"shot","name":"h5-01-门楼外"},
+ {"do":"click","at":[328,2520]},{"do":"shot","name":"h5-02-门楼里"},
+ {"do":"click","at":[420,2415]},{"do":"shot","name":"h5-03-院坝"},
+ {"do":"click","at":[554,2360]},{"do":"shot","name":"h5-04-自动进屋"},
+ {"do":"go","id":"outside"},{"do":"shot","name":"h5-05-出屋回院坝"},
+ {"do":"stand","room":"village","at":[3224,2680],"face":"up"},{"do":"shot","name":"my-01-路口"},
+ {"do":"click","at":[3224,2540]},{"do":"shot","name":"my-02-石板场"},
+ {"do":"click","at":[3224,2455]},{"do":"shot","name":"my-03-自动进屋"},
+ {"do":"go","id":"outside"},{"do":"shot","name":"my-04-出屋回石板场"},
+ {"do":"stand","room":"village","at":[3080,1300],"face":"up"},{"do":"shot","name":"erba-门前"},
+ {"do":"stand","room":"village","at":[1800,3520],"face":"up"},{"do":"shot","name":"persimmon-门前"}]

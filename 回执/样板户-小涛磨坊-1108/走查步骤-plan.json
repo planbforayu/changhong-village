@@ -1,0 +1,8 @@
+[{"do":"stand","room":"village","at":[784,3520],"face":"up"},{"do":"shot","name":"01-主路"},
+ {"do":"click","at":[784,3390]},{"do":"shot","name":"02-入户路"},
+ {"do":"click","at":[784,3300]},{"do":"shot","name":"03-院门"},
+ {"do":"click","at":[700,3222]},{"do":"shot","name":"04-院坝"},
+ {"do":"click","at":[822,3176]},{"do":"shot","name":"05-自动进屋"},
+ {"do":"go","id":"outside"},{"do":"shot","name":"06-出屋回院坝"},
+ {"do":"click","at":[784,3330]},{"do":"click","at":[788,3420]},{"do":"shot","name":"07-走回村路"},
+ {"do":"stand","room":"village","at":[2418,2800],"face":"up"},{"do":"shot","name":"08-阿鱼家对照"}]
