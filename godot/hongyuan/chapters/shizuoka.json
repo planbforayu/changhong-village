@@ -161,6 +161,36 @@
                 "scale": 0.9,
                 "phase": 0.2,
                 "npc": "d6_02"
+              },
+              {
+                "a": [
+                  262,
+                  588
+                ],
+                "b": [
+                  262,
+                  532
+                ],
+                "speed": 15,
+                "phase": 0.21,
+                "scale": 0.9,
+                "pause": 3,
+                "npc": "d5_01"
+              },
+              {
+                "a": [
+                  318,
+                  596
+                ],
+                "b": [
+                  318,
+                  544
+                ],
+                "speed": 15,
+                "phase": 0.58,
+                "scale": 0.9,
+                "pause": 3,
+                "npc": "d5_02"
               }
             ],
             "hotspots": [
@@ -288,6 +318,21 @@
                 "speed": 17,
                 "scale": 0.95,
                 "npc": "d6_02"
+              },
+              {
+                "a": [
+                  130,
+                  536
+                ],
+                "b": [
+                  107,
+                  446
+                ],
+                "speed": 20,
+                "phase": 0.21,
+                "scale": 0.95,
+                "pause": 3,
+                "npc": "d5_01"
               }
             ]
           },
@@ -299,7 +344,31 @@
             "hint": ""
           },
           {
-            "wait": 5.0
+            "say": "A4-BOAT-1",
+            "who": "toretto"
+          },
+          {
+            "say": "A4-BOAT-2",
+            "who": "ayu"
+          },
+          {
+            "say": "A4-BOAT-3",
+            "who": "toretto"
+          },
+          {
+            "say": "A4-BOAT-4",
+            "who": "ayu"
+          },
+          {
+            "say": "A4-BOAT-5",
+            "who": "toretto"
+          },
+          {
+            "say": "A4-BOAT-6",
+            "who": "ayu"
+          },
+          {
+            "wait": 1.5
           },
           {
             "card": "B-J3-1",
