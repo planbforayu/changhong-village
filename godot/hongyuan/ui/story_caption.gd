@@ -114,7 +114,7 @@ static func _draw_caption_text(ci: CanvasItem, full_text: String, who: String, v
 	var box := caption_rect(full_text, who, anchor)
 	var panel := StyleBoxFlat.new()
 	# 旁白压在亮背景（天空、海面、楼面）上也要看得清：深色半透明底 + 细金边
-	panel.bg_color = PAPER if named else Color(0.14, 0.10, 0.08, 0.74)
+	panel.bg_color = PAPER if named else Color(0.14, 0.10, 0.08, 0.88)
 	panel.set_corner_radius_all(12 if named else 6)
 	if named:
 		panel.border_color = WOOD
