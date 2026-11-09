@@ -14,7 +14,10 @@ var t := 0.0
 var edit: LineEdit
 var error := false
 const SEND_TIME := 3.3   # 寄信过场：书桌窗口飞出 → 飞过江岸 → 落到收件人桌上
-const LETTER := "w2/finale/letter_closeup.png"
+const LETTER := "w2/finale/invite_card.png|w2/finale/letter_closeup.png"
+## GPT 重画的邀请函到位后，字写在中间留白处（顶部是插画）
+const NEW_CARD := "w2/finale/invite_card.png"
+const NEW_CARD_SMALL := "w2/finale/invite_card_small.png"
 var error_key := "A7-E1"
 const RESERVED_NAMES := ["阿鱼", "toretto", "新郎", "新娘", "主角"]
 var look := -1
@@ -290,11 +293,14 @@ func draw(ci) -> void:
 			_envelope_art(ci, false)
 			var k := smoothstep(0, 1, clampf(t / 1.3, 0, 1))
 			var page := Rect2(Vector2(70, 130).lerp(Vector2(75, 280), k), Vector2(210, 260).lerp(Vector2(210, 95), k))
-			desk.paper_art(ci, page)
+			var small: Texture2D = ci.texture(NEW_CARD_SMALL)
+			if small: ci.draw_texture_rect(small, page, false)
+			else: desk.paper_art(ci, page)
 			ci.draw_set_transform(page.position,0,page.size/Vector2(210,260))
 			var row := 0
-			for line in _letter_lines(ci,_letter(),13,174):
-				ci.draw_string(ci.FONT,Vector2(18,30+row*18),line,HORIZONTAL_ALIGNMENT_LEFT,174,13,ci.INK)
+			var top := 112 if small else 30
+			for line in _letter_lines(ci,_letter(),11 if small else 13,174):
+				ci.draw_string(ci.FONT,Vector2(18,top+row*(15 if small else 18)),line,HORIZONTAL_ALIGNMENT_LEFT,174,11 if small else 13,ci.INK)
 				row += 1
 			ci.draw_set_transform(Vector2.ZERO)
 		"seal", "stamped", "ready_send", "send", "receive", "opening":
@@ -352,11 +358,14 @@ func _paper(ci, length: int) -> void:
 	# 正面信纸特写占满屏幕，字一行一行写上去，手机上也看得清
 	if phase == "read_received":
 		desk.cover(ci, ci.texture(LETTER), r.view_rect)
-	var fs := 18
-	var width := 248.0
+	var fancy: bool = ci.texture(NEW_CARD) != null
+	var fs := 17 if fancy else 18
+	var width := 220.0 if fancy else 248.0
+	var origin := Vector2(70, 286) if fancy else Vector2(56, 120)
+	var step := 27.0 if fancy else 30.0
 	var row := 0
 	for line in _letter_lines(ci, _letter().substr(0,length),fs,width):
-		ci.draw_string(ci.FONT,Vector2(56,120 + row*30),line,HORIZONTAL_ALIGNMENT_LEFT,width,fs,ci.INK)
+		ci.draw_string(ci.FONT,origin + Vector2(0, row*step),line,HORIZONTAL_ALIGNMENT_LEFT,width,fs,ci.INK)
 		row += 1
 
 func _envelope_art(ci, sealed: bool) -> void:
