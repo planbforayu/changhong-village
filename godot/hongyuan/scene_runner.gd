@@ -53,6 +53,8 @@ const GAMES := {
 	"photo": preload("res://hongyuan/games/photo.gd"),
 	"offer": preload("res://hongyuan/games/offer.gd"),
 	"invite_mail": preload("res://hongyuan/games/invite_mail.gd"),
+	"song": preload("res://hongyuan/games/song.gd"),
+	"moments": preload("res://hongyuan/games/moments.gd"),
 }
 
 var copy: Dictionary
@@ -407,7 +409,7 @@ func _walk(dt: float) -> void:
 func _update_companion(dt: float) -> void:
 	if companion == "":
 		return
-	var want := feet + Vector2(36 * facing, -10)
+	var want := _clamp(feet + Vector2(36 * facing, -10))  # 同伴也不能走出可走区域（比如走到水面上）
 	var before := comp_pos
 	comp_pos = comp_pos.lerp(want, 1.0 - exp(-6.0 * dt))
 	var moved := comp_pos.distance_to(before)
@@ -729,15 +731,22 @@ func _draw_world() -> void:
 		var a: Dictionary = actors[id]
 		if a.get("hidden", false):
 			continue
+		if a.has("appearAfter") and world_elapsed < float(a.appearAfter):
+			continue
 		var pos := _v(a.at)
-		if a.has("moveFrom"): pos = _v(a.moveFrom).lerp(pos,smoothstep(0,1,world_elapsed/float(a.get("moveTime",2))))
+		var sc := float(a.get("scale", 1.0))
+		if a.has("moveFrom"):
+			var k := smoothstep(0,1,world_elapsed/float(a.get("moveTime",2)))
+			pos = _v(a.moveFrom).lerp(pos,k)
+			# 车从镜头前往里开：越远越小
+			if a.has("scaleFrom"): sc = lerpf(float(a.scaleFrom), sc, k)
 		var tex_name := str(a.tex)
 		if a.get("ring", false) and mode == "go":
 			# 正在响的手机：两帧交替、左右震动、外圈光晕，一眼看得出在响
 			tex_name = tex_name.replace("_ring_1", "_ring_%d" % (1 + int(time * 8.0) % 2))
 			pos.x += sin(time * 60.0) * 1.5 * (1.0 if fmod(time, 1.2) < 0.7 else 0.0)
 			ring_glow.append(pos - Vector2(0, 10.0 * float(a.get("scale", 1.0))))
-		items.append({"y": pos.y + float(a.get("z", 0)), "tex": tex_name, "at": pos, "flip": bool(a.get("flip", false)), "scale": float(a.get("scale", 1.0))})
+		items.append({"y": pos.y + float(a.get("z", 0)), "tex": tex_name, "at": pos, "flip": bool(a.get("flip", false)), "scale": sc})
 	if player_visible:
 		items.append({"y": feet.y, "player": true})
 	if companion == "toretto" and player_visible:

@@ -19,7 +19,7 @@ func start(runner, _beat: Dictionary) -> void:
 	rng.seed = Time.get_ticks_usec()
 	r.pose = "fishing"
 	r.facing = 1.0
-	r.comp_pos = r.feet + Vector2(-72,4)
+	r.comp_pos = r.feet + Vector2(-44,4)  # 站在栈桥上，不再踩到水面
 
 
 const BODY_ORIGIN := Vector2(49,200)
@@ -264,4 +264,4 @@ func _bobber(ci, p: Vector2, sinking: bool) -> void:
 
 
 func restore_checkpoint() -> void:
-	r.comp_pos = r.feet + Vector2(-72,4)
+	r.comp_pos = r.feet + Vector2(-44,4)  # 站在栈桥上，不再踩到水面

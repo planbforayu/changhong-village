@@ -370,6 +370,82 @@
             "game": "balance"
           },
           {
+            "bg": "round1/people/call_split.png",
+            "hideAyu": true,
+            "actors": [],
+            "walkers": [],
+            "hotspots": [],
+            "companion": ""
+          },
+          {
+            "narrate": "A3-S1"
+          },
+          {
+            "say": "A3-S2",
+            "who": "toretto"
+          },
+          {
+            "narrate": "A3-S3"
+          },
+          {
+            "game": "song",
+            "part": "sing",
+            "count": 5
+          },
+          {
+            "say": "A3-S4",
+            "who": "ayu"
+          },
+          {
+            "narrate": "A3-S5"
+          },
+          {
+            "say": "A3-S6",
+            "who": "toretto"
+          },
+          {
+            "say": "A3-S7",
+            "who": "ayu"
+          },
+          {
+            "say": "A3-S8",
+            "who": "toretto"
+          },
+          {
+            "say": "A3-S9",
+            "who": "ayu"
+          },
+          {
+            "say": "A3-S10",
+            "who": "toretto"
+          },
+          {
+            "say": "A3-S11",
+            "who": "ayu"
+          },
+          {
+            "game": "song",
+            "part": "crash"
+          },
+          {
+            "say": "A3-S12",
+            "who": "toretto"
+          },
+          {
+            "game": "song",
+            "part": "laugh"
+          },
+          {
+            "narrate": "A3-S13"
+          },
+          {
+            "button": "A3-S14"
+          },
+          {
+            "game": "moments",
+            "text": "A3-POST"
+          },
+          {
             "narrate": "A3-3a"
           },
           {
