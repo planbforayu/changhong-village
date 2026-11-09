@@ -13,6 +13,8 @@ var menu := false
 var menu_t := 0.0
 var lines: PackedStringArray = []
 var toast := ""
+var viewing := -1           # 正在看大图的那张（-1 表示没在看）
+var view_t := 0.0
 
 const FS := 15
 const LH := 24.0
@@ -93,6 +95,7 @@ func process(dt: float) -> bool:
 	t += dt
 	if menu:
 		menu_t += dt
+	view_t += dt
 	if phase == "read" and scroll >= _max_scroll() - 30 and toast.begins_with("上下"):
 		toast = "读完了，点右下角的「··」给她点个赞"
 	if phase == "liked":
@@ -104,8 +107,22 @@ func process(dt: float) -> bool:
 			return true
 	return false
 
+func _photo_rect(k: int) -> Rect2:
+	return Rect2(TEXT_X + (k % 2) * (PHOTO + 4), y_photos - scroll + int(k / 2) * (PHOTO + 4), PHOTO, PHOTO)
+
 func input(kind: String, pos: Vector2) -> void:
 	if phase != "read":
+		return
+	if viewing >= 0:
+		# 看大图时：点左右两边换一张，点中间关掉
+		if kind == "tap":
+			if pos.x < 70 and viewing > 0:
+				viewing -= 1
+			elif pos.x > 290 and viewing < PHOTOS.size() - 1:
+				viewing += 1
+			else:
+				viewing = -1
+			view_t = 0.0
 		return
 	match kind:
 		"down":
@@ -120,7 +137,14 @@ func input(kind: String, pos: Vector2) -> void:
 		"tap":
 			if menu and _like_btn().grow(6).has_point(pos):
 				_like()
-			elif _dots_rect().grow(10).has_point(pos):
+				return
+			for k in range(PHOTOS.size()):
+				if not menu and pos.y > NAV_H and _photo_rect(k).has_point(pos):
+					viewing = k
+					view_t = 0.0
+					r.play("pop")
+					return
+			if _dots_rect().grow(10).has_point(pos):
 				menu = not menu
 				menu_t = 0.0
 				r.play("pop")
@@ -155,17 +179,10 @@ func draw(ci) -> void:
 		ci.text_at(Vector2(TEXT_X, y), lines[i], FS, INK, TEXT_W, HORIZONTAL_ALIGNMENT_LEFT)
 	# 2×2 配图
 	for k in range(PHOTOS.size()):
-		var rect := Rect2(TEXT_X + (k % 2) * (PHOTO + 4), y_photos - s + int(k / 2) * (PHOTO + 4), PHOTO, PHOTO)
+		var rect := _photo_rect(k)
 		if rect.end.y < NAV_H or rect.position.y > 640:
 			continue
-		var tex: Texture2D = ci.texture(str(PHOTOS[k][0]))
-		var fallback: Texture2D = ci.texture(str(PHOTOS[k][1]))
-		if tex:
-			ci.draw_texture_rect(tex, rect, false)
-		elif fallback:
-			ci.draw_texture_rect_region(fallback, rect, PHOTOS[k][2])
-		else:
-			ci.draw_rect(rect, Color("#e8e2da"))
+		_draw_photo(ci, k, rect)
 	# 时间行和「··」
 	var my := y_meta - s
 	ci.text_at(Vector2(TEXT_X, my), "深夜 · 异地的最后一段日子", 12, GRAY, 240, HORIZONTAL_ALIGNMENT_LEFT)
@@ -192,17 +209,47 @@ func draw(ci) -> void:
 	ci.draw_line(Vector2(0, NAV_H), Vector2(360, NAV_H), Color("#dcdcdc"), 1)
 	ci.draw_polyline(PackedVector2Array([Vector2(26, 22), Vector2(18, 31), Vector2(26, 40)]), INK, 2.0)
 	ci.text_at(Vector2(0, 38), "详情", 17, INK, 360)
+	if viewing >= 0:
+		_draw_viewer(ci)
+		return
 	# 滚动条
 	if _max_scroll() > 0:
 		var view := 640.0 - NAV_H
 		var bar_h := view * view / (view + _max_scroll())
 		ci.draw_style_box(_box(Color(0, 0, 0, 0.18), 2), Rect2(354, NAV_H + (view - bar_h) * scroll / _max_scroll(), 3, bar_h))
 	# 底部提示
-	if toast != "":
+	if toast != "" and viewing < 0:
 		var w := minf(320.0, 30.0 + 14.0 * toast.length())
 		var tr := Rect2((360 - w) * 0.5, 588, w, 32)
 		ci.draw_style_box(_box(Color(0, 0, 0, 0.62), 16), tr)
 		ci.text_at(Vector2(tr.position.x, tr.position.y + 21), toast, 14, Color.WHITE, w)
+
+func _draw_photo(ci, k: int, rect: Rect2) -> void:
+	var tex: Texture2D = ci.texture(str(PHOTOS[k][0]))
+	var fallback: Texture2D = ci.texture(str(PHOTOS[k][1]))
+	if tex:
+		ci.draw_texture_rect(tex, rect, false)
+	elif fallback:
+		ci.draw_texture_rect_region(fallback, rect, PHOTOS[k][2])
+	else:
+		ci.draw_rect(rect, Color("#e8e2da"))
+
+## 点开的大图：黑底铺满，图片占满屏宽，底下是第几张和怎么操作
+func _draw_viewer(ci) -> void:
+	var k := clampf(view_t / 0.18, 0, 1)
+	ci.draw_rect(Rect2(0, 0, 360, 640), Color(0, 0, 0, k))
+	var size := lerpf(PHOTO, 360.0, ease(k, 0.5))
+	var rect := Rect2(Vector2(180, 300) - Vector2.ONE * size * 0.5, Vector2.ONE * size)
+	_draw_photo(ci, viewing, rect)
+	if k < 1:
+		return
+	for i in range(PHOTOS.size()):
+		ci.draw_circle(Vector2(180 + (i - 1.5) * 14, 512), 3.0, Color(1, 1, 1, 0.9 if i == viewing else 0.35))
+	if viewing > 0:
+		ci.text_at(Vector2(0, 312), "‹", 34, Color(1, 1, 1, 0.7), 50)
+	if viewing < PHOTOS.size() - 1:
+		ci.text_at(Vector2(310, 312), "›", 34, Color(1, 1, 1, 0.7), 50)
+	ci.text_at(Vector2(0, 560), "点两边换一张，点中间回到朋友圈", 13, Color(1, 1, 1, 0.6), 360)
 
 func _draw_panel(ci, y: float) -> void:
 	var rect := Rect2(TEXT_X, y, 346 - TEXT_X, _panel_h())

@@ -85,6 +85,7 @@ func input(kind: String, pos: Vector2) -> void:
 					_make_edit()
 		"name":
 			if kind == "tap" and _ok_rect().grow(8).has_point(pos): _submit_name()
+			elif kind == "tap" and SKIP_NAME.grow(6).has_point(pos): _skip_name()
 		"written":
 			if kind == "tap" and _ok_rect().has_point(pos): _set_phase("fold")
 		"seal":
@@ -209,6 +210,22 @@ func _wechat_name_input(event: InputEvent) -> void:
 	bridge.editGuestName(edit.text, edit.max_length, keyboard_callback)
 
 
+## 手机键盘偶尔拉不起来：允许先跳过，用「来做客的你」当名字，照样能写信、入席
+const SKIP_NAME := Rect2(56, 612, 226, 24)
+const SKIP_NAME_AS := "来做客的你"
+func _skip_name() -> void:
+	if is_instance_valid(edit):
+		edit.queue_free()
+	edit = null
+	name = SKIP_NAME_AS
+	error = false
+	keyboard_open = false
+	phase = "write"
+	typed = 0.0
+	t = 0.0
+	r.play("pop")
+
+
 func _submit_name() -> void:
 	var s := edit.text.strip_edges()
 	if s.length() < 2 or s.length() > 12:
@@ -264,6 +281,7 @@ func draw(ci) -> void:
 			ci.text_at(Vector2(42,458),ci.t_("A7-I1"),16,ci.INK,276)
 			ci.text_at(Vector2(42,533),ci.t_(error_key) if error else ci.t_("A7-I2"),13,ci.WOOD,276)
 			ci.pill(_ok_rect(), ci.t_("G-19"), 18, ci.RED, ci.PAPER)
+			ci.pill(SKIP_NAME, "键盘没弹出来？点这里先跳过", 13, Color(ci.INK, 0.72), ci.PAPER)
 		"write", "written":
 			_paper(ci, int(typed))
 			if phase == "written":
