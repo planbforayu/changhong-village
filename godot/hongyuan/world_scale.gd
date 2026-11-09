@@ -19,6 +19,8 @@ const PROFILES := {
 	"airport": [400.0, 98.0, 615.0, 175.0],
 	"banquet": [198.0, 50.0, 600.0, 50.0],
 	"disney": [383.0, 48.0, 620.0, 128.0],
+	# HK park: calibrated so walkers at y≈460–520 appear 150–185 px tall (item-7 fix)
+	"hk_park": [383.0, 105.0, 620.0, 243.0],
 }
 
 static func profile(scene_id: String, background := "") -> String:

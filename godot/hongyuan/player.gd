@@ -392,13 +392,23 @@ func _enter_step(index: int, resume := false) -> void:
 			Packs.prefetch(["world", "world-media", "estate"] as Array[String])
 
 ## 每章结束后的两页小字：淡入、停一会儿，点一下翻页（也会自己翻）。
+## interludes.json 支持 image 字段：540×540 章末插图显示在上半区，文字在下半区。
 func _interlude(chapter_id: String) -> void:
 	if chapter_id == "" or interludes_shown.has(chapter_id):
 		return
-	var pages: Array = _read_json("res://hongyuan/interludes.json").get(chapter_id, [])
+	var entry = _read_json("res://hongyuan/interludes.json").get(chapter_id)
+	# 兼容旧格式（纯 Array）和新格式（有 image + pages 的 Dictionary）
+	var pages: Array = entry if entry is Array else (entry.get("pages", []) if entry is Dictionary else [])
 	if pages.is_empty():
 		return
 	interludes_shown[chapter_id] = true
+	var image_path: String = entry.get("image", "") if entry is Dictionary else ""
+	var img_tex: Texture2D = null
+	if image_path != "":
+		var full_path := "res://hongyuan/assets/" + image_path
+		if ResourceLoader.exists(full_path):
+			img_tex = load(full_path) as Texture2D
+
 	var layer := Control.new()
 	layer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	layer.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -407,18 +417,39 @@ func _interlude(chapter_id: String) -> void:
 	back.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	back.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	layer.add_child(back)
+
+	# 章末插图：占据画面上半部分（360×360），与下半文字区分开
+	var img_node: TextureRect = null
+	const IMG_H := 360
+	if img_tex:
+		img_node = TextureRect.new()
+		img_node.texture = img_tex
+		img_node.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		img_node.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+		img_node.offset_bottom = IMG_H
+		img_node.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		layer.add_child(img_node)
+
 	var label := Label.new()
-	label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	if img_tex:
+		# 下半区垂直居中
+		label.set_anchor_and_offset(SIDE_LEFT, 0, 40)
+		label.set_anchor_and_offset(SIDE_RIGHT, 1, -40)
+		label.set_anchor_and_offset(SIDE_TOP, 0, float(IMG_H))
+		label.set_anchor_and_offset(SIDE_BOTTOM, 1, 0)
+	else:
+		label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		label.offset_left = 40
+		label.offset_right = -40
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	label.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
-	label.offset_left = 40
-	label.offset_right = -40
 	label.add_theme_font_override("font", StoryCaption.FONT)
 	label.add_theme_font_size_override("font_size", 24)
 	label.add_theme_color_override("font_color", SceneRunner.PAPER)
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	layer.add_child(label)
+
 	var hint := Label.new()
 	hint.text = "轻点继续"
 	hint.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
@@ -435,6 +466,12 @@ func _interlude(chapter_id: String) -> void:
 	layer.gui_input.connect(func(event: InputEvent) -> void:
 		if (event is InputEventMouseButton and event.pressed) or (event is InputEventScreenTouch and event.pressed):
 			flipped[0] = true)
+	# 插图只淡入一次，文字每页都淡入淡出
+	if img_node:
+		img_node.modulate.a = 0.0
+		var img_fade := create_tween()
+		img_fade.tween_property(img_node, "modulate:a", 1.0, 0.8)
+		await img_fade.finished
 	for page in pages:
 		label.text = str(page)
 		label.modulate.a = 0.0

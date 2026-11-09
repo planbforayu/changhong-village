@@ -1,1690 +1,1690 @@
 {
-  "chapterId": "hongkong",
-  "titleId": "G-11",
-  "steps": [
-    {
-      "id": "hk",
-      "type": "scene",
-      "sceneId": "hongkong",
-      "speaker": "system",
-      "actorMode": "none",
-      "actorSlot": null,
-      "background": "scene",
-      "visibleActors": [],
-      "scene": {
-        "badge": "G-02",
-        "bg": "round1/people/offer_room.png",
-        "fill": "#2a1c18",
-        "hideAyu": true,
-        "beats": [
-          {
-            "card": "G-11",
-            "duration": 2.0
-          },
-          {
-            "narrate": "A6-0"
-          },
-          {
-            "hint": "A6-P1"
-          },
-          {
-            "goal": {
-              "目标": "一起出发，留下旅行合影",
-              "操作": "打开新邮件，再带着行李去机场",
-              "所得": "信封，让这份邀请能够寄出"
+    "chapterId": "hongkong",
+    "titleId": "G-11",
+    "steps": [
+        {
+            "id": "hk",
+            "type": "scene",
+            "sceneId": "hongkong",
+            "speaker": "system",
+            "actorMode": "none",
+            "actorSlot": null,
+            "background": "scene",
+            "visibleActors": [],
+            "scene": {
+                "badge": "G-02",
+                "bg": "round1/people/offer_room.png",
+                "fill": "#2a1c18",
+                "hideAyu": true,
+                "beats": [
+                    {
+                        "card": "G-11",
+                        "duration": 2.0
+                    },
+                    {
+                        "narrate": "A6-0"
+                    },
+                    {
+                        "hint": "A6-P1"
+                    },
+                    {
+                        "goal": {
+                            "目标": "一起出发，留下旅行合影",
+                            "操作": "打开新邮件，再带着行李去机场",
+                            "所得": "信封，让这份邀请能够寄出"
+                        }
+                    },
+                    {
+                        "game": "offer"
+                    },
+                    {
+                        "hint": ""
+                    },
+                    {
+                        "narrate": "A6-1"
+                    },
+                    {
+                        "personHeight": 112,
+                        "bg": "w2/hongkong/bg_departure_pvg.png",
+                        "sky": "#cfe3ee",
+                        "ground": "#d8d2c6",
+                        "horizon": 330,
+                        "decor": [
+                            {
+                                "r": [
+                                    0,
+                                    120,
+                                    360,
+                                    200
+                                ],
+                                "c": "#a9c9dc"
+                            },
+                            {
+                                "r": [
+                                    0,
+                                    300,
+                                    360,
+                                    30
+                                ],
+                                "c": "#7d8c7a"
+                            },
+                            {
+                                "r": [
+                                    296,
+                                    300,
+                                    54,
+                                    118
+                                ],
+                                "c": "#3f7d5a"
+                            },
+                            {
+                                "r": [
+                                    306,
+                                    312,
+                                    34,
+                                    22
+                                ],
+                                "c": "#f2f2f2"
+                            }
+                        ],
+                        "hideAyu": false,
+                        "start": [
+                            50,
+                            590
+                        ],
+                        "follow": "w2/hongkong/suitcase_1.png",
+                        "companion": "toretto",
+                        "walkers": [
+                            {
+                                "a": [
+                                    20,
+                                    410
+                                ],
+                                "b": [
+                                    85,
+                                    410
+                                ],
+                                "speed": 18,
+                                "phase": 0.0,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d11_01",
+                                "chat": [
+                                    "护照带了吗"
+                                ],
+                                "chatOffset": 0.0
+                            },
+                            {
+                                "a": [
+                                    325,
+                                    427
+                                ],
+                                "b": [
+                                    265,
+                                    427
+                                ],
+                                "speed": 21,
+                                "phase": 0.19,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d11_02"
+                            },
+                            {
+                                "a": [
+                                    115,
+                                    444
+                                ],
+                                "b": [
+                                    180,
+                                    444
+                                ],
+                                "speed": 24,
+                                "phase": 0.38,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d11_03",
+                                "chat": [
+                                    "要排多久"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    85,
+                                    426
+                                ],
+                                "b": [
+                                    20,
+                                    426
+                                ],
+                                "speed": 21,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d12_01"
+                            },
+                            {
+                                "a": [
+                                    265,
+                                    443
+                                ],
+                                "b": [
+                                    325,
+                                    443
+                                ],
+                                "speed": 24,
+                                "phase": 0.58,
+                                "scale": 0.95,
+                                "pause": 3.0,
+                                "npc": "d12_02",
+                                "chat": [
+                                    "登机口在哪"
+                                ],
+                                "chatOffset": 5.2
+                            },
+                            {
+                                "a": [
+                                    50,
+                                    340
+                                ],
+                                "b": [
+                                    50,
+                                    340
+                                ],
+                                "npc": "d11_talk_a",
+                                "scale": 0.95,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "护照带了吗？",
+                                    "登机口在哪",
+                                    "要排多久"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    82,
+                                    340
+                                ],
+                                "b": [
+                                    82,
+                                    340
+                                ],
+                                "npc": "d11_talk_b",
+                                "scale": 0.95,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "带了带了",
+                                    "往左走",
+                                    "快了快了"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    85,
+                                    426
+                                ],
+                                "b": [
+                                    20,
+                                    426
+                                ],
+                                "speed": 16.2,
+                                "phase": 0.33,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d11_04"
+                            },
+                            {
+                                "a": [
+                                    265,
+                                    443
+                                ],
+                                "b": [
+                                    325,
+                                    443
+                                ],
+                                "speed": 20.9,
+                                "phase": 0.6,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d11_05"
+                            },
+                            {
+                                "a": [
+                                    180,
+                                    460
+                                ],
+                                "b": [
+                                    115,
+                                    460
+                                ],
+                                "speed": 25.6,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d11_06"
+                            }
+                        ],
+                        "walkArea": [
+                            [
+                                20,
+                                330
+                            ],
+                            [
+                                345,
+                                330
+                            ],
+                            [
+                                345,
+                                615
+                            ],
+                            [
+                                20,
+                                615
+                            ]
+                        ],
+                        "actors": [],
+                        "hotspots": [
+                            {
+                                "id": "security",
+                                "at": [
+                                    268,
+                                    342
+                                ],
+                                "snap": [
+                                    268,
+                                    346
+                                ],
+                                "icon": "exit",
+                                "iconAt": [
+                                    268,
+                                    300
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "go": "security",
+                        "hint": "R1-AIRPORT-SECURITY"
+                    },
+                    {
+                        "wait": 1.2
+                    },
+                    {
+                        "bg": "w2/hongkong/bg_arrival_hk_r2.png",
+                        "start": [
+                            60,
+                            590
+                        ],
+                        "walkArea": [
+                            [
+                                130,
+                                320
+                            ],
+                            [
+                                345,
+                                320
+                            ],
+                            [
+                                345,
+                                615
+                            ],
+                            [
+                                20,
+                                615
+                            ],
+                            [
+                                20,
+                                395
+                            ],
+                            [
+                                130,
+                                395
+                            ]
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "exit",
+                                "at": [
+                                    250,
+                                    336
+                                ],
+                                "snap": [
+                                    250,
+                                    340
+                                ],
+                                "icon": "exit",
+                                "iconAt": [
+                                    250,
+                                    296
+                                ]
+                            }
+                        ],
+                        "actors": [],
+                        "walkers": [
+                            {
+                                "a": [
+                                    40,
+                                    470
+                                ],
+                                "b": [
+                                    110,
+                                    470
+                                ],
+                                "speed": 20,
+                                "phase": 0.0,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d12_01",
+                                "chat": [
+                                    "先去酒店"
+                                ],
+                                "chatOffset": 0.0
+                            },
+                            {
+                                "a": [
+                                    330,
+                                    500
+                                ],
+                                "b": [
+                                    250,
+                                    500
+                                ],
+                                "speed": 23,
+                                "phase": 0.3,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d12_02"
+                            },
+                            {
+                                "a": [
+                                    200,
+                                    545
+                                ],
+                                "b": [
+                                    290,
+                                    545
+                                ],
+                                "speed": 18,
+                                "phase": 0.6,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d12_03",
+                                "chat": [
+                                    "好热啊"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    110,
+                                    486
+                                ],
+                                "b": [
+                                    40,
+                                    486
+                                ],
+                                "speed": 23,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d11_01"
+                            },
+                            {
+                                "a": [
+                                    250,
+                                    516
+                                ],
+                                "b": [
+                                    330,
+                                    516
+                                ],
+                                "speed": 26,
+                                "phase": 0.58,
+                                "scale": 0.95,
+                                "pause": 3.0,
+                                "npc": "d11_02",
+                                "chat": [
+                                    "打车还是地铁"
+                                ],
+                                "chatOffset": 5.2
+                            },
+                            {
+                                "a": [
+                                    130,
+                                    330
+                                ],
+                                "b": [
+                                    130,
+                                    330
+                                ],
+                                "npc": "d11_talk_a",
+                                "scale": 0.95,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "接机的来了",
+                                    "好热啊",
+                                    "先去酒店"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    162,
+                                    330
+                                ],
+                                "b": [
+                                    162,
+                                    330
+                                ],
+                                "npc": "d11_talk_b",
+                                "scale": 0.95,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "这边这边",
+                                    "香港就这样",
+                                    "好"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    110,
+                                    486
+                                ],
+                                "b": [
+                                    40,
+                                    486
+                                ],
+                                "speed": 18.0,
+                                "phase": 0.33,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d11_04"
+                            },
+                            {
+                                "a": [
+                                    250,
+                                    516
+                                ],
+                                "b": [
+                                    330,
+                                    516
+                                ],
+                                "speed": 22.7,
+                                "phase": 0.6,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d11_05"
+                            },
+                            {
+                                "a": [
+                                    290,
+                                    561
+                                ],
+                                "b": [
+                                    200,
+                                    561
+                                ],
+                                "speed": 20.2,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d11_06"
+                            }
+                        ]
+                    },
+                    {
+                        "go": "exit",
+                        "hint": "A6-P3"
+                    },
+                    {
+                        "companion": "",
+                        "walkers": []
+                    },
+                    {
+                        "bg": "round1/scenes/hk_street_v2.png",
+                        "scaleProfile": "disney",
+                        "start": [
+                            58,
+                            590
+                        ],
+                        "hideAyu": false,
+                        "personHeight": 100,
+                        "companion": "toretto",
+                        "actors": [],
+                        "walkArea": [
+                            [
+                                20,
+                                440
+                            ],
+                            [
+                                340,
+                                440
+                            ],
+                            [
+                                340,
+                                610
+                            ],
+                            [
+                                20,
+                                610
+                            ]
+                        ],
+                        "walkers": [
+                            {
+                                "a": [
+                                    20,
+                                    455
+                                ],
+                                "b": [
+                                    85,
+                                    455
+                                ],
+                                "speed": 18,
+                                "phase": 0.0,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d13_01",
+                                "chat": [
+                                    "今日好热"
+                                ],
+                                "chatOffset": 0.0
+                            },
+                            {
+                                "a": [
+                                    325,
+                                    472
+                                ],
+                                "b": [
+                                    265,
+                                    472
+                                ],
+                                "speed": 21,
+                                "phase": 0.19,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d13_02"
+                            },
+                            {
+                                "a": [
+                                    115,
+                                    489
+                                ],
+                                "b": [
+                                    180,
+                                    489
+                                ],
+                                "speed": 24,
+                                "phase": 0.38,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d13_03",
+                                "chat": [
+                                    "等埋我"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    85,
+                                    471
+                                ],
+                                "b": [
+                                    20,
+                                    471
+                                ],
+                                "speed": 21,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d11_01"
+                            },
+                            {
+                                "a": [
+                                    265,
+                                    488
+                                ],
+                                "b": [
+                                    325,
+                                    488
+                                ],
+                                "speed": 24,
+                                "phase": 0.58,
+                                "scale": 0.95,
+                                "pause": 3.0,
+                                "npc": "d11_02",
+                                "chat": [
+                                    "叮叮车来了"
+                                ],
+                                "chatOffset": 5.2
+                            },
+                            {
+                                "a": [
+                                    230,
+                                    450
+                                ],
+                                "b": [
+                                    230,
+                                    450
+                                ],
+                                "npc": "d13_talk_a",
+                                "scale": 0.95,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "饮茶先啦",
+                                    "叮叮车来了",
+                                    "今日好热"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    262,
+                                    450
+                                ],
+                                "b": [
+                                    262,
+                                    450
+                                ],
+                                "npc": "d13_talk_b",
+                                "scale": 0.95,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "好啊",
+                                    "等埋我",
+                                    "系咪啊"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    85,
+                                    471
+                                ],
+                                "b": [
+                                    20,
+                                    471
+                                ],
+                                "speed": 16.2,
+                                "phase": 0.33,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d13_04"
+                            },
+                            {
+                                "a": [
+                                    265,
+                                    488
+                                ],
+                                "b": [
+                                    325,
+                                    488
+                                ],
+                                "speed": 20.9,
+                                "phase": 0.6,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d13_05"
+                            },
+                            {
+                                "a": [
+                                    180,
+                                    505
+                                ],
+                                "b": [
+                                    115,
+                                    505
+                                ],
+                                "speed": 25.6,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d13_06"
+                            }
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "street_photo",
+                                "at": [
+                                    180,
+                                    560
+                                ],
+                                "icon": "pick"
+                            }
+                        ],
+                        "follow": "w2/hongkong/suitcase_1.png",
+                        "badge": ""
+                    },
+                    {
+                        "narrate": "R1-HK-ARRIVAL"
+                    },
+                    {
+                        "go": "street_photo"
+                    },
+                    {
+                        "hideAyu": true,
+                        "companion": ""
+                    },
+                    {
+                        "game": "photo",
+                        "caption": "R1-HK-PHOTO"
+                    },
+                    {
+                        "bg": "w2/hongkong/park_toys_r2.png",
+                        "scaleProfile": "hk_park",
+                        "start": [
+                            58,
+                            590
+                        ],
+                        "hideAyu": false,
+                        "personHeight": 100,
+                        "companion": "toretto",
+                        "actors": [],
+                        "walkArea": [
+                            [
+                                60,
+                                250
+                            ],
+                            [
+                                250,
+                                250
+                            ],
+                            [
+                                300,
+                                420
+                            ],
+                            [
+                                335,
+                                612
+                            ],
+                            [
+                                25,
+                                612
+                            ],
+                            [
+                                45,
+                                420
+                            ]
+                        ],
+                        "walkers": [
+                            {
+                                "a": [
+                                    40,
+                                    470
+                                ],
+                                "b": [
+                                    85,
+                                    470
+                                ],
+                                "speed": 16,
+                                "phase": 0.0,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d14toys_01",
+                                "chat": [
+                                    "好多人"
+                                ],
+                                "chatOffset": 0.0
+                            },
+                            {
+                                "a": [
+                                    300,
+                                    460
+                                ],
+                                "b": [
+                                    255,
+                                    460
+                                ],
+                                "speed": 20,
+                                "phase": 0.23,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d14toys_02"
+                            },
+                            {
+                                "a": [
+                                    150,
+                                    500
+                                ],
+                                "b": [
+                                    195,
+                                    500
+                                ],
+                                "speed": 24,
+                                "phase": 0.46,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d14toys_03",
+                                "chat": [
+                                    "我要那个"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    85,
+                                    486
+                                ],
+                                "b": [
+                                    40,
+                                    486
+                                ],
+                                "speed": 19,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d11_01"
+                            },
+                            {
+                                "a": [
+                                    255,
+                                    476
+                                ],
+                                "b": [
+                                    300,
+                                    476
+                                ],
+                                "speed": 23,
+                                "phase": 0.58,
+                                "scale": 0.95,
+                                "pause": 3.0,
+                                "npc": "d11_02",
+                                "chat": [
+                                    "排队拍照"
+                                ],
+                                "chatOffset": 5.2
+                            },
+                            {
+                                "a": [
+                                    65,
+                                    260
+                                ],
+                                "b": [
+                                    65,
+                                    260
+                                ],
+                                "npc": "d14toys_talk_a",
+                                "scale": 0.95,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "想要那个气球",
+                                    "排队拍照",
+                                    "好多人"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    97,
+                                    260
+                                ],
+                                "b": [
+                                    97,
+                                    260
+                                ],
+                                "npc": "d14toys_talk_b",
+                                "scale": 0.95,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "只能买一个",
+                                    "我帮你拍",
+                                    "周末嘛"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    85,
+                                    486
+                                ],
+                                "b": [
+                                    40,
+                                    486
+                                ],
+                                "speed": 14.4,
+                                "phase": 0.33,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14toys_04"
+                            },
+                            {
+                                "a": [
+                                    255,
+                                    476
+                                ],
+                                "b": [
+                                    300,
+                                    476
+                                ],
+                                "speed": 20.0,
+                                "phase": 0.6,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14toys_05"
+                            },
+                            {
+                                "a": [
+                                    195,
+                                    516
+                                ],
+                                "b": [
+                                    150,
+                                    516
+                                ],
+                                "speed": 25.6,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14toys_06"
+                            }
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "toys_path",
+                                "at": [
+                                    220,
+                                    330
+                                ],
+                                "icon": "pick"
+                            }
+                        ],
+                        "follow": "",
+                        "badge": ""
+                    },
+                    {
+                        "narrate": "R1-DISNEY-TOYS"
+                    },
+                    {
+                        "go": "toys_path"
+                    },
+                    {
+                        "bg": "w2/hongkong/park_garden_r2.png",
+                        "scaleProfile": "hk_park",
+                        "start": [
+                            58,
+                            590
+                        ],
+                        "hideAyu": false,
+                        "personHeight": 100,
+                        "companion": "toretto",
+                        "actors": [],
+                        "walkArea": [
+                            [
+                                40,
+                                300
+                            ],
+                            [
+                                320,
+                                300
+                            ],
+                            [
+                                335,
+                                612
+                            ],
+                            [
+                                25,
+                                612
+                            ]
+                        ],
+                        "walkers": [
+                            {
+                                "a": [
+                                    60,
+                                    480
+                                ],
+                                "b": [
+                                    105,
+                                    480
+                                ],
+                                "speed": 16,
+                                "phase": 0.0,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d14garden_01",
+                                "chat": [
+                                    "好香啊"
+                                ],
+                                "chatOffset": 0.0
+                            },
+                            {
+                                "a": [
+                                    280,
+                                    470
+                                ],
+                                "b": [
+                                    235,
+                                    470
+                                ],
+                                "speed": 20,
+                                "phase": 0.23,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d14garden_02"
+                            },
+                            {
+                                "a": [
+                                    200,
+                                    520
+                                ],
+                                "b": [
+                                    245,
+                                    520
+                                ],
+                                "speed": 24,
+                                "phase": 0.46,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d14garden_03",
+                                "chat": [
+                                    "再来一张"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    105,
+                                    496
+                                ],
+                                "b": [
+                                    60,
+                                    496
+                                ],
+                                "speed": 19,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d11_01"
+                            },
+                            {
+                                "a": [
+                                    235,
+                                    486
+                                ],
+                                "b": [
+                                    280,
+                                    486
+                                ],
+                                "speed": 23,
+                                "phase": 0.58,
+                                "scale": 0.95,
+                                "pause": 3.0,
+                                "npc": "d11_02",
+                                "chat": [
+                                    "这边光好"
+                                ],
+                                "chatOffset": 5.2
+                            },
+                            {
+                                "a": [
+                                    55,
+                                    310
+                                ],
+                                "b": [
+                                    55,
+                                    310
+                                ],
+                                "npc": "d14garden_talk_a",
+                                "scale": 0.95,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "花开得真好",
+                                    "帮我们拍一张",
+                                    "再来一张"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    87,
+                                    310
+                                ],
+                                "b": [
+                                    87,
+                                    310
+                                ],
+                                "npc": "d14garden_talk_b",
+                                "scale": 0.95,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "好香啊",
+                                    "一二三！",
+                                    "闭眼了"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    105,
+                                    496
+                                ],
+                                "b": [
+                                    60,
+                                    496
+                                ],
+                                "speed": 14.4,
+                                "phase": 0.33,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14garden_04"
+                            },
+                            {
+                                "a": [
+                                    235,
+                                    486
+                                ],
+                                "b": [
+                                    280,
+                                    486
+                                ],
+                                "speed": 20.0,
+                                "phase": 0.6,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14garden_05"
+                            },
+                            {
+                                "a": [
+                                    245,
+                                    536
+                                ],
+                                "b": [
+                                    200,
+                                    536
+                                ],
+                                "speed": 25.6,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14garden_06"
+                            }
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "garden_path",
+                                "at": [
+                                    235,
+                                    420
+                                ],
+                                "icon": "pick"
+                            }
+                        ],
+                        "follow": "",
+                        "badge": ""
+                    },
+                    {
+                        "narrate": "R1-DISNEY-GARDEN"
+                    },
+                    {
+                        "go": "garden_path"
+                    },
+                    {
+                        "bg": "w2/hongkong/park_castle_r2.png",
+                        "scaleProfile": "hk_park",
+                        "start": [
+                            58,
+                            590
+                        ],
+                        "hideAyu": false,
+                        "personHeight": 100,
+                        "companion": "toretto",
+                        "actors": [],
+                        "walkArea": [
+                            [
+                                20,
+                                400
+                            ],
+                            [
+                                345,
+                                400
+                            ],
+                            [
+                                345,
+                                615
+                            ],
+                            [
+                                20,
+                                615
+                            ]
+                        ],
+                        "walkers": [
+                            {
+                                "a": [
+                                    300,
+                                    455
+                                ],
+                                "b": [
+                                    345,
+                                    455
+                                ],
+                                "speed": 16,
+                                "phase": 0.0,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d14castle_01",
+                                "chat": [
+                                    "晚上有烟花"
+                                ],
+                                "chatOffset": 0.0
+                            },
+                            {
+                                "a": [
+                                    40,
+                                    500
+                                ],
+                                "b": [
+                                    -5,
+                                    500
+                                ],
+                                "speed": 20,
+                                "phase": 0.23,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d14castle_02"
+                            },
+                            {
+                                "a": [
+                                    240,
+                                    480
+                                ],
+                                "b": [
+                                    285,
+                                    480
+                                ],
+                                "speed": 24,
+                                "phase": 0.46,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d14castle_03",
+                                "chat": [
+                                    "去那边看"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    285,
+                                    496
+                                ],
+                                "b": [
+                                    240,
+                                    496
+                                ],
+                                "speed": 27,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d11_01"
+                            },
+                            {
+                                "a": [
+                                    280,
+                                    410
+                                ],
+                                "b": [
+                                    280,
+                                    410
+                                ],
+                                "npc": "d14castle_talk_a",
+                                "scale": 0.95,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "城堡好漂亮",
+                                    "晚上有烟花",
+                                    "去那边看"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    312,
+                                    410
+                                ],
+                                "b": [
+                                    312,
+                                    410
+                                ],
+                                "npc": "d14castle_talk_b",
+                                "scale": 0.95,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "像童话一样",
+                                    "几点开始？",
+                                    "走"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    325,
+                                    463
+                                ],
+                                "b": [
+                                    280,
+                                    463
+                                ],
+                                "speed": 14.4,
+                                "phase": 0.33,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14castle_04"
+                            },
+                            {
+                                "a": [
+                                    285,
+                                    496
+                                ],
+                                "b": [
+                                    240,
+                                    496
+                                ],
+                                "speed": 25.6,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d14castle_06"
+                            }
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "castle_photo",
+                                "at": [
+                                    180,
+                                    470
+                                ],
+                                "icon": "pick"
+                            }
+                        ],
+                        "follow": "",
+                        "badge": ""
+                    },
+                    {
+                        "narrate": "R1-DISNEY-CASTLE"
+                    },
+                    {
+                        "go": "castle_photo"
+                    },
+                    {
+                        "hideAyu": true,
+                        "companion": ""
+                    },
+                    {
+                        "game": "photo",
+                        "caption": "B-G3-1"
+                    },
+                    {
+                        "bg": "round1/scenes/university.png",
+                        "scaleProfile": "disney",
+                        "start": [
+                            58,
+                            590
+                        ],
+                        "hideAyu": false,
+                        "personHeight": 100,
+                        "companion": "toretto",
+                        "actors": [],
+                        "walkArea": [
+                            [
+                                20,
+                                440
+                            ],
+                            [
+                                340,
+                                440
+                            ],
+                            [
+                                340,
+                                610
+                            ],
+                            [
+                                20,
+                                610
+                            ]
+                        ],
+                        "walkers": [
+                            {
+                                "a": [
+                                    70,
+                                    470
+                                ],
+                                "b": [
+                                    115,
+                                    470
+                                ],
+                                "speed": 16,
+                                "phase": 0.0,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d15_01",
+                                "chat": [
+                                    "学士帽扔吗"
+                                ],
+                                "chatOffset": 0.0
+                            },
+                            {
+                                "a": [
+                                    290,
+                                    500
+                                ],
+                                "b": [
+                                    245,
+                                    500
+                                ],
+                                "speed": 20,
+                                "phase": 0.23,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d15_02"
+                            },
+                            {
+                                "a": [
+                                    150,
+                                    455
+                                ],
+                                "b": [
+                                    195,
+                                    455
+                                ],
+                                "speed": 24,
+                                "phase": 0.46,
+                                "scale": 0.95,
+                                "pause": 2.6,
+                                "npc": "d15_03",
+                                "chat": [
+                                    "笑一个"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    115,
+                                    486
+                                ],
+                                "b": [
+                                    70,
+                                    486
+                                ],
+                                "speed": 19,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d11_01"
+                            },
+                            {
+                                "a": [
+                                    245,
+                                    516
+                                ],
+                                "b": [
+                                    290,
+                                    516
+                                ],
+                                "speed": 23,
+                                "phase": 0.58,
+                                "scale": 0.95,
+                                "pause": 3.0,
+                                "npc": "d11_02",
+                                "chat": [
+                                    "再拍一张"
+                                ],
+                                "chatOffset": 5.2
+                            },
+                            {
+                                "a": [
+                                    250,
+                                    450
+                                ],
+                                "b": [
+                                    250,
+                                    450
+                                ],
+                                "npc": "d15_talk_a",
+                                "scale": 0.95,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "毕业快乐！",
+                                    "再拍一张",
+                                    "学士帽扔吗"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    282,
+                                    450
+                                ],
+                                "b": [
+                                    282,
+                                    450
+                                ],
+                                "npc": "d15_talk_b",
+                                "scale": 0.95,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "终于毕业了",
+                                    "笑一个",
+                                    "一起扔！"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    115,
+                                    486
+                                ],
+                                "b": [
+                                    70,
+                                    486
+                                ],
+                                "speed": 14.4,
+                                "phase": 0.33,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d15_04"
+                            },
+                            {
+                                "a": [
+                                    245,
+                                    516
+                                ],
+                                "b": [
+                                    290,
+                                    516
+                                ],
+                                "speed": 20.0,
+                                "phase": 0.6,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d15_05"
+                            },
+                            {
+                                "a": [
+                                    195,
+                                    471
+                                ],
+                                "b": [
+                                    150,
+                                    471
+                                ],
+                                "speed": 25.6,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d15_06"
+                            }
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "campus_photo",
+                                "at": [
+                                    180,
+                                    550
+                                ],
+                                "icon": "pick"
+                            }
+                        ],
+                        "follow": "",
+                        "badge": ""
+                    },
+                    {
+                        "narrate": "R1-HK-CAMPUS"
+                    },
+                    {
+                        "go": "campus_photo"
+                    },
+                    {
+                        "hideAyu": true,
+                        "companion": ""
+                    },
+                    {
+                        "game": "photo",
+                        "caption": "R1-CAMPUS-PHOTO"
+                    },
+                    {
+                        "material": "envelope"
+                    },
+                    {
+                        "badge": "",
+                        "bg": "round1/desk_r4/writing.png",
+                        "hideAyu": true,
+                        "walkers": [],
+                        "actors": [],
+                        "companion": ""
+                    },
+                    {
+                        "button": "A6-B2"
+                    }
+                ]
             }
-          },
-          {
-            "game": "offer"
-          },
-          {
-            "hint": ""
-          },
-          {
-            "narrate": "A6-1"
-          },
-          {
-            "personHeight": 112,
-            "bg": "w2/hongkong/bg_departure_pvg.png",
-            "sky": "#cfe3ee",
-            "ground": "#d8d2c6",
-            "horizon": 330,
-            "decor": [
-              {
-                "r": [
-                  0,
-                  120,
-                  360,
-                  200
-                ],
-                "c": "#a9c9dc"
-              },
-              {
-                "r": [
-                  0,
-                  300,
-                  360,
-                  30
-                ],
-                "c": "#7d8c7a"
-              },
-              {
-                "r": [
-                  296,
-                  300,
-                  54,
-                  118
-                ],
-                "c": "#3f7d5a"
-              },
-              {
-                "r": [
-                  306,
-                  312,
-                  34,
-                  22
-                ],
-                "c": "#f2f2f2"
-              }
-            ],
-            "hideAyu": false,
-            "start": [
-              50,
-              590
-            ],
-            "follow": "w2/hongkong/suitcase_1.png",
-            "companion": "toretto",
-            "walkers": [
-              {
-                "a": [
-                  20,
-                  410
-                ],
-                "b": [
-                  85,
-                  410
-                ],
-                "speed": 18,
-                "phase": 0.0,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d11_01",
-                "chat": [
-                  "护照带了吗"
-                ],
-                "chatOffset": 0.0
-              },
-              {
-                "a": [
-                  325,
-                  427
-                ],
-                "b": [
-                  265,
-                  427
-                ],
-                "speed": 21,
-                "phase": 0.19,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_02"
-              },
-              {
-                "a": [
-                  115,
-                  444
-                ],
-                "b": [
-                  180,
-                  444
-                ],
-                "speed": 24,
-                "phase": 0.38,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d11_03",
-                "chat": [
-                  "要排多久"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  85,
-                  426
-                ],
-                "b": [
-                  20,
-                  426
-                ],
-                "speed": 21,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d12_01"
-              },
-              {
-                "a": [
-                  265,
-                  443
-                ],
-                "b": [
-                  325,
-                  443
-                ],
-                "speed": 24,
-                "phase": 0.58,
-                "scale": 0.95,
-                "pause": 3.0,
-                "npc": "d12_02",
-                "chat": [
-                  "登机口在哪"
-                ],
-                "chatOffset": 5.2
-              },
-              {
-                "a": [
-                  50,
-                  340
-                ],
-                "b": [
-                  50,
-                  340
-                ],
-                "npc": "d11_talk_a",
-                "scale": 0.95,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "护照带了吗？",
-                  "登机口在哪",
-                  "要排多久"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  82,
-                  340
-                ],
-                "b": [
-                  82,
-                  340
-                ],
-                "npc": "d11_talk_b",
-                "scale": 0.95,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "带了带了",
-                  "往左走",
-                  "快了快了"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  85,
-                  426
-                ],
-                "b": [
-                  20,
-                  426
-                ],
-                "speed": 16.2,
-                "phase": 0.33,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d11_04"
-              },
-              {
-                "a": [
-                  265,
-                  443
-                ],
-                "b": [
-                  325,
-                  443
-                ],
-                "speed": 20.9,
-                "phase": 0.6,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d11_05"
-              },
-              {
-                "a": [
-                  180,
-                  460
-                ],
-                "b": [
-                  115,
-                  460
-                ],
-                "speed": 25.6,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d11_06"
-              }
-            ],
-            "walkArea": [
-              [
-                20,
-                330
-              ],
-              [
-                345,
-                330
-              ],
-              [
-                345,
-                615
-              ],
-              [
-                20,
-                615
-              ]
-            ],
-            "actors": [],
-            "hotspots": [
-              {
-                "id": "security",
-                "at": [
-                  268,
-                  342
-                ],
-                "snap": [
-                  268,
-                  346
-                ],
-                "icon": "exit",
-                "iconAt": [
-                  268,
-                  300
-                ]
-              }
-            ]
-          },
-          {
-            "go": "security",
-            "hint": "R1-AIRPORT-SECURITY"
-          },
-          {
-            "wait": 1.2
-          },
-          {
-            "bg": "w2/hongkong/bg_arrival_hk_r2.png",
-            "start": [
-              60,
-              590
-            ],
-            "walkArea": [
-              [
-                130,
-                320
-              ],
-              [
-                345,
-                320
-              ],
-              [
-                345,
-                615
-              ],
-              [
-                20,
-                615
-              ],
-              [
-                20,
-                395
-              ],
-              [
-                130,
-                395
-              ]
-            ],
-            "hotspots": [
-              {
-                "id": "exit",
-                "at": [
-                  250,
-                  336
-                ],
-                "snap": [
-                  250,
-                  340
-                ],
-                "icon": "exit",
-                "iconAt": [
-                  250,
-                  296
-                ]
-              }
-            ],
-            "actors": [],
-            "walkers": [
-              {
-                "a": [
-                  40,
-                  470
-                ],
-                "b": [
-                  110,
-                  470
-                ],
-                "speed": 20,
-                "phase": 0.0,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d12_01",
-                "chat": [
-                  "先去酒店"
-                ],
-                "chatOffset": 0.0
-              },
-              {
-                "a": [
-                  330,
-                  500
-                ],
-                "b": [
-                  250,
-                  500
-                ],
-                "speed": 23,
-                "phase": 0.3,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d12_02"
-              },
-              {
-                "a": [
-                  200,
-                  545
-                ],
-                "b": [
-                  290,
-                  545
-                ],
-                "speed": 18,
-                "phase": 0.6,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d12_03",
-                "chat": [
-                  "好热啊"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  110,
-                  486
-                ],
-                "b": [
-                  40,
-                  486
-                ],
-                "speed": 23,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_01"
-              },
-              {
-                "a": [
-                  250,
-                  516
-                ],
-                "b": [
-                  330,
-                  516
-                ],
-                "speed": 26,
-                "phase": 0.58,
-                "scale": 0.95,
-                "pause": 3.0,
-                "npc": "d11_02",
-                "chat": [
-                  "打车还是地铁"
-                ],
-                "chatOffset": 5.2
-              },
-              {
-                "a": [
-                  130,
-                  330
-                ],
-                "b": [
-                  130,
-                  330
-                ],
-                "npc": "d11_talk_a",
-                "scale": 0.95,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "接机的来了",
-                  "好热啊",
-                  "先去酒店"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  162,
-                  330
-                ],
-                "b": [
-                  162,
-                  330
-                ],
-                "npc": "d11_talk_b",
-                "scale": 0.95,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "这边这边",
-                  "香港就这样",
-                  "好"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  110,
-                  486
-                ],
-                "b": [
-                  40,
-                  486
-                ],
-                "speed": 18.0,
-                "phase": 0.33,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d11_04"
-              },
-              {
-                "a": [
-                  250,
-                  516
-                ],
-                "b": [
-                  330,
-                  516
-                ],
-                "speed": 22.7,
-                "phase": 0.6,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d11_05"
-              },
-              {
-                "a": [
-                  290,
-                  561
-                ],
-                "b": [
-                  200,
-                  561
-                ],
-                "speed": 20.2,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d11_06"
-              }
-            ]
-          },
-          {
-            "go": "exit",
-            "hint": "A6-P3"
-          },
-          {
-            "companion": "",
-            "walkers": []
-          },
-          {
-            "bg": "round1/scenes/hk_street.png",
-            "scaleProfile": "disney",
-            "start": [
-              58,
-              590
-            ],
-            "hideAyu": false,
-            "personHeight": 100,
-            "companion": "toretto",
-            "actors": [],
-            "walkArea": [
-              [
-                20,
-                440
-              ],
-              [
-                340,
-                440
-              ],
-              [
-                340,
-                610
-              ],
-              [
-                20,
-                610
-              ]
-            ],
-            "walkers": [
-              {
-                "a": [
-                  20,
-                  455
-                ],
-                "b": [
-                  85,
-                  455
-                ],
-                "speed": 18,
-                "phase": 0.0,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d13_01",
-                "chat": [
-                  "今日好热"
-                ],
-                "chatOffset": 0.0
-              },
-              {
-                "a": [
-                  325,
-                  472
-                ],
-                "b": [
-                  265,
-                  472
-                ],
-                "speed": 21,
-                "phase": 0.19,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d13_02"
-              },
-              {
-                "a": [
-                  115,
-                  489
-                ],
-                "b": [
-                  180,
-                  489
-                ],
-                "speed": 24,
-                "phase": 0.38,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d13_03",
-                "chat": [
-                  "等埋我"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  85,
-                  471
-                ],
-                "b": [
-                  20,
-                  471
-                ],
-                "speed": 21,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_01"
-              },
-              {
-                "a": [
-                  265,
-                  488
-                ],
-                "b": [
-                  325,
-                  488
-                ],
-                "speed": 24,
-                "phase": 0.58,
-                "scale": 0.95,
-                "pause": 3.0,
-                "npc": "d11_02",
-                "chat": [
-                  "叮叮车来了"
-                ],
-                "chatOffset": 5.2
-              },
-              {
-                "a": [
-                  230,
-                  450
-                ],
-                "b": [
-                  230,
-                  450
-                ],
-                "npc": "d13_talk_a",
-                "scale": 0.95,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "饮茶先啦",
-                  "叮叮车来了",
-                  "今日好热"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  262,
-                  450
-                ],
-                "b": [
-                  262,
-                  450
-                ],
-                "npc": "d13_talk_b",
-                "scale": 0.95,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "好啊",
-                  "等埋我",
-                  "系咪啊"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  85,
-                  471
-                ],
-                "b": [
-                  20,
-                  471
-                ],
-                "speed": 16.2,
-                "phase": 0.33,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d13_04"
-              },
-              {
-                "a": [
-                  265,
-                  488
-                ],
-                "b": [
-                  325,
-                  488
-                ],
-                "speed": 20.9,
-                "phase": 0.6,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d13_05"
-              },
-              {
-                "a": [
-                  180,
-                  505
-                ],
-                "b": [
-                  115,
-                  505
-                ],
-                "speed": 25.6,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d13_06"
-              }
-            ],
-            "hotspots": [
-              {
-                "id": "street_photo",
-                "at": [
-                  180,
-                  560
-                ],
-                "icon": "pick"
-              }
-            ],
-            "follow": "w2/hongkong/suitcase_1.png",
-            "badge": ""
-          },
-          {
-            "narrate": "R1-HK-ARRIVAL"
-          },
-          {
-            "go": "street_photo"
-          },
-          {
-            "hideAyu": true,
-            "companion": ""
-          },
-          {
-            "game": "photo",
-            "caption": "R1-HK-PHOTO"
-          },
-          {
-            "bg": "w2/hongkong/park_toys_r2.png",
-            "scaleProfile": "disney",
-            "start": [
-              58,
-              590
-            ],
-            "hideAyu": false,
-            "personHeight": 100,
-            "companion": "toretto",
-            "actors": [],
-            "walkArea": [
-              [
-                60,
-                250
-              ],
-              [
-                250,
-                250
-              ],
-              [
-                300,
-                420
-              ],
-              [
-                335,
-                612
-              ],
-              [
-                25,
-                612
-              ],
-              [
-                45,
-                420
-              ]
-            ],
-            "walkers": [
-              {
-                "a": [
-                  40,
-                  470
-                ],
-                "b": [
-                  85,
-                  470
-                ],
-                "speed": 16,
-                "phase": 0.0,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d14toys_01",
-                "chat": [
-                  "好多人"
-                ],
-                "chatOffset": 0.0
-              },
-              {
-                "a": [
-                  300,
-                  460
-                ],
-                "b": [
-                  255,
-                  460
-                ],
-                "speed": 20,
-                "phase": 0.23,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d14toys_02"
-              },
-              {
-                "a": [
-                  150,
-                  500
-                ],
-                "b": [
-                  195,
-                  500
-                ],
-                "speed": 24,
-                "phase": 0.46,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d14toys_03",
-                "chat": [
-                  "我要那个"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  85,
-                  486
-                ],
-                "b": [
-                  40,
-                  486
-                ],
-                "speed": 19,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_01"
-              },
-              {
-                "a": [
-                  255,
-                  476
-                ],
-                "b": [
-                  300,
-                  476
-                ],
-                "speed": 23,
-                "phase": 0.58,
-                "scale": 0.95,
-                "pause": 3.0,
-                "npc": "d11_02",
-                "chat": [
-                  "排队拍照"
-                ],
-                "chatOffset": 5.2
-              },
-              {
-                "a": [
-                  65,
-                  260
-                ],
-                "b": [
-                  65,
-                  260
-                ],
-                "npc": "d14toys_talk_a",
-                "scale": 0.95,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "想要那个气球",
-                  "排队拍照",
-                  "好多人"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  97,
-                  260
-                ],
-                "b": [
-                  97,
-                  260
-                ],
-                "npc": "d14toys_talk_b",
-                "scale": 0.95,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "只能买一个",
-                  "我帮你拍",
-                  "周末嘛"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  85,
-                  486
-                ],
-                "b": [
-                  40,
-                  486
-                ],
-                "speed": 14.4,
-                "phase": 0.33,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14toys_04"
-              },
-              {
-                "a": [
-                  255,
-                  476
-                ],
-                "b": [
-                  300,
-                  476
-                ],
-                "speed": 20.0,
-                "phase": 0.6,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14toys_05"
-              },
-              {
-                "a": [
-                  195,
-                  516
-                ],
-                "b": [
-                  150,
-                  516
-                ],
-                "speed": 25.6,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14toys_06"
-              }
-            ],
-            "hotspots": [
-              {
-                "id": "toys_path",
-                "at": [
-                  220,
-                  330
-                ],
-                "icon": "pick"
-              }
-            ],
-            "follow": "",
-            "badge": ""
-          },
-          {
-            "narrate": "R1-DISNEY-TOYS"
-          },
-          {
-            "go": "toys_path"
-          },
-          {
-            "bg": "w2/hongkong/park_garden_r2.png",
-            "scaleProfile": "disney",
-            "start": [
-              58,
-              590
-            ],
-            "hideAyu": false,
-            "personHeight": 100,
-            "companion": "toretto",
-            "actors": [],
-            "walkArea": [
-              [
-                40,
-                300
-              ],
-              [
-                320,
-                300
-              ],
-              [
-                335,
-                612
-              ],
-              [
-                25,
-                612
-              ]
-            ],
-            "walkers": [
-              {
-                "a": [
-                  60,
-                  480
-                ],
-                "b": [
-                  105,
-                  480
-                ],
-                "speed": 16,
-                "phase": 0.0,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d14garden_01",
-                "chat": [
-                  "好香啊"
-                ],
-                "chatOffset": 0.0
-              },
-              {
-                "a": [
-                  280,
-                  470
-                ],
-                "b": [
-                  235,
-                  470
-                ],
-                "speed": 20,
-                "phase": 0.23,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d14garden_02"
-              },
-              {
-                "a": [
-                  200,
-                  520
-                ],
-                "b": [
-                  245,
-                  520
-                ],
-                "speed": 24,
-                "phase": 0.46,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d14garden_03",
-                "chat": [
-                  "再来一张"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  105,
-                  496
-                ],
-                "b": [
-                  60,
-                  496
-                ],
-                "speed": 19,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_01"
-              },
-              {
-                "a": [
-                  235,
-                  486
-                ],
-                "b": [
-                  280,
-                  486
-                ],
-                "speed": 23,
-                "phase": 0.58,
-                "scale": 0.95,
-                "pause": 3.0,
-                "npc": "d11_02",
-                "chat": [
-                  "这边光好"
-                ],
-                "chatOffset": 5.2
-              },
-              {
-                "a": [
-                  55,
-                  310
-                ],
-                "b": [
-                  55,
-                  310
-                ],
-                "npc": "d14garden_talk_a",
-                "scale": 0.95,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "花开得真好",
-                  "帮我们拍一张",
-                  "再来一张"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  87,
-                  310
-                ],
-                "b": [
-                  87,
-                  310
-                ],
-                "npc": "d14garden_talk_b",
-                "scale": 0.95,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "好香啊",
-                  "一二三！",
-                  "闭眼了"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  105,
-                  496
-                ],
-                "b": [
-                  60,
-                  496
-                ],
-                "speed": 14.4,
-                "phase": 0.33,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14garden_04"
-              },
-              {
-                "a": [
-                  235,
-                  486
-                ],
-                "b": [
-                  280,
-                  486
-                ],
-                "speed": 20.0,
-                "phase": 0.6,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14garden_05"
-              },
-              {
-                "a": [
-                  245,
-                  536
-                ],
-                "b": [
-                  200,
-                  536
-                ],
-                "speed": 25.6,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14garden_06"
-              }
-            ],
-            "hotspots": [
-              {
-                "id": "garden_path",
-                "at": [
-                  235,
-                  420
-                ],
-                "icon": "pick"
-              }
-            ],
-            "follow": "",
-            "badge": ""
-          },
-          {
-            "narrate": "R1-DISNEY-GARDEN"
-          },
-          {
-            "go": "garden_path"
-          },
-          {
-            "bg": "w2/hongkong/park_castle_r2.png",
-            "scaleProfile": "disney",
-            "start": [
-              58,
-              590
-            ],
-            "hideAyu": false,
-            "personHeight": 100,
-            "companion": "toretto",
-            "actors": [],
-            "walkArea": [
-              [
-                20,
-                400
-              ],
-              [
-                345,
-                400
-              ],
-              [
-                345,
-                615
-              ],
-              [
-                20,
-                615
-              ]
-            ],
-            "walkers": [
-              {
-                "a": [
-                  300,
-                  455
-                ],
-                "b": [
-                  345,
-                  455
-                ],
-                "speed": 16,
-                "phase": 0.0,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d14castle_01",
-                "chat": [
-                  "晚上有烟花"
-                ],
-                "chatOffset": 0.0
-              },
-              {
-                "a": [
-                  40,
-                  500
-                ],
-                "b": [
-                  -5,
-                  500
-                ],
-                "speed": 20,
-                "phase": 0.23,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d14castle_02"
-              },
-              {
-                "a": [
-                  240,
-                  480
-                ],
-                "b": [
-                  285,
-                  480
-                ],
-                "speed": 24,
-                "phase": 0.46,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d14castle_03",
-                "chat": [
-                  "去那边看"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  285,
-                  496
-                ],
-                "b": [
-                  240,
-                  496
-                ],
-                "speed": 27,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_01"
-              },
-              {
-                "a": [
-                  280,
-                  410
-                ],
-                "b": [
-                  280,
-                  410
-                ],
-                "npc": "d14castle_talk_a",
-                "scale": 0.95,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "城堡好漂亮",
-                  "晚上有烟花",
-                  "去那边看"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  312,
-                  410
-                ],
-                "b": [
-                  312,
-                  410
-                ],
-                "npc": "d14castle_talk_b",
-                "scale": 0.95,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "像童话一样",
-                  "几点开始？",
-                  "走"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  325,
-                  463
-                ],
-                "b": [
-                  280,
-                  463
-                ],
-                "speed": 14.4,
-                "phase": 0.33,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14castle_04"
-              },
-              {
-                "a": [
-                  285,
-                  496
-                ],
-                "b": [
-                  240,
-                  496
-                ],
-                "speed": 25.6,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d14castle_06"
-              }
-            ],
-            "hotspots": [
-              {
-                "id": "castle_photo",
-                "at": [
-                  180,
-                  470
-                ],
-                "icon": "pick"
-              }
-            ],
-            "follow": "",
-            "badge": ""
-          },
-          {
-            "narrate": "R1-DISNEY-CASTLE"
-          },
-          {
-            "go": "castle_photo"
-          },
-          {
-            "hideAyu": true,
-            "companion": ""
-          },
-          {
-            "game": "photo",
-            "caption": "B-G3-1"
-          },
-          {
-            "bg": "round1/scenes/university.png",
-            "scaleProfile": "disney",
-            "start": [
-              58,
-              590
-            ],
-            "hideAyu": false,
-            "personHeight": 100,
-            "companion": "toretto",
-            "actors": [],
-            "walkArea": [
-              [
-                20,
-                440
-              ],
-              [
-                340,
-                440
-              ],
-              [
-                340,
-                610
-              ],
-              [
-                20,
-                610
-              ]
-            ],
-            "walkers": [
-              {
-                "a": [
-                  70,
-                  470
-                ],
-                "b": [
-                  115,
-                  470
-                ],
-                "speed": 16,
-                "phase": 0.0,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d15_01",
-                "chat": [
-                  "学士帽扔吗"
-                ],
-                "chatOffset": 0.0
-              },
-              {
-                "a": [
-                  290,
-                  500
-                ],
-                "b": [
-                  245,
-                  500
-                ],
-                "speed": 20,
-                "phase": 0.23,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d15_02"
-              },
-              {
-                "a": [
-                  150,
-                  455
-                ],
-                "b": [
-                  195,
-                  455
-                ],
-                "speed": 24,
-                "phase": 0.46,
-                "scale": 0.95,
-                "pause": 2.6,
-                "npc": "d15_03",
-                "chat": [
-                  "笑一个"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  115,
-                  486
-                ],
-                "b": [
-                  70,
-                  486
-                ],
-                "speed": 19,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_01"
-              },
-              {
-                "a": [
-                  245,
-                  516
-                ],
-                "b": [
-                  290,
-                  516
-                ],
-                "speed": 23,
-                "phase": 0.58,
-                "scale": 0.95,
-                "pause": 3.0,
-                "npc": "d11_02",
-                "chat": [
-                  "再拍一张"
-                ],
-                "chatOffset": 5.2
-              },
-              {
-                "a": [
-                  250,
-                  450
-                ],
-                "b": [
-                  250,
-                  450
-                ],
-                "npc": "d15_talk_a",
-                "scale": 0.95,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "毕业快乐！",
-                  "再拍一张",
-                  "学士帽扔吗"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  282,
-                  450
-                ],
-                "b": [
-                  282,
-                  450
-                ],
-                "npc": "d15_talk_b",
-                "scale": 0.95,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "终于毕业了",
-                  "笑一个",
-                  "一起扔！"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  115,
-                  486
-                ],
-                "b": [
-                  70,
-                  486
-                ],
-                "speed": 14.4,
-                "phase": 0.33,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d15_04"
-              },
-              {
-                "a": [
-                  245,
-                  516
-                ],
-                "b": [
-                  290,
-                  516
-                ],
-                "speed": 20.0,
-                "phase": 0.6,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d15_05"
-              },
-              {
-                "a": [
-                  195,
-                  471
-                ],
-                "b": [
-                  150,
-                  471
-                ],
-                "speed": 25.6,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d15_06"
-              }
-            ],
-            "hotspots": [
-              {
-                "id": "campus_photo",
-                "at": [
-                  180,
-                  550
-                ],
-                "icon": "pick"
-              }
-            ],
-            "follow": "",
-            "badge": ""
-          },
-          {
-            "narrate": "R1-HK-CAMPUS"
-          },
-          {
-            "go": "campus_photo"
-          },
-          {
-            "hideAyu": true,
-            "companion": ""
-          },
-          {
-            "game": "photo",
-            "caption": "R1-CAMPUS-PHOTO"
-          },
-          {
-            "material": "envelope"
-          },
-          {
-            "badge": "",
-            "bg": "round1/desk_r4/writing.png",
-            "hideAyu": true,
-            "walkers": [],
-            "actors": [],
-            "companion": ""
-          },
-          {
-            "button": "A6-B2"
-          }
-        ]
-      }
-    }
-  ]
+        }
+    ]
 }

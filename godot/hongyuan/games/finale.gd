@@ -67,11 +67,17 @@ func _set_phase(value: String) -> void:
 func _letter() -> String:
 	return "亲爱的我的朋友" + name + "：\n" + r.t_("A7-1a") + "\n" + r.t_("A7-1c") + "\n" + r.t_("A7-1e")
 
-func _ok_rect() -> Rect2:
+func _ok_rect(phase_name := "") -> Rect2:
+	if phase_name == "look":
+		return Rect2(100, 606, 160, 34)
 	return Rect2(100, 560, 160, 48)
 
+const LOOK_PANEL_Y := 50.0
+const LOOK_CELL_W := 180.0
+const LOOK_CELL_H := 138.0
+
 func _look_rect(i: int) -> Rect2:
-	return Rect2(36 + (i % 4) * 74, 250 + (i / 4) * 120, 66, 108)
+	return Rect2((i % 2) * LOOK_CELL_W, LOOK_PANEL_Y + (i / 2) * LOOK_CELL_H, LOOK_CELL_W, LOOK_CELL_H)
 
 func _envelope() -> Rect2:
 	return Rect2(50, 255, 260, 165)
@@ -123,7 +129,7 @@ func input(kind: String, pos: Vector2) -> void:
 					if _look_rect(i).has_point(pos):
 						look = i
 						r.play("blip")
-				if look >= 0 and _ok_rect().has_point(pos): _set_phase("welcome")
+				if look >= 0 and _ok_rect("look").has_point(pos): _set_phase("welcome")
 		"welcome":
 			if kind == "tap" and t > 0.6:
 				r.result = {"name": name, "look": LOOKS[look]}
@@ -269,7 +275,7 @@ func draw(ci) -> void:
 		_send_frames(ci)
 		return
 	elif phase in ["receive", "opening", "read_received"]:
-		desk.cover(ci, ci.texture("w2/finale/recipient_desk.png"), r.view_rect)
+		desk.cover(ci, ci.texture("w2/finale/recipient_gate.png"), r.view_rect)
 	elif phase in ["write", "written"]:
 		desk.cover(ci, ci.texture(LETTER), r.view_rect)
 	else:
@@ -329,14 +335,23 @@ func draw(ci) -> void:
 			_paper(ci, _letter().length())
 			ci.pill(_ok_rect(), "收下这份邀请", 18, ci.RED, ci.PAPER)
 		"look":
-			ci.text_at(Vector2(30, 185), ci.t_("G-CHOOSE-LOOK"), 20, ci.PAPER, 300)
-			for i in range(LOOKS.size()):
-				var rr := _look_rect(i)
-				ci.draw_rect(rr, ci.PAPER if i != look else Color("#ffe6a8"))
-				ci.draw_rect(rr, ci.GOLD if i == look else ci.WOOD, false, 3 if i == look else 2)
-				var guest := _guest(i)
-				if guest: ci.draw_texture_rect_region(guest, Rect2(rr.position + Vector2(1, 0), Vector2(64, 84)), Rect2(0, 0, 64, 84))
-			if look >= 0: ci.pill(_ok_rect(), ci.t_("G-19"), 18, ci.RED, ci.PAPER)
+			ci.text_at(Vector2(30, 22), ci.t_("G-CHOOSE-LOOK"), 18, ci.PAPER, 300)
+			var panel: Texture2D = ci.texture("round1/people/choose_look_panel.png")
+			if panel:
+				# Panel 720×1100 → 360×550 at 0.5×
+				ci.draw_texture_rect(panel, Rect2(0, LOOK_PANEL_Y, 360, 550), false)
+				var hi: Texture2D = ci.texture("round1/people/choose_look_highlight.png")
+				if hi and look >= 0:
+					var rr := _look_rect(look)
+					ci.draw_texture_rect(hi, Rect2(rr.position + Vector2(2, 2), rr.size - Vector2(4, 4)), false)
+			else:
+				for i in range(LOOKS.size()):
+					var rr := _look_rect(i)
+					ci.draw_rect(rr, ci.PAPER if i != look else Color("#ffe6a8"))
+					ci.draw_rect(rr, ci.GOLD if i == look else ci.WOOD, false, 3 if i == look else 2)
+					var guest := _guest(i)
+					if guest: ci.draw_texture_rect_region(guest, Rect2(rr.position + Vector2(1, 0), Vector2(64, 84)), Rect2(0, 0, 64, 84))
+			if look >= 0: ci.pill(_ok_rect("look"), ci.t_("G-19"), 16, ci.RED, ci.PAPER)
 		"welcome":
 			ci.StoryCaption.draw_caption(ci, ci.t_("A7-2c"), "ayu", -1, true, Vector2(166, 318))
 			ci.pill(_ok_rect(), "去赴约", 18, ci.RED, ci.PAPER)

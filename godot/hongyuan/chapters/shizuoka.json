@@ -1,772 +1,772 @@
 {
-  "chapterId": "shizuoka",
-  "titleId": "G-09",
-  "steps": [
-    {
-      "id": "pier",
-      "type": "scene",
-      "sceneId": "shizuoka",
-      "speaker": "system",
-      "actorMode": "none",
-      "actorSlot": null,
-      "background": "scene",
-      "visibleActors": [],
-      "scene": {
-        "personHeight": 128,
-        "badge": "G-02",
-        "bg": "round1/rework1107/shizuoka_pier.png",
-        "walkArea": [
-          [
-            125,
-            245
-          ],
-          [
-            235,
-            245
-          ],
-          [
-            332,
-            604
-          ],
-          [
-            28,
-            604
-          ]
-        ],
-        "start": [
-          65,
-          588
-        ],
-        "hotspots": [
-          {
-            "id": "spot",
-            "at": [
-              180,
-              300
-            ],
-            "snap": [
-              180,
-              300
-            ],
-            "face": 1,
-            "icon": "rod"
-          },
-          {
-            "id": "boat",
-            "at": [
-              290,
-              585
-            ],
-            "icon": "exit"
-          }
-        ],
-        "beats": [
-          {
-            "card": "G-09",
-            "duration": 2.0
-          },
-          {
-            "narrate": "A4-1a"
-          },
-          {
-            "narrate": "A4-1b"
-          },
-          {
-            "narrate": "A4-1c"
-          },
-          {
-            "goal": {
-              "目标": "到港口钓一次鱼",
-              "操作": "走到钓位，按住蓄力，松手甩竿",
-              "所得": "印章，盖在邀请函上"
+    "chapterId": "shizuoka",
+    "titleId": "G-09",
+    "steps": [
+        {
+            "id": "pier",
+            "type": "scene",
+            "sceneId": "shizuoka",
+            "speaker": "system",
+            "actorMode": "none",
+            "actorSlot": null,
+            "background": "scene",
+            "visibleActors": [],
+            "scene": {
+                "personHeight": 128,
+                "badge": "G-02",
+                "bg": "round1/rework1107/shizuoka_pier_v2.png",
+                "walkArea": [
+                    [
+                        125,
+                        245
+                    ],
+                    [
+                        235,
+                        245
+                    ],
+                    [
+                        332,
+                        604
+                    ],
+                    [
+                        28,
+                        604
+                    ]
+                ],
+                "start": [
+                    65,
+                    588
+                ],
+                "hotspots": [
+                    {
+                        "id": "spot",
+                        "at": [
+                            180,
+                            300
+                        ],
+                        "snap": [
+                            180,
+                            300
+                        ],
+                        "face": 1,
+                        "icon": "rod"
+                    },
+                    {
+                        "id": "boat",
+                        "at": [
+                            290,
+                            585
+                        ],
+                        "icon": "exit"
+                    }
+                ],
+                "beats": [
+                    {
+                        "card": "G-09",
+                        "duration": 2.0
+                    },
+                    {
+                        "narrate": "A4-1a"
+                    },
+                    {
+                        "narrate": "A4-1b"
+                    },
+                    {
+                        "narrate": "A4-1c"
+                    },
+                    {
+                        "goal": {
+                            "目标": "到港口钓一次鱼",
+                            "操作": "走到钓位，按住蓄力，松手甩竿",
+                            "所得": "印章，盖在邀请函上"
+                        }
+                    },
+                    {
+                        "go": "spot",
+                        "hint": "A4-P1"
+                    },
+                    {
+                        "game": "fishing"
+                    },
+                    {
+                        "go": "boat"
+                    },
+                    {
+                        "bg": "round1/rework1107/turtle_boarding.png",
+                        "scaleProfile": "boarding",
+                        "walkArea": [
+                            [
+                                20,
+                                610
+                            ],
+                            [
+                                340,
+                                610
+                            ],
+                            [
+                                340,
+                                432
+                            ],
+                            [
+                                198,
+                                424
+                            ],
+                            [
+                                250,
+                                242
+                            ],
+                            [
+                                206,
+                                242
+                            ],
+                            [
+                                78,
+                                420
+                            ],
+                            [
+                                20,
+                                430
+                            ]
+                        ],
+                        "start": [
+                            65,
+                            590
+                        ],
+                        "companion": "toretto",
+                        "walkers": [
+                            {
+                                "a": [
+                                    262,
+                                    548
+                                ],
+                                "b": [
+                                    262,
+                                    604
+                                ],
+                                "speed": 12,
+                                "scale": 0.9,
+                                "phase": 0.0,
+                                "npc": "d6_01",
+                                "chat": [
+                                    "排队排队"
+                                ],
+                                "chatOffset": 0.0,
+                                "pause": 2.6
+                            },
+                            {
+                                "a": [
+                                    318,
+                                    560
+                                ],
+                                "b": [
+                                    318,
+                                    612
+                                ],
+                                "speed": 12,
+                                "scale": 0.9,
+                                "phase": 0.2,
+                                "npc": "d6_02"
+                            },
+                            {
+                                "a": [
+                                    262,
+                                    588
+                                ],
+                                "b": [
+                                    262,
+                                    532
+                                ],
+                                "speed": 15,
+                                "phase": 0.21,
+                                "scale": 0.9,
+                                "pause": 3.0,
+                                "npc": "d5_01",
+                                "chat": [
+                                    "票在这儿"
+                                ],
+                                "chatOffset": 2.6
+                            },
+                            {
+                                "a": [
+                                    318,
+                                    596
+                                ],
+                                "b": [
+                                    318,
+                                    544
+                                ],
+                                "speed": 15,
+                                "phase": 0.58,
+                                "scale": 0.9,
+                                "pause": 3,
+                                "npc": "d5_02"
+                            },
+                            {
+                                "a": [
+                                    180,
+                                    282
+                                ],
+                                "b": [
+                                    180,
+                                    282
+                                ],
+                                "npc": "d6_talk_a",
+                                "scale": 0.9,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "这船像乌龟",
+                                    "几点开船？",
+                                    "坐窗边吧"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    212,
+                                    282
+                                ],
+                                "b": [
+                                    212,
+                                    282
+                                ],
+                                "npc": "d6_talk_b",
+                                "scale": 0.9,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "慢慢开才好",
+                                    "马上就开了",
+                                    "听你的"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    262,
+                                    588
+                                ],
+                                "b": [
+                                    262,
+                                    532
+                                ],
+                                "speed": 10.8,
+                                "phase": 0.33,
+                                "scale": 0.9,
+                                "pause": 2.4,
+                                "npc": "d6_04"
+                            },
+                            {
+                                "a": [
+                                    318,
+                                    596
+                                ],
+                                "b": [
+                                    318,
+                                    544
+                                ],
+                                "speed": 12.8,
+                                "phase": 0.6,
+                                "scale": 0.9,
+                                "pause": 2.4,
+                                "npc": "d6_05"
+                            },
+                            {
+                                "a": [
+                                    262,
+                                    548
+                                ],
+                                "b": [
+                                    262,
+                                    604
+                                ],
+                                "speed": 17.5,
+                                "phase": 0.87,
+                                "scale": 0.9,
+                                "pause": 2.4,
+                                "npc": "d6_06"
+                            }
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "gangway_foot",
+                                "at": [
+                                    140,
+                                    445
+                                ],
+                                "icon": "exit"
+                            },
+                            {
+                                "id": "gangway",
+                                "at": [
+                                    228,
+                                    258
+                                ],
+                                "snap": [
+                                    228,
+                                    258
+                                ],
+                                "icon": "exit"
+                            }
+                        ]
+                    },
+                    {
+                        "go": "gangway_foot",
+                        "hint": "A4-B3"
+                    },
+                    {
+                        "go": "gangway",
+                        "hint": "A4-B3"
+                    },
+                    {
+                        "personHeight": 95,
+                        "bg": "round1/scenes/cabin.png",
+                        "walkArea": [
+                            [
+                                95,
+                                285
+                            ],
+                            [
+                                270,
+                                285
+                            ],
+                            [
+                                305,
+                                620
+                            ],
+                            [
+                                55,
+                                620
+                            ]
+                        ],
+                        "start": [
+                            180,
+                            590
+                        ],
+                        "pose": "",
+                        "actors": [
+                            {
+                                "id": "toretto",
+                                "tex": "w2/common/toretto_sit.png",
+                                "at": [
+                                    170,
+                                    264
+                                ]
+                            }
+                        ],
+                        "hotspots": [
+                            {
+                                "id": "seat",
+                                "at": [
+                                    220,
+                                    294
+                                ],
+                                "snap": [
+                                    220,
+                                    264
+                                ],
+                                "face": -1,
+                                "pose": "sit",
+                                "icon": "sit"
+                            }
+                        ],
+                        "scaleProfile": "cabin",
+                        "atmosphere": "boat",
+                        "companion": "",
+                        "walkers": [
+                            {
+                                "a": [
+                                    80,
+                                    298
+                                ],
+                                "b": [
+                                    80,
+                                    298
+                                ],
+                                "speed": 0,
+                                "scale": 0.8,
+                                "npc": "d6_03",
+                                "chat": [
+                                    "好多海鸥"
+                                ],
+                                "chatOffset": 0.0,
+                                "pause": 2.6
+                            },
+                            {
+                                "a": [
+                                    292,
+                                    340
+                                ],
+                                "b": [
+                                    292,
+                                    340
+                                ],
+                                "speed": 0,
+                                "scale": 0.8,
+                                "npc": "d6_01"
+                            },
+                            {
+                                "a": [
+                                    107,
+                                    445
+                                ],
+                                "b": [
+                                    107,
+                                    445
+                                ],
+                                "speed": 0,
+                                "scale": 0.95,
+                                "npc": "d6_02",
+                                "chat": [
+                                    "坐窗边吧"
+                                ],
+                                "chatOffset": 2.6,
+                                "pause": 2.6
+                            },
+                            {
+                                "a": [
+                                    118,
+                                    492
+                                ],
+                                "b": [
+                                    118,
+                                    492
+                                ],
+                                "speed": 0,
+                                "phase": 0.21,
+                                "scale": 0.95,
+                                "pause": 3,
+                                "npc": "d5_01"
+                            },
+                            {
+                                "a": [
+                                    95,
+                                    325
+                                ],
+                                "b": [
+                                    95,
+                                    325
+                                ],
+                                "npc": "d6_talk_a",
+                                "scale": 0.8,
+                                "face": 1,
+                                "pause": 99,
+                                "chat": [
+                                    "能看到富士山吗",
+                                    "你晕船吗？",
+                                    "好多海鸥"
+                                ],
+                                "chatOffset": 0.0,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    127,
+                                    325
+                                ],
+                                "b": [
+                                    127,
+                                    325
+                                ],
+                                "npc": "d6_talk_b",
+                                "scale": 0.8,
+                                "face": -1,
+                                "pause": 99,
+                                "chat": [
+                                    "天晴就能",
+                                    "还好还好",
+                                    "别喂它们"
+                                ],
+                                "chatOffset": -2.3,
+                                "chatPair": true
+                            },
+                            {
+                                "a": [
+                                    100,
+                                    306
+                                ],
+                                "b": [
+                                    100,
+                                    306
+                                ],
+                                "speed": 0.0,
+                                "phase": 0.33,
+                                "scale": 0.8,
+                                "pause": 2.4,
+                                "npc": "d6_04"
+                            },
+                            {
+                                "a": [
+                                    272,
+                                    348
+                                ],
+                                "b": [
+                                    272,
+                                    348
+                                ],
+                                "speed": 2.0,
+                                "phase": 0.6,
+                                "scale": 0.8,
+                                "pause": 2.4,
+                                "npc": "d6_05"
+                            },
+                            {
+                                "a": [
+                                    122,
+                                    500
+                                ],
+                                "b": [
+                                    122,
+                                    500
+                                ],
+                                "speed": 0,
+                                "phase": 0.87,
+                                "scale": 0.95,
+                                "pause": 2.4,
+                                "npc": "d6_06"
+                            }
+                        ]
+                    },
+                    {
+                        "go": "seat",
+                        "hint": "G-BOAT-SIT"
+                    },
+                    {
+                        "hint": ""
+                    },
+                    {
+                        "say": "A4-BOAT-1",
+                        "who": "toretto"
+                    },
+                    {
+                        "say": "A4-BOAT-2",
+                        "who": "ayu"
+                    },
+                    {
+                        "say": "A4-BOAT-3",
+                        "who": "toretto"
+                    },
+                    {
+                        "say": "A4-BOAT-4",
+                        "who": "ayu"
+                    },
+                    {
+                        "say": "A4-BOAT-5",
+                        "who": "toretto"
+                    },
+                    {
+                        "say": "A4-BOAT-6",
+                        "who": "ayu"
+                    },
+                    {
+                        "wait": 1.5
+                    },
+                    {
+                        "card": "B-J3-1",
+                        "duration": 2.0
+                    },
+                    {
+                        "bg": "",
+                        "fill": "#10122a",
+                        "badge": "",
+                        "pose": "",
+                        "actors": [],
+                        "hotspots": [],
+                        "hideAyu": true,
+                        "walkers": [],
+                        "companion": ""
+                    },
+                    {
+                        "game": "onsen",
+                        "lines": [
+                            {
+                                "say": "A4-2a",
+                                "who": "toretto"
+                            },
+                            {
+                                "say": "A4-2b",
+                                "who": "ayu"
+                            },
+                            {
+                                "say": "A4-2c",
+                                "who": "toretto"
+                            },
+                            {
+                                "say": "A4-2d",
+                                "who": "toretto"
+                            },
+                            {
+                                "say": "A4-2e",
+                                "who": "toretto"
+                            },
+                            {
+                                "say": "A4-2f",
+                                "who": "toretto"
+                            },
+                            {
+                                "say": "A4-2g"
+                            },
+                            {
+                                "say": "A4-2h",
+                                "who": "ayu"
+                            }
+                        ]
+                    },
+                    {
+                        "card": "A4-T1",
+                        "duration": 1.8
+                    },
+                    {
+                        "bg": "round1/scenes/registry.png",
+                        "fill": "#5e2929",
+                        "actors": [],
+                        "hideAyu": true,
+                        "hotspots": [],
+                        "walkers": [],
+                        "companion": ""
+                    },
+                    {
+                        "game": "registration",
+                        "memory": [
+                            "A4-3a",
+                            "A4-3b"
+                        ]
+                    },
+                    {
+                        "material": "stamp"
+                    }
+                ],
+                "scaleProfile": "harbor",
+                "atmosphere": "harbour",
+                "walkers": [
+                    {
+                        "a": [
+                            20,
+                            510
+                        ],
+                        "b": [
+                            125,
+                            510
+                        ],
+                        "speed": 11,
+                        "scale": 0.8,
+                        "pause": 3.0,
+                        "npc": "d5_02",
+                        "chat": [
+                            "今天鱼多吗"
+                        ],
+                        "chatOffset": 0.0
+                    },
+                    {
+                        "a": [
+                            130,
+                            545
+                        ],
+                        "b": [
+                            25,
+                            545
+                        ],
+                        "speed": 13,
+                        "scale": 0.8,
+                        "pause": 4,
+                        "npc": "d5_03"
+                    },
+                    {
+                        "a": [
+                            310,
+                            505
+                        ],
+                        "b": [
+                            310,
+                            505
+                        ],
+                        "speed": 0,
+                        "scale": 0.8,
+                        "fishing": true,
+                        "npc": "d5_01",
+                        "chat": [
+                            "晚上吃寿司"
+                        ],
+                        "chatOffset": 2.6,
+                        "pause": 2.6
+                    },
+                    {
+                        "a": [
+                            128,
+                            255
+                        ],
+                        "b": [
+                            128,
+                            255
+                        ],
+                        "npc": "d5_talk_a",
+                        "scale": 0.8,
+                        "face": 1,
+                        "pause": 99,
+                        "chat": [
+                            "今天鱼多吗？",
+                            "海风好舒服",
+                            "晚上吃寿司"
+                        ],
+                        "chatOffset": 0.0,
+                        "chatPair": true
+                    },
+                    {
+                        "a": [
+                            160,
+                            255
+                        ],
+                        "b": [
+                            160,
+                            255
+                        ],
+                        "npc": "d5_talk_b",
+                        "scale": 0.8,
+                        "face": -1,
+                        "pause": 99,
+                        "chat": [
+                            "刚钓到一条",
+                            "再坐会儿",
+                            "好主意"
+                        ],
+                        "chatOffset": -2.3,
+                        "chatPair": true
+                    },
+                    {
+                        "a": [
+                            45,
+                            553
+                        ],
+                        "b": [
+                            150,
+                            553
+                        ],
+                        "speed": 13.7,
+                        "phase": 0.6,
+                        "scale": 0.8,
+                        "pause": 2.4,
+                        "npc": "d5_05"
+                    },
+                    {
+                        "a": [
+                            310,
+                            535
+                        ],
+                        "b": [
+                            310,
+                            535
+                        ],
+                        "speed": 4.0,
+                        "phase": 0.87,
+                        "scale": 0.8,
+                        "pause": 2.4,
+                        "npc": "d5_06"
+                    }
+                ],
+                "companion": "toretto"
             }
-          },
-          {
-            "go": "spot",
-            "hint": "A4-P1"
-          },
-          {
-            "game": "fishing"
-          },
-          {
-            "go": "boat"
-          },
-          {
-            "bg": "round1/rework1107/turtle_boarding.png",
-            "scaleProfile": "boarding",
-            "walkArea": [
-              [
-                20,
-                610
-              ],
-              [
-                340,
-                610
-              ],
-              [
-                340,
-                432
-              ],
-              [
-                198,
-                424
-              ],
-              [
-                250,
-                242
-              ],
-              [
-                206,
-                242
-              ],
-              [
-                78,
-                420
-              ],
-              [
-                20,
-                430
-              ]
-            ],
-            "start": [
-              65,
-              590
-            ],
-            "companion": "toretto",
-            "walkers": [
-              {
-                "a": [
-                  262,
-                  548
-                ],
-                "b": [
-                  262,
-                  604
-                ],
-                "speed": 12,
-                "scale": 0.9,
-                "phase": 0.0,
-                "npc": "d6_01",
-                "chat": [
-                  "排队排队"
-                ],
-                "chatOffset": 0.0,
-                "pause": 2.6
-              },
-              {
-                "a": [
-                  318,
-                  560
-                ],
-                "b": [
-                  318,
-                  612
-                ],
-                "speed": 12,
-                "scale": 0.9,
-                "phase": 0.2,
-                "npc": "d6_02"
-              },
-              {
-                "a": [
-                  262,
-                  588
-                ],
-                "b": [
-                  262,
-                  532
-                ],
-                "speed": 15,
-                "phase": 0.21,
-                "scale": 0.9,
-                "pause": 3.0,
-                "npc": "d5_01",
-                "chat": [
-                  "票在这儿"
-                ],
-                "chatOffset": 2.6
-              },
-              {
-                "a": [
-                  318,
-                  596
-                ],
-                "b": [
-                  318,
-                  544
-                ],
-                "speed": 15,
-                "phase": 0.58,
-                "scale": 0.9,
-                "pause": 3,
-                "npc": "d5_02"
-              },
-              {
-                "a": [
-                  180,
-                  282
-                ],
-                "b": [
-                  180,
-                  282
-                ],
-                "npc": "d6_talk_a",
-                "scale": 0.9,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "这船像乌龟",
-                  "几点开船？",
-                  "坐窗边吧"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  212,
-                  282
-                ],
-                "b": [
-                  212,
-                  282
-                ],
-                "npc": "d6_talk_b",
-                "scale": 0.9,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "慢慢开才好",
-                  "马上就开了",
-                  "听你的"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  262,
-                  588
-                ],
-                "b": [
-                  262,
-                  532
-                ],
-                "speed": 10.8,
-                "phase": 0.33,
-                "scale": 0.9,
-                "pause": 2.4,
-                "npc": "d6_04"
-              },
-              {
-                "a": [
-                  318,
-                  596
-                ],
-                "b": [
-                  318,
-                  544
-                ],
-                "speed": 12.8,
-                "phase": 0.6,
-                "scale": 0.9,
-                "pause": 2.4,
-                "npc": "d6_05"
-              },
-              {
-                "a": [
-                  262,
-                  548
-                ],
-                "b": [
-                  262,
-                  604
-                ],
-                "speed": 17.5,
-                "phase": 0.87,
-                "scale": 0.9,
-                "pause": 2.4,
-                "npc": "d6_06"
-              }
-            ],
-            "hotspots": [
-              {
-                "id": "gangway_foot",
-                "at": [
-                  140,
-                  445
-                ],
-                "icon": "exit"
-              },
-              {
-                "id": "gangway",
-                "at": [
-                  228,
-                  258
-                ],
-                "snap": [
-                  228,
-                  258
-                ],
-                "icon": "exit"
-              }
-            ]
-          },
-          {
-            "go": "gangway_foot",
-            "hint": "A4-B3"
-          },
-          {
-            "go": "gangway",
-            "hint": "A4-B3"
-          },
-          {
-            "personHeight": 95,
-            "bg": "round1/scenes/cabin.png",
-            "walkArea": [
-              [
-                95,
-                285
-              ],
-              [
-                270,
-                285
-              ],
-              [
-                305,
-                620
-              ],
-              [
-                55,
-                620
-              ]
-            ],
-            "start": [
-              180,
-              590
-            ],
-            "pose": "",
-            "actors": [
-              {
-                "id": "toretto",
-                "tex": "w2/common/toretto_sit.png",
-                "at": [
-                  170,
-                  264
-                ]
-              }
-            ],
-            "hotspots": [
-              {
-                "id": "seat",
-                "at": [
-                  220,
-                  294
-                ],
-                "snap": [
-                  220,
-                  264
-                ],
-                "face": -1,
-                "pose": "sit",
-                "icon": "sit"
-              }
-            ],
-            "scaleProfile": "cabin",
-            "atmosphere": "boat",
-            "companion": "",
-            "walkers": [
-              {
-                "a": [
-                  80,
-                  298
-                ],
-                "b": [
-                  80,
-                  298
-                ],
-                "speed": 0,
-                "scale": 0.8,
-                "npc": "d6_03",
-                "chat": [
-                  "好多海鸥"
-                ],
-                "chatOffset": 0.0,
-                "pause": 2.6
-              },
-              {
-                "a": [
-                  292,
-                  340
-                ],
-                "b": [
-                  292,
-                  340
-                ],
-                "speed": 0,
-                "scale": 0.8,
-                "npc": "d6_01"
-              },
-              {
-                "a": [
-                  107,
-                  445
-                ],
-                "b": [
-                  107,
-                  445
-                ],
-                "speed": 0,
-                "scale": 0.95,
-                "npc": "d6_02",
-                "chat": [
-                  "坐窗边吧"
-                ],
-                "chatOffset": 2.6,
-                "pause": 2.6
-              },
-              {
-                "a": [
-                  118,
-                  492
-                ],
-                "b": [
-                  118,
-                  492
-                ],
-                "speed": 0,
-                "phase": 0.21,
-                "scale": 0.95,
-                "pause": 3,
-                "npc": "d5_01"
-              },
-              {
-                "a": [
-                  95,
-                  325
-                ],
-                "b": [
-                  95,
-                  325
-                ],
-                "npc": "d6_talk_a",
-                "scale": 0.8,
-                "face": 1,
-                "pause": 99,
-                "chat": [
-                  "能看到富士山吗",
-                  "你晕船吗？",
-                  "好多海鸥"
-                ],
-                "chatOffset": 0.0,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  127,
-                  325
-                ],
-                "b": [
-                  127,
-                  325
-                ],
-                "npc": "d6_talk_b",
-                "scale": 0.8,
-                "face": -1,
-                "pause": 99,
-                "chat": [
-                  "天晴就能",
-                  "还好还好",
-                  "别喂它们"
-                ],
-                "chatOffset": -2.3,
-                "chatPair": true
-              },
-              {
-                "a": [
-                  100,
-                  306
-                ],
-                "b": [
-                  100,
-                  306
-                ],
-                "speed": 0.0,
-                "phase": 0.33,
-                "scale": 0.8,
-                "pause": 2.4,
-                "npc": "d6_04"
-              },
-              {
-                "a": [
-                  272,
-                  348
-                ],
-                "b": [
-                  272,
-                  348
-                ],
-                "speed": 2.0,
-                "phase": 0.6,
-                "scale": 0.8,
-                "pause": 2.4,
-                "npc": "d6_05"
-              },
-              {
-                "a": [
-                  122,
-                  500
-                ],
-                "b": [
-                  122,
-                  500
-                ],
-                "speed": 0,
-                "phase": 0.87,
-                "scale": 0.95,
-                "pause": 2.4,
-                "npc": "d6_06"
-              }
-            ]
-          },
-          {
-            "go": "seat",
-            "hint": "G-BOAT-SIT"
-          },
-          {
-            "hint": ""
-          },
-          {
-            "say": "A4-BOAT-1",
-            "who": "toretto"
-          },
-          {
-            "say": "A4-BOAT-2",
-            "who": "ayu"
-          },
-          {
-            "say": "A4-BOAT-3",
-            "who": "toretto"
-          },
-          {
-            "say": "A4-BOAT-4",
-            "who": "ayu"
-          },
-          {
-            "say": "A4-BOAT-5",
-            "who": "toretto"
-          },
-          {
-            "say": "A4-BOAT-6",
-            "who": "ayu"
-          },
-          {
-            "wait": 1.5
-          },
-          {
-            "card": "B-J3-1",
-            "duration": 2.0
-          },
-          {
-            "bg": "",
-            "fill": "#10122a",
-            "badge": "",
-            "pose": "",
-            "actors": [],
-            "hotspots": [],
-            "hideAyu": true,
-            "walkers": [],
-            "companion": ""
-          },
-          {
-            "game": "onsen",
-            "lines": [
-              {
-                "say": "A4-2a",
-                "who": "toretto"
-              },
-              {
-                "say": "A4-2b",
-                "who": "ayu"
-              },
-              {
-                "say": "A4-2c",
-                "who": "toretto"
-              },
-              {
-                "say": "A4-2d",
-                "who": "toretto"
-              },
-              {
-                "say": "A4-2e",
-                "who": "toretto"
-              },
-              {
-                "say": "A4-2f",
-                "who": "toretto"
-              },
-              {
-                "say": "A4-2g"
-              },
-              {
-                "say": "A4-2h",
-                "who": "ayu"
-              }
-            ]
-          },
-          {
-            "card": "A4-T1",
-            "duration": 1.8
-          },
-          {
-            "bg": "round1/scenes/registry.png",
-            "fill": "#5e2929",
-            "actors": [],
-            "hideAyu": true,
-            "hotspots": [],
-            "walkers": [],
-            "companion": ""
-          },
-          {
-            "game": "registration",
-            "memory": [
-              "A4-3a",
-              "A4-3b"
-            ]
-          },
-          {
-            "material": "stamp"
-          }
-        ],
-        "scaleProfile": "harbor",
-        "atmosphere": "harbour",
-        "walkers": [
-          {
-            "a": [
-              20,
-              510
-            ],
-            "b": [
-              125,
-              510
-            ],
-            "speed": 11,
-            "scale": 0.8,
-            "pause": 3.0,
-            "npc": "d5_02",
-            "chat": [
-              "今天鱼多吗"
-            ],
-            "chatOffset": 0.0
-          },
-          {
-            "a": [
-              130,
-              545
-            ],
-            "b": [
-              25,
-              545
-            ],
-            "speed": 13,
-            "scale": 0.8,
-            "pause": 4,
-            "npc": "d5_03"
-          },
-          {
-            "a": [
-              310,
-              505
-            ],
-            "b": [
-              310,
-              505
-            ],
-            "speed": 0,
-            "scale": 0.8,
-            "fishing": true,
-            "npc": "d5_01",
-            "chat": [
-              "晚上吃寿司"
-            ],
-            "chatOffset": 2.6,
-            "pause": 2.6
-          },
-          {
-            "a": [
-              128,
-              255
-            ],
-            "b": [
-              128,
-              255
-            ],
-            "npc": "d5_talk_a",
-            "scale": 0.8,
-            "face": 1,
-            "pause": 99,
-            "chat": [
-              "今天鱼多吗？",
-              "海风好舒服",
-              "晚上吃寿司"
-            ],
-            "chatOffset": 0.0,
-            "chatPair": true
-          },
-          {
-            "a": [
-              160,
-              255
-            ],
-            "b": [
-              160,
-              255
-            ],
-            "npc": "d5_talk_b",
-            "scale": 0.8,
-            "face": -1,
-            "pause": 99,
-            "chat": [
-              "刚钓到一条",
-              "再坐会儿",
-              "好主意"
-            ],
-            "chatOffset": -2.3,
-            "chatPair": true
-          },
-          {
-            "a": [
-              45,
-              553
-            ],
-            "b": [
-              150,
-              553
-            ],
-            "speed": 13.7,
-            "phase": 0.6,
-            "scale": 0.8,
-            "pause": 2.4,
-            "npc": "d5_05"
-          },
-          {
-            "a": [
-              310,
-              535
-            ],
-            "b": [
-              310,
-              535
-            ],
-            "speed": 4.0,
-            "phase": 0.87,
-            "scale": 0.8,
-            "pause": 2.4,
-            "npc": "d5_06"
-          }
-        ],
-        "companion": "toretto"
-      }
-    }
-  ]
+        }
+    ]
 }
