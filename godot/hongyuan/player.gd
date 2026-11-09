@@ -55,6 +55,9 @@ var pending_index := -1
 var pending_resume := false
 var fading := false
 var fade_screen: Control
+## 章末过渡页：测试里关掉，免得等点击。
+var interludes_enabled := true
+var interludes_shown: Dictionary = {}
 const SceneWipe := preload("res://hongyuan/ui/scene_wipe.gd")
 # Pointer gestures follow the wedding input: short release taps, lower-left drags steer.
 # Touch and mouse share one gesture path; emulated duplicates are ignored.
@@ -278,6 +281,11 @@ func _enter_step(index: int, resume := false) -> void:
 		if is_instance_valid(runner):
 			runner.set_process(false)
 		await fade_screen.cover()
+		if interludes_enabled and not resume:
+			var ended := str(shot.get("chapterId", "")) if chapter_changed else ""
+			if ended == "" and str(playlist[index].get("type", "")) == "terminal" and chapter == "finale":
+				ended = "finale"
+			await _interlude(ended)
 	var previous_scene: String = shot.get("sceneId", "")
 	var previous_type: String = shot.get("type", "")
 	if runner:
@@ -382,6 +390,69 @@ func _enter_step(index: int, resume := false) -> void:
 		elif chapter == "finale":
 			# 终章之后去婚礼现场：世界和山庄只有十来 MB，先在后台备好。村子太大，点了再下。
 			Packs.prefetch(["world", "world-media", "estate"] as Array[String])
+
+## 每章结束后的两页小字：淡入、停一会儿，点一下翻页（也会自己翻）。
+func _interlude(chapter_id: String) -> void:
+	if chapter_id == "" or interludes_shown.has(chapter_id):
+		return
+	var pages: Array = _read_json("res://hongyuan/interludes.json").get(chapter_id, [])
+	if pages.is_empty():
+		return
+	interludes_shown[chapter_id] = true
+	var layer := Control.new()
+	layer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	layer.mouse_filter = Control.MOUSE_FILTER_STOP
+	var back := ColorRect.new()
+	back.color = SceneRunner.INK
+	back.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	back.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(back)
+	var label := Label.new()
+	label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.autowrap_mode = TextServer.AUTOWRAP_ARBITRARY
+	label.offset_left = 40
+	label.offset_right = -40
+	label.add_theme_font_override("font", StoryCaption.FONT)
+	label.add_theme_font_size_override("font_size", 24)
+	label.add_theme_color_override("font_color", SceneRunner.PAPER)
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(label)
+	var hint := Label.new()
+	hint.text = "轻点继续"
+	hint.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	hint.offset_top = -64
+	hint.offset_bottom = -28
+	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	hint.add_theme_font_override("font", StoryCaption.FONT)
+	hint.add_theme_font_size_override("font_size", 13)
+	hint.add_theme_color_override("font_color", Color(SceneRunner.WHEAT, 0.6))
+	hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	layer.add_child(hint)
+	add_child(layer)
+	var flipped := [false]
+	layer.gui_input.connect(func(event: InputEvent) -> void:
+		if (event is InputEventMouseButton and event.pressed) or (event is InputEventScreenTouch and event.pressed):
+			flipped[0] = true)
+	for page in pages:
+		label.text = str(page)
+		label.modulate.a = 0.0
+		hint.modulate.a = 0.0
+		flipped[0] = false
+		var fade_in := create_tween()
+		fade_in.tween_property(label, "modulate:a", 1.0, 0.7)
+		fade_in.tween_property(hint, "modulate:a", 1.0, 0.4)
+		await fade_in.finished
+		var waited := 0.0
+		while not flipped[0] and waited < 6.0:
+			await get_tree().process_frame
+			waited += get_process_delta_time()
+		var fade_out := create_tween()
+		fade_out.tween_property(label, "modulate:a", 0.0, 0.45)
+		fade_out.parallel().tween_property(hint, "modulate:a", 0.0, 0.3)
+		await fade_out.finished
+	layer.queue_free()
 
 func _starting_feet(scene: String) -> Vector2:
 	match scene:
@@ -855,12 +926,16 @@ func _present() -> void:
 			if shot.has("copyId") and not _parking_active():
 				_dialogue(_text(shot.copyId))
 		"walk":
-			_label(_text(shot.objectiveId), Rect2(18, 56, 324, 40), 15, Stage.CREAM, true)
+			_label("目标　" + _text(shot.objectiveId), Rect2(14, 54, 332, 46), 16, Stage.CREAM, true)
 			var objective: Control = slots.get_child(slots.get_child_count() - 1)
 			if objective is Label:
 				var back := StyleBoxFlat.new()
-				back.bg_color = Color(SceneRunner.INK, 0.82)
-				back.set_corner_radius_all(6)
+				back.bg_color = Color(SceneRunner.INK, 0.94)
+				back.set_corner_radius_all(10)
+				back.set_border_width_all(2)
+				back.border_color = Color("#e2b857")
+				back.content_margin_left = 10
+				back.content_margin_right = 10
 				objective.add_theme_stylebox_override("normal", back)
 		"chat":
 			_present_chat()
@@ -1097,7 +1172,7 @@ func _start_scene(resume := false) -> void:
 		state.sceneMaterials = m
 		_save())
 	runner.scene_requested.connect(func(path: String) -> void:
-		# 先去村子入住：存好宾客名字和形象、停在二选一这一步，回来还能去婚礼现场
+		# 去村里逛逛：存好宾客名字和形象、停在二选一这一步，回来还能去婚礼现场
 		if not runner.result.is_empty():
 			state.guest = runner.result
 		_save()
