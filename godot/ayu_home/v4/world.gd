@@ -125,6 +125,12 @@ func load_room(which: String) -> void:
 			elif p.has("plant_type"):
 				var sm:=make_season_material();sm.set_shader_parameter("plant_kind",{"fruit":3,"deciduous":1,"evergreen":2}.get(str(p.plant_type),0));sp.material=sm;plant_materials.append(sm)
 			else:sp.material=season_material
+		# 样板户字段（默认不开，其他户不受影响）：alpha_cut 去掉生成图留下的半透明光晕；
+		# front_cut 把院墙、院门这类「人站在院坝里时应挡在人前面」的部分按原图像素切出来，单独按 front_foot 排前后。
+		if p.has("alpha_cut") and sp.material is ShaderMaterial and village_material_cache.values().has(sp.material):
+			var own:ShaderMaterial=sp.material.duplicate();own.set_shader_parameter("alpha_cut",float(p.alpha_cut));sp.material=own
+			if plant_materials.has(own)==false:plant_materials.append(own)
+		if p.has("front_cut") and sp.texture!=null:add_front_cut(p,sp)
 		props.append({"root":base,"sprite":sp,"origin":sp.position,"config":p})
 	for pane in []:
 		var view=preload("res://ayu_home/v2/window_view.gd").new()
@@ -157,6 +163,18 @@ func load_room(which: String) -> void:
 	add_table_top();add_tap_water()
 	update_light()
 
+## 院墙、院门等前景按原图像素切成多边形，排在 front_foot：人在院坝里时被院墙挡住腿，走出院门后站到墙前面。
+## 原图不改，只是同一张图多画一层；切线沿墙顶走，不切到院坝地面。
+func add_front_cut(p:Dictionary,sp:Sprite2D) -> void:
+	var scale:Vector2=v(p.scale) if p.has("scale") else Vector2.ONE
+	var foot:=float(p.get("front_foot",p.foot))
+	for polygon in p.front_cut:
+		var anchor:=Node2D.new();anchor.position=Vector2(0,foot);actors.add_child(anchor)
+		var shape:=Polygon2D.new();shape.texture=sp.texture;shape.material=sp.material;shape.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
+		var pts:=PackedVector2Array();var uv:=PackedVector2Array()
+		for q in polygon:
+			uv.append(Vector2(q[0],q[1]));pts.append(v(p.pos)+Vector2(q[0],q[1])*scale-anchor.position)
+		shape.polygon=pts;shape.uv=uv;anchor.add_child(shape)
 ## 桌面上的东西（餐桌上的菜、麻将桌上的牌）跟着桌子排前后，不再画在所有人上面（第六轮第 20 条：妈妈走到餐桌边头被菜碗盖住）
 ## 第 28 条（第六轮 15 没修全）：水龙头的水原来画在最上面那层（atmosphere），人站在龙头正前面时水线压在人头和身上。
 ## 现在每个水龙头一层，跟人一起排前后：排在水池那件家具（或水池）脚下再往前一点，人站在龙头前面时人在水前面、挡住水
@@ -353,6 +371,13 @@ func _ground_draw() -> void:
 	if not effects_enabled:return
 	for b in obstacles:
 		soft_shadow(b.get_center(),minf(b.size.x*.43,56),.07)
+	# 房脚接地：沿墙根往外一条由深到浅的阴影，房子才像站在地上（道具写 contact_shadow：[x0,y,x1,深度]）
+	for p in cfg.props:
+		for s in p.get("contact_shadow",[]):
+			var depth:=float(s[3]);var lean:=sun_vector().x*.12
+			for k in 4:
+				var reach:=depth*(k+1)/4.0
+				ground.draw_colored_polygon(PackedVector2Array([Vector2(s[0],s[1]),Vector2(s[2],s[1]),Vector2(s[2]+lean,s[1]+reach),Vector2(s[0]+lean,s[1]+reach)]),Color(.08,.09,.15,.07))
 	for a in actors.get_children():
 		if a is Actor and a.visible and a.action not in ["sit","lie","eat","tv","read"]:
 			soft_shadow(a.position,10 if a.pet else 12,.13)
