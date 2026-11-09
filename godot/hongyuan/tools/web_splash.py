@@ -2,7 +2,7 @@
 import shutil
 from pathlib import Path
 
-SPLASH = Path(__file__).resolve().parents[1] / "assets/round1/common/splash_1108.png"
+SPLASH = Path(__file__).resolve().parents[1] / "assets/round1/common/splash_title_1109.png"
 MARK = "<!-- hongyuan-splash -->"
 STYLE = MARK + """<style>
 #status{visibility:visible;background-color:#48223a}
