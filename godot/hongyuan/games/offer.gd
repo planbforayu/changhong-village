@@ -183,3 +183,6 @@ func restore_checkpoint() -> void:
 		_build()
 		scroll = clampf(scroll, 0.0, max_scroll)
 		r.hint = r.t_("G-OFFER-READ") if phase == "letter" else ""
+
+func hud() -> Array:
+	return [["读邮件", 1 if phase in ["accepted", "done"] else 0, 1]]

@@ -8,11 +8,11 @@ var dragging := false
 var pointer := Vector2.ZERO
 var pops: Array = []   # [中心, 剩余时间]：泡泡碎开的动画
 const CENTERS := [Vector2(78,160),Vector2(258,160),Vector2(68,255),Vector2(278,255),Vector2(75,350),Vector2(265,350)]
-const WORDS := ["周报","会议","加班","家庭的责任","相处的摩擦","工作压力"]
+const WORDS := ["面试","工作","加班","家人的牵挂","异地的摩擦","工作&求职"]
 const TRAY := Rect2(56,530,248,65)
 func start(runner,_beat: Dictionary) -> void:
 	r = runner
-	r.hint = "把关心拖向烦恼，或拖给阿鱼"
+	r.hint = "按住下方的爱心，往上拖到烦恼上"
 func process(dt: float) -> bool:
 	t += dt
 	for p in pops: p[1] = float(p[1]) - dt
@@ -55,12 +55,35 @@ func draw(ci) -> void:
 			var a := TAU * j / 8.0
 			var q: Vector2 = (p[0] as Vector2) + Vector2(cos(a),sin(a)) * (30 + 30 * k)
 			ci.draw_rect(Rect2(q.round() - Vector2(3,3),Vector2(6,6)),Color(0.62,0.72,0.95,1.0 - k))
-	ci.pill(TRAY,"Toretto 的关心 · 拖给她",16,Color("#f5dfbe"),ci.INK)
+	ci.pill(TRAY,"按住这颗心 · 往上拖",16,Color("#f5dfbe"),ci.INK)
+	_heart(ci, TRAY.position + Vector2(TRAY.size.x - 34, 32), 3.0)
+	if phase == "care" and cleared.is_empty() and not dragging:
+		# 往上拖的箭头提示：在托盘上方一下一下往上飘
+		var rise := fposmod(t, 1.1) / 1.1
+		var a := TRAY.position + Vector2(TRAY.size.x - 34, -6 - rise * 40)
+		var tint := Color(PIXEL_HEART, 1.0 - rise)
+		ci.draw_colored_polygon(PackedVector2Array([a + Vector2(0, -12), a + Vector2(12, 4), a + Vector2(5, 4), a + Vector2(5, 16), a + Vector2(-5, 16), a + Vector2(-5, 4), a + Vector2(-12, 4)]), tint)
 	var face: Texture2D = ci.texture("toretto_avatar.png")
 	if face: ci.draw_texture_rect(face,Rect2(TRAY.position + Vector2(-30,10),Vector2(44,44)),false)
 	ci.text_at(Vector2(90,512),"已经放下 %d / 6"%cleared.size(),15,ci.PAPER,180)
 	if dragging:
-		ci.draw_circle(pointer,24,Color("#edb1a4"));ci.text_at(pointer-Vector2(25,-5),"关心",14,ci.INK,50)
+		_heart(ci, pointer, 4.0)
+
+const PIXEL_HEART := Color("#e5484d")
+const HEART_ROWS := ["01100110", "11111111", "11111111", "11111111", "01111110", "00111100", "00011000"]
+
+## 像素爱心：优先用 GPT 的 care_heart.png，没有就按点阵画。c 是中心，px 是每个方块的边长。
+func _heart(ci, c: Vector2, px: float) -> void:
+	var tex: Texture2D = ci.texture("w2/call/care_heart.png|")
+	if tex:
+		ci.draw_texture_rect(tex, Rect2(c - Vector2(8, 8) * px, Vector2(16, 16) * px), false)
+		return
+	var origin := c - Vector2(HEART_ROWS[0].length(), HEART_ROWS.size()) * px * 0.5
+	for y in range(HEART_ROWS.size()):
+		for x in range(HEART_ROWS[y].length()):
+			if HEART_ROWS[y][x] == "1":
+				var shade := PIXEL_HEART.lightened(0.35) if (y <= 1 and x in [1, 2]) else PIXEL_HEART
+				ci.draw_rect(Rect2(origin + Vector2(x, y) * px, Vector2(px, px)), shade)
 
 ## GPT 像素泡泡 64×64，云朵本体中心在 (32,29)，按 3 倍最近邻放大，本体约 102×54
 func _bubble_rect(c: Vector2) -> Rect2:
@@ -76,3 +99,6 @@ func _bubble(ci, c: Vector2, rad: float) -> void:
 	ci.draw_arc(c,rad-1,0,TAU,24,Color(0.55,0.62,0.82,0.9),2)
 	ci.draw_rect(Rect2(c + Vector2(-rad*0.55,-rad*0.6),Vector2(8,8)),Color(0.85,0.9,1.0,0.7))
 	ci.draw_rect(Rect2(c + Vector2(-rad*0.55+10,-rad*0.6+2),Vector2(4,4)),Color(0.85,0.9,1.0,0.5))
+
+func hud() -> Array:
+	return [["帮阿鱼扛过烦恼", cleared.size(), 6]]

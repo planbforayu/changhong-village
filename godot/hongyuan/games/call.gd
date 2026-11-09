@@ -165,3 +165,6 @@ func _head(who: String) -> Vector2:
 	var k := maxf(r.view_rect.size.x/size.x,r.view_rect.size.y/size.y)
 	var point := Vector2(520,380) if who == "ayu" else Vector2(500,1120)
 	return r.view_rect.get_center()-size*k*0.5+point*k
+
+func hud() -> Array:
+	return [["接起这通电话", 0 if phase == "ring" else 1, 1]]

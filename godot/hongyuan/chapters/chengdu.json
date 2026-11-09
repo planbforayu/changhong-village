@@ -499,7 +499,9 @@
                 "who": "toretto"
               }
             ],
-            "backdrop": "round1/people/group_chengdu.png"
+            "backdrop": "round1/people/group_chengdu.png",
+            "title": "A2-2",
+            "titleSuffix": ""
           }
         ]
       }

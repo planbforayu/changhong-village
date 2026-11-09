@@ -15,6 +15,8 @@ var reveal := 0.0
 var chat_scroll := 0.0
 var dragging := false
 var last_y := 0.0
+## 统一的微信对话样式：自己发的消息靠右、绿色。窗前是 Toretto 的手机，群聊是阿鱼的手机。
+var own_who := "toretto"
 
 func start(runner, beat: Dictionary) -> void:
 	r = runner
@@ -32,6 +34,22 @@ func _current_text() -> String:
 
 func _typing_delay() -> float:
 	return 0.55 if li < lines.size() and lines[li].who == "ayu" else 0.2
+
+func _title(ci) -> String:
+	return ci.t_("G-WINDOW-CHAT")
+
+func y_for(row: Dictionary) -> float:
+	var latest: bool = int(row.index) == li
+	var entering := (1.0 - clampf(t / 0.22, 0, 1)) if latest else 0.0
+	return float(row.y) + entering * 6
+
+## 「阿晓邀请 Toretto 加入了群聊」这类系统提示：居中的小灰条，没有气泡。
+func _draw_system(ci, row: Dictionary, y: float) -> void:
+	var text: String = str(row.text)
+	var w := clampf(ci.FONT.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 12).x + 20, 100, 320)
+	var rect := Rect2(180.0 - w * 0.5, y + 14, w, 20)
+	Bubble._round_box(ci, rect, Color(0.25, 0.28, 0.27, 0.62), 10)
+	ci.draw_string(ci.FONT, rect.position + Vector2(0, 14), text, HORIZONTAL_ALIGNMENT_CENTER, w, 12, Color("#f6f5ed"))
 
 func _rows() -> Array:
 	var rows: Array = []
@@ -77,12 +95,18 @@ func input(kind: String, pos: Vector2) -> void:
 
 func draw(ci) -> void:
 	# No dimmer: the window, his hands and gifts stay fully visible above the chat.
-	Bubble._round_box(ci, Rect2(112, 411, 136, 21), Color(1, 1, 1, 0.77), 10)
-	ci.draw_circle(Vector2(125, 421), 5, Color("#66a977"))
-	ci.draw_circle(Vector2(130, 424), 3.5, Color("#8fbe96"))
-	ci.draw_string(ci.FONT, Vector2(140, 426), ci.t_("G-WINDOW-CHAT"), HORIZONTAL_ALIGNMENT_LEFT, 103, 12, Color("#46554b"))
+	var title := _title(ci)
+	var title_w := clampf(ci.FONT.get_string_size(title, HORIZONTAL_ALIGNMENT_LEFT, -1, 12).x + 44, 136, 300)
+	var title_x := 180.0 - title_w * 0.5
+	Bubble._round_box(ci, Rect2(title_x, 411, title_w, 21), Color(1, 1, 1, 0.77), 10)
+	ci.draw_circle(Vector2(title_x + 13, 421), 5, Color("#66a977"))
+	ci.draw_circle(Vector2(title_x + 18, 424), 3.5, Color("#8fbe96"))
+	ci.draw_string(ci.FONT, Vector2(title_x + 28, 426), title, HORIZONTAL_ALIGNMENT_LEFT, title_w - 32, 12, Color("#46554b"))
 	for row: Dictionary in _rows():
-		var own: bool = row.who == "toretto"
+		var own: bool = row.who == own_who
+		if row.who == "system":
+			_draw_system(ci, row, y_for(row))
+			continue
 		var latest: bool = int(row.index) == li
 		var entering := (1.0 - clampf(t / 0.22, 0, 1)) if latest else 0.0
 		var y: float = float(row.y) + entering * 6

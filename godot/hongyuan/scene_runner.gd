@@ -659,6 +659,7 @@ func _draw() -> void:
 		draw_rect(Rect2(Vector2.ZERO, CANVAS), Color(0.05, 0.04, 0.12, night))
 	if mode == "game" and game:
 		game.draw(self)
+		_draw_hud()
 	if mode == "go":
 		draw_set_transform(Vector2(0, camera_y))
 		_draw_go_ui()
@@ -712,6 +713,25 @@ func _draw() -> void:
 	if mode == "transition":
 		_draw_wipe()
 
+
+## 左上角目标栏：本关要做什么、做到哪了（游戏里实现 hud()）。
+func _draw_hud() -> void:
+	if not game.has_method("hud"):
+		return
+	var lines: Array = game.hud()
+	if lines.is_empty():
+		return
+	var h := 10.0 + lines.size() * 22.0
+	var panel := Rect2(8, 54, 168, h)
+	draw_rect(panel, Color(INK, 0.78))
+	draw_rect(panel, Color(WHEAT, 0.55), false, 1.0)
+	for i in range(lines.size()):
+		var row: Array = lines[i]
+		var done: bool = int(row[1]) >= int(row[2])
+		var y := 54.0 + 20.0 + i * 22.0
+		var color := Color("#9fd18b") if done else PAPER
+		draw_string(FONT, Vector2(16, y), ("✓ " if done else "· ") + str(row[0]), HORIZONTAL_ALIGNMENT_LEFT, 120, 13, color)
+		draw_string(FONT, Vector2(panel.end.x - 8 - 44, y), "%d/%d" % [row[1], row[2]], HORIZONTAL_ALIGNMENT_RIGHT, 44, 13, color)
 
 ## 场景内换背景：像素菱形先铺满，停一下换图，再退开。
 func _draw_wipe() -> void:

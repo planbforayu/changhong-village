@@ -52,7 +52,7 @@ static func caption_rect(full_text: String, who: String, anchor := Vector2(-1, -
 		var height := FONT.get_multiline_string_size(_display_text(full_text, who, width - 28), HORIZONTAL_ALIGNMENT_LEFT, width - 28, 16).y + 28
 		return Rect2(clampf(anchor.x - width * 0.5, 12, 348 - width), maxf(narration_top - 40, anchor.y - height - 20), width, height)
 	var height := FONT.get_multiline_string_size(_display_text(full_text, who, 244), HORIZONTAL_ALIGNMENT_LEFT, 244, 16).y + 38
-	return Rect2(14, 604 - maxf(height, 80), 332, maxf(height, 80))
+	return Rect2(14, 604 - maxf(height, 88), 332, maxf(height, 88))
 
 ## 表情字符在 Web 包里不可靠（字体回退会画空），换成占位全角空格，字画完后在原位置贴图标
 const EMOJI := {"🤔": "res://hongyuan/assets/think.svg", "😂": "res://hongyuan/assets/laugh.svg"}
@@ -87,7 +87,7 @@ static func draw_caption(ci: CanvasItem, full_text: String, who: String, visible
 			if visible_characters >= 0 and visible_characters <= int(ic[0]):
 				continue
 			var before := FONT.get_string_size(full_text.substr(0, int(ic[0])), HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
-			_draw_face(ci, Vector2(x0 + before + fs * 0.5 + 3, box.position.y + (26 if named else 23) - fs * 0.35), fs * 0.5, str(ic[1]))
+			_draw_face(ci, Vector2(x0 + before + fs * 0.5 + 3, box.position.y + ((22 if not bubble else 26) if named else 23) - fs * 0.35), fs * 0.5, str(ic[1]))
 		return
 	_draw_caption_text(ci, full_text, who, visible_characters, next_hint, anchor)
 
@@ -141,18 +141,19 @@ static func _draw_caption_text(ci: CanvasItem, full_text: String, who: String, v
 		ci.draw_string(FONT, name_tag.position + Vector2(0, 12), who_name, HORIZONTAL_ALIGNMENT_CENTER, name_tag.size.x, 11, PAPER)
 	var inset := 14.0 if bubble else (70.0 if named else 12.0)
 	if named and not bubble:
+		# 头像在左，名字写在头像正下方，不压着对话。
 		var face := avatar(who)
-		if face: ci.draw_texture_rect(face, Rect2(box.position + Vector2(14, 18), Vector2(44, 44)), false)
+		if face: ci.draw_texture_rect(face, Rect2(box.position + Vector2(14, 10), Vector2(44, 44)), false)
 		var label: String = NAMES[who]
-		var tag := Rect2(box.position + Vector2(inset, -14), Vector2(FONT.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 14).x + 26, 28))
+		var tag := Rect2(box.position + Vector2(6, 58), Vector2(60, 20))
 		var skin := StyleBoxFlat.new()
 		skin.bg_color = RED
-		skin.set_corner_radius_all(14)
+		skin.set_corner_radius_all(10)
 		ci.draw_style_box(skin, tag)
-		ci.draw_string(FONT, tag.position + Vector2(0, 19), label, HORIZONTAL_ALIGNMENT_CENTER, tag.size.x, 14, PAPER)
+		ci.draw_string(FONT, tag.position + Vector2(0, 15), label, HORIZONTAL_ALIGNMENT_CENTER, tag.size.x, 12, PAPER)
 	var width := box.size.x - inset - (14 if bubble else (18 if named else 12))
 	var shown := _display_text(full_text, who, width, visible_characters)
-	var at := box.position + Vector2(inset, 26 if named else 23)
+	var at := box.position + Vector2(inset, (22 if not bubble else 26) if named else 23)
 	var align := HORIZONTAL_ALIGNMENT_LEFT if named else HORIZONTAL_ALIGNMENT_CENTER
 	if not named:
 		ci.draw_multiline_string(FONT, at + Vector2(1, 1), shown, align, width, 15, -1, Color(0, 0, 0, 0.6))
