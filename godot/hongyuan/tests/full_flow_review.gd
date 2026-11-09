@@ -70,6 +70,8 @@ func game_action(r, g, kind: String) -> void:
 				for i in range(6):
 					if i not in g.cleared:
 						g.input("down",g.TRAY.get_center());g.input("move",g.CENTERS[i]);g.input("up",g.CENTERS[i]);break
+		"fireworks":
+			if g.phase == "play": g.input("down",Vector2(90+g.count*80,150+g.count*30))
 		"balance":
 			var index := 0
 			for i in range(3):
