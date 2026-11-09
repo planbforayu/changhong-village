@@ -47,8 +47,8 @@ func run() -> void:
 	var has_click_game := false
 	for i in range(r.beats.size()):
 		if r.beats[i].get("narrate", "") == "A5-2": index = i
-		if r.beats[i].get("game", "") == "fireworks": has_click_game = true
-	check(index >= 0 and not has_click_game, "Chapter contains the seaside memory and no five-click fireworks game")
+		if r.beats[i].get("game", "") == "fireworks": has_click_game = int(r.beats[i].get("count", 5)) <= 3
+	check(index >= 0 and has_click_game, "Seaside memory keeps the continuous show and adds a short tap-to-launch moment")
 	r.begin(index)
 	r.reveal = r.say_text.length()
 	check(r.bg.ends_with("bg_wenchang_memory_r2.png") and r.texture(r.bg) != null and r.bg_fit and r.atmosphere == "coast", "New crowd beach is imported and actually selected by the chapter")
@@ -78,9 +78,14 @@ func run() -> void:
 	r.reveal = r.say_text.length()
 	await tick(0.3)
 	tap()
-	check(r.mode == "wait" and not r._skip_visible(), "Finale is an uninterrupted memory, with no targets or counter")
-	await tick(8.1)
-	check(r.mode == "material" and r.material_id == "wax" and r.atmosphere == "", "Automatic show transitions to wax without completing a game")
+	check(r.mode == "game" and r.atmosphere == "coast", "Player launches the fireworks while the seaside show keeps playing")
+	await tick(3.0)
+	check(r.mode == "game", "Fireworks wait for the player instead of advancing on a timer")
+	for at in [Vector2(90, 150), Vector2(260, 120), Vector2(180, 220)]:
+		r.game.input("down", at)
+		await tick(0.3)
+	await tick(6.0)
+	check(r.mode == "material" and r.material_id == "wax" and r.atmosphere == "", "Three launches end in the wax seal")
 	print("FAILURES ", failures)
 	p.queue_free()
 	await process_frame

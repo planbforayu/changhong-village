@@ -1,0 +1,4 @@
+SCALE shanghai/ actor g42 ： car_street.png scale=0.70 → 画出来相当于 1.15 米，应为 1.45 米（scale 应约 0.88）
+SCALE shanghai/ actor g42 ： g42_rear_r2.png 没登记真实尺寸（REAL 表）
+SCALE shizuoka/ walker None ： 路人 scale=0.80，成年人应在 0.90～1.12
+检查 117 项，问题 3 类

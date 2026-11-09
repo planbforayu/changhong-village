@@ -1,0 +1,257 @@
+{
+  "status": "normal_story_both_destinations_roundtrip_and_reload",
+  "method": "fresh isolated Chrome context; normal entry; real gestures only; read-only localStorage observations",
+  "viewport": [
+    390,
+    844
+  ],
+  "wall_seconds": 240.85,
+  "visited_steps": [
+    "call/night_call",
+    "chengdu/chengdu_group",
+    "chengdu/chengdu_ping",
+    "chengdu/chengdu_return",
+    "chengdu/chengdu_routine",
+    "chengdu/chengdu_walk",
+    "chengdu/ink",
+    "finale/finale",
+    "hainan/wanning",
+    "hongkong/hk",
+    "prologue/closed",
+    "prologue/line_to_road",
+    "prologue/open",
+    "prologue/unfinished_letter",
+    "shanghai/approach_axiao",
+    "shanghai/board_car",
+    "shanghai/chat_axiao",
+    "shanghai/chat_ayu",
+    "shanghai/chat_system",
+    "shanghai/chat_toretto",
+    "shanghai/drive",
+    "shanghai/later",
+    "shanghai/line_1",
+    "shanghai/line_2",
+    "shanghai/line_3",
+    "shanghai/line_4",
+    "shanghai/line_5",
+    "shanghai/line_6",
+    "shanghai/meet_close",
+    "shanghai/other_car",
+    "shanghai/parked",
+    "shanghai/pen",
+    "shanghai/perspective",
+    "shanghai/quiet",
+    "shanghai/street_intro",
+    "shanghai/to_chengdu",
+    "shizuoka/pier"
+  ],
+  "game_visits": [
+    [
+      "finale/finale",
+      2,
+      "finale"
+    ],
+    [
+      "hainan/wanning",
+      6,
+      "ringtoss"
+    ],
+    [
+      "hongkong/hk",
+      4,
+      "offer"
+    ],
+    [
+      "hongkong/hk",
+      17,
+      "photo"
+    ],
+    [
+      "hongkong/hk",
+      28,
+      "photo"
+    ],
+    [
+      "hongkong/hk",
+      33,
+      "photo"
+    ],
+    [
+      "shizuoka/pier",
+      17,
+      "onsen"
+    ],
+    [
+      "shizuoka/pier",
+      20,
+      "registration"
+    ]
+  ],
+  "screenshots": 140,
+  "content_requests": [],
+  "errors": [
+    {
+      "seconds": 225.408,
+      "kind": "console_error",
+      "value": "ERROR: Lambda capture at index 0 was freed. Passed \"null\" instead."
+    },
+    {
+      "seconds": 225.429,
+      "kind": "console_error",
+      "value": "   at: call (modules/gdscript/gdscript_lambda_callable.cpp:110)"
+    },
+    {
+      "seconds": 225.439,
+      "kind": "console_error",
+      "value": "ERROR: Lambda capture at index 1 was freed. Passed \"null\" instead."
+    },
+    {
+      "seconds": 225.447,
+      "kind": "console_error",
+      "value": "   at: call (modules/gdscript/gdscript_lambda_callable.cpp:110)"
+    },
+    {
+      "seconds": 225.448,
+      "kind": "console_error",
+      "value": "ERROR: Lambda capture at index 2 was freed. Passed \"null\" instead."
+    },
+    {
+      "seconds": 225.449,
+      "kind": "console_error",
+      "value": "   at: call (modules/gdscript/gdscript_lambda_callable.cpp:110)"
+    },
+    {
+      "seconds": 225.449,
+      "kind": "console_error",
+      "value": "ERROR: Lambda capture at index 0 was freed. Passed \"null\" instead."
+    },
+    {
+      "seconds": 225.456,
+      "kind": "console_error",
+      "value": "   at: call (modules/gdscript/gdscript_lambda_callable.cpp:110)"
+    },
+    {
+      "seconds": 225.459,
+      "kind": "console_error",
+      "value": "ERROR: Lambda capture at index 1 was freed. Passed \"null\" instead."
+    },
+    {
+      "seconds": 225.46,
+      "kind": "console_error",
+      "value": "   at: call (modules/gdscript/gdscript_lambda_callable.cpp:110)"
+    },
+    {
+      "seconds": 225.461,
+      "kind": "console_error",
+      "value": "ERROR: Lambda capture at index 2 was freed. Passed \"null\" instead."
+    },
+    {
+      "seconds": 225.462,
+      "kind": "console_error",
+      "value": "   at: call (modules/gdscript/gdscript_lambda_callable.cpp:110)"
+    }
+  ],
+  "world_ready": "WORLD_READY route=wedding nick=FriendR5 avatar=6",
+  "world_routes": [
+    "WORLD_READY route=wedding nick=FriendR5 avatar=6",
+    "WORLD_READY route=village nick=FriendR5 avatar=6",
+    "WORLD_READY route=wedding nick=FriendR5 avatar=6",
+    "WORLD_READY route=wedding nick=FriendR5 avatar=6"
+  ],
+  "balance_wall_seconds": null,
+  "final_checkpoint": {
+    "chatFast": false,
+    "driveArrival": 0,
+    "driveDistance": 0,
+    "driveStarted": false,
+    "elapsed": 0,
+    "facing": 1,
+    "feet": [
+      96,
+      456
+    ],
+    "guest": {
+      "look": "07",
+      "name": "FriendR5"
+    },
+    "hitIndex": -1,
+    "lane": 1,
+    "lanePosition": 1,
+    "materials": {},
+    "pandaUsed": false,
+    "parking": {
+      "align": false,
+      "angle": 0,
+      "baseX": 0,
+      "done": true,
+      "lateral": 0,
+      "progress": 1,
+      "speed": 1,
+      "started": false,
+      "steered": true,
+      "steeringVersion": 1
+    },
+    "revision": 1454,
+    "runId": "f683c4b0d7764e2d26346016bec36cdb",
+    "sceneBeat": 3,
+    "sceneMaterials": {
+      "envelope": true,
+      "ink": true,
+      "paper": true,
+      "pen": true,
+      "stamp": true,
+      "wax": true
+    },
+    "sceneSig": "531238629",
+    "sceneSnapshot": {
+      "atmosphere_elapsed": 0,
+      "beat": 3,
+      "comp_pos": [
+        0,
+        0
+      ],
+      "facing": 1,
+      "feet": [
+        180,
+        520
+      ],
+      "mode": "choice",
+      "moving": false,
+      "pose": "",
+      "result": {
+        "look": "07",
+        "name": "FriendR5"
+      },
+      "reveal": 0,
+      "t": 0.967854666666675,
+      "target": [
+        0,
+        0
+      ],
+      "trail": [],
+      "walk_dist": 0
+    },
+    "slow": 0,
+    "stepId": "finale/finale",
+    "trafficSeed": 0,
+    "version": 1,
+    "walkTarget": [
+      0,
+      0
+    ],
+    "walking": false,
+    "weddingLocation": {
+      "area": "banquet",
+      "position": [
+        1035,
+        415
+      ]
+    },
+    "worldProfile": {
+      "avatar": 6,
+      "id": "hongyuan_f683c4b0d7764e2d26346016bec36cdb",
+      "nick": "FriendR5"
+    },
+    "worldRoute": "wedding"
+  }
+}

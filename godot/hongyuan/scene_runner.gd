@@ -799,16 +799,17 @@ func _draw_walker(w: Dictionary) -> void:
 	if absf(heading.y) > absf(heading.x): row = 0 if heading.y > 0 else 12
 	if bool(w.get("fishing",false)): row = 12
 	if w.has("frameRow"): row = int(w.frameRow)
-	if w.has("sheet"):
-		_draw_sheet_walker(w, state)
-		return
-	var path := "res://assets/characters/lm/chr_LM-GUEST-%s.png" % str(w.guest)
-	if not sheet_cache.has(path): sheet_cache[path] = load(path) if ResourceLoader.exists(path) else null
-	var sheet: Texture2D = sheet_cache[path]
 	var pos: Vector2 = _walker_pos(w)
 	var height := person_height_at(pos.y) * float(w.get("scale", 0.94))
 	if bool(w.get("sourceAnchored",false)):
 		height = float(w.get("sourceHeight",310))*_walker_source_transform().x.length()
+	if w.has("npc"):
+		_draw_npc_strip(w, state, pos, height)
+		_draw_walker_extras(w, state, pos, height)
+		return
+	var path := "res://assets/characters/lm/chr_LM-GUEST-%s.png" % str(w.guest)
+	if not sheet_cache.has(path): sheet_cache[path] = load(path) if ResourceLoader.exists(path) else null
+	var sheet: Texture2D = sheet_cache[path]
 	if not sheet: return
 	var f := row + (int(float(state.distance) / 8.0) % 4 if state.walking else 0)
 	var key := path + str(f)
@@ -823,6 +824,46 @@ func _draw_walker(w: Dictionary) -> void:
 		var source: Rect2 = parts[part+2]
 		source.position.x += f*64
 		draw_texture_rect_region(sheet,target,source)
+	_draw_walker_extras(w, state, pos, height)
+
+
+## GPT 路人整图（5 帧横条：第 0 帧站立，1–4 帧向右走）。向左走时翻转；
+## 缩放按 npc_meta.json 里该条的人高，脚点落在 foot 行，和老路人共用景深标定。
+const NPC_DIR := "res://hongyuan/assets/round1/npc/"
+var npc_meta: Dictionary = {}
+var npc_tex: Dictionary = {}
+func _npc_meta(id: String) -> Dictionary:
+	if npc_meta.is_empty():
+		var f := FileAccess.open(NPC_DIR + "npc_meta.json", FileAccess.READ)
+		npc_meta = JSON.parse_string(f.get_as_text()) if f else {"_": {}}
+	return npc_meta.get(id, {})
+
+func _draw_npc_strip(w: Dictionary, state: Dictionary, pos: Vector2, height: float) -> void:
+	var id := str(w.npc)
+	var m := _npc_meta(id)
+	var path := NPC_DIR + id + ".png"
+	if m.is_empty() or not ResourceLoader.exists(path): return
+	if not npc_tex.has(id):
+		var loaded: Texture2D = load(path)
+		npc_tex[id] = ImageTexture.create_from_image(loaded.get_image()) if loaded else null
+	var sheet: Texture2D = npc_tex[id]
+	if not sheet: return
+	var heading: Vector2 = state.heading
+	var frame := 0
+	if state.walking: frame = 1 + int(float(state.distance) / 8.0) % 4
+	var k := height / float(m.h)
+	var fw := float(m.w)
+	var src := Rect2(frame * fw, 0, fw, sheet.get_height())
+	var flip := heading.x < 0
+	var dest := Rect2(-fw * k * 0.5, -float(m.foot) * k, fw * k, sheet.get_height() * k)
+	_shadow(pos, fw * k * 0.16)
+	dest.position += pos
+	if flip:
+		dest = Rect2(dest.position.x + dest.size.x, dest.position.y, -dest.size.x, dest.size.y)
+	draw_texture_rect_region(sheet, dest, src)
+
+
+func _draw_walker_extras(w: Dictionary, state: Dictionary, pos: Vector2, height: float) -> void:
 	if bool(w.get("sourceAnchored",false)) and w.has("occludeBelowSource"):
 		var plate := texture(bg)
 		var source_h := float(w.get("sourceHeight",310))

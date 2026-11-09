@@ -15,6 +15,7 @@ func start(runner, beat: Dictionary) -> void:
 	r = runner
 	need = int(beat.get("count", 5))
 	color_offset = randi_range(0, 2)
+	r.hint = "点一下夜空，在那里放一朵烟花"
 
 func _burst(at: Vector2, color: String, big := false) -> void:
 	bursts.append({"at": at, "color": color, "t": 0.0, "big": big})
@@ -28,6 +29,7 @@ func process(dt: float) -> bool:
 	match phase:
 		"play":
 			if count >= need:
+				r.hint = ""
 				phase = "finale"
 				finale_t = 0.0
 		"finale":
