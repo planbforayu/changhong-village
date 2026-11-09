@@ -131,7 +131,7 @@ func travel(where: String) -> void:
         while not game.bootstrapped:
             await get_tree().process_frame
         # 从爱情篇进村会跳过村子欢迎页，音乐要在这里启动（点按钮进村，已算一次手势）
-        preload("res://ayu_home/v4/core/playtest_music.gd").ensure(get_tree()).unlock_from_gesture()
+        load("res://ayu_home/v4/core/playtest_music.gd").ensure(get_tree()).unlock_from_gesture()
     else:
         game = load("res://hongyuan/wedding.gd").new()
         game.guest_profile = profile.duplicate(true)
