@@ -23,6 +23,8 @@ with love_project(root, user_data_name=args.user_data_name):
 # Patch before split_web can reuse immutable engine files from sibling exports.
 # The helper fails closed if the verified Godot 4.7.2 implementation changes.
 idbfs_report = patch_export(out / 'index.js')
+from web_splash import apply as apply_splash
+apply_splash(out)
 (out / 'idbfs-patch.json').write_text(json.dumps(idbfs_report, indent=2) + '\n')
 if args.content_base_url:
     from split_web_pack import split_web
