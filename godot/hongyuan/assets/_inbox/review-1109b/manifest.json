@@ -158,11 +158,147 @@
       "method": "原创像素海报底图",
       "status": "reviewCandidate",
       "scene_note": "苏七镇老街，阿鱼与 Toretto 并肩站在街面；街巷向画面深处延伸，右下预留二维码净区。"
+    },
+    "group_phone_1109_bg.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/group_phone_1109_bg.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "user-selected generated scene",
+      "generationAttempt": 1,
+      "method": "使用用户指定图像并按原图尺寸导出",
+      "status": "reviewCandidate",
+      "scene_note": "使用用户指定的咖啡厅阿鱼看手机图作为群聊场景背景。"
+    },
+    "care_heart.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/care_heart.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "非场景 UI 图标：暖红像素爱心，供关心玩法拖动；无门/出口。"
+    },
+    "care_hand.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/care_hand.png",
+      "dimensions": [
+        64,
+        96
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "非场景 UI 操作提示：手指和箭头向上，提示玩家上划；无门/出口。"
+    },
+    "chapter_end_prologue.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_prologue.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_shanghai.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_shanghai.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_chengdu.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_chengdu.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_call.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_call.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_shizuoka.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_shizuoka.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_hainan.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_hainan.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_hongkong.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_hongkong.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "chapter_end_finale.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/chapter_end_finale.png",
+      "dimensions": [
+        540,
+        540
+      ],
+      "origin": "new 1109b task",
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate",
+      "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
     }
   },
   "notes": [
     "仅新增审稿候选，不改游戏代码。",
     "turtle_boarding.png 已检查，无误穿水问题，本批无需重画。",
-    "海报二维码净区目标为 x=700,y=1540,w=320,h=320。"
+    "海报二维码净区目标为 x=700,y=1540,w=320,h=320。",
+    "第7项五组场景比例修正尚未制作。",
+    "第8项群聊背景采用用户指定图。",
+    "第9项爱心与上划提示已补。",
+    "第10项八张章末图为独立新绘场景。"
   ]
 }

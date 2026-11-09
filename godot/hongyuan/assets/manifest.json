@@ -4272,6 +4272,116 @@
       "generationAttempt": 1,
       "method": "原创像素海报底图",
       "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/group_phone_1109_bg.png": {
+      "origin": "user-selected generated scene",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "generationAttempt": 1,
+      "method": "使用用户指定图像并按原图尺寸导出",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/care_heart.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        64,
+        64
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/care_hand.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        64,
+        96
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_prologue.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_shanghai.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_chengdu.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_call.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_shizuoka.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_hainan.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_hongkong.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/chapter_end_finale.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        540,
+        540
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素绘制",
+      "status": "reviewCandidate"
     }
   },
   "palette": {
