@@ -84,7 +84,9 @@ func run() -> void:
 	for at in [Vector2(90, 150), Vector2(260, 120), Vector2(180, 220)]:
 		r.game.input("down", at)
 		await tick(0.3)
-	await tick(2.0)
+	await tick(0.9)
+	await shot("03b-tap-bursts-heart")
+	await tick(1.1)
 	await shot("04-grand-finale")
 	await tick(7.0)
 	check(r.mode == "material" and r.material_id == "wax" and r.atmosphere == "", "Three launches end in the wax seal")
