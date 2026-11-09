@@ -31,8 +31,12 @@
             "speed": 18,
             "phase": 0.0,
             "scale": 0.95,
-            "pause": 2,
-            "npc": "d3_01"
+            "pause": 2.6,
+            "npc": "d3_01",
+            "chat": [
+              "竹子好香"
+            ],
+            "chatOffset": 0.0
           },
           {
             "a": [
@@ -61,8 +65,12 @@
             "speed": 24,
             "phase": 0.38,
             "scale": 0.95,
-            "pause": 2,
-            "npc": "d3_03"
+            "pause": 2.6,
+            "npc": "d3_03",
+            "chat": [
+              "熊猫在哪"
+            ],
+            "chatOffset": 2.6
           },
           {
             "a": [
@@ -91,8 +99,54 @@
             "speed": 24,
             "phase": 0.58,
             "scale": 0.95,
-            "pause": 3,
-            "npc": "d1_02"
+            "pause": 3.0,
+            "npc": "d1_02",
+            "chat": [
+              "好想抱一只"
+            ],
+            "chatOffset": 5.2
+          },
+          {
+            "a": [
+              190,
+              272
+            ],
+            "b": [
+              190,
+              272
+            ],
+            "npc": "d1_01",
+            "scale": 0.95,
+            "face": 1,
+            "pause": 99,
+            "chat": [
+              "它在睡觉！",
+              "快拍快拍",
+              "它看我了！"
+            ],
+            "chatOffset": 0.0,
+            "chatPair": true
+          },
+          {
+            "a": [
+              222,
+              272
+            ],
+            "b": [
+              222,
+              272
+            ],
+            "npc": "d2_01",
+            "scale": 0.95,
+            "face": -1,
+            "pause": 99,
+            "chat": [
+              "好圆啊",
+              "手机没电了",
+              "真的假的"
+            ],
+            "chatOffset": -2.3,
+            "chatPair": true
           }
         ],
         "beats": [
@@ -131,8 +185,12 @@
             "speed": 18,
             "phase": 0.0,
             "scale": 0.95,
-            "pause": 2,
-            "npc": "d3_01"
+            "pause": 2.6,
+            "npc": "d3_01",
+            "chat": [
+              "竹子好香"
+            ],
+            "chatOffset": 0.0
           },
           {
             "a": [
@@ -161,8 +219,12 @@
             "speed": 24,
             "phase": 0.38,
             "scale": 0.95,
-            "pause": 2,
-            "npc": "d3_03"
+            "pause": 2.6,
+            "npc": "d3_03",
+            "chat": [
+              "熊猫在哪"
+            ],
+            "chatOffset": 2.6
           },
           {
             "a": [
@@ -191,8 +253,54 @@
             "speed": 24,
             "phase": 0.58,
             "scale": 0.95,
-            "pause": 3,
-            "npc": "d1_02"
+            "pause": 3.0,
+            "npc": "d1_02",
+            "chat": [
+              "好想抱一只"
+            ],
+            "chatOffset": 5.2
+          },
+          {
+            "a": [
+              190,
+              272
+            ],
+            "b": [
+              190,
+              272
+            ],
+            "npc": "d1_01",
+            "scale": 0.95,
+            "face": 1,
+            "pause": 99,
+            "chat": [
+              "它在睡觉！",
+              "快拍快拍",
+              "它看我了！"
+            ],
+            "chatOffset": 0.0,
+            "chatPair": true
+          },
+          {
+            "a": [
+              222,
+              272
+            ],
+            "b": [
+              222,
+              272
+            ],
+            "npc": "d2_01",
+            "scale": 0.95,
+            "face": -1,
+            "pause": 99,
+            "chat": [
+              "好圆啊",
+              "手机没电了",
+              "真的假的"
+            ],
+            "chatOffset": -2.3,
+            "chatPair": true
           }
         ],
         "beats": [

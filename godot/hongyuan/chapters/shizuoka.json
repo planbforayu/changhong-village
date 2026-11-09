@@ -146,7 +146,12 @@
                 "speed": 12,
                 "scale": 0.9,
                 "phase": 0.0,
-                "npc": "d6_01"
+                "npc": "d6_01",
+                "chat": [
+                  "排队排队"
+                ],
+                "chatOffset": 0.0,
+                "pause": 2.6
               },
               {
                 "a": [
@@ -174,8 +179,12 @@
                 "speed": 15,
                 "phase": 0.21,
                 "scale": 0.9,
-                "pause": 3,
-                "npc": "d5_01"
+                "pause": 3.0,
+                "npc": "d5_01",
+                "chat": [
+                  "票在这儿"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -191,6 +200,48 @@
                 "scale": 0.9,
                 "pause": 3,
                 "npc": "d5_02"
+              },
+              {
+                "a": [
+                  180,
+                  282
+                ],
+                "b": [
+                  180,
+                  282
+                ],
+                "npc": "d6_02",
+                "scale": 0.9,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "这船像乌龟",
+                  "几点开船？",
+                  "坐窗边吧"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  212,
+                  282
+                ],
+                "b": [
+                  212,
+                  282
+                ],
+                "npc": "d6_03",
+                "scale": 0.9,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "慢慢开才好",
+                  "马上就开了",
+                  "听你的"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "hotspots": [
@@ -291,7 +342,12 @@
                 ],
                 "speed": 0,
                 "scale": 0.8,
-                "npc": "d6_03"
+                "npc": "d6_03",
+                "chat": [
+                  "好多海鸥"
+                ],
+                "chatOffset": 0.0,
+                "pause": 2.6
               },
               {
                 "a": [
@@ -317,7 +373,12 @@
                 ],
                 "speed": 17,
                 "scale": 0.95,
-                "npc": "d6_02"
+                "npc": "d6_02",
+                "chat": [
+                  "坐窗边吧"
+                ],
+                "chatOffset": 2.6,
+                "pause": 2.6
               },
               {
                 "a": [
@@ -333,6 +394,48 @@
                 "scale": 0.95,
                 "pause": 3,
                 "npc": "d5_01"
+              },
+              {
+                "a": [
+                  95,
+                  325
+                ],
+                "b": [
+                  95,
+                  325
+                ],
+                "npc": "d6_02",
+                "scale": 0.8,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "能看到富士山吗",
+                  "你晕船吗？",
+                  "好多海鸥"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  127,
+                  325
+                ],
+                "b": [
+                  127,
+                  325
+                ],
+                "npc": "d6_03",
+                "scale": 0.8,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "天晴就能",
+                  "还好还好",
+                  "别喂它们"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ]
           },
@@ -459,8 +562,12 @@
             ],
             "speed": 11,
             "scale": 0.8,
-            "pause": 3,
-            "npc": "d5_02"
+            "pause": 3.0,
+            "npc": "d5_02",
+            "chat": [
+              "今天鱼多吗"
+            ],
+            "chatOffset": 0.0
           },
           {
             "a": [
@@ -488,7 +595,54 @@
             "speed": 0,
             "scale": 0.8,
             "fishing": true,
-            "npc": "d5_01"
+            "npc": "d5_01",
+            "chat": [
+              "晚上吃寿司"
+            ],
+            "chatOffset": 2.6,
+            "pause": 2.6
+          },
+          {
+            "a": [
+              128,
+              255
+            ],
+            "b": [
+              128,
+              255
+            ],
+            "npc": "d5_01",
+            "scale": 0.8,
+            "face": 1,
+            "pause": 99,
+            "chat": [
+              "今天鱼多吗？",
+              "海风好舒服",
+              "晚上吃寿司"
+            ],
+            "chatOffset": 0.0,
+            "chatPair": true
+          },
+          {
+            "a": [
+              160,
+              255
+            ],
+            "b": [
+              160,
+              255
+            ],
+            "npc": "d5_02",
+            "scale": 0.8,
+            "face": -1,
+            "pause": 99,
+            "chat": [
+              "刚钓到一条",
+              "再坐会儿",
+              "好主意"
+            ],
+            "chatOffset": -2.3,
+            "chatPair": true
           }
         ],
         "companion": "toretto"

@@ -76,8 +76,8 @@ func game_action(r, g, kind: String) -> void:
 					if not n.caught: g.input("down",n.p);break
 		"moments":
 			if g.phase == "read":
-				g.input("down",Vector2(180,400));g.input("move",Vector2(180,400-g._max_scroll()-20));g.input("up",Vector2(180,380-g._max_scroll()))
-				g.input("down",g.LIKE.get_center())
+				g.input("down",Vector2(180,600));g.input("move",Vector2(180,600-g._max_scroll()-20));g.input("up",Vector2(180,580-g._max_scroll()))
+				g.input("tap",g._dots_rect().get_center());g.input("tap",g._like_btn().get_center())
 		"fireworks":
 			if g.phase == "play": g.input("down",Vector2(90+g.count*80,150+g.count*30))
 		"balance":

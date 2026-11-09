@@ -864,6 +864,7 @@ func _draw_npc_strip(w: Dictionary, state: Dictionary, pos: Vector2, height: flo
 	var fw := float(m.w)
 	var src := Rect2(frame * fw, 0, fw, sheet.get_height())
 	var flip := heading.x < 0
+	if w.has("face") and not state.walking: flip = int(w.face) < 0
 	var dest := Rect2(-fw * k * 0.5, -float(m.foot) * k, fw * k, sheet.get_height() * k)
 	_shadow(pos, fw * k * 0.16)
 	dest.position += pos
@@ -873,6 +874,8 @@ func _draw_npc_strip(w: Dictionary, state: Dictionary, pos: Vector2, height: flo
 
 
 func _draw_walker_extras(w: Dictionary, state: Dictionary, pos: Vector2, height: float) -> void:
+	if w.has("chat"):
+		_draw_walker_chat(w, state, pos, height)
 	if bool(w.get("sourceAnchored",false)) and w.has("occludeBelowSource"):
 		var plate := texture(bg)
 		var source_h := float(w.get("sourceHeight",310))
@@ -893,6 +896,36 @@ func _draw_walker_extras(w: Dictionary, state: Dictionary, pos: Vector2, height:
 		var float_at := tip+Vector2(-15,-24)
 		draw_line(tip,float_at,Color(0.9,0.94,0.95,0.65),0.8)
 		draw_circle(float_at,1.5,Color("#dc6652"))
+
+
+## 路人闲聊：站着的时候头顶轮流冒一句。两人一对时用 chatOffset 错开，像在你一句我一句。
+const CHAT_PERIOD := 4.6
+const CHAT_SHOW := 2.3
+func _draw_walker_chat(w: Dictionary, state: Dictionary, pos: Vector2, height: float) -> void:
+	if bool(state.walking) or mode in ["game", "material", "card", "choice", "goal", "button"]:
+		return
+	var lines: Array = w.chat
+	if lines.is_empty(): return
+	var clock := world_elapsed + float(w.get("chatOffset", 0.0))
+	var phase := fposmod(clock, CHAT_PERIOD)
+	if phase > CHAT_SHOW: return
+	var text := _text(str(lines[int(clock / CHAT_PERIOD) % lines.size()]))
+	var a := clampf(minf(phase / 0.18, (CHAT_SHOW - phase) / 0.3), 0.0, 1.0)
+	var fs := 11
+	var tw := 0.0
+	for ch in text: tw += 6.6 if ch.unicode_at(0) < 128 else 11.0
+	var box := Rect2(pos.x - tw * 0.5 - 7, pos.y - height - 30 + (1.0 - a) * 4, tw + 14, 20)
+	box.position.x = clampf(box.position.x, 4, CANVAS.x - box.size.x - 4)
+	var sb := StyleBoxFlat.new()
+	sb.bg_color = Color(1, 0.99, 0.96, 0.93 * a)
+	sb.set_corner_radius_all(9)
+	sb.anti_aliasing = true
+	sb.shadow_color = Color(0, 0, 0, 0.18 * a)
+	sb.shadow_size = 2
+	draw_style_box(sb, box)
+	var tip := Vector2(clampf(pos.x, box.position.x + 10, box.end.x - 10), box.end.y)
+	draw_colored_polygon(PackedVector2Array([tip + Vector2(-4, -1), tip + Vector2(4, -1), tip + Vector2(0, 5)]), Color(1, 0.99, 0.96, 0.93 * a))
+	text_at(Vector2(box.position.x, box.position.y + 14), text, fs, Color(INK, a), box.size.x)
 
 
 ## GPT 路人图集：192×208 一格，横排 5 格（第 0 格站立、1–4 行走，朝右），脚点 (96,198)，
