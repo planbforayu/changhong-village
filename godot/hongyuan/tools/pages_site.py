@@ -36,4 +36,18 @@ if build:
     html = html.replace("</head>", '<meta name="hongyuan-build" content="%s"></head>' % build, 1)
 (dst / "index.html").write_text(html)
 (dst / ".nojekyll").touch()
+# 按章下载：content/ 里是带内容哈希的章节包，只保留这次清单里用到的。
+content = dst / "content"
+if (src / "content").is_dir():
+    content.mkdir(exist_ok=True)
+    keep = {p.name for p in (src / "content").iterdir()}
+    for old in content.iterdir():
+        if old.name not in keep:
+            old.unlink()
+    for part in (src / "content").iterdir():
+        if not (content / part.name).exists():
+            shutil.copyfile(part, content / part.name)
+    print("content", len(keep), sum(p.stat().st_size for p in content.iterdir()))
+elif content.is_dir():
+    shutil.rmtree(content)
 print("parts", sizes)
