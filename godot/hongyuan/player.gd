@@ -54,7 +54,8 @@ var recovery: Control
 var pending_index := -1
 var pending_resume := false
 var fading := false
-var fade_screen: ColorRect
+var fade_screen: Control
+const SceneWipe := preload("res://hongyuan/ui/scene_wipe.gd")
 # Pointer gestures follow the wedding input: short release taps, lower-left drags steer.
 # Touch and mouse share one gesture path; emulated duplicates are ignored.
 var pointer_input := preload("res://hongyuan/pointer_input.gd").new()
@@ -119,9 +120,7 @@ func _ready() -> void:
 	content_overlay.retry.connect(_retry_content)
 	content_overlay.return_to_desk.connect(_show_recovery)
 	Packs.service().progress.connect(content_overlay.update_progress)
-	fade_screen = ColorRect.new()
-	fade_screen.color = Color("#241b18", 0)
-	fade_screen.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	fade_screen = SceneWipe.new()
 	fade_screen.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(fade_screen)
 	_make_music_button()
@@ -278,9 +277,7 @@ func _enter_step(index: int, resume := false) -> void:
 		fading = true
 		if is_instance_valid(runner):
 			runner.set_process(false)
-		var fade := create_tween()
-		fade.tween_property(fade_screen, "color:a", 1.0, 0.16)
-		await fade.finished
+		await fade_screen.cover()
 	var previous_scene: String = shot.get("sceneId", "")
 	var previous_type: String = shot.get("type", "")
 	if runner:
@@ -371,9 +368,7 @@ func _enter_step(index: int, resume := false) -> void:
 	if shot.type == "chat" and not resume:
 		chime.play()
 	if fading:
-		var fade := create_tween()
-		fade.tween_property(fade_screen, "color:a", 0.0, 0.20)
-		await fade.finished
+		await fade_screen.reveal()
 		fading = false
 	if chapter_changed and chapter != "prologue":
 		var chapters: Array = _read_json("res://hongyuan/chapter_order.json").get("chapters", [])

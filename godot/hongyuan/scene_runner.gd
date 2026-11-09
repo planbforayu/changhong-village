@@ -23,6 +23,10 @@ const STRIDE_K := 0.2
 const NEAR := 40.0
 const GOAL_DELAY := 1.2
 const INK := Color("#281a1a")
+const SceneWipe := preload("res://hongyuan/ui/scene_wipe.gd")
+const WIPE_IN := 0.32
+const WIPE_HOLD := 0.1
+const WIPE_OUT := 0.4
 const WOOD := Color("#50332a")
 const RED := Color("#5e2929")
 const GOLD := Color("#d6a456")
@@ -344,10 +348,10 @@ func _process(dt: float) -> void:
 	var beat: Dictionary = beats[bi] if bi >= 0 and bi < beats.size() else {}
 	match mode:
 		"transition":
-			if t >= 0.18 and not transition_applied:
+			if t >= WIPE_IN + WIPE_HOLD * 0.5 and not transition_applied:
 				_run_setup(pending_setup)
 				transition_applied = true
-			if t >= 0.36:
+			if t >= WIPE_IN + WIPE_HOLD + WIPE_OUT:
 				_next()
 		"say", "auto":
 			reveal += dt * 26.0
@@ -702,8 +706,18 @@ func _draw() -> void:
 			_pill(button_rect, button_text, 20, RED, PAPER)
 
 	if mode == "transition":
-		draw_rect(view_rect, Color(INK, sin(PI * clampf(t / 0.36, 0, 1))))
+		_draw_wipe()
 
+
+## 场景内换背景：像素菱形先铺满，停一下换图，再退开。
+func _draw_wipe() -> void:
+	if t < WIPE_IN:
+		SceneWipe.paint(self, view_rect, ease(t / WIPE_IN, -1.8), false, INK)
+	elif t < WIPE_IN + WIPE_HOLD:
+		draw_rect(view_rect, INK)
+	else:
+		var k := clampf((t - WIPE_IN - WIPE_HOLD) / WIPE_OUT, 0.0, 1.0)
+		SceneWipe.paint(self, view_rect, 1.0 - ease(k, -1.8), true, INK)
 
 func _draw_bg() -> void:
 	if sky.a > 0.0:
