@@ -297,6 +297,10 @@ func _next() -> void:
 		mode = "say"
 		say_who = str(beat.get("who", "narrator"))
 		say_text = _text(str(beat.get("say", beat.get("narrate", ""))))
+		if say_text.strip_edges() == "" and not beat.has("say"):
+			# 定稿里标明「不显示」的旁白：留着这一拍的位置（存档不会错位），但直接略过。
+			_next()
+			return
 		reveal = 0.0
 		if beat.has("auto"):
 			mode = "auto"
@@ -1072,7 +1076,7 @@ const NEXT_STOP := {"paper": "W-NEXT-SHIZUOKA", "stamp": "W-NEXT-HAINAN", "wax":
 func _draw_material() -> void:
 	preload("res://hongyuan/ui/desk_art.gd").draw(self, materials, view_rect, material_id, t)
 	if t >= 2.0:
-		_pill(Rect2(100, 566, 160, 44), "继续这封邀请函", 17, RED, PAPER)
+		_pill(Rect2(100, 566, 160, 44), "接着写邀请函", 17, RED, PAPER)
 
 
 func _draw_material_icon(id: String, c: Vector2, k: float) -> void:

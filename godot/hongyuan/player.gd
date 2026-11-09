@@ -1097,7 +1097,7 @@ func _start_scene(resume := false) -> void:
 		state.sceneMaterials = m
 		_save())
 	runner.scene_requested.connect(func(path: String) -> void:
-		# 先去村子入住：存好宾客名字和形象、停在二选一这一步，回来还能去婚礼现场
+		# 去村里逛逛：存好宾客名字和形象、停在二选一这一步，回来还能去婚礼现场
 		if not runner.result.is_empty():
 			state.guest = runner.result
 		_save()
