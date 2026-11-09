@@ -63,6 +63,7 @@ func game_action(r, g, kind: String) -> void:
 		"call":
 			if g.phase == "ring": g.input("tap",g._accept_rect().get_center())
 			elif g.phase == "talk": g.input("down",Vector2(180,500))
+			elif g.phase == "wechat": g.input("tap",Vector2(180,500))
 			elif g.phase == "reply": g.input("tap",g._speaker_rect().get_center() if g.li == 6 else Vector2(180,500))
 		"desk_chat", "group_chat": g.input("tap",Vector2(180,610))
 		"care":
@@ -189,7 +190,7 @@ func run() -> void:
 	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(preview)
 	await frame()
-	p = Harness.new();p.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);view.add_child(p);p.set_process(false)
+	p = Harness.new();p.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);p.interludes_enabled=false;view.add_child(p);p.set_process(false)
 	await frame()
 	if not is_instance_valid(p.fade_screen):
 		problem("Playlist initialization failed");p.free();quit(1);return

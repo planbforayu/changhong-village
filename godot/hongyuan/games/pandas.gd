@@ -213,3 +213,6 @@ func _draw_stick(ci) -> void:
 	var origin: Vector2 = r.down_pos if r.down and r.stick_pointer else STICK
 	if base: ci.draw_texture_rect(base, Rect2(origin - Vector2(36, 36), Vector2(72, 72)), false)
 	if knob: ci.draw_texture_rect(knob, Rect2(origin + r.stick * 25 - Vector2(16, 16), Vector2(32, 32)), false)
+
+func hud() -> Array:
+	return [["喂饱熊猫", mini(fed.size(), GOAL), GOAL]]

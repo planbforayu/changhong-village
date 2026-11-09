@@ -196,3 +196,9 @@ func restore_checkpoint() -> void:
 	dragging = false
 	if absf(r.comp_pos.x-r.feet.x) < 55.0:
 		r.comp_pos = r.feet + Vector2(72,-4)
+
+func hud() -> Array:
+	var hit := 0
+	for ring: Dictionary in rings:
+		if bool(ring.get("peg", false)): hit += 1
+	return [["套中", mini(hit, 3), 3]]

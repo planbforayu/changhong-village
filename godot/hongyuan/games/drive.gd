@@ -289,3 +289,8 @@ func _far_pearl(ci) -> void:
 	ci.draw_circle(base - Vector2(0, h * 0.30), h * 0.11, col)
 	ci.draw_circle(base - Vector2(0, h * 0.68), h * 0.08, col)
 	ci.draw_circle(base - Vector2(0, h * 0.86), h * 0.04, col)
+
+## 左上角目标栏：[文字, 已完成, 总数]
+func hud() -> Array:
+	return [["开去东方明珠", 0 if phase == "drive" else 1, 1],
+		["停车进车位", 1 if phase == "done" else 0, 1]]

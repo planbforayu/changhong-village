@@ -265,3 +265,6 @@ func _bobber(ci, p: Vector2, sinking: bool) -> void:
 
 func restore_checkpoint() -> void:
 	r.comp_pos = r.feet + Vector2(-44,4)  # 站在栈桥上，不再踩到水面
+
+func hud() -> Array:
+	return [["钓上一条鱼", 1 if phase == "caught" else 0, 1]]
