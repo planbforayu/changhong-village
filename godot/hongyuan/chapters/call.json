@@ -229,12 +229,16 @@
                   840
                 ],
                 "speed": 9,
-                "pause": 5,
+                "pause": 5.0,
                 "sourceAnchored": true,
                 "sourceHeight": 310,
                 "frameRow": 8,
                 "avoidPlayer": false,
-                "npc": "d4_03"
+                "npc": "d4_03",
+                "chat": [
+                  "会议改到三点"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -252,6 +256,48 @@
                 "avoidPlayer": false,
                 "occludeBelowSource": 670,
                 "npc": "d4_01"
+              },
+              {
+                "a": [
+                  218,
+                  442
+                ],
+                "b": [
+                  218,
+                  442
+                ],
+                "npc": "d4_01",
+                "scale": 0.94,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "蛋糕谁订的？",
+                  "今晚聚餐吗",
+                  "我先走一步"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  250,
+                  442
+                ],
+                "b": [
+                  250,
+                  442
+                ],
+                "npc": "d4_03",
+                "scale": 0.94,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "好像是 Toretto",
+                  "老地方？",
+                  "你又早退"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "scaleProfile": "office"

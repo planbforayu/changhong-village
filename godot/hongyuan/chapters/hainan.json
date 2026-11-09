@@ -178,8 +178,12 @@
                 "speed": 18,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d10_01"
+                "pause": 2.6,
+                "npc": "d10_01",
+                "chat": [
+                  "又开一朵"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -208,8 +212,54 @@
                 "speed": 24,
                 "phase": 0.21,
                 "scale": 0.95,
-                "pause": 3,
-                "npc": "d9_01"
+                "pause": 3.0,
+                "npc": "d9_01",
+                "chat": [
+                  "拍下来了"
+                ],
+                "chatOffset": 2.6
+              },
+              {
+                "a": [
+                  50,
+                  520
+                ],
+                "b": [
+                  50,
+                  520
+                ],
+                "npc": "d10_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "快看那边！",
+                  "又开一朵",
+                  "好像心形"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  82,
+                  520
+                ],
+                "b": [
+                  82,
+                  520
+                ],
+                "npc": "d10_02",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "好亮啊",
+                  "拍下来了",
+                  "真的是心"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ]
           },
@@ -254,8 +304,12 @@
             "speed": 18,
             "phase": 0.0,
             "scale": 0.95,
-            "pause": 2,
-            "npc": "d9_01"
+            "pause": 2.6,
+            "npc": "d9_01",
+            "chat": [
+              "差一点点"
+            ],
+            "chatOffset": 0.0
           },
           {
             "a": [
@@ -284,8 +338,12 @@
             "speed": 24,
             "phase": 0.38,
             "scale": 0.95,
-            "pause": 2,
-            "npc": "d9_03"
+            "pause": 2.6,
+            "npc": "d9_03",
+            "chat": [
+              "老板再来十个"
+            ],
+            "chatOffset": 2.6
           },
           {
             "a": [
@@ -314,8 +372,54 @@
             "speed": 24,
             "phase": 0.58,
             "scale": 0.95,
-            "pause": 3,
-            "npc": "d10_02"
+            "pause": 3.0,
+            "npc": "d10_02",
+            "chat": [
+              "套中了！"
+            ],
+            "chatOffset": 5.2
+          },
+          {
+            "a": [
+              50,
+              458
+            ],
+            "b": [
+              50,
+              458
+            ],
+            "npc": "d10_01",
+            "scale": 0.95,
+            "face": 1,
+            "pause": 99,
+            "chat": [
+              "再套一个！",
+              "差一点点",
+              "老板再来十个"
+            ],
+            "chatOffset": 0.0,
+            "chatPair": true
+          },
+          {
+            "a": [
+              82,
+              458
+            ],
+            "b": [
+              82,
+              458
+            ],
+            "npc": "d10_02",
+            "scale": 0.95,
+            "face": -1,
+            "pause": 99,
+            "chat": [
+              "你手太抖了",
+              "下次一定",
+              "好嘞"
+            ],
+            "chatOffset": -2.3,
+            "chatPair": true
           }
         ],
         "atmosphere": "pool",

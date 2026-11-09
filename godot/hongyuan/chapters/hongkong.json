@@ -107,8 +107,12 @@
                 "speed": 18,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d11_01"
+                "pause": 2.6,
+                "npc": "d11_01",
+                "chat": [
+                  "护照带了吗"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -137,8 +141,12 @@
                 "speed": 24,
                 "phase": 0.38,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d11_03"
+                "pause": 2.6,
+                "npc": "d11_03",
+                "chat": [
+                  "要排多久"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -167,8 +175,54 @@
                 "speed": 24,
                 "phase": 0.58,
                 "scale": 0.95,
-                "pause": 3,
-                "npc": "d12_02"
+                "pause": 3.0,
+                "npc": "d12_02",
+                "chat": [
+                  "登机口在哪"
+                ],
+                "chatOffset": 5.2
+              },
+              {
+                "a": [
+                  50,
+                  340
+                ],
+                "b": [
+                  50,
+                  340
+                ],
+                "npc": "d11_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "护照带了吗？",
+                  "登机口在哪",
+                  "要排多久"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  82,
+                  340
+                ],
+                "b": [
+                  82,
+                  340
+                ],
+                "npc": "d11_02",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "带了带了",
+                  "往左走",
+                  "快了快了"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "walkArea": [
@@ -280,8 +334,12 @@
                 "speed": 20,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d12_01"
+                "pause": 2.6,
+                "npc": "d12_01",
+                "chat": [
+                  "先去酒店"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -310,8 +368,12 @@
                 "speed": 18,
                 "phase": 0.6,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d12_03"
+                "pause": 2.6,
+                "npc": "d12_03",
+                "chat": [
+                  "好热啊"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -340,8 +402,54 @@
                 "speed": 26,
                 "phase": 0.58,
                 "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_02"
+                "pause": 3.0,
+                "npc": "d11_02",
+                "chat": [
+                  "打车还是地铁"
+                ],
+                "chatOffset": 5.2
+              },
+              {
+                "a": [
+                  130,
+                  330
+                ],
+                "b": [
+                  130,
+                  330
+                ],
+                "npc": "d11_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "接机的来了",
+                  "好热啊",
+                  "先去酒店"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  162,
+                  330
+                ],
+                "b": [
+                  162,
+                  330
+                ],
+                "npc": "d11_02",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "这边这边",
+                  "香港就这样",
+                  "好"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ]
           },
@@ -395,8 +503,12 @@
                 "speed": 18,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d13_01"
+                "pause": 2.6,
+                "npc": "d13_01",
+                "chat": [
+                  "今日好热"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -425,8 +537,12 @@
                 "speed": 24,
                 "phase": 0.38,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d13_03"
+                "pause": 2.6,
+                "npc": "d13_03",
+                "chat": [
+                  "等埋我"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -455,8 +571,54 @@
                 "speed": 24,
                 "phase": 0.58,
                 "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_02"
+                "pause": 3.0,
+                "npc": "d11_02",
+                "chat": [
+                  "叮叮车来了"
+                ],
+                "chatOffset": 5.2
+              },
+              {
+                "a": [
+                  230,
+                  450
+                ],
+                "b": [
+                  230,
+                  450
+                ],
+                "npc": "d11_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "饮茶先啦",
+                  "叮叮车来了",
+                  "今日好热"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  262,
+                  450
+                ],
+                "b": [
+                  262,
+                  450
+                ],
+                "npc": "d11_02",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "好啊",
+                  "等埋我",
+                  "系咪啊"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "hotspots": [
@@ -536,8 +698,12 @@
                 "speed": 16,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d14toys_01"
+                "pause": 2.6,
+                "npc": "d14toys_01",
+                "chat": [
+                  "好多人"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -566,8 +732,12 @@
                 "speed": 24,
                 "phase": 0.46,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d14toys_03"
+                "pause": 2.6,
+                "npc": "d14toys_03",
+                "chat": [
+                  "我要那个"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -596,8 +766,54 @@
                 "speed": 23,
                 "phase": 0.58,
                 "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_02"
+                "pause": 3.0,
+                "npc": "d11_02",
+                "chat": [
+                  "排队拍照"
+                ],
+                "chatOffset": 5.2
+              },
+              {
+                "a": [
+                  65,
+                  260
+                ],
+                "b": [
+                  65,
+                  260
+                ],
+                "npc": "d11_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "想要那个气球",
+                  "排队拍照",
+                  "好多人"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  97,
+                  260
+                ],
+                "b": [
+                  97,
+                  260
+                ],
+                "npc": "d11_02",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "只能买一个",
+                  "我帮你拍",
+                  "周末嘛"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "hotspots": [
@@ -661,8 +877,12 @@
                 "speed": 16,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d14garden_01"
+                "pause": 2.6,
+                "npc": "d14garden_01",
+                "chat": [
+                  "好香啊"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -691,8 +911,12 @@
                 "speed": 24,
                 "phase": 0.46,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d14garden_03"
+                "pause": 2.6,
+                "npc": "d14garden_03",
+                "chat": [
+                  "再来一张"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -721,8 +945,54 @@
                 "speed": 23,
                 "phase": 0.58,
                 "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_02"
+                "pause": 3.0,
+                "npc": "d11_02",
+                "chat": [
+                  "这边光好"
+                ],
+                "chatOffset": 5.2
+              },
+              {
+                "a": [
+                  55,
+                  310
+                ],
+                "b": [
+                  55,
+                  310
+                ],
+                "npc": "d11_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "花开得真好",
+                  "帮我们拍一张",
+                  "再来一张"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  87,
+                  310
+                ],
+                "b": [
+                  87,
+                  310
+                ],
+                "npc": "d11_02",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "好香啊",
+                  "一二三！",
+                  "闭眼了"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "hotspots": [
@@ -786,8 +1056,12 @@
                 "speed": 16,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d14castle_01"
+                "pause": 2.6,
+                "npc": "d14castle_01",
+                "chat": [
+                  "晚上有烟花"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -816,8 +1090,12 @@
                 "speed": 24,
                 "phase": 0.46,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d14castle_03"
+                "pause": 2.6,
+                "npc": "d14castle_03",
+                "chat": [
+                  "去那边看"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -833,6 +1111,48 @@
                 "scale": 0.95,
                 "pause": 3,
                 "npc": "d11_01"
+              },
+              {
+                "a": [
+                  280,
+                  410
+                ],
+                "b": [
+                  280,
+                  410
+                ],
+                "npc": "d11_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "城堡好漂亮",
+                  "晚上有烟花",
+                  "去那边看"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  312,
+                  410
+                ],
+                "b": [
+                  312,
+                  410
+                ],
+                "npc": "d14castle_01",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "像童话一样",
+                  "几点开始？",
+                  "走"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "hotspots": [
@@ -904,8 +1224,12 @@
                 "speed": 16,
                 "phase": 0.0,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d15_01"
+                "pause": 2.6,
+                "npc": "d15_01",
+                "chat": [
+                  "学士帽扔吗"
+                ],
+                "chatOffset": 0.0
               },
               {
                 "a": [
@@ -934,8 +1258,12 @@
                 "speed": 24,
                 "phase": 0.46,
                 "scale": 0.95,
-                "pause": 2,
-                "npc": "d15_03"
+                "pause": 2.6,
+                "npc": "d15_03",
+                "chat": [
+                  "笑一个"
+                ],
+                "chatOffset": 2.6
               },
               {
                 "a": [
@@ -964,8 +1292,54 @@
                 "speed": 23,
                 "phase": 0.58,
                 "scale": 0.95,
-                "pause": 3,
-                "npc": "d11_02"
+                "pause": 3.0,
+                "npc": "d11_02",
+                "chat": [
+                  "再拍一张"
+                ],
+                "chatOffset": 5.2
+              },
+              {
+                "a": [
+                  250,
+                  450
+                ],
+                "b": [
+                  250,
+                  450
+                ],
+                "npc": "d11_01",
+                "scale": 0.95,
+                "face": 1,
+                "pause": 99,
+                "chat": [
+                  "毕业快乐！",
+                  "再拍一张",
+                  "学士帽扔吗"
+                ],
+                "chatOffset": 0.0,
+                "chatPair": true
+              },
+              {
+                "a": [
+                  282,
+                  450
+                ],
+                "b": [
+                  282,
+                  450
+                ],
+                "npc": "d11_02",
+                "scale": 0.95,
+                "face": -1,
+                "pause": 99,
+                "chat": [
+                  "终于毕业了",
+                  "笑一个",
+                  "一起扔！"
+                ],
+                "chatOffset": -2.3,
+                "chatPair": true
               }
             ],
             "hotspots": [
