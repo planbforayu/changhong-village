@@ -63,6 +63,7 @@ func game_action(r, g, kind: String) -> void:
 		"call":
 			if g.phase == "ring": g.input("tap",g._accept_rect().get_center())
 			elif g.phase == "talk": g.input("down",Vector2(180,500))
+			elif g.phase == "wechat": g.input("tap",Vector2(180,500))
 			elif g.phase == "reply": g.input("tap",g._speaker_rect().get_center() if g.li == 6 else Vector2(180,500))
 		"desk_chat", "group_chat": g.input("tap",Vector2(180,610))
 		"care":

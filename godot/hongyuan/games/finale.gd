@@ -65,7 +65,7 @@ func _set_phase(value: String) -> void:
 	r.play("blip")
 
 func _letter() -> String:
-	return name + "：\n\n" + r.t_("A7-1a") + "\n\n" + r.t_("A7-1c") + "\n\n" + r.t_("A7-1e")
+	return "亲爱的我的朋友" + name + "：\n" + r.t_("A7-1a") + "\n" + r.t_("A7-1c") + "\n" + r.t_("A7-1e")
 
 func _ok_rect() -> Rect2:
 	return Rect2(100, 560, 160, 48)
@@ -346,7 +346,8 @@ func _letter_lines(ci, text: String, font_size := 20, width := 205.0) -> Array[S
 	for paragraph in text.split("\n"):
 		var line := ""
 		for character in paragraph:
-			if ci.FONT.get_string_size(line + character, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x > width:
+			# 句号逗号等不单独占行首（悬挂在上一行末尾）
+			if character not in "，。！？、；：）」』…" and ci.FONT.get_string_size(line + character, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x > width:
 				result.append(line)
 				line = ""
 			line += character
@@ -359,10 +360,10 @@ func _paper(ci, length: int) -> void:
 	if phase == "read_received":
 		desk.cover(ci, ci.texture(LETTER), r.view_rect)
 	var fancy: bool = ci.texture(NEW_CARD) != null
-	var fs := 17 if fancy else 18
+	var fs := 15 if fancy else 18
 	var width := 220.0 if fancy else 248.0
 	var origin := Vector2(72, 304) if fancy else Vector2(56, 120)
-	var step := 27.0 if fancy else 30.0
+	var step := 23.0 if fancy else 30.0
 	var row := 0
 	for line in _letter_lines(ci, _letter().substr(0,length),fs,width):
 		ci.draw_string(ci.FONT,origin + Vector2(0, row*step),line,HORIZONTAL_ALIGNMENT_LEFT,width,fs,ci.INK)

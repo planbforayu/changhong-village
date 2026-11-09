@@ -140,7 +140,42 @@
                 "say": "A3-2h",
                 "who": "toretto"
               }
+            ],
+            "wechat": [
+              {
+                "say": "A3-W1",
+                "who": "toretto",
+                "time": "10:42"
+              },
+              {
+                "say": "A3-W2",
+                "who": "toretto",
+                "time": "10:42"
+              },
+              {
+                "say": "A3-W3",
+                "who": "toretto",
+                "time": "10:43"
+              },
+              {
+                "say": "A3-W4",
+                "who": "toretto",
+                "time": "10:44"
+              },
+              {
+                "say": "A3-W5",
+                "who": "toretto",
+                "time": "10:46"
+              }
             ]
+          },
+          {
+            "bg": "w2/call/bg_room_night.png",
+            "hideAyu": true,
+            "actors": []
+          },
+          {
+            "narrate": "A3-R1"
           },
           {
             "bg": "w2/call/bg_cbd_office_r2.png",

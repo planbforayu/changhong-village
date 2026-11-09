@@ -8,7 +8,7 @@ const LETTERS_PER_SECOND := 12.0
 const LINE_REST := 0.6
 
 var r
-var phase := "ring"   # ring → talk → birthday → reply → hangup → done
+var phase := "ring"   # ring → talk → (wechat → talk) → birthday → reply → hangup → done
 var t := 0.0
 var lines: Array = []
 var li := 0
@@ -20,12 +20,17 @@ var birthday_flash := 0.0
 var call_time := 0.0
 var hint_t := 0.0
 var speaker_on := false
+# 听到「他刚分手」这一句时，轻切到微信对话页，看他半夜发来的几条消息，再回到通话。
+var wechat: Array = []
+var wi := 0
+var wechat_done := false
 
 
 func start(runner, beat: Dictionary) -> void:
 	r = runner
 	lines = beat.get("lines", [])
 	aside = r.t_(str(beat.get("aside", "")))
+	wechat = beat.get("wechat", [])
 	r.play("blip")
 
 
@@ -33,7 +38,9 @@ func process(dt: float) -> bool:
 	birthday_flash = maxf(0.0, birthday_flash - dt)
 	if phase in ["talk", "birthday", "reply"]:
 		call_time += dt
-	if phase == "ring":
+	if phase == "wechat":
+		t += dt
+	elif phase == "ring":
 		t += dt
 		if fmod(t, 1.2) < dt:
 			r.play("blip")
@@ -57,6 +64,11 @@ func process(dt: float) -> bool:
 			li += 1
 			reveal = 0.0
 			t = 0.0
+			if li == 1 and not wechat_done and not wechat.is_empty():
+				phase = "wechat"
+				wi = 0
+				holding = false
+				r.play("pop")
 	elif phase == "birthday":
 		t += dt
 		if t >= LINE_REST:
@@ -75,6 +87,8 @@ func process(dt: float) -> bool:
 
 func restore_checkpoint() -> void:
 	# Refresh replays the current sentence from its beginning, never a held finger.
+	if phase == "wechat":
+		wi = clampi(wi, 0, maxi(0, wechat.size() - 1))
 	if phase == "talk" and li >= 4:
 		phase = "reply" if li < lines.size() else "hangup"
 	holding = false
@@ -99,6 +113,18 @@ func _speaker_rect() -> Rect2:
 
 
 func input(kind: String, pos: Vector2) -> void:
+	if phase == "wechat":
+		if kind == "tap" and t >= 0.25:
+			wi += 1
+			t = 0.0
+			if wi >= wechat.size():
+				wechat_done = true
+				phase = "talk"
+				reveal = 0.0
+				r.play("blip")
+			else:
+				r.play("blip")
+		return
 	if phase == "talk":
 		if kind == "down":
 			holding = _listen_rect().has_point(pos)
@@ -132,7 +158,40 @@ func _line_text() -> String:
 	return r.t_(str(lines[li].get("say", "")))
 
 
+func _draw_wechat(ci) -> void:
+	# 手机弹出微信页：深色底、顶栏写着 Toretto，他发来的话一条条冒出来。
+	ci.draw_rect(ci.view_rect, Color(0, 0, 0, 0.62))
+	var page := Rect2(18, 70, 324, 470)
+	PhoneShell._round_box(ci, page, Color("#ededed"), 16)
+	PhoneShell._round_box(ci, Rect2(18, 70, 324, 44), Color("#f7f7f7"), 16)
+	ci.text_at(Vector2(18, 98), "Toretto", 17, ci.INK, 324)
+	ci.text_at(Vector2(30, 98), "‹ " + ci.t_("G-WECHAT-BACK"), 14, Color("#576b95"), 80, HORIZONTAL_ALIGNMENT_LEFT)
+	var y := 128.0
+	var face: Texture2D = ci.texture("toretto_avatar.png")
+	var shown := mini(wi + 1, wechat.size())
+	for i in range(shown):
+		var row: Dictionary = wechat[i]
+		var text: String = ci.t_(str(row.get("say", "")))
+		var w := clampf(ci.FONT.get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15).x + 26, 80, 238)
+		var wrapped: String = StoryCaption.wrap_text(text, w - 26, 15)
+		var h := maxf(38.0, ci.FONT.get_multiline_string_size(wrapped, HORIZONTAL_ALIGNMENT_LEFT, w - 26, 15).y + 18)
+		if i == 0 or str(wechat[i - 1].get("time", "")) != str(row.get("time", "")):
+			ci.text_at(Vector2(18, y + 12), str(row.get("time", "")), 12, Color("#9a9a9a"), 324)
+			y += 22.0
+		var pop := clampf(t / 0.2, 0, 1) if i == shown - 1 else 1.0
+		if face: ci.draw_texture_rect(face, Rect2(28, y, 36, 36), false)
+		var rect := Rect2(74, y + 2 + (1.0 - pop) * 6, w, h)
+		PhoneShell._round_box(ci, rect, Color.WHITE, 8)
+		ci.draw_multiline_string(ci.FONT, rect.position + Vector2(13, 22), wrapped, HORIZONTAL_ALIGNMENT_LEFT, w - 26, 15, -1, ci.INK)
+		y += h + 14.0
+	ci.pill(Rect2(88, 580, 184, 28), "轻点继续看", 14, Color(ci.WOOD, 0.8), ci.PAPER)
+
 func draw(ci) -> void:
+	if phase == "wechat":
+		var back: Texture2D = ci.texture("round1/people/call_split.png")
+		if back: preload("res://hongyuan/ui/desk_art.gd").cover(ci, back, ci.view_rect)
+		_draw_wechat(ci)
+		return
 	var who := str(lines[li].get("who", "narrator")) if li < lines.size() else "narrator"
 	var monologue := who == "narrator"
 	if phase != "ring" and not monologue:
@@ -167,4 +226,6 @@ func _head(who: String) -> Vector2:
 	return r.view_rect.get_center()-size*k*0.5+point*k
 
 func hud() -> Array:
+	if phase == "wechat":
+		return []
 	return [["接起这通电话", 0 if phase == "ring" else 1, 1]]
