@@ -370,11 +370,18 @@ func _enter_step(index: int, resume := false) -> void:
 	if fading:
 		await fade_screen.reveal()
 		fading = false
-	if chapter_changed and chapter != "prologue":
+	if chapter_changed:
+		# 走进一章就在后台预下载下一章；序章也一样，先把第一章和共用图备好。
 		var chapters: Array = _read_json("res://hongyuan/chapter_order.json").get("chapters", [])
 		var at := chapters.find(chapter)
 		if at >= 0 and at + 1 < chapters.size():
-			Packs.prefetch([str(chapters[at + 1])])
+			var upcoming: Array[String] = [str(chapters[at + 1])]
+			if chapter == "prologue":
+				upcoming.push_front("love-media")
+			Packs.prefetch(upcoming)
+		elif chapter == "finale":
+			# 终章之后去婚礼现场：世界和山庄只有十来 MB，先在后台备好。村子太大，点了再下。
+			Packs.prefetch(["world", "world-media", "estate"] as Array[String])
 
 func _starting_feet(scene: String) -> Vector2:
 	match scene:
