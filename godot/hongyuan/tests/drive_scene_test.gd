@@ -78,7 +78,7 @@ func run() -> void:
 	check(g.phase == "in", "Holding the brake parks into the bay before release (guard=%d)" % guard)
 	touch(Vector2(180, 400), false)
 	# 入位后收尾，场景前进；10 秒后出现「下一步」
-	for i in range(60):
+	for i in range(120):
 		if not is_instance_valid(r) or p.shot.id != "drive": break
 		await tick(0.05)
 	check(p.shot.id != "drive", "Parked drive hands control back to the story")

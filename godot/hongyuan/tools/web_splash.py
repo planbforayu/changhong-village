@@ -26,7 +26,7 @@ def apply(out: Path) -> None:
     text = text.replace("</head>", STYLE + "</head>", 1)
     text = re.sub(r"<title>[^<]*</title>", "<title>苏七镇奇缘</title>", text, count=1)
     text = text.replace('<progress id="status-progress"></progress>',
-                        '<div id="hy-loading">苏七镇奇缘 · 正在加载</div>\n\t\t\t<progress id="status-progress"></progress>', 1)
+                        '<div id="hy-loading">阿鱼和 Toretto 的故事，正在加载…</div>\n\t\t\t<progress id="status-progress"></progress>', 1)
     html.write_text(text)
 
 
