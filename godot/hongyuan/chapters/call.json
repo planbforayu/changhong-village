@@ -220,7 +220,6 @@
             ],
             "walkers": [
               {
-                "guest": "04",
                 "a": [
                   240,
                   840
@@ -234,10 +233,10 @@
                 "sourceAnchored": true,
                 "sourceHeight": 310,
                 "frameRow": 8,
-                "avoidPlayer": false
+                "avoidPlayer": false,
+                "npc": "d4_03"
               },
               {
-                "guest": "06",
                 "a": [
                   750,
                   850
@@ -251,7 +250,8 @@
                 "sourceHeight": 310,
                 "frameRow": 0,
                 "avoidPlayer": false,
-                "occludeBelowSource": 670
+                "occludeBelowSource": 670,
+                "npc": "d4_01"
               }
             ],
             "scaleProfile": "office"

@@ -20,7 +20,6 @@
         "scaleProfile": "chengdu",
         "walkers": [
           {
-            "guest": "05",
             "a": [
               20,
               270
@@ -32,10 +31,10 @@
             "speed": 18,
             "phase": 0.0,
             "scale": 0.95,
-            "pause": 2
+            "pause": 2,
+            "npc": "d3_01"
           },
           {
-            "guest": "06",
             "a": [
               325,
               287
@@ -47,10 +46,10 @@
             "speed": 21,
             "phase": 0.19,
             "scale": 0.95,
-            "pause": 3
+            "pause": 3,
+            "npc": "d3_02"
           },
           {
-            "guest": "07",
             "a": [
               115,
               304
@@ -62,22 +61,8 @@
             "speed": 24,
             "phase": 0.38,
             "scale": 0.95,
-            "pause": 2
-          },
-          {
-            "guest": "08",
-            "a": [
-              250,
-              321
-            ],
-            "b": [
-              200,
-              321
-            ],
-            "speed": 27,
-            "phase": 0.5700000000000001,
-            "scale": 0.95,
-            "pause": 3
+            "pause": 2,
+            "npc": "d3_03"
           }
         ],
         "beats": [
@@ -105,7 +90,6 @@
         "scaleProfile": "chengdu",
         "walkers": [
           {
-            "guest": "05",
             "a": [
               20,
               270
@@ -117,10 +101,10 @@
             "speed": 18,
             "phase": 0.0,
             "scale": 0.95,
-            "pause": 2
+            "pause": 2,
+            "npc": "d3_01"
           },
           {
-            "guest": "06",
             "a": [
               325,
               287
@@ -132,10 +116,10 @@
             "speed": 21,
             "phase": 0.19,
             "scale": 0.95,
-            "pause": 3
+            "pause": 3,
+            "npc": "d3_02"
           },
           {
-            "guest": "07",
             "a": [
               115,
               304
@@ -147,22 +131,8 @@
             "speed": 24,
             "phase": 0.38,
             "scale": 0.95,
-            "pause": 2
-          },
-          {
-            "guest": "08",
-            "a": [
-              250,
-              321
-            ],
-            "b": [
-              200,
-              321
-            ],
-            "speed": 27,
-            "phase": 0.5700000000000001,
-            "scale": 0.95,
-            "pause": 3
+            "pause": 2,
+            "npc": "d3_03"
           }
         ],
         "beats": [

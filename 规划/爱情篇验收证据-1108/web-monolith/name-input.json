@@ -1,0 +1,11 @@
+{
+  "dialogs": [
+    {
+      "type": "prompt",
+      "message": "请输入你的名字（2–12 个字）",
+      "default": ""
+    }
+  ],
+  "saved_name": "小林",
+  "phase": "write"
+}

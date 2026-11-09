@@ -4,7 +4,32 @@ const PATH := "user://hongyuan_save.json"
 const PENDING_PATH := "user://hongyuan_save.json.tmp"
 const WEB_KEY := "hongyuan_save.json"
 
+## 网址带 ?new=1 时清掉存档从头开始。清完立刻把参数从地址栏去掉，
+## 这样刷新页面不会反复清档。只在网页版生效，微信小游戏没有网址。
+static func clear_if_requested() -> bool:
+	if not OS.has_feature("web") or OS.has_feature("hongyuan_wechat"):
+		return false
+	var asked := str(JavaScriptBridge.eval(
+		"""(function() {
+			try {
+				var q = new URLSearchParams(location.search);
+				if (q.get('new') !== '1') return '';
+				localStorage.removeItem('hongyuan_save.json');
+				q.delete('new');
+				var rest = q.toString();
+				history.replaceState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+				return '1';
+			} catch (_) { return ''; }
+		})()""", true)) == "1"
+	if asked:
+		for path in [PATH, PENDING_PATH]:
+			if FileAccess.file_exists(path):
+				DirAccess.remove_absolute(path)
+		JavaScriptBridge.force_fs_sync()
+	return asked
+
 static func read() -> Dictionary:
+	clear_if_requested()
 	var saved := _decode(FileAccess.get_file_as_string(PATH)) if FileAccess.file_exists(PATH) else {}
 	if OS.has_feature("web") and OS.has_feature("hongyuan_wechat"):
 		var wx := JavaScriptBridge.get_interface("wx")
