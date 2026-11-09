@@ -4142,6 +4142,136 @@
         "D1": "pending"
       },
       "sha256": "edcf7401a824de04929a0d14c0ce9ba47099e35cfc594e3e38e1877ff093cc87"
+    },
+    "_inbox/review-1109b/moments_1.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        840,
+        840
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/moments_2.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        840,
+        840
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/moments_3.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        840,
+        840
+      ],
+      "generationAttempt": 2,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/moments_4.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        840,
+        840
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/choose_look_panel.png": {
+      "origin": "eight existing LM guest sprites",
+      "dimensions": [
+        720,
+        1100
+      ],
+      "generationAttempt": 0,
+      "method": "原始客人逐帧提取并手工合成",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/choose_look_highlight.png": {
+      "origin": "D3 original",
+      "dimensions": [
+        320,
+        250
+      ],
+      "generationAttempt": 0,
+      "method": "手工绘制透明像素边框",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/choose_look_coordinates.png": {
+      "origin": "choose_look_panel.png",
+      "dimensions": [
+        720,
+        1100
+      ],
+      "generationAttempt": 0,
+      "method": "手工坐标标注图",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/recipient_gate.png": {
+      "origin": "new 1109b task, style revised after review",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "generationAttempt": 3,
+      "method": "原创像素重绘，平视双人中景；保留开屏原图两车车牌",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/shizuoka_pier_v2.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素重绘",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/shizuoka_pier_v2_walk.png": {
+      "origin": "shizuoka_pier_v2.png",
+      "dimensions": [
+        720,
+        1280
+      ],
+      "generationAttempt": 0,
+      "method": "手工绘制 RGBA 可行走遮罩",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/hk_street_v2.png": {
+      "origin": "round1/scenes/hk_street.png",
+      "dimensions": [
+        841,
+        1870
+      ],
+      "generationAttempt": 1,
+      "method": "沿用原图并添加六处繁体灯牌",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/poster_base_a.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素海报底图",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/poster_base_b.png": {
+      "origin": "new 1109b task",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素海报底图",
+      "status": "reviewCandidate"
     }
   },
   "palette": {
