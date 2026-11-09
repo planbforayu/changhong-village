@@ -24,12 +24,12 @@ const GRAY := Color("#b2b2b2")
 const INK := Color("#191919")
 const PANEL := Color("#f7f7f7")
 const PHOTO := 92.0
-## 四张图都取自游戏里画好的场景（不是真实照片）：牵手、她打电话、他打电话、并肩散步
+## 四张生活照：GPT 出的正式图（w2/call/moments_N.png）到位就用它，没到位先用游戏里现成场景的局部
 const PHOTOS := [
-	["w2/call/ayu_toretto_holdhands.png", Rect2(0, 820, 841, 841)],
-	["round1/people/call_split.png", Rect2(110, 40, 740, 740)],
-	["round1/people/call_split.png", Rect2(80, 900, 760, 760)],
-	["round1/people/daily_walk.png", Rect2(0, 860, 841, 841)],
+	["w2/call/moments_1.png", "w2/call/ayu_toretto_holdhands.png", Rect2(0, 820, 841, 841)],
+	["w2/call/moments_2.png", "round1/people/call_split.png", Rect2(110, 40, 740, 740)],
+	["w2/call/moments_3.png", "round1/people/call_split.png", Rect2(80, 900, 760, 760)],
+	["w2/call/moments_4.png", "round1/people/daily_walk.png", Rect2(0, 860, 841, 841)],
 ]
 ## 点赞栏里先有的朋友（游戏角色和泛化的朋友），点赞后 Toretto 排到最前
 const FRIENDS := [
@@ -159,8 +159,11 @@ func draw(ci) -> void:
 		if rect.end.y < NAV_H or rect.position.y > 640:
 			continue
 		var tex: Texture2D = ci.texture(str(PHOTOS[k][0]))
+		var fallback: Texture2D = ci.texture(str(PHOTOS[k][1]))
 		if tex:
-			ci.draw_texture_rect_region(tex, rect, PHOTOS[k][1])
+			ci.draw_texture_rect(tex, rect, false)
+		elif fallback:
+			ci.draw_texture_rect_region(fallback, rect, PHOTOS[k][2])
 		else:
 			ci.draw_rect(rect, Color("#e8e2da"))
 	# 时间行和「··」

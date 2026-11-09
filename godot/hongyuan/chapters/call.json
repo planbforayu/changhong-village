@@ -416,7 +416,7 @@
             "game": "balance"
           },
           {
-            "bg": "round1/people/call_split.png",
+            "bg": "w2/call/video_call_sing.png|round1/people/call_split.png",
             "hideAyu": true,
             "actors": [],
             "walkers": [],
