@@ -190,7 +190,7 @@ func run() -> void:
 	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(preview)
 	await frame()
-	p = Harness.new();p.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);view.add_child(p);p.set_process(false)
+	p = Harness.new();p.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);p.interludes_enabled=false;view.add_child(p);p.set_process(false)
 	await frame()
 	if not is_instance_valid(p.fade_screen):
 		problem("Playlist initialization failed");p.free();quit(1);return
