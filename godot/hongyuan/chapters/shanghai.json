@@ -150,7 +150,7 @@
               150,
               328
             ],
-            "npc": "d1_01",
+            "npc": "d1_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -171,7 +171,7 @@
               182,
               328
             ],
-            "npc": "d1_02",
+            "npc": "d1_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -182,6 +182,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              200,
+              416
+            ],
+            "b": [
+              70,
+              416
+            ],
+            "speed": 32.4,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_05"
+          },
+          {
+            "a": [
+              170,
+              486
+            ],
+            "b": [
+              290,
+              486
+            ],
+            "speed": 30.8,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_06"
+          },
+          {
+            "a": [
+              180,
+              530
+            ],
+            "b": [
+              60,
+              576
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_07"
           }
         ],
         "badge": "G-02",
@@ -352,7 +397,7 @@
               150,
               328
             ],
-            "npc": "d1_01",
+            "npc": "d1_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -373,7 +418,7 @@
               182,
               328
             ],
-            "npc": "d1_02",
+            "npc": "d1_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -384,6 +429,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              200,
+              416
+            ],
+            "b": [
+              70,
+              416
+            ],
+            "speed": 32.4,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_05"
+          },
+          {
+            "a": [
+              170,
+              486
+            ],
+            "b": [
+              290,
+              486
+            ],
+            "speed": 30.8,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_06"
+          },
+          {
+            "a": [
+              170,
+              576
+            ],
+            "b": [
+              60,
+              576
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_07"
           }
         ],
         "badge": "G-02",
@@ -553,7 +643,7 @@
               140,
               328
             ],
-            "npc": "d1_01",
+            "npc": "d1_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -574,7 +664,7 @@
               172,
               328
             ],
-            "npc": "d1_02",
+            "npc": "d1_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -585,6 +675,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              200,
+              416
+            ],
+            "b": [
+              70,
+              416
+            ],
+            "speed": 32.4,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_05"
+          },
+          {
+            "a": [
+              170,
+              486
+            ],
+            "b": [
+              290,
+              486
+            ],
+            "speed": 30.8,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_06"
+          },
+          {
+            "a": [
+              170,
+              576
+            ],
+            "b": [
+              60,
+              576
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d1_07"
           }
         ],
         "badge": "G-02",
@@ -792,7 +927,7 @@
               240,
               440
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -813,7 +948,7 @@
               272,
               440
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -824,6 +959,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -993,7 +1173,7 @@
               280,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -1014,7 +1194,7 @@
               312,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -1025,6 +1205,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -1221,7 +1446,7 @@
               280,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -1242,7 +1467,7 @@
               312,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -1253,6 +1478,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -1450,7 +1720,7 @@
               50,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -1471,7 +1741,7 @@
               82,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -1482,6 +1752,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -1669,7 +1984,7 @@
               50,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -1690,7 +2005,7 @@
               82,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -1701,6 +2016,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -1888,7 +2248,7 @@
               50,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -1909,7 +2269,7 @@
               82,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -1920,6 +2280,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -2107,7 +2512,7 @@
               50,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -2128,7 +2533,7 @@
               82,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -2139,6 +2544,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -2326,7 +2776,7 @@
               50,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -2347,7 +2797,7 @@
               82,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -2358,6 +2808,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -2545,7 +3040,7 @@
               50,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -2566,7 +3061,7 @@
               82,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -2577,6 +3072,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -2764,7 +3304,7 @@
               280,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -2785,7 +3325,7 @@
               312,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -2796,6 +3336,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -2982,7 +3567,7 @@
               280,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -3003,7 +3588,7 @@
               312,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -3014,6 +3599,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -3200,7 +3830,7 @@
               280,
               470
             ],
-            "npc": "d1_01",
+            "npc": "d2_talk_a",
             "scale": 0.95,
             "face": 1,
             "pause": 99,
@@ -3221,7 +3851,7 @@
               312,
               470
             ],
-            "npc": "d1_02",
+            "npc": "d2_talk_b",
             "scale": 0.95,
             "face": -1,
             "pause": 99,
@@ -3232,6 +3862,51 @@
             ],
             "chatOffset": -2.3,
             "chatPair": true
+          },
+          {
+            "a": [
+              85,
+              551
+            ],
+            "b": [
+              20,
+              551
+            ],
+            "speed": 16.2,
+            "phase": 0.33,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_04"
+          },
+          {
+            "a": [
+              265,
+              568
+            ],
+            "b": [
+              325,
+              568
+            ],
+            "speed": 20.9,
+            "phase": 0.6,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_05"
+          },
+          {
+            "a": [
+              180,
+              585
+            ],
+            "b": [
+              115,
+              585
+            ],
+            "speed": 25.6,
+            "phase": 0.87,
+            "scale": 0.95,
+            "pause": 2.4,
+            "npc": "d2_06"
           }
         ],
         "badge": "G-02",
@@ -3283,7 +3958,7 @@
       "messageId": "invite",
       "scene": {
         "hideAyu": true,
-        "bg": "round1/people/group_shoulder.png",
+        "bg": "round1/people/group_phone_1109.png|round1/people/group_shoulder.png",
         "badge": "",
         "beats": [
           {
@@ -3310,7 +3985,7 @@
       "messageId": "axiao",
       "scene": {
         "hideAyu": true,
-        "bg": "round1/people/group_shoulder.png",
+        "bg": "round1/people/group_phone_1109.png|round1/people/group_shoulder.png",
         "badge": "",
         "beats": [
           {
@@ -3337,7 +4012,7 @@
       "messageId": "toretto",
       "scene": {
         "hideAyu": true,
-        "bg": "round1/people/group_shoulder.png",
+        "bg": "round1/people/group_phone_1109.png|round1/people/group_shoulder.png",
         "badge": "",
         "beats": [
           {
@@ -3365,7 +4040,7 @@
       "caret": true,
       "scene": {
         "hideAyu": true,
-        "bg": "round1/people/group_shoulder.png",
+        "bg": "round1/people/group_phone_1109.png|round1/people/group_shoulder.png",
         "badge": "",
         "beats": [
           {

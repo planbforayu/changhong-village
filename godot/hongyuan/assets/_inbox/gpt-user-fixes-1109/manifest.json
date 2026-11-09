@@ -1,0 +1,45 @@
+{
+  "batch": "gpt-user-fixes-1109",
+  "notes": "Inbox-only art deliverables; no game code or existing assets changed. The full-scene car image is a visual proposal; the separate shadow sprite is an integration asset.",
+  "files": {
+    "characters/ayu_phone_scene_1109.png": {
+      "size_px": [
+        941,
+        1672
+      ],
+      "frames": 1,
+      "usage": {
+        "characters/ayu_phone_scene_1109.png": "窗口边阿鱼查看手机的群聊场景，手部姿势重画",
+        "props_ui/car_shadow_topdown_1109.png": "建议置于上海三车道驾驶场景的车身下方，需由整合方按实际车辆像素比例摆放",
+        "designs/car_shadow_position_preview_1109.png": "阴影位置修改方向预览；仅供视觉参考，不是游戏运行截图"
+      },
+      "trigger": "characters/ayu_phone_scene_1109.png:群聊画面；props_ui/car_shadow_topdown_1109.png:上海驾驶场景车辆绘制时；designs/car_shadow_position_preview_1109.png:评审参考"
+    },
+    "props_ui/car_shadow_topdown_1109.png": {
+      "size_px": [
+        32,
+        54
+      ],
+      "frames": 1,
+      "usage": {
+        "characters/ayu_phone_scene_1109.png": "窗口边阿鱼查看手机的群聊场景，手部姿势重画",
+        "props_ui/car_shadow_topdown_1109.png": "建议置于上海三车道驾驶场景的车身下方，需由整合方按实际车辆像素比例摆放",
+        "designs/car_shadow_position_preview_1109.png": "阴影位置修改方向预览；仅供视觉参考，不是游戏运行截图"
+      },
+      "trigger": "characters/ayu_phone_scene_1109.png:群聊画面；props_ui/car_shadow_topdown_1109.png:上海驾驶场景车辆绘制时；designs/car_shadow_position_preview_1109.png:评审参考"
+    },
+    "designs/car_shadow_position_preview_1109.png": {
+      "size_px": [
+        851,
+        1847
+      ],
+      "frames": 1,
+      "usage": {
+        "characters/ayu_phone_scene_1109.png": "窗口边阿鱼查看手机的群聊场景，手部姿势重画",
+        "props_ui/car_shadow_topdown_1109.png": "建议置于上海三车道驾驶场景的车身下方，需由整合方按实际车辆像素比例摆放",
+        "designs/car_shadow_position_preview_1109.png": "阴影位置修改方向预览；仅供视觉参考，不是游戏运行截图"
+      },
+      "trigger": "characters/ayu_phone_scene_1109.png:群聊画面；props_ui/car_shadow_topdown_1109.png:上海驾驶场景车辆绘制时；designs/car_shadow_position_preview_1109.png:评审参考"
+    }
+  }
+}
