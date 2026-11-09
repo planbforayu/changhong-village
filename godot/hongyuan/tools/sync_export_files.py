@@ -75,6 +75,23 @@ for script in scripts:
     runtime_strings.update(re.findall(r'"([^"\n]+)"', script.read_text()))
 for value in runtime_strings:
     include(value)
+
+
+# 路人只在章节里写编号（"npc": "d9_04"），图是运行时拼路径加载的：按编号把整条图集打进包
+def npc_ids(value):
+    if isinstance(value, dict):
+        if isinstance(value.get('npc'), str):
+            yield value['npc']
+        for item in value.values():
+            yield from npc_ids(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from npc_ids(item)
+
+
+for chapter in (root / 'hongyuan/chapters').glob('*.json'):
+    for npc in npc_ids(json.loads(chapter.read_text())):
+        include('round1/npc/%s.png' % npc)
 manifest = json.loads((assets / 'manifest.json').read_text())
 # Legacy stage looks up background aliases; unused review aliases are not runtime dependencies.
 for key, entry in manifest.get('backgrounds', {}).items():
