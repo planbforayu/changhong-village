@@ -926,12 +926,16 @@ func _present() -> void:
 			if shot.has("copyId") and not _parking_active():
 				_dialogue(_text(shot.copyId))
 		"walk":
-			_label(_text(shot.objectiveId), Rect2(18, 56, 324, 40), 15, Stage.CREAM, true)
+			_label("目标　" + _text(shot.objectiveId), Rect2(14, 54, 332, 46), 16, Stage.CREAM, true)
 			var objective: Control = slots.get_child(slots.get_child_count() - 1)
 			if objective is Label:
 				var back := StyleBoxFlat.new()
-				back.bg_color = Color(SceneRunner.INK, 0.82)
-				back.set_corner_radius_all(6)
+				back.bg_color = Color(SceneRunner.INK, 0.94)
+				back.set_corner_radius_all(10)
+				back.set_border_width_all(2)
+				back.border_color = Color("#e2b857")
+				back.content_margin_left = 10
+				back.content_margin_right = 10
 				objective.add_theme_stylebox_override("normal", back)
 		"chat":
 			_present_chat()
