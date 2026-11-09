@@ -46,7 +46,7 @@ func configure(value:Dictionary,background:String) -> void:
 		native_surface.configure(self,spec.g0_native,contract)
 		var b:Array=spec.g0_native.region
 		native_cut=PackedVector2Array([Vector2(b[0],b[1]),Vector2(b[0]+b[2],b[1]),Vector2(b[0]+b[2],b[1]+b[3]),Vector2(b[0],b[1]+b[3])])
-		var atlas:=AtlasTexture.new();atlas.atlas=Assets.texture("res://ayu_home/v4/assets/village/road-shoulder-1025/road-transition-atlas.png");atlas.region=Rect2(0,0,256,256);atlas.filter_clip=true;legacy_earth=atlas
+		legacy_earth=ImageTexture.create_from_image(Assets.texture("res://ayu_home/v4/assets/village/road-shoulder-1025/road-transition-atlas.png").get_image().get_region(Rect2i(0,0,256,256))) # 独立 256 图块：AtlasTexture 做重复贴图会在每 256 像素处跳到图集别的区域，形成竖直硬接缝
 	if not layout.is_empty():roadside.setup(layout,polygons.road+polygons.yard+polygons.entry_road)
 	texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST
 	texture_repeat=CanvasItem.TEXTURE_REPEAT_ENABLED

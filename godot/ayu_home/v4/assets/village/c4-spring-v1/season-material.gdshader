@@ -6,6 +6,8 @@ uniform sampler2D spring_plant_mask : filter_nearest, repeat_disable;
 uniform bool spring_mask_enabled = false;
 // 0 = baked ground, 1 = leaves/courtyard, 2 = evergreen bamboo.
 uniform int spring_layer_kind = 1;
+// >0: drop the faint generation halo around a prop (alpha below this) and draw the rest fully opaque. 0 keeps original behaviour.
+uniform float alpha_cut = 0.0;
 
 vec3 spring_palette(float l, int kind) {
     float t = clamp((l - 0.04) / 0.72, 0.0, 1.0);
@@ -17,6 +19,10 @@ vec3 spring_palette(float l, int kind) {
 
 void fragment() {
     vec4 c = texture(TEXTURE, UV);
+    if (alpha_cut > 0.0) {
+        if (c.a < alpha_cut) discard;
+        c.a = 1.0;
+    }
     vec3 col = c.rgb;
     float green = clamp((col.g-max(col.r,col.b))*5.0,0.0,1.0);
     float lum = dot(col,vec3(.3,.59,.11));
