@@ -1,10 +1,10 @@
 extends Control
 
 const Checkpoint := preload("res://hongyuan/checkpoint.gd")
-const DeskArt := preload("res://hongyuan/ui/desk_art.gd")
 const StoryCaption := preload("res://hongyuan/ui/story_caption.gd")
 const FONT := preload("res://hongyuan/fonts/dialogue_font.tres")
 const ASSET_ROOT := "res://hongyuan/assets/"
+const SPLASH := "round1/common/splash_title_1109.png"
 
 const CANVAS := Vector2(360, 640)
 const INK := Color("#281a1a")
@@ -12,6 +12,10 @@ const RED := Color("#5e2929")
 const PAPER := Color("#fff1d5")
 const WHEAT := Color("#f4d495")
 const GOLD := Color("#d6a456")
+const SPLASH_BG := Color("#48223a")
+const MENU_BOTTOM_PAD := 28.0
+const MENU_GAP := 52.0
+const MENU_H := 44.0
 
 var saved: Dictionary = {}
 var show_menu := false
@@ -56,7 +60,7 @@ func _story_destination() -> String:
 
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, size), Color("#241b18"))
+	draw_rect(Rect2(Vector2.ZERO, size), SPLASH_BG)
 
 
 func _fit_canvas() -> void:
@@ -88,16 +92,14 @@ func _draw_canvas() -> void:
 	if not show_menu:
 		return
 	var view_rect := Rect2(Vector2.ZERO, CANVAS)
-	var welcome_bg := _texture("round1/common/welcome_bg.png")
-	if welcome_bg:
-		DeskArt.cover(canvas, welcome_bg, view_rect)
-	var welcome := _texture("round1/common/welcome.png")
-	if welcome:
-		canvas.draw_texture_rect(welcome, Rect2(42, 166, 276, 386.4), false)
-	canvas.draw_rect(view_rect, Color(0, 0, 0, 0.35))
+	var splash := _texture(SPLASH)
+	if splash:
+		canvas.draw_texture_rect(splash, view_rect, false)
+	else:
+		canvas.draw_rect(view_rect, SPLASH_BG)
 
 	if confirm_restart:
-		var warn := Rect2(24, 168, 312, 108)
+		var warn := Rect2(24, 368, 312, 108)
 		canvas.draw_rect(warn, Color(INK, 0.94))
 		canvas.draw_rect(warn, Color(GOLD, 0.6), false, 2.0)
 		canvas.draw_multiline_string(
@@ -117,12 +119,14 @@ func _draw_canvas() -> void:
 		_pill(_secondary_rect(), "重新开始", 19, Color(INK, 0.85), PAPER)
 
 
-func _primary_rect() -> Rect2:
-	return Rect2(48, 532, 264, 44)
-
-
 func _secondary_rect() -> Rect2:
-	return Rect2(48, 532 + 52, 264, 44)
+	var y := CANVAS.y - MENU_BOTTOM_PAD - MENU_H
+	return Rect2(48, y, 264, MENU_H)
+
+
+func _primary_rect() -> Rect2:
+	var secondary := _secondary_rect()
+	return Rect2(48, secondary.position.y - MENU_GAP, 264, MENU_H)
 
 
 func _on_canvas_input(event: InputEvent) -> void:
