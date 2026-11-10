@@ -4214,13 +4214,13 @@
       "status": "reviewCandidate"
     },
     "_inbox/review-1109b/recipient_gate.png": {
-      "origin": "new 1109b task, style revised after review",
+      "origin": "redraw per latest task",
       "dimensions": [
         720,
         1280
       ],
-      "generationAttempt": 3,
-      "method": "原创像素重绘，平视双人中景；保留开屏原图两车车牌",
+      "generationAttempt": 1,
+      "method": "原创居家像素场景重绘",
       "status": "reviewCandidate"
     },
     "_inbox/review-1109b/shizuoka_pier_v2.png": {
@@ -4244,13 +4244,13 @@
       "status": "reviewCandidate"
     },
     "_inbox/review-1109b/hk_street_v2.png": {
-      "origin": "round1/scenes/hk_street.png",
+      "origin": "new task, Traditional Chinese shop signs",
       "dimensions": [
         841,
         1870
       ],
       "generationAttempt": 1,
-      "method": "沿用原图并添加六处繁体灯牌",
+      "method": "原创重绘及招牌/遮罩",
       "status": "reviewCandidate"
     },
     "_inbox/review-1109b/poster_base_a.png": {
@@ -4421,6 +4421,16 @@
       ],
       "generationAttempt": 1,
       "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/hk_street_walk.png": {
+      "origin": "hk_street_v2.png",
+      "dimensions": [
+        841,
+        1870
+      ],
+      "generationAttempt": 1,
+      "method": "原创重绘及招牌/遮罩",
       "status": "reviewCandidate"
     }
   },

@@ -93,11 +93,11 @@
         720,
         1280
       ],
-      "origin": "new 1109b task, style revised after review",
-      "generationAttempt": 3,
-      "method": "原创像素重绘",
+      "origin": "redraw per latest task",
+      "generationAttempt": 1,
+      "method": "原创居家像素场景重绘",
       "status": "reviewCandidate",
-      "scene_note": "上海外滩黄昏滨江步道上，阿鱼和 Toretto 面对面站在地面递信，脚底着地；两车车牌保留沪EKX9**与苏E432**；步道朝江岸延伸。"
+      "scene_note": "居家书桌上的喜帖收件画面，红色火漆信封置于桌面中央；人物不入镜，无门/出口。"
     },
     "shizuoka_pier_v2.png": {
       "path": "godot/hongyuan/assets/_inbox/review-1109b/shizuoka_pier_v2.png",
@@ -129,11 +129,11 @@
         841,
         1870
       ],
-      "origin": "round1/scenes/hk_street.png",
+      "origin": "new task, Traditional Chinese shop signs",
       "generationAttempt": 1,
-      "method": "沿用原图并添加六处繁体灯牌",
+      "method": "原创重绘并排入繁体字/走路遮罩",
       "status": "reviewCandidate",
-      "scene_note": "香港街景，行人站在人行道；街道出口沿街道纵深方向；门店入口朝向人行道。"
+      "scene_note": "香港繁华街头，行人和 NPC 沿连续中央步道活动；招牌由左至右含棲霞茶樓、涼茶鋪、絲襪奶茶、千禧菠蘿包、玖隆冰室、雲吞麵；出口沿街道向远处电车方向。"
     },
     "poster_base_a.png": {
       "path": "godot/hongyuan/assets/_inbox/review-1109b/poster_base_a.png",
@@ -338,6 +338,18 @@
       "method": "原创像素场景及比例标注",
       "status": "reviewCandidate",
       "scene_note": "宾馆房间比例标注图：368px人形框、桌面线和床面线。"
+    },
+    "hk_street_walk.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/hk_street_walk.png",
+      "dimensions": [
+        841,
+        1870
+      ],
+      "origin": "hk_street_v2.png",
+      "generationAttempt": 1,
+      "method": "原创重绘并排入繁体字/走路遮罩",
+      "status": "reviewCandidate",
+      "scene_note": "NPC 可活动区域遮罩：绿色为中央连续步行街道，透明区域为店铺、建筑和花池；沿街向远处电车方向延伸。"
     }
   },
   "notes": [
