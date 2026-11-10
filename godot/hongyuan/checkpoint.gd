@@ -22,11 +22,24 @@ static func clear_if_requested() -> bool:
 			} catch (_) { return ''; }
 		})()""", true)) == "1"
 	if asked:
-		for path in [PATH, PENDING_PATH]:
-			if FileAccess.file_exists(path):
-				DirAccess.remove_absolute(path)
-		JavaScriptBridge.force_fs_sync()
+		_erase_files()
 	return asked
+
+## 清掉本地与浏览器里的爱情篇存档（效果同 ?new=1，但不改地址栏）。
+static func clear_save() -> void:
+	if OS.has_feature("web") and not OS.has_feature("hongyuan_wechat"):
+		JavaScriptBridge.eval(
+			"try { localStorage.removeItem('hongyuan_save.json'); } catch (_) {}",
+			true
+		)
+	_erase_files()
+
+static func _erase_files() -> void:
+	for path in [PATH, PENDING_PATH]:
+		if FileAccess.file_exists(path):
+			DirAccess.remove_absolute(path)
+	if OS.has_feature("web"):
+		JavaScriptBridge.force_fs_sync()
 
 static func read() -> Dictionary:
 	clear_if_requested()
@@ -44,6 +57,9 @@ static func read() -> Dictionary:
 		if int(web_save.get("revision", -1)) > int(saved.get("revision", -1)):
 			saved = web_save
 	return saved
+
+static func has_progress(state: Dictionary) -> bool:
+	return int(state.get("version", 0)) == 1 and str(state.get("stepId", "")) != ""
 
 static func write(state: Dictionary) -> bool:
 	var revision := int(state.get("revision", 0))
