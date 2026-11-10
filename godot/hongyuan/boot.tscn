@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://hongyuan/boot.gd" id="1"]
 
-[node name="HongyuanBoot" type="Node"]
+[node name="HongyuanBoot" type="Control"]
 script = ExtResource("1")

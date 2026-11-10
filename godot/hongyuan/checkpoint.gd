@@ -90,6 +90,18 @@ static func write(state: Dictionary) -> bool:
 		JavaScriptBridge.force_fs_sync()
 	return file_saved or browser_saved
 
+## 直接清除当前玩家的存档（网页版：清 localStorage；通用：删本地文件）。
+## 不检查 URL 参数，可在游戏内从任何地方调用。
+static func clear() -> void:
+	if OS.has_feature("web") and not OS.has_feature("hongyuan_wechat"):
+		JavaScriptBridge.eval(
+			"try { localStorage.removeItem('hongyuan_save.json'); } catch(_) {}", true)
+	for path in [PATH, PENDING_PATH]:
+		if FileAccess.file_exists(path):
+			DirAccess.remove_absolute(path)
+	if OS.has_feature("web"):
+		JavaScriptBridge.force_fs_sync()
+
 static func _decode(value: String) -> Dictionary:
 	if value.is_empty():
 		return {}
