@@ -290,6 +290,54 @@
       "method": "原创像素绘制",
       "status": "reviewCandidate",
       "scene_note": "章节结束页独立插图，供对应节点作背景，中下方留字；非可行走场景，无门/出口。"
+    },
+    "bg_cbd_office_r2.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/bg_cbd_office_r2.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "user supplied specification",
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate",
+      "scene_note": "CBD 办公室像素场景，无人物；蛋糕位于左前桌、花与电话位于右前桌，底部留连续走动区；出口为右上门。"
+    },
+    "office_scale.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/office_scale.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "origin": "user supplied specification",
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate",
+      "scene_note": "办公室比例标注图：310px人形框与桌面高度线。"
+    },
+    "bg_room_night.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/bg_room_night.png",
+      "dimensions": [
+        540,
+        960
+      ],
+      "origin": "user supplied specification",
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate",
+      "scene_note": "宾馆夜间客房，无人物；床在右、书桌在左上、底部留行走区，门在左侧。"
+    },
+    "hotel_scale.png": {
+      "path": "godot/hongyuan/assets/_inbox/review-1109b/hotel_scale.png",
+      "dimensions": [
+        540,
+        960
+      ],
+      "origin": "user supplied specification",
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate",
+      "scene_note": "宾馆房间比例标注图：368px人形框、桌面线和床面线。"
     }
   },
   "notes": [

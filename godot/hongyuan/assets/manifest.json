@@ -4382,6 +4382,46 @@
       "generationAttempt": 1,
       "method": "原创像素绘制",
       "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/bg_cbd_office_r2.png": {
+      "origin": "user supplied specification",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/office_scale.png": {
+      "origin": "user supplied specification",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/bg_room_night.png": {
+      "origin": "user supplied specification",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate"
+    },
+    "_inbox/review-1109b/hotel_scale.png": {
+      "origin": "user supplied specification",
+      "dimensions": [
+        540,
+        960
+      ],
+      "generationAttempt": 1,
+      "method": "原创像素场景及比例标注",
+      "status": "reviewCandidate"
     }
   },
   "palette": {
