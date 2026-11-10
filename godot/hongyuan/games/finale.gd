@@ -80,7 +80,8 @@ func _look_rect(i: int) -> Rect2:
 	return Rect2((i % 2) * LOOK_CELL_W, LOOK_PANEL_Y + (i / 2) * LOOK_CELL_H, LOOK_CELL_W, LOOK_CELL_H)
 
 func _envelope() -> Rect2:
-	return Rect2(50, 255, 260, 165)
+	# recipient_gate 底图火漆约在 y≈299（360×640 视口），与 overlay 信封对齐
+	return Rect2(50, 218, 260, 165)
 
 func input(kind: String, pos: Vector2) -> void:
 	match phase:
@@ -325,7 +326,7 @@ func draw(ci) -> void:
 				ci.pill(_ok_rect(), "寄出邀请函", 18, ci.RED, ci.PAPER)
 			elif phase == "receive":
 				ci.StoryCaption.draw_caption(ci, "你收到了一封邀请函", "narrator")
-				ci.draw_line(Vector2(76, 275), Vector2(76 + 208 * open_progress, 275), ci.GOLD, 4)
+				ci.draw_line(Vector2(76, 238), Vector2(76 + 208 * open_progress, 238), ci.GOLD, 4)
 				ci.pill(Rect2(48, 475, 264, 44), "按住信封，向右拖动拆开", 16, ci.RED, ci.PAPER)
 			elif phase == "opening":
 				var k := clampf(t / 0.8, 0, 1)
