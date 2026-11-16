@@ -53,6 +53,7 @@ var content_overlay: Control
 var recovery: Control
 var pending_index := -1
 var pending_resume := false
+var pending_world_scene := ""
 var fading := false
 var fade_screen: Control
 ## 章末过渡页：测试里关掉，免得等点击。
@@ -1209,26 +1210,18 @@ func _start_scene(resume := false) -> void:
 		state.sceneMaterials = m
 		_save())
 	runner.scene_requested.connect(func(path: String) -> void:
-		# 去村里逛逛：存好宾客名字和形象、停在二选一这一步，回来还能去婚礼现场
+		if loading_content:
+			return
+		# Keep the invitation checkpoint until the destination packs are ready.
 		if not runner.result.is_empty():
 			state.guest = runner.result
 		_save()
 		if path in ["res://hongyuan/world_entry.tscn", "res://hongyuan/village_entry.tscn"]:
 			pending_index = active_index
 			pending_resume = true
-			loading_content = true
-			runner.set_process(false)
-			content_overlay.waiting("正在准备出发")
-			var groups: Array[String] = ["world", "world-media"]
-			groups.append_array(["village", "village-media"] if path.ends_with("village_entry.tscn") else ["estate"])
-			if not await Packs.ensure(groups):
-				content_overlay.failed(Packs.service().last_error)
-				return
-			loading_content = false
-			content_overlay.hide()
-			state["worldRoute"] = "village" if path.ends_with("village_entry.tscn") else "wedding"
-			state.revision = int(state.revision) + 1
-			Checkpoint.write(state)
+			pending_world_scene = path
+			_load_world_destination()
+			return
 		get_tree().change_scene_to_file.call_deferred(path))
 	runner.finished.connect(func() -> void:
 		if not runner.result.is_empty():
@@ -1241,6 +1234,29 @@ func _start_scene(resume := false) -> void:
 		runner.restore(saved)
 		if runner.result.is_empty() and state.get("guest", null) is Dictionary:
 			runner.result = state.guest.duplicate(true)
+
+
+func _load_world_destination() -> void:
+	if loading_content or pending_world_scene.is_empty():
+		return
+	loading_content = true
+	var path := pending_world_scene
+	var village := path.ends_with("village_entry.tscn")
+	runner.set_process(false)
+	runner.choice_note = ""
+	runner.queue_redraw()
+	content_overlay.waiting("正在前往裳泓村" if village else "正在前往罗曼山庄")
+	var groups: Array[String] = ["world", "world-media"]
+	groups.append_array(["village", "village-media"] if village else ["estate"])
+	if not await Packs.ensure(groups):
+		loading_content = false
+		content_overlay.failed(Packs.service().last_error)
+		return
+	pending_world_scene = ""
+	state["worldRoute"] = "village" if village else "wedding"
+	state.revision = int(state.revision) + 1
+	Checkpoint.write(state)
+	get_tree().change_scene_to_file.call_deferred(path)
 
 
 ## 每章一段循环背景乐（tools/make_bgm.py 生成）；同一章内换场不重播
@@ -1311,6 +1327,9 @@ func _set_music_off(off: bool) -> void:
 	_refresh_music_button()
 
 func _retry_content() -> void:
+	if not pending_world_scene.is_empty():
+		_load_world_destination()
+		return
 	if is_instance_valid(recovery):
 		recovery.queue_free()
 		recovery = null
@@ -1320,6 +1339,7 @@ func _retry_content() -> void:
 	_enter_step(pending_index, pending_resume)
 
 func _show_recovery() -> void:
+	pending_world_scene = ""
 	loading_content = false
 	content_overlay.hide()
 	if is_instance_valid(runner):
